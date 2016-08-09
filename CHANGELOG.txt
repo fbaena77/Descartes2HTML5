@@ -1,0 +1,6 @@
+Histórico de versiones
+======================
+
+Versión 1.0.0 (08/08/2016)
+--------------------------------------
+	- Versión inicial del transformador

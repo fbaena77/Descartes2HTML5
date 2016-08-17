@@ -2,9 +2,14 @@ package com.emergya.descartes.job;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.Stream;
 
 import org.apache.log4j.Logger;
+
+import com.emergya.descartes.content.ZipContent;
 
 public class SearchDescartesContents {
 
@@ -13,25 +18,41 @@ public class SearchDescartesContents {
 
     private long numContents;
     private String path;
+    private List<ZipContent> contentList;
 
     public SearchDescartesContents(String path) {
         super();
-        this.setNumContents(getNumContents(path));
+        this.setNumContents(path);
         this.setPath(path);
     }
 
-    private long getNumContents(String _path) {
+    public List<ZipContent> getZipContentListNames() {
+        try (Stream<Path> filePathStream = Files.walk(Paths.get(getPath()))) {
+            filePathStream.forEach(filePath -> {
+                if (Files.isRegularFile(filePath)) {
+                    ZipContent zipContent = new ZipContent(getPath());
+                    contentList.add(zipContent);
+                }
+            });
 
-        long count = 0;
+        } catch (IOException e) {
+            log.error(
+                    "Error al obtener el nombre de los ficheros .zip de Descartes en la ruta de origen",
+                    e);
+        }
+
+        return contentList;
+    }
+
+    private void setNumContents(final String _path) {
         try {
-            count = Files.find(Paths.get(_path), 1,
-                    (path, attributes) -> attributes.isDirectory()).count() - 1;
+            numContents = Files.find(Paths.get(_path), 1,
+                    (path, attributes) -> !attributes.isDirectory()).count() - 1;
         } catch (IOException e) {
             log.error(
                     "Error al obtener el ńumero de contenidos Descartes en la ruta de origen",
                     e);
         }
-        return count;
     }
 
     /**
@@ -39,13 +60,6 @@ public class SearchDescartesContents {
      */
     public long getNumContents() {
         return numContents;
-    }
-
-    /**
-     * @param numContents the numContents to set
-     */
-    private void setNumContents(long numContents) {
-        this.numContents = numContents;
     }
 
     /**
@@ -61,5 +75,4 @@ public class SearchDescartesContents {
     private void setPath(String path) {
         this.path = path;
     }
-
 }

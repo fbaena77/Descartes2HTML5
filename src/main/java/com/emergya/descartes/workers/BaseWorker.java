@@ -8,31 +8,31 @@ import com.emergya.descartes.job.JobConverter;
  */
 public class BaseWorker implements Runnable {
 
-	private JobConverter job;
+    private JobConverter job;
 
-	/**
-	 * @param job
-	 */
-	public BaseWorker(JobConverter job) {
-		this.job = job;
-	}
+    /**
+     * @param job
+     */
+    public BaseWorker(JobConverter job) {
+        setJob(job);
+    }
 
-	public void run() {
+    @Override
+    public void run() {
 
-	}
+    }
 
-	/**
-	 * @return JobConverter
-	 */
-	public JobConverter getJob() {
-		return job;
-	}
+    /**
+     * @return JobConverter
+     */
+    public JobConverter getJob() {
+        return job;
+    }
 
-	/**
-	 * @param job
-	 */
-	public void setJob(JobConverter job) {
-		this.job = job;
-	}
-
+    /**
+     * @param job
+     */
+    private void setJob(JobConverter job) {
+        this.job = job;
+    }
 }

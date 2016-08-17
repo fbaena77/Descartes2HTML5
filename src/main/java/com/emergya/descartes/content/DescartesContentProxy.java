@@ -1,83 +1,27 @@
 package com.emergya.descartes.content;
 
-// TODO: Auto-generated Javadoc
+import java.io.File;
+
 /**
- * The Class Contenido.
+ * The Class DescartesContentProxy.
  */
 public class DescartesContentProxy {
-
-    /** The path. */
-    private String path;
-
-    /** The errores. */
-    private String errores;
-
+    /**
+     * Identificador único del contenido
+     */
+    private String id;
+    /**
+     * Titulo del contenido.
+     */
+    private String title;
     /**
      * Tipo de contenido
      */
     private String contentType;
-
     /**
-     * Titulo del contenido.
+     * Referencia a la copia local del metadato.
      */
-    private String titulo;
-
-    /** The validate html5. */
-    private String validateHtml5;
-
-    /**
-     * Gets the path.
-     *
-     * @return the path
-     */
-    public String getPath() {
-        return path;
-    }
-
-    /**
-     * Sets the path.
-     *
-     * @param path the new path
-     */
-    public void setPath(String path) {
-        this.path = path;
-    }
-
-    /**
-     * Gets the errores.
-     *
-     * @return the errores
-     */
-    public String getErrores() {
-        return errores;
-    }
-
-    /**
-     * Sets the errores.
-     *
-     * @param errores the new errores
-     */
-    public void setErrores(String errores) {
-        this.errores = errores;
-    }
-
-    /**
-     * Gets the validate html5.
-     *
-     * @return the validate html5
-     */
-    public String getValidateHtml5() {
-        return validateHtml5;
-    }
-
-    /**
-     * Sets the validate html5.
-     *
-     * @param validateHtml5 the new validate html5
-     */
-    public void setValidateHtml5(String validateHtml5) {
-        this.validateHtml5 = validateHtml5;
-    }
+    private File localCopy;
 
     /**
      * @return the contentType
@@ -94,17 +38,45 @@ public class DescartesContentProxy {
     }
 
     /**
-     * @return the titulo
+     * @return the title
      */
-    public String getTitulo() {
-        return titulo;
+    public String getTitle() {
+        return title;
     }
 
     /**
-     * @param titulo the titulo to set
+     * @param title the title to set
      */
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    /**
+     * @return the id
+     */
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    /**
+     * @return the localCopy
+     */
+    public File getLocalCopy() {
+        return localCopy;
+    }
+
+    /**
+     * @param localCopy the localCopy to set
+     */
+    public void setLocalCopy(File localCopy) {
+        this.localCopy = localCopy;
     }
 
 }

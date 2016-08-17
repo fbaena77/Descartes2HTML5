@@ -30,10 +30,10 @@ import org.jsoup.parser.Tag;
 import org.jsoup.select.Elements;
 
 import com.emergya.descartes.content.DescartesContentProxy;
-import com.emergya.descartes.conversor.Html4AttributeCss;
-import com.emergya.descartes.conversor.Html4CustomDeprecated;
-import com.emergya.descartes.conversor.Html4NodeAttributeDeprecated;
-import com.emergya.descartes.conversor.Html4NodeDeprecated;
+import com.emergya.descartes.converter.Html4AttributeCss;
+import com.emergya.descartes.converter.Html4CustomDeprecated;
+import com.emergya.descartes.converter.Html4NodeAttributeDeprecated;
+import com.emergya.descartes.converter.Html4NodeDeprecated;
 import com.emergya.descartes.persistence.FileManager;
 import com.emergya.descartes.persistence.model.FileValidation;
 import com.emergya.descartes.utils.Message;
@@ -113,7 +113,6 @@ public class JsoupHtml5Service implements IJsoupHtml5Service {
      */
     private void validationObjectToCSV(String directorio,
             List<com.emergya.descartes.persistence.model.File> validationObjects) {
-        // TODO Auto-generated method stub
         try {
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(
                     new FileOutputStream(directorio + File.separator

@@ -17,7 +17,7 @@ public class JSOUPFileAnalyticsReporter {
      * para analizar las etiquetas, atributos, propiedades que no pasan la validación w3c y corregirlas pasandole posteriormente
      * la validación de w3c.
      * 
-     * Los ficheros corregidos se guardandan cn el mismo nombre que el original, y del original se realiza un backup.
+     * Los ficheros corregidos se guardan cn el mismo nombre que el original, y del original se realiza un backup.
      * 
      * La librería descartes-min.js es actualizada con la que se encuentra en el directorio 'src/main/resources'
      * 

@@ -109,6 +109,15 @@ public class JobConfiguration {
     /**
      * @return String
      */
+    public String getWorkingContentPath() {
+        String workingContentPath = getCommonProperties().get(
+                Constants.PATH_WORKING_CONTENT);
+        return workingContentPath;
+    }
+
+    /**
+     * @return String
+     */
     public String getOriginalContentPath() {
         String originalContentPath = getCommonProperties().get(
                 Constants.PATH_ORIGINAL_CONTENT);

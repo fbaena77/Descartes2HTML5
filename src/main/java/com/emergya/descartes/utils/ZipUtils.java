@@ -88,9 +88,9 @@ public class ZipUtils {
             JobConverter job) throws IOException, FileNotFoundException {
 
         File zipFile = new File(job.getJobConfig().getConvertedContentPath()
-                + contentPoxy.getTitulo() + ".zip");
+                + contentPoxy.getTitle() + ".zip");
         File dirToZip = new File(job.getJobConfig().getConvertedContentPath()
-                + contentPoxy.getTitulo());
+                + contentPoxy.getTitle());
         zip(dirToZip, zipFile);
     }
 

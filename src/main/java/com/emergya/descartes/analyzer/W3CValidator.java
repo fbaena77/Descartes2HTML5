@@ -1,10 +1,8 @@
-package com.emergya.descartes.validator;
+package com.emergya.descartes.analyzer;
 
 import java.io.File;
 import java.io.IOException;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.jsoup.Jsoup;
@@ -26,17 +24,10 @@ public class W3CValidator {
      */
     public String validateHtml5W3C(String path) throws UnirestException,
             ParserConfigurationException, IOException {
-
         File file = new File(path);
-        final DocumentBuilderFactory dbfac = DocumentBuilderFactory
-                .newInstance();
-        final DocumentBuilder docBuilder = dbfac.newDocumentBuilder();
-        // final Document doc =
-        // docBuilder.parse(this.getClass().getResourceAsStream(file));
         final Document doc = Jsoup.parse(file, "UTF-8");
-
         String response = null;
-        String source = doc.html();// "your html here";
+        String source = doc.html();
         HttpResponse<String> uniResponse = Unirest
                 .post("http://validator.w3.org/nu/")
                 .header("User-Agent",

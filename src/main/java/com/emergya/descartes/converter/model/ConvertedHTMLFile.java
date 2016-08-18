@@ -1,12 +1,12 @@
-package com.emergya.descartes.analyzer.model;
+package com.emergya.descartes.converter.model;
 
 import java.io.File;
 
-public class AnalyzedHTMLFile {
+public class ConvertedHTMLFile {
 
     private File localCopy;
     private String pathInContent;
-    private W3CResponse analisis;
+    private String errors;
 
     /**
      * @return the pathInContent
@@ -37,16 +37,17 @@ public class AnalyzedHTMLFile {
     }
 
     /**
-     * @return the analisis
+     * @return the errors
      */
-    public W3CResponse getAnalisis() {
-        return analisis;
+    public String getErrors() {
+        return errors;
     }
 
     /**
-     * @param analisis the analisis to set
+     * @param errors the errors to set
      */
-    public void setAnalisis(W3CResponse analisis) {
-        this.analisis = analisis;
+    public void setErrors(String errors) {
+        this.errors = errors;
     }
+
 }

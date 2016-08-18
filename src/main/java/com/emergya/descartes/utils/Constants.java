@@ -21,4 +21,13 @@ public class Constants {
     public static final String MUST_VALIDATE = "valid.must_validate";
     // Varios
     public static final String SIZE_ARRAY_BLOCKINGQUEUE = "size.array.blockingqueue";
+
+    /** The Constant FILE_HTML. */
+    public static final String FILE_HTML = "html";
+
+    /** The Constant FILE_HTM. */
+    public static final String FILE_HTM = "htm";
+
+    /** The Constant SCRIPT_DESCARTES. */
+    public static final String SCRIPT_DESCARTES = "descartes-min.js";
 }

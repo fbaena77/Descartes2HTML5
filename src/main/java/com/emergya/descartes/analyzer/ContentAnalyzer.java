@@ -17,23 +17,19 @@ import org.jsoup.nodes.Document;
 import com.emergya.descartes.analyzer.model.AnalyzedContent;
 import com.emergya.descartes.analyzer.model.AnalyzedHTMLFile;
 import com.emergya.descartes.content.DescartesContentProxy;
+import com.emergya.descartes.utils.Constants;
 
 public class ContentAnalyzer {
 
     private static Logger log = Logger.getLogger(ContentAnalyzer.class);
 
-    /** The Constant FILE_HTML. */
-    private static final String FILE_HTML = "html";
-
-    /** The Constant FILE_HTM. */
-    private static final String FILE_HTM = "htm";
-
     /**
+     * @param <T>
      * @param contentProxy
      */
-    public AnalyzedContent analyzeContent(DescartesContentProxy contentProxy) {
-
-        AnalyzedContent analyzedContent = new AnalyzedContent();
+    public <T> AnalyzedContent<T> analyzeContent(
+            DescartesContentProxy contentProxy) {
+        AnalyzedContent<T> analyzedContent = new AnalyzedContent<T>();
         analyzedContent.setContentProxy(contentProxy);
         List<AnalyzedHTMLFile> analyzedListFiles = new ArrayList<>();
 
@@ -44,7 +40,8 @@ public class ContentAnalyzer {
                         if (Files.isRegularFile(filePath)) {
                             String ext = FilenameUtils.getExtension(filePath
                                     .toString());
-                            if (ext.equals(FILE_HTML) || ext.equals(FILE_HTM)) {
+                            if (ext.equals(Constants.FILE_HTML)
+                                    || ext.equals(Constants.FILE_HTM)) {
                                 analyzedListFiles.add(analyzeHtml(filePath));
                             }
                         }
@@ -65,21 +62,21 @@ public class ContentAnalyzer {
      * @param file the file
      */
     private AnalyzedHTMLFile analyzeHtml(Path file) {
+        AnalyzedHTMLFile analyzedHTMLFile = new AnalyzedHTMLFile();
         try {
+            @SuppressWarnings("unused")
             Document doc = Jsoup.parse(file.toFile(),
                     StandardCharsets.UTF_8.displayName());
 
-            c.setValidateHtml5(checkW3C(file.getPath()));
+            analyzedHTMLFile.setPathInContent(file.getFileName().toString());
+            analyzedHTMLFile.setAnalisis(W3CValidator.validateHtml5(file
+                    .toFile()));
 
         } catch (Exception e) {
-            errorContent = e.getMessage();
-            System.out.println((file != null ? file.getAbsolutePath()
-                    : "Fichero")
-                    + ": Estructura HTML incorrecta."
-                    + e.getMessage());
-            e.printStackTrace();
+            log.error((file != null ? file.getFileName().toString() : "Fichero")
+                    + ": Estructura HTML incorrecta." + e);
         }
 
-        analizado.add(c);
+        return analyzedHTMLFile;
     }
 }

@@ -1,23 +1,18 @@
-package es.juntadeandalucia.cmaot.geoinspire.exportador.workers;
+package com.emergya.descartes.workers;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
-import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.log4j.Logger;
-import org.xml.sax.SAXException;
 
+import com.emergya.descartes.content.DescartesContentProxy;
+import com.emergya.descartes.converter.Html5FileConverter;
+import com.emergya.descartes.converter.model.ConvertedContent;
 import com.emergya.descartes.job.JobConverter;
-import com.emergya.descartes.utils.Constants;
-import com.emergya.descartes.utils.DeleteFilesInFolder;
+import com.emergya.descartes.persistence.FileManager;
+import com.emergya.descartes.persistence.OutputManager;
 
 /**
- * 
- * Prepara el entorno de trabajo para realizar el proceso de transformación
- * 
- * @author root
+ * @author fbaena
  * 
  */
 public class ConvertWorker extends BaseWorker implements Runnable {
@@ -36,127 +31,79 @@ public class ConvertWorker extends BaseWorker implements Runnable {
      */
     @Override
     public void run() {
-
-        JobConverter currentJob = getJob();
-
-        log.info("----Inicio de la transformación de metadatos----");
-
-        // Control de la carpeta de trabajo
-        File theDir = new File(currentJob.getJobConfig()
-                .getTransformTempLocalPath());
         try {
-            if (theDir.exists()) {
-                DeleteFilesInFolder.delete(theDir);
-            }
-            theDir.mkdirs();
-        } catch (Exception e) {
-            String fatalError = "No se ha podido crear la carpeta temporal de transformación de metadatos";
-            log.error(fatalError);
-            throw new Error(fatalError);
-        }
+            JobConverter currentJob = getJob();
+            log.info("----Inicio del proceso de conversión de contenidos----");
+            // Control de existencia de carpeta de trabajo
+            File resultPath = new File(currentJob.getJobConfig()
+                    .getConvertedContentPath());
 
-        while (!currentJob.isTransformQueueReadyFlag()
-                || !currentJob.getMetadatosATransformar().isEmpty()) {
-            try {
-                MetadataProxy metadataToTransform = currentJob
-                        .getMetadatosATransformar().take();
-                if (metadataToTransform != Job.STOP_QUEUE) {
-                    if (metadataToTransform != null) {
-                        try {
-                            doWork(metadataToTransform, currentJob);
-                        } catch (ParserConfigurationException e) {
-                            log.error("Ha ocurrido un error en la transformación de metadatos. "
-                                    + e.getMessage());
-                        } catch (SAXException e) {
-                            log.error("Ha ocurrido un error en la transformación de metadatos. "
-                                    + e.getMessage());
-                        }
+            if (resultPath.exists()) {
+                FileManager.deleteFilesInFolder(resultPath);
+            }
+            resultPath.mkdirs();
+
+            while (!currentJob.isConvertQueueReadyFlag()
+                    || !currentJob.getContentsToConvert().isEmpty()) {
+
+                DescartesContentProxy contentToConvert = currentJob
+                        .getContentsToConvert().take();
+
+                if (contentToConvert != JobConverter.STOP_QUEUE) {
+                    if (contentToConvert != null) {
+                        doWork(contentToConvert, currentJob);
                     }
                 } else {
-                    currentJob.getMetadatosAImportar().put(Job.STOP_QUEUE);
-                    currentJob.setTransformQueueReadyFlag(true);
-                    log.info("-->>Total Transformados: "
-                            + (currentJob.getMetadatosTransformados().size()));
-                }
-
-            } catch (InterruptedException e) {
-                log.error("Interrupción de la cola de transformación. "
-                        + e.getMessage());
-                try {
-                    currentJob.getMetadatosAImportar().put(Job.STOP_QUEUE);
-                } catch (InterruptedException e1) {
-                    log.error("error", e1);
+                    currentJob.getContentsToValidate().put(
+                            JobConverter.STOP_QUEUE);
+                    currentJob.setConvertQueueReadyFlag(true);
+                    log.info("-->>Total contenidos convertidos: "
+                            + (currentJob.getContentsConverted().size()));
                 }
             }
-        }
-    }
 
-    /**
-     * Método que realiza el trabajo de transformacion
-     * @param metadataToTransform
-     * @param job
-     * @throws InterruptedException 
-     * @throws SAXException 
-     * @throws ParserConfigurationException 
-     */
-    private void doWork(MetadataProxy metadataToTransform, Job job)
-            throws InterruptedException, ParserConfigurationException,
-            SAXException {
-
-        try {
-
-            File parentFolder = doMefDecompress(metadataToTransform, job);
-
-            // Aplicamos las transformaciones XSL
-            if (job.getJobConfig().isToTransformMEF()) {
-                aplicaXSLT(job, metadataToTransform,
-                        parentFolder.getAbsolutePath() + "/", job
-                                .getJobConfig().isToModifUUID());
-            }
-            // ¿Hay que cambiar el uuid? Parametrizable
-            /*
-             * if(job.getJobConfig().isToModifUUID()){
-             * generarUUIDMetadataXml(metadataToTransform,
-             * parentFolder.getAbsolutePath() + "/"); }
-             */
-
-            File theDir2 = new File(job.getJobConfig()
-                    .getImportAfterTransfTempLocalPath());
-            try {
-                if (!theDir2.exists()) {
-                    theDir2.mkdir();
-                }
-            } catch (Exception e) {
-                log.error(
-                        "No se ha podido crear la carpeta temporal de importación de metadatos",
-                        e);
-                job.getMetadatosAImportar().put(Job.STOP_QUEUE);
-            }
-
-            // Volvemos a comprimir el mef
-            doMefCompress(metadataToTransform);
-
-            // Asignamos el contenido del fichero al metadato a importar
-            File metadataFileCopy = new File(job.getJobConfig()
-                    .getImportAfterTransfTempLocalPath()
-                    + metadataToTransform.getUuid() + Constants._MEF);
-            metadataToTransform.setLocalCopy(metadataFileCopy);
-            job.getMetadatosAImportar().put(metadataToTransform);
-
-            // Estadistica
-            job.getMetadatosTransformados().add(metadataToTransform);
+            log.info("Contenidos que han provocado errores: "
+                    + currentJob.getContentsConvertedError().size());
 
         } catch (InterruptedException e) {
             log.error("Interrupción de la cola de transformación. "
                     + e.getMessage());
-            job.getMetadatosAImportar().put(Job.STOP_QUEUE);
-        } catch (FileNotFoundException e) {
-            log.error(
-                    "No se ha encontrado el fichero indicado" + e.getMessage(),
-                    e);
-            job.getMetadatosAImportar().put(Job.STOP_QUEUE);
-        } catch (IOException e) {
-            log.error("Tratamiento de archivos incorrecto" + e.getMessage(), e);
+            try {
+                getJob().getContentsToValidate().put(JobConverter.STOP_QUEUE);
+            } catch (InterruptedException e1) {
+                log.error("error", e1);
+            }
+        } catch (Exception e) {
+            log.error("No se ha podido crear la carpeta de conversión de contenidos");
         }
+    }
+
+    /**
+     * Método que realiza el trabajo de conversión de un contenido
+     * @param <T>
+     * @param contentToConvert
+     * @param job
+     */
+    private void doWork(DescartesContentProxy contentToConvert, JobConverter job)
+            throws InterruptedException {
+        File filesConvertedPath = new File(job.getJobConfig()
+                .getConvertedContentPath());
+
+        Html5FileConverter html5FileConverter = new Html5FileConverter();
+        ConvertedContent<?> convertedContent = html5FileConverter
+                .convertContentToHtml5(contentToConvert, filesConvertedPath);
+        log.info(">>Convirtiendo Contenido: " + contentToConvert.getTitle());
+
+        File convertedContentLogFile = new File(job.getJobConfig()
+                .getConvertedContentPath()
+                + File.separator
+                + "descartes2Html5_summary.csv");
+
+        convertedContent.setLocalCopy(convertedContentLogFile);
+        OutputManager.createLogConvertedContentCSV(convertedContent);
+        log.info(">>Conversión Summary guardado para el contenido: "
+                + contentToConvert.getTitle());
+        // Estadistica
+        job.getContentsConverted().add(contentToConvert);
     }
 }

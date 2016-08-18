@@ -17,7 +17,7 @@ import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
 
 import com.emergya.descartes.persistence.FileManager;
-import com.emergya.descartes.validator.impl.JsoupHtml5Service;
+import com.emergya.descartes.utils.Constants;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -374,7 +374,7 @@ public class Html4CustomDeprecated {
         final Elements scripts = doc.head().getElementsByTag(
                 Tag.SCRIPT.toString());
         for (Element script : scripts) {
-            if (script.attr("src").contains(JsoupHtml5Service.SCRIPT_DESCARTES)) {
+            if (script.attr("src").contains(Constants.SCRIPT_DESCARTES)) {
                 existDescartes = true;
                 break;
             }
@@ -385,21 +385,21 @@ public class Html4CustomDeprecated {
             final Element descartesJs = new Element(
                     org.jsoup.parser.Tag.valueOf(Tag.SCRIPT.toString()), "");
             descartesJs.attr("type", SCRIPT_TYPE);
-            descartesJs.attr("src", "./" + JsoupHtml5Service.SCRIPT_DESCARTES);
+            descartesJs.attr("src", "./" + Constants.SCRIPT_DESCARTES);
             doc.head().appendChild(descartesJs);
 
             final File actual = new File(doc.baseUri());
             final boolean existFile = FileManager.exist(actual.getParent(),
-                    JsoupHtml5Service.SCRIPT_DESCARTES);
+                    Constants.SCRIPT_DESCARTES);
 
             /** Añadir el fichero de descartes si no existe*/
             if (!existFile) {
                 try {
-                    FileManager.copy(
-                            Html4CustomDeprecated.class.getResource(
-                                    "/" + JsoupHtml5Service.SCRIPT_DESCARTES)
-                                    .getPath(), actual.getParent(),
-                            JsoupHtml5Service.SCRIPT_DESCARTES);
+                    FileManager
+                            .copy(Html4CustomDeprecated.class.getResource(
+                                    "/" + Constants.SCRIPT_DESCARTES).getPath(),
+                                    actual.getParent(),
+                                    Constants.SCRIPT_DESCARTES);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

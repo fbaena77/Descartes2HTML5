@@ -1,15 +1,19 @@
-package es.juntadeandalucia.cmaot.geoinspire.exportador.workers;
+package com.emergya.descartes.workers;
+
+import java.io.File;
 
 import org.apache.log4j.Logger;
 
+import com.emergya.descartes.analyzer.ContentAnalyzer;
+import com.emergya.descartes.analyzer.model.AnalyzedContent;
+import com.emergya.descartes.content.DescartesContentProxy;
 import com.emergya.descartes.job.JobConverter;
+import com.emergya.descartes.persistence.FileManager;
+import com.emergya.descartes.persistence.OutputManager;
 
 /**
  * 
- * Prepara el entorno de trabajo para realizar el proceso de exportacion.
- * Se basa en el uso del servicio xml.search de Geonetwork.
- *   
- * @author root
+ * @author fbaena
  *
  */
 public class ValidateWorker extends BaseWorker implements Runnable {
@@ -24,73 +28,69 @@ public class ValidateWorker extends BaseWorker implements Runnable {
     }
 
     /**
-    * Realiza el proceso de procesamiento de metadatos
-    * @author Federico Baena (Fujitsu)
+    * Realiza el proceso de validación de los html de los contenidos por la W3C
     */
     @Override
     public void run() {
         try {
-
             JobConverter currentJob = getJob();
-            connection = currentJob.getJobConfig().getPoolGNDestino()
-                    .getConnectionThreadSafe();
+            log.info("----Inicio de la validación final de contenidos----");
+            // Control de existencia de carpeta de trabajo
+            File resultPath = new File(currentJob.getJobConfig()
+                    .getValidationResultPath());
+            try {
+                if (resultPath.exists()) {
+                    FileManager.deleteFilesInFolder(resultPath);
+                }
+                resultPath.mkdirs();
+            } catch (Exception e) {
+                log.error("No se ha podido crear la carpeta temporal de validación de contenidos");
+            }
 
-            while (!currentJob.isProcessQueueReadyFlag()
-                    || !currentJob.getMetadatosAProcesar().isEmpty()) {
+            while (!currentJob.isValidateQueueReadyFlag()
+                    || !currentJob.getContentsToValidate().isEmpty()) {
 
-                MetadataProxy metadataToProcess = currentJob
-                        .getMetadatosAProcesar().take();
+                DescartesContentProxy contentToValidate = currentJob
+                        .getContentsToValidate().take();
 
-                if (metadataToProcess != Job.STOP_QUEUE) {
-                    if (metadataToProcess != null) {
-                        doWork(metadataToProcess, currentJob);
+                if (contentToValidate != JobConverter.STOP_QUEUE) {
+                    if (contentToValidate != null) {
+                        doWork(contentToValidate, currentJob);
                     }
                 } else {
-                    log.info("-->>Total Privilegios Procesados en el GN en "
-                            + currentJob.getServerDestino().getHost() + ": "
-                            + currentJob.getMetadatosProcesados().size());
-                    log.info("****Procesamiento de datos finalizado****");
-                    currentJob.setProcessQueueReadyFlag(true);
+                    log.info("-->>Total Validados: "
+                            + (currentJob.getContentsValidate().size()));
+                    log.info("****Proceso de Validación Finalizado****");
+                    currentJob.setValidateQueueReadyFlag(true);
                 }
             }
 
         } catch (InterruptedException e) {
             log.error("Problema de Interrupción. " + e.getMessage(), e);
-        } catch (GnNotAvailableConnectionException e) {
-            log.error(
-                    "Conexión destino no disponible en este instante. "
-                            + e.getMessage(), e);
         }
     }
 
     /**
-     * Método que realiza el trabajo de procesamiento
-     * 
+     * Método que realiza el trabajo de validación
      */
-    private void doWork(MetadataProxy metadataToProcess, Job job) {
-        PrivilegesRequest privilReq = new PrivilegesRequest(
-                metadataToProcess.getUuid(), job.getJobConfig()
-                        .getPrivilegesToProcess());
-        try {
-            PrivilegesResponse privilResp = (PrivilegesResponse) connection
-                    .exec(privilReq);
+    private void doWork(DescartesContentProxy contentToValidate,
+            JobConverter job) {
 
-            if (privilResp != null) {
-                // Info estadística
-                job.getMetadatosProcesados().add(metadataToProcess);
-                log.info(">>Modificados Privilegios al metadato: "
-                        + metadataToProcess.getUuid());
-            }
+        ContentAnalyzer contentAnalyzer = new ContentAnalyzer();
+        AnalyzedContent<?> analyzedContent = contentAnalyzer
+                .analyzeContent(contentToValidate);
+        log.info(">>Validando Contenido: " + contentToValidate.getTitle());
 
-        } catch (GnNotAuthorizedConnectionException e) {
-            log.error(
-                    "No autorizado para la conexión destino en este instante. "
-                            + e.getMessage(), e);
-        } catch (GnRequestException e) {
-            log.error("[Error]" + e.getMessage(), e);
-        } catch (NullPointerException e) {
-            // FIXME Revisar este nullpointer
-            log.warn("El Dato con uuid :" + e + " ya existe", e);
-        }
+        File validatedContentFile = new File(job.getJobConfig()
+                .getValidationResultPath()
+                + File.separator
+                + contentToValidate.getTitle() + "_W3CResult.csv");
+        analyzedContent.setLocalCopy(validatedContentFile);
+        OutputManager.createAnalizedContentCSV(analyzedContent);
+        log.info(">>Validación guardada para el contenido: "
+                + contentToValidate.getTitle());
+
+        // Info estadística
+        job.getContentsValidate().add(contentToValidate);
     }
 }

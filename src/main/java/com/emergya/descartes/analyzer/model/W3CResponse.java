@@ -21,6 +21,91 @@ public class W3CResponse {
     /** The solution. */
     private String solution;
 
+    /** The extract. */
+    private String extract;
+
+    /** The first line. */
+    private String firstLine;
+
+    /** The first column. */
+    private String firstColumn;
+
+    /** The last line. */
+    private String lastLine;
+
+    /** The last column. */
+    private String lastColumn;
+
+    /**
+     * @return the extract
+     */
+    public String getExtract() {
+        return extract;
+    }
+
+    /**
+     * @param extract the extract to set
+     */
+    public void setExtract(String extract) {
+        this.extract = extract;
+    }
+
+    /**
+     * @return the firstLine
+     */
+    public String getFirstLine() {
+        return firstLine;
+    }
+
+    /**
+     * @param firstLine the firstLine to set
+     */
+    public void setFirstLine(String firstLine) {
+        this.firstLine = firstLine;
+    }
+
+    /**
+     * @return the firstColumn
+     */
+    public String getFirstColumn() {
+        return firstColumn;
+    }
+
+    /**
+     * @param firstColumn the firstColumn to set
+     */
+    public void setFirstColumn(String firstColumn) {
+        this.firstColumn = firstColumn;
+    }
+
+    /**
+     * @return the lastLine
+     */
+    public String getLastLine() {
+        return lastLine;
+    }
+
+    /**
+     * @param lastLine the lastLine to set
+     */
+    public void setLastLine(String lastLine) {
+        this.lastLine = lastLine;
+    }
+
+    /**
+     * @return the lastColumn
+     */
+    public String getLastColumn() {
+        return lastColumn;
+    }
+
+    /**
+     * @param lastColumn the lastColumn to set
+     */
+    public void setLastColumn(String lastColumn) {
+        this.lastColumn = lastColumn;
+    }
+
     public Long getId() {
         return id;
     }

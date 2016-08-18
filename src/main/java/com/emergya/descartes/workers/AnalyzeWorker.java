@@ -4,18 +4,18 @@ import java.io.File;
 
 import org.apache.log4j.Logger;
 
+import com.emergya.descartes.analyzer.ContentAnalyzer;
+import com.emergya.descartes.analyzer.model.AnalyzedContent;
 import com.emergya.descartes.content.DescartesContentProxy;
 import com.emergya.descartes.content.ZipContent;
 import com.emergya.descartes.job.JobConverter;
-import com.emergya.descartes.utils.DeleteFilesInFolder;
+import com.emergya.descartes.persistence.FileManager;
+import com.emergya.descartes.persistence.OutputManager;
 import com.emergya.descartes.utils.ZipUtils;
 
 /**
  * 
- * Prepara el entorno de trabajo para realizar el proceso de exportacion. Se
- * basa en el uso del servicio mef.export de Geonetwork.
- * 
- * @author root
+ * @author fbaena
  * 
  */
 public class AnalyzeWorker extends BaseWorker implements Runnable {
@@ -38,18 +38,15 @@ public class AnalyzeWorker extends BaseWorker implements Runnable {
     public void run() {
         try {
             JobConverter currentJob = getJob();
-
+            log.info("----Inicio del análisis de contenidos----");
             // Control de existencia de carpeta de trabajo
             File resultPath = new File(currentJob.getJobConfig()
-                    .getValidationResultPath());
-            try {
-                if (resultPath.exists()) {
-                    DeleteFilesInFolder.delete(resultPath);
-                }
-                resultPath.mkdirs();
-            } catch (Exception e) {
-                log.error("No se ha podido crear la carpeta temporal de análisis de contenidos");
+                    .getAnalysisResultPath());
+
+            if (resultPath.exists()) {
+                FileManager.deleteFilesInFolder(resultPath);
             }
+            resultPath.mkdirs();
 
             boolean toConvert2HTML5 = currentJob.getJobConfig()
                     .isToConvert2HTML5();
@@ -92,6 +89,8 @@ public class AnalyzeWorker extends BaseWorker implements Runnable {
                 log.error("Interrupción de la cola de análisis. "
                         + e1.getMessage());
             }
+        } catch (Exception e) {
+            log.error("No se ha podido crear la carpeta temporal de análisis de contenidos");
         }
     }
 
@@ -107,9 +106,20 @@ public class AnalyzeWorker extends BaseWorker implements Runnable {
         contentProxy.setLocalCopy(contentFolder);
         contentProxy.setTitle(zipContent.getFileName());
 
-        // TODO analizar
-
+        ContentAnalyzer contentAnalyzer = new ContentAnalyzer();
+        AnalyzedContent<?> analyzedContent = contentAnalyzer
+                .analyzeContent(contentProxy);
         log.info(">>Analizando Contenido: " + zipContent.getFileName());
+
+        File analyzedContentFile = new File(job.getJobConfig()
+                .getAnalysisResultPath()
+                + File.separator
+                + contentProxy.getTitle() + "_W3CResult.csv");
+        analyzedContent.setLocalCopy(analyzedContentFile);
+        OutputManager.createAnalizedContentCSV(analyzedContent);
+        log.info(">>Análisis guardado para el contenido: "
+                + zipContent.getFileName());
+
         // Info estadística
         job.getContentsAnalyzed().add(zipContent);
         return contentProxy;

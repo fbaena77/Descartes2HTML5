@@ -1,4 +1,4 @@
-package com.emergya.descartes.analyzer.model;
+package com.emergya.descartes.converter.model;
 
 import java.io.File;
 import java.util.Iterator;
@@ -7,14 +7,18 @@ import java.util.List;
 import com.emergya.descartes.content.DescartesContentProxy;
 import com.emergya.descartes.content.DescartesContentType;
 
-public class AnalyzedContent<T> implements Iterable<T> {
+public class ConvertedContent<T> implements Iterable<T> {
 
     private DescartesContentProxy contentProxy;
     private File localCopy;
     private Double totalSize;
     private DescartesContentType typeContent = DescartesContentType.mef10;
-    private List<AnalyzedHTMLFile> analyzedListFiles;
-    private String errors;
+    private List<ConvertedHTMLFile> convertedListFiles;
+
+    @Override
+    public Iterator<T> iterator() {
+        return null;
+    }
 
     /**
      * @return the contentProxy
@@ -59,37 +63,17 @@ public class AnalyzedContent<T> implements Iterable<T> {
     }
 
     /**
-     * @return the errors
+     * @return the convertedListFiles
      */
-    public String getErrors() {
-        return errors;
+    public List<ConvertedHTMLFile> getConvertedListFiles() {
+        return convertedListFiles;
     }
 
     /**
-     * @param errors the errors to set
+     * @param convertedListFiles the convertedListFiles to set
      */
-    public void setErrors(String errors) {
-        this.errors = errors;
-    }
-
-    /**
-     * @return the analyzedListFiles
-     */
-    public List<AnalyzedHTMLFile> getAnalyzedListFiles() {
-        return analyzedListFiles;
-    }
-
-    /**
-     * @param analyzedListFiles the analyzedListFiles to set
-     */
-    public void setAnalyzedListFiles(List<AnalyzedHTMLFile> analyzedListFiles) {
-        this.analyzedListFiles = analyzedListFiles;
-    }
-
-    @Override
-    public Iterator<T> iterator() {
-        // TODO Auto-generated method stub
-        return null;
+    public void setConvertedListFiles(List<ConvertedHTMLFile> convertedListFiles) {
+        this.convertedListFiles = convertedListFiles;
     }
 
     /**

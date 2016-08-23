@@ -1,0 +1,18 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Start tag seen without seeing a doctype first. Expected e.g. “<!DOCTYPE html>”.;;1;1;6;<html> <hea
+error;Internal encoding declaration “windows-1252” disagrees with the actual encoding of the document (“utf-8”).;;3;3;76;<head>   <meta http-equiv=""Content-Type"" content=""text/html; charset=windows-1252"">   <t
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;9;21;p></p>   <p align=""justify"">El tra
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;10;47;. </p>   <p style=""text-align: center"" align=""center""> <img 
+info;The “border” attribute is obsolete. Consider specifying “img { border: 0; }” in CSS instead.;;49;10;150;""center""> <img border=""0"" src=""macanals.jpg"" alt=""Mar�a Antonia"" title=""Mar�a Antonia"" width=""480"" height=""360""></p> 
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;11;21;""></p>   <p align=""justify"">Uno de
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;12;21;. </p>   <p align=""justify"">Seis a
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;13;21;o.</p>   <p align=""justify""> En 19
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;14;21;. </p>   <p align=""justify""> Como 
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;15;21;. </p>   <p align=""justify"">Deja T
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;16;21;. </p>   <p align=""justify"">Parale
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;17;21;. </p>   <p align=""justify"">Uno de
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;18;21;s.</p>   <p align=""justify""> Su ta
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;19;21;).</p>   <p align=""justify""> Desde
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;20;21;. </p>   <p align=""justify""><br>So
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;21;20;ia.</p>  <p align=""center"">Granad
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;22;19; 7</p>   <p align=""right"">Fuente

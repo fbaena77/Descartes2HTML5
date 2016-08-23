@@ -1,0 +1,41 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Almost standards mode doctype. Expected e.g. “<!DOCTYPE html>”.;;1;1;121;<!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.0 Transitional//EN"" ""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd""><html
+error;Internal encoding declaration “iso-8859-2” disagrees with the actual encoding of the document (“utf-8”).;;3;4;74;<head>   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-2"">   <t
+error;Attribute “height” not allowed on element “table” at this point.;;3;42;113;p;</p>   <table width=""624"" height=""444"" border=""0"" align=""center"" cellspacing=""0"" background=""img/fondo_canals_D4.png"">    <
+error;Attribute “background” not allowed on element “table” at this point.;;3;42;113;p;</p>   <table width=""624"" height=""444"" border=""0"" align=""center"" cellspacing=""0"" background=""img/fondo_canals_D4.png"">    <
+error;The “width” attribute on the “table” element is obsolete. Use CSS instead.;;3;42;113;p;</p>   <table width=""624"" height=""444"" border=""0"" align=""center"" cellspacing=""0"" background=""img/fondo_canals_D4.png"">    <
+error;The “align” attribute on the “table” element is obsolete. Use CSS instead.;;3;42;113;p;</p>   <table width=""624"" height=""444"" border=""0"" align=""center"" cellspacing=""0"" background=""img/fondo_canals_D4.png"">    <
+error;The “cellspacing” attribute on the “table” element is obsolete. Use CSS instead.;;3;42;113;p;</p>   <table width=""624"" height=""444"" border=""0"" align=""center"" cellspacing=""0"" background=""img/fondo_canals_D4.png"">    <
+error;The “border” attribute on the “table” element is obsolete. Use CSS instead.;;3;42;113;p;</p>   <table width=""624"" height=""444"" border=""0"" align=""center"" cellspacing=""0"" background=""img/fondo_canals_D4.png"">    <
+error;The “height” attribute on the “td” element is obsolete. Use CSS instead.;44;9;45;34;>    <tr>      <td height=""100"" colspan=""5""><p>&nb
+error;The “width” attribute on the “table” element is obsolete. Use CSS instead.;;7;46;81;p>       <table width=""0"" border=""0"" align=""center"" cellpadding=""0"" cellspacing=""0"">     
+error;The “align” attribute on the “table” element is obsolete. Use CSS instead.;;7;46;81;p>       <table width=""0"" border=""0"" align=""center"" cellpadding=""0"" cellspacing=""0"">     
+error;The “cellpadding” attribute on the “table” element is obsolete. Use CSS instead.;;7;46;81;p>       <table width=""0"" border=""0"" align=""center"" cellpadding=""0"" cellspacing=""0"">     
+error;The “cellspacing” attribute on the “table” element is obsolete. Use CSS instead.;;7;46;81;p>       <table width=""0"" border=""0"" align=""center"" cellpadding=""0"" cellspacing=""0"">     
+error;The “border” attribute on the “table” element is obsolete. Use CSS instead.;;7;46;81;p>       <table width=""0"" border=""0"" align=""center"" cellpadding=""0"" cellspacing=""0"">     
+error;The “height” attribute on the “td” element is obsolete. Use CSS instead.;49;9;50;33;     <tr>      <td height=""10"" colspan=""5""><p ali
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;34;50;51;lspan=""5""><p align=""center"">&nbsp;
+error;The “width” attribute on the “td” element is obsolete. Use CSS instead.;52;9;53;32;     <tr>      <td width=""25"" rowspan=""4"">&nbsp;
+error;The “width” attribute on the “td” element is obsolete. Use CSS instead.;53;44;54;20;nbsp;</td>      <td width=""90"">&nbsp;
+error;The “width” attribute on the “td” element is obsolete. Use CSS instead.;54;32;55;21;nbsp;</td>      <td width=""467"">     
+error;The “align” attribute on the “div” element is obsolete. Use CSS instead.;;7;56;26;7"">      <div align=""center"">     
+error;The “width” attribute on the “td” element is obsolete. Use CSS instead.;58;18;59;32;/div></td>      <td width=""17"" rowspan=""3"">&nbsp;
+error;The “width” attribute on the “td” element is obsolete. Use CSS instead.;59;44;60;45;nbsp;</td>      <td width=""15"" height=""100"" rowspan=""4"">&nbsp;
+error;The “height” attribute on the “td” element is obsolete. Use CSS instead.;59;44;60;45;nbsp;</td>      <td width=""15"" height=""100"" rowspan=""4"">&nbsp;
+error;The “width” attribute on the “td” element is obsolete. Use CSS instead.;62;9;63;32;     <tr>      <td width=""90"" rowspan=""2""><a hre
+info;The “border” attribute is obsolete. Consider specifying “img { border: 0; }” in CSS instead.;;45;63;326; href=""#""><img src=""img/CP01.png"" alt=""Visualizar"" title=""Visualizar"" width=""85"" height=""70"" border=""0"" onclick=""MM_callJS('window.open(\'index.html\', \'_Ventana_Canals_\',\'top=30,left=100,width=835,height=600,toolbar=0,menubar=0,scrollbars=1,resizable=1,location=0,status=0\');void(0);')""></a></
+error;The “align” attribute on the “div” element is obsolete. Use CSS instead.;;7;65;43;td>      <div align=""center"" class=""Estilo15"">     
+error;The “align” attribute on the “div” element is obsolete. Use CSS instead.;;7;71;26;td>      <div align=""center"">     
+error;The “height” attribute on the “td” element is obsolete. Use CSS instead.;78;;79;21;nbsp;</td>      <td height=""50"">     
+error;The “align” attribute on the “div” element is obsolete. Use CSS instead.;;7;80;26;0"">      <div align=""center"">     
+info;The “border” attribute is obsolete. Consider specifying “img { border: 0; }” in CSS instead.;;42;81;329; href=""#""><img src=""img/visualizar.png"" alt=""Visualizar"" width=""20"" height=""20"" border=""0"" title=""Visualizar"" onclick=""MM_callJS('window.open(\'index.html\', \'_Ventana_Canals_\',\'top=30,left=100,width=835,height=600,toolbar=0,menubar=0,scrollbars=1,resizable=1,location=0,status=0\');void(0);')""></a><b
+error;The “width” attribute on the “td” element is obsolete. Use CSS instead.;82;18;83;20;/div></td>      <td width=""17"">&nbsp;
+error;The “height” attribute on the “td” element is obsolete. Use CSS instead.;85;9;86;33;     <tr>      <td height=""10"" colspan=""5"">&nbsp;
+error;The “height” attribute on the “td” element is obsolete. Use CSS instead.;88;9;89;22;     <tr>      <td height=""100"">&nbsp;
+error;The “height” attribute on the “td” element is obsolete. Use CSS instead.;89;34;90;22;nbsp;</td>      <td height=""100"">&nbsp;
+error;The “height” attribute on the “td” element is obsolete. Use CSS instead.;90;34;91;22;nbsp;</td>      <td height=""100""><p cla
+error;The “font” element is obsolete. Use CSS instead.;;43;91;93;Estilo13""><font face=""Verdana, Arial, Helvetica, sans-serif"">Autor:
+error;The “font” element is obsolete. Use CSS instead.;;184;91;234;Estilo14""><font face=""Verdana, Arial, Helvetica, sans-serif"">© Mini
+error;The “height” attribute on the “td” element is obsolete. Use CSS instead.;91;312;92;22;></p></td>      <td height=""100"">&nbsp;
+error;The “height” attribute on the “td” element is obsolete. Use CSS instead.;92;34;93;22;nbsp;</td>      <td height=""100"">&nbsp;
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;97;20;table>   <p align=""center"">&nbsp;

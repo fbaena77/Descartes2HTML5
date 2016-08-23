@@ -1,0 +1,3 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Almost standards mode doctype. Expected e.g. “<!DOCTYPE html>”.;;1;1;121;<!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.0 Transitional//EN"" ""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd""><html
+info;The “language” attribute on the “script” element is obsolete. You can safely omit it.;;3;6;60;/css"">   <script language=""javascript"" src=""./javascript/utils.js""></scri

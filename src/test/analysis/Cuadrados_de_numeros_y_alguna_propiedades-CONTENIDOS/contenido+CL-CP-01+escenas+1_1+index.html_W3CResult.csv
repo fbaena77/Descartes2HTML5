@@ -1,0 +1,7 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Start tag seen without seeing a doctype first. Expected e.g. “<!DOCTYPE html>”.;;1;1;6;<html> <hea
+error;The “bgcolor” attribute on the “body” element is obsolete. Use CSS instead.;;2;13;24;</head>  <body bgcolor=""ffffff"">   <p
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;3;14;18;ffff"">   <p align=""left"">    <
+error;Attribute “mayscript” not allowed on element “applet” at this point.;;4;15;181;eft"">    <applet width=""790"" height=""500"" code=""descinst.Descartes.class"" codebase=""./"" archive=""descinst.jar,http://recursostic.educacion.es/descartes/web/plugin/descinst.jar"" mayscript>     
+error;The “applet” element is obsolete. Use the “object” element instead.;;4;15;181;eft"">    <applet width=""790"" height=""500"" code=""descinst.Descartes.class"" codebase=""./"" archive=""descinst.jar,http://recursostic.educacion.es/descartes/web/plugin/descinst.jar"" mayscript>     
+error;The “font” element is obsolete. Use CSS instead.;;5;52;32;í'"">     <font face=""Arial"" size=""3"">Esta u

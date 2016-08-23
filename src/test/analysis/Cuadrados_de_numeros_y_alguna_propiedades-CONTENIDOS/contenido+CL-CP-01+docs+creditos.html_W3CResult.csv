@@ -1,0 +1,37 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Start tag seen without seeing a doctype first. Expected e.g. “<!DOCTYPE html>”.;;1;1;6;<html> <hea
+error;Using the “meta” element to specify the document-wide default language is obsolete. Consider specifying the language on the root element instead.;;3;3;51;<head>   <meta http-equiv=""Content-Language"" content=""es"">   <m
+error;Internal encoding declaration “windows-1252” disagrees with the actual encoding of the document (“utf-8”).;;3;4;76;=""es"">   <meta http-equiv=""Content-Type"" content=""text/html; charset=windows-1252"">   <t
+error;The “bgcolor” attribute on the “body” element is obsolete. Use CSS instead.;;2;7;64;</head>  <body bgcolor=""#ffffff"" background=""img_creditos/fon-home.jpg"">   <t
+error;The “background” attribute on the “body” element is obsolete. Use CSS instead.;;2;7;64;</head>  <body bgcolor=""#ffffff"" background=""img_creditos/fon-home.jpg"">   <t
+error;The “width” attribute on the “table” element is obsolete. Use CSS instead.;;3;8;66;.jpg"">   <table border=""0"" width=""650"" cellpadding=""3"" bgcolor=""#ffffff"">    <
+error;The “cellpadding” attribute on the “table” element is obsolete. Use CSS instead.;;3;8;66;.jpg"">   <table border=""0"" width=""650"" cellpadding=""3"" bgcolor=""#ffffff"">    <
+error;The “bgcolor” attribute on the “table” element is obsolete. Use CSS instead.;;3;8;66;.jpg"">   <table border=""0"" width=""650"" cellpadding=""3"" bgcolor=""#ffffff"">    <
+error;The “border” attribute on the “table” element is obsolete. Use CSS instead.;;3;8;66;.jpg"">   <table border=""0"" width=""650"" cellpadding=""3"" bgcolor=""#ffffff"">    <
+error;The “width” attribute on the “td” element is obsolete. Use CSS instead.;10;9;11;21;>    <tr>      <td width=""425""> <a ti
+error;An “img” element must have an “alt” attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.;;163;11;236;da.html""> <img border=""0"" src=""img_creditos/ministerio.jpg"" width=""425"" height=""60""></a></
+info;The “border” attribute is obsolete. Consider specifying “img { border: 0; }” in CSS instead.;;163;11;236;da.html""> <img border=""0"" src=""img_creditos/ministerio.jpg"" width=""425"" height=""60""></a></
+error;The “width” attribute on the “td” element is obsolete. Use CSS instead.;11;246;12;20;></a></td>      <td width=""94""> <a ti
+error;An “img” element must have an “alt” attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.;;159;12;224;ion.es/""> <img border=""0"" src=""img_creditos/ite.jpg"" width=""94"" height=""32""></a></
+info;The “border” attribute is obsolete. Consider specifying “img { border: 0; }” in CSS instead.;;159;12;224;ion.es/""> <img border=""0"" src=""img_creditos/ite.jpg"" width=""94"" height=""32""></a></
+error;An “img” element must have an “alt” attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.;;108;13;180;cartes/""> <img border=""0"" src=""img_creditos/Descartes.jpg"" width=""131"" height=""60""></a></
+info;The “border” attribute is obsolete. Consider specifying “img { border: 0; }” in CSS instead.;;108;13;180;cartes/""> <img border=""0"" src=""img_creditos/Descartes.jpg"" width=""131"" height=""60""></a></
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;23;16;40;span=""3""> <p align=""center""><b> <f
+error;The “font” element is obsolete. Use CSS instead.;;45;16;120;nter""><b> <font face=""Verdana, Arial, Helvetica, sans-serif"" size=""2"" color=""#666699""> Direc
+error;The “font” element is obsolete. Use CSS instead.;;139;16;198;/font></b><font face=""Verdana, Arial, Helvetica, sans-serif"" size=""2""><b><fo
+error;The “font” element is obsolete. Use CSS instead.;;202;16;223;ze=""2""><b><font color=""#666699"">ión: <
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;23;19;41;span=""3""> <p align=""justify""><b> <f
+error;The “font” element is obsolete. Use CSS instead.;;46;19;121;tify""><b> <font face=""Verdana, Arial, Helvetica, sans-serif"" size=""2"" color=""#666699"">Edic</
+error;The “font” element is obsolete. Use CSS instead.;;137;19;196;/font></b><font face=""Verdana, Arial, Helvetica, sans-serif"" size=""2""><b><fo
+error;The “font” element is obsolete. Use CSS instead.;;200;19;221;ze=""2""><b><font color=""#666699"">ión: <
+error;The “font” element is obsolete. Use CSS instead.;;26;22;85;n=""3""> <p><font face=""Verdana, Arial, Helvetica, sans-serif"" size=""2""><b> <f
+error;The “font” element is obsolete. Use CSS instead.;;90;22;111;e=""2""><b> <font color=""#666699"">Autor 
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;23;25;41;span=""3""> <p align=""justify""><b> <f
+error;The “font” element is obsolete. Use CSS instead.;;46;25;121;tify""><b> <font face=""Verdana, Arial, Helvetica, sans-serif"" size=""2"" color=""#666699""> Conte
+error;The “font” element is obsolete. Use CSS instead.;;143;25;202;/font></b><font face=""Verdana, Arial, Helvetica, sans-serif"" size=""2""><b><fo
+error;The “font” element is obsolete. Use CSS instead.;;206;25;227;ze=""2""><b><font color=""#666699"">: </fo
+error;The “font” element is obsolete. Use CSS instead.;;27;28;102;=""3""> <b> <font face=""Verdana, Arial, Helvetica, sans-serif"" size=""2"" color=""#666699""> Diseñ
+error;The “font” element is obsolete. Use CSS instead.;;144;28;203;/font></b><font face=""Verdana, Arial, Helvetica, sans-serif"" size=""2""><font 
+error;The “font” element is obsolete. Use CSS instead.;;204;28;225; size=""2""><font color=""#666699""><b>: <
+error;The “align” attribute on the “p” element is obsolete. Use CSS instead.;;45;32;62;mmons --> <p align=""center""><a rel
+info;The “border” attribute is obsolete. Consider specifying “img { border: 0; }” in CSS instead.;;140;32;216;/2.5/es/""><img alt=""Licencia de Creative Commons"" src=""img_creditos/cc.jpg"" border=""0""></a></

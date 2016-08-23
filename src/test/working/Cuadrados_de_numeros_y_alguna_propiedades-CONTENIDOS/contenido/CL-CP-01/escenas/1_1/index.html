@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>TITULO</title>
+<style>
+		*{
+		border:0;
+		margin:0;
+		padding:0;
+		}
+	</style>
+<script type="text/javascript" src="./descartes-min.js"></script></head>
+<body BGCOLOR="ffffff">
+
+<p align="left">
+<applet width=790 height=500
+        code="descinst.Descartes.class"
+        codebase="./"
+        archive="descinst.jar,http://recursostic.educacion.es/descartes/web/plugin/descinst.jar"
+        MAYSCRIPT>
+   <param name="tama&ntilde;o" value="790x500">
+   <param name="sonido" value="s&iacute;">
+   <param name="&aacute;lgebra" value="s&iacute;">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="s&iacute;">
+   <param name="Versi&oacute;n" value="4.41, 2010-12-16">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=no limpiar=no">
+   <param name="E_00" value="tipo='R2' id='E1' fijo='s&iacute;' escala='25' O.x='-220' O.y='-50' despl_imagen='arr-izq' fondo='blanco' red='grisClaro' red10='no' ejes='no' texto='no'">
+   <param name="C_00" value="id='n' tipo='num&eacute;rico' regi&oacute;n='interior' espacio='E1' nombre='Lado del cuadrado' expresi&oacute;n='(10,80,230,30)' valor='1' incr='1' min='1' max='10' decimales='0' fijo='s&iacute;' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_01" value="id='m' tipo='num&eacute;rico' regi&oacute;n='interior' espacio='E1' nombre='Cuadrados de lado' expresi&oacute;n='(10,140,230,30)' valor='1' incr='1' min='1' max='n' decimales='0' fijo='s&iacute;' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='n&gt;1' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_02" value="id='n3' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' nombre='Algunas preguntas' expresi&oacute;n='(20,460,180,30)' fijo='s&iacute;' visible='s&iacute;' color='amarillo' color-int='negro' negrita='s&iacute;' fuente puntos='18' acci&oacute;n='calcular' par&aacute;metro='otra=1\nn2=ent(rnd*7)+3\nm2=ent(rnd*4)+1\nm2=(m2&gt;n2)?n2:m2\nmta=1\nrta=0\n\n' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='otra=0' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_03" value="id='n4' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' nombre='Otra pregunta' expresi&oacute;n='(20,460,180,30)' fijo='s&iacute;' visible='s&iacute;' color='amarillo' color-int='negro' negrita='s&iacute;' fuente puntos='18' acci&oacute;n='calcular' par&aacute;metro='otra=1\nn2=ent(rnd*7)+3\nm2=ent(rnd*4)+1\nm2=(m2&gt;n2)?n2:m2\nmta=1\nrta=0\n' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='otra&gt;0' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_04" value="id='n5' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' nombre='Verdadero' expresi&oacute;n='(320,375,100,25)' fijo='s&iacute;' visible='s&iacute;' color='ff7700' color-int='azul' negrita='s&iacute;' fuente puntos='18' acci&oacute;n='calcular' par&aacute;metro='rta=1\nmta=0' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='otra&gt;0' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_05" value="id='n6' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' nombre='Falso' expresi&oacute;n='(430,375,100,25)' fijo='s&iacute;' visible='s&iacute;' color='ff7700' color-int='azul' negrita='s&iacute;' fuente puntos='18' acci&oacute;n='calcular' par&aacute;metro='rta=2\nmta=0' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='otra&gt;0' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="A_00" value="id='INICIO' algoritmo='s&iacute;' evaluar='una-sola-vez'">
+   <param name="A_01" value="id='CALCULOS' algoritmo='s&iacute;' evaluar='siempre'">
+   <param name="A_02" value="id='h' constante='s&iacute;' expresi&oacute;n='0' evaluar='una-sola-vez'">
+   <param name="A_03" value="id='k' constante='s&iacute;' expresi&oacute;n='0' evaluar='una-sola-vez'">
+   <param name="A_04" value="id='a5' algoritmo='s&iacute;' evaluar='siempre' hacer='pasos=(m=0)?0:ent(n/m);sw=(n=pasos*m)?1:0;pasos2=(m2=0)?0:ent(n2/m2);sw2=(n2=pasos2*m2)?1:0;'">
+   <param name="G_00" value="espacio='E1' tipo='pol&iacute;gono' color='gris' dibujar-si='n&gt;1' expresi&oacute;n='(h+n+1,k)(h+n+1,k-n)(h+n+n+1,k-n)(h+n+n+1,k)(h+n+1,k)' relleno='ff6000' ancho='2'">
+   <param name="G_01" value="espacio='E1' tipo='pol&iacute;gono' color='00f000' expresi&oacute;n='(h,k)(h,k-n)(h+n,k-n)(h+n,k)(h,k)' relleno='009000' ancho='2'">
+   <param name="G_02" value="espacio='E1' tipo='segmento' color='grisClaro' dibujar-si='(n&gt;1)&amp;(sw=1)' expresi&oacute;n='(h+n+n+1,s)(h+n+1,s)' familia='s' s.intervalo='[0,-n]' s.pasos='pasos' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='0' ancho='1.5'">
+   <param name="G_03" value="espacio='E1' tipo='segmento' color='grisClaro' dibujar-si='(n&gt;1)&amp;(sw=1)' expresi&oacute;n='(s+n+1,k)(s+n+1,k-n)' familia='s' s.intervalo='[0,n]' s.pasos='pasos' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='0' ancho='1.5'">
+   <param name="G_04" value="espacio='E1' tipo='texto' expresi&oacute;n='[11,16]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red32\green48\blue58;}\f1\fs48\b\cf0 Para empezar, debes escoger\par un cuadrado con lado mayor a 1\cf1\fs24\b0}' fuente='Arial Negrita,BOLD,24' fijo='s&iacute;'">
+   <param name="G_05" value="espacio='E1' tipo='texto' expresi&oacute;n='[10,16]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red255\green0\blue0;\red32\green48\blue58;}\f1\fs48\b\cf0 Para empezar, debes escoger\par un cuadrado con lado mayor a 1\cf1\fs24\b0}' fuente='Arial Negrita,BOLD,24' fijo='s&iacute;'">
+   <param name="G_06" value="espacio='E1' tipo='texto' dibujar-si='n&gt;1' expresi&oacute;n='[250,86]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red0\green141\blue0;\red32\green48\blue58;}\f1\fs44\b\cf0 Cuadrado de \u225 rea igual a {\*\mjaformula\cf1{\expr n*n\decimals 0\fixed1}\cf0} unidades cuadradas\cf2\fs24\b0}' fuente='Arial Negrita,BOLD,22' fijo='s&iacute;'">
+   <param name="G_07" value="espacio='E1' tipo='texto' dibujar-si='(sw=1)&amp;(m=1)' expresi&oacute;n='[250,140]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red0\green141\blue0;\red32\green48\blue58;}\f1\fs44\b\cf0 Un cuadrado de lado {\*\mjaformula\cf1{\expr n\decimals 0\fixed1}\cf0} unidades tiene\par \cf1{\*\mjaformula{\expr n\decimals 0\fixed1}}x{\*\mjaformula{\expr n\decimals 0\fixed1}}={\*\mjaformula{\expr n*n\decimals 0\fixed1}}\cf0  unidades cuadradas.\cf2\fs48\par \fs24\b0}' fuente='Arial Negrita,BOLD,22' fijo='s&iacute;'">
+   <param name="G_08" value="espacio='E1' tipo='texto' dibujar-si='(sw=0)&amp;(n&gt;1)' expresi&oacute;n='[250,140]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red255\green0\blue0;}\cf0\f1\fs44\b\u161 {\*\mjaformula{\expr m\decimals 0\fixed1}} no es divisor de {\*\mjaformula{\expr n\decimals 0\fixed1}}!\f2\fs24\b0}' fuente='Arial Negrita,BOLD,22' fijo='s&iacute;'">
+   <param name="G_09" value="espacio='E1' tipo='texto' dibujar-si='raro=1' expresi&oacute;n='[20,480]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;}\f1\fs24 pasos{\*\mjaformula{\expr pasos}}  sw={\*\mjaformula{\expr sw}}}' fuente='Monospaced,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_10" value="espacio='E1' tipo='texto' dibujar-si='(sw=1)&amp;(m&gt;1)' expresi&oacute;n='[250,140]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red0\green141\blue0;\red32\green48\blue58;}\f1\fs44\b\cf0 Un cuadrado de lado {\*\mjaformula\cf1{\expr n\decimals 0\fixed1}\cf0} unidades tiene\par \cf1{\*\mjaformula ({\expr n/m\decimals 0\fixed1}}x{\*\mjaformula{\expr m\decimals 0\fixed1}})x({\*\mjaformula{\expr n/m\decimals 0\fixed1}}x{\*\mjaformula{\expr m\decimals 0\fixed1}})={\*\mjaformula{\expr n*n\decimals 0\fixed1}}\cf0  unidades cuadradas.\cf2\fs48\par \fs24\b0}' fuente='Arial Negrita,BOLD,22' fijo='s&iacute;'">
+   <param name="G_11" value="espacio='E1' tipo='texto' dibujar-si='otra&gt;0' expresi&oacute;n='[220,320]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red0\green141\blue0;\red32\green48\blue58;\red0\green0\blue255;}\cf0\f1\fs44\b Un cuadrado de lado {\*\mjaformula\cf1{\expr n2\decimals 0\fixed1}\cf0} unidades se puede\par descomponer en cuadrados de  {\*\mjaformula\cf1{\expr m2\decimals 0\fixed1}\cf0} unidades\par de lado:\cf2\fs48\par \cf3\f3\fs24\b0}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_12" value="espacio='E1' tipo='texto' dibujar-si='(sw2=0)&amp;(n2&gt;1)&amp;(rta=1)' expresi&oacute;n='[220,400]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red255\green0\blue0;\red0\green141\blue0;\red0\green0\blue255;}\cf0\f1\fs44\b  \cf1  \u161 Lo siento! \cf0  {\*\mjaformula\cf2{\expr m2\decimals 0\fixed1}\cf0} no es divisor de \cf2{\*\mjaformula{\expr n2\decimals 0\fixed1}}\par \cf3  Revisa tu respuesta con la actividad de arriba.\cf0}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_13" value="espacio='E1' tipo='texto' dibujar-si='(sw2=0)&amp;(n2&gt;1)&amp;(rta=2)' expresi&oacute;n='[220,400]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}{\colortbl\red255\green125\blue0;\red255\green0\blue0;\red0\green0\blue0;\red0\green141\blue0;\red0\green0\blue255;}\f1\fs44\b\cf0   \u161 Muy bien!\cf1  \cf2  {\*\mjaformula\cf3{\expr m2\decimals 0\fixed1}\cf2} no es divisor de \cf3{\*\mjaformula{\expr n2\decimals 0\fixed1}}\par \cf4  Se puede comprobar con la actividad de arriba.\cf2}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_14" value="espacio='E1' tipo='texto' dibujar-si='(sw2!=0)&amp;(n2&gt;1)&amp;(rta=2)' expresi&oacute;n='[220,400]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red255\green0\blue0;\red0\green141\blue0;\red0\green0\blue255;}\cf0\f1\fs44\b  \cf1  \u161 Lo siento! \cf0  {\*\mjaformula\cf2{\expr m2\decimals 0\fixed1}\cf0} es un divisor de \cf2{\*\mjaformula{\expr n2\decimals 0\fixed1}}\par \cf3 Revisa tu respuesta con la actividad de arriba.\cf0}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_15" value="espacio='E1' tipo='texto' dibujar-si='(sw2!=0)&amp;(n2&gt;1)&amp;(rta=1)' expresi&oacute;n='[220,420]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red255\green0\blue0;\red0\green0\blue255;\red0\green141\blue0;}\cf0\f1\fs44\b  \cf1  \cf2\u161 Muy bien! \cf0  {\*\mjaformula\cf3{\expr m2\decimals 0\fixed1}\cf0} es un divisor de \cf3{\*\mjaformula{\expr n2\decimals 0\fixed1}}\par \cf0}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+<font face="Arial" size="3">Esta unidad interactiva requiere la m&aacute;quina virtual de Java <a href="http://java.sun.com/javase/downloads/index.jsp" target="_blank">J2RE</a>.</font>
+</applet></p>
+
+</body>
+<script type="text/javascript" src="./descartes-min.js"></script>
+
+</html>

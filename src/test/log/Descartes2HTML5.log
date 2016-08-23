@@ -1,0 +1,11 @@
+02:25:08 ERROR [Thread-0] (InitWorker.java:52) - ----------La configuración no es válida: el parámetro 'general.analyzeORconvert' sólo acepta los valores 'analyze' o 'convert'-----------
+02:25:08  INFO [Thread-0] (InitWorker.java:94) - -->> Número Total de Contenidos: 2
+02:25:21  INFO [Thread-1] (AnalyzeWorker.java:40) - ****INICIO DEL ANÁLISIS DE CONTENIDOS****
+02:25:21  INFO [Thread-0] (InitWorker.java:94) - -->> Número Total de Contenidos: 1
+02:25:21  INFO [Thread-1] (AnalyzeWorker.java:98) - >> Analizando Contenido: /home/fede/Emergya/descartes/Descartes2HTML5/src/test/source/Amperimetro-CONTENIDOS.zip
+02:25:21  INFO [Thread-1] (AnalyzeWorker.java:107) - >> Análisis guardado para el contenido: /home/fede/Emergya/descartes/Descartes2HTML5/src/test/source/Amperimetro-CONTENIDOS.zip
+02:25:21  INFO [Thread-1] (AnalyzeWorker.java:98) - >> Analizando Contenido: /home/fede/Emergya/descartes/Descartes2HTML5/src/test/source/Cuadrados_de_numeros_y_alguna_propiedades-CONTENIDOS.zip
+02:25:21  INFO [Thread-1] (AnalyzeWorker.java:107) - >> Análisis guardado para el contenido: /home/fede/Emergya/descartes/Descartes2HTML5/src/test/source/Cuadrados_de_numeros_y_alguna_propiedades-CONTENIDOS.zip
+02:25:21  INFO [Thread-1] (AnalyzeWorker.java:60) - -->> Total Analizados: 2
+02:25:21  INFO [Thread-1] (AnalyzeWorker.java:62) - ****ANÁLISIS FINALIZADO****
+02:25:21  INFO [Thread-1] (AnalyzeWorker.java:67) - Contenidos que han provocado errores: 0

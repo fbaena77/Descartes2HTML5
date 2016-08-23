@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
+  <script type="text/javascript" src="img/homejs/objNavegador.js"></script> 
+  <script type="text/javascript" src="img/homejs/objLayer.js"></script> 
+  <script type="text/javascript">
+<!--
+
+var capaMuestra = "";
+function mostrarCapa(capa) {
+	if (is.ns4) {
+		if(document.layers[capaMuestra])document.layers[capaMuestra].visibility = "hide";
+		if(document.layers[capaMuestra + "_titulo"])document.layers[capaMuestra + "_titulo"].visibility = "hide";
+		if(document.layers[capa])document.layers[capa].visibility = "show";
+		if(document.layers[capa + "_titulo"])document.layers[capa + "_titulo"].visibility = "show";
+	}
+	else if(is.ie4) {
+		if(document.all[capaMuestra])document.all[capaMuestra].style.visibility = "hidden";
+		if(document.all[capaMuestra + "_titulo"])document.all[capaMuestra + "_titulo"].style.visibility = "hidden";
+		if(document.all[capa])document.all[capa].style.visibility = "visible";
+		if(document.all[capa + "_titulo"])document.all[capa + "_titulo"].style.visibility = "visible";
+	}
+	else {
+		if(document.getElementById(capaMuestra))document.getElementById(capaMuestra).style.visibility = "hidden";
+		if(document.getElementById(capaMuestra + "_titulo"))document.getElementById(capaMuestra + "_titulo").style.visibility = "hidden";
+		if(document.getElementById(capa))document.getElementById(capa).style.visibility = "visible";
+		if(document.getElementById(capa + "_titulo"))document.getElementById(capa + "_titulo").style.visibility = "visible";
+		window.focus();
+	}
+	capaMuestra = capa;
+}
+//-->
+</script> 
+  <style>
+
+
+
+DIV.capaCurso {
+	position:absolute;
+	left:276px;
+	top:154px;
+	width:387px;
+	height:227px;
+	overflow:auto;
+	scrollbar-face-color: #eaeaea;
+	scrollbar-shadow-color: #222222;
+	scrollbar-highlight-color: #CACACA;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #CACACA;
+	scrollbar-track-color: #eeeeee;
+	scrollbar-arrow-color: #0033CC;
+	visibility: hidden;
+}
+DIV.capaCurso_titulo {position:absolute; left:200px; top:115px; width:560px; height:30px; visibility:hidden;
+COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 13px; TEXT-DECORATION: none; font-weight:bold;
+}
+
+#alumnos_inicio{position:absolute; left:700px; top:420px;}
+#alumnos_fondo{position:absolute; left:8px; top:106px;}
+#alumnos_menu{
+	position:absolute;
+	left:0px;
+	top:165px;
+	width: 207px;
+	height: 187px;
+}
+#alumnos_mail{position:absolute; left:0px; top:417px;}
+#alumnos_newton{position:absolute; left:196px; top:78px;}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+.Estilo3 {color: #FFCC00; font-weight: bold; }
+body,td,th {
+	color: #6699CC;
+	font-weight: bold;
+}
+.Estilo5 {font-size: x-large}
+.Estilo99 {font-size: 12px}
+ #html5div_1158237477{text-align:center;} #html5body_1442008172{background-color:#FFFFFF;margin-left:0px;margin-top:0px;} #html5div_1924261764{text-align:center;} #contenidos{position:absolute; left:1px; top:68px; width:770px; height:375px; z-index:3;} #html5div_1492806749{text-align:center;} #html5td_1318826415{vertical-align:top;} #html5div_1878042329{text-align:center;} #html5p_1010124549{text-align:center;} #html5div_1066100689{text-align:center;} #html5table_1198081133{border:0px;} #html5table_1721494120 &gt; tr &gt; td{padding:0;margin:0;} #html5table_1198081133 &gt; tr &gt; td{padding:10;} #html5img_1216503595{border:0px;width:771px;height:51px;} #html5img_1444702041{border:0px;} #html5p_1572207362{text-align:justify;} #html5table_1721494120{border-color:708EB2;border:2px;width:44%;}.table_center{margin: auto;}.noshade{height:2px;border-width:0;color:gray;background-color:gray;}.allowtransparency{background: none transparent !important;}.iframe_scrolling_auto{overflow:auto;}.iframe_scrolling_yes{overflow:scroll;}.iframe_scrolling_no{overflow:hidden;}.div_center{text-align: center;}.span_dl{display: block;margin-top: 1em; margin-bottom: 1em;margin-left: 0;margin-right: 0;}.span_u{text-decoration:underline}.span_em{font-style:italic}.span_tt{font-family:'Lucida Console', monospace}.span_remove{display:none}.span_nobr{white-space:nowrap;}</style>
+  <script type="text/javascript">
+<!--
+
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script> 
+  <script type="text/javascript" src="./descartes-min.js"></script>
+  <title>El amperímetro</title>
+ </head> 
+ <body onload=";mostrarCapa('bienvenidos')" id="html5body_1442008172"> 
+  <div id="banner">
+   <img src="img/banner_nuevo1.gif" id="html5img_1216503595" alt="img/banner_nuevo1.gif">
+  </div> 
+  <div id="contenidos"> 
+   <table class="table_center" id="html5table_1198081133"> 
+    <tbody>
+     <tr> 
+      <td><p id="html5p_1572207362"><span class="Estilo3">El amperímetro</span> es el instrumento que mide la intensidad de corriente, se coloca intercalado en el circuito. En esta escena puedes ver su colocación y uso en un circuito. Cambia la resistencia y comprueba la variación de la intensidad leyendo lo que marca el <span class="Estilo3">amperímetro</span>.</p> 
+       <div id="html5div_1066100689"> 
+        <table class="table_center" id="html5table_1721494120"> 
+         <tbody>
+          <tr> 
+           <td class="clsTexto" id="html5td_1318826415">
+            <div id="html5div_1924261764">
+             <ajs width="465" height="3000" code="descinst.DescartesWeb2_0.class" name="descinst.DescartesWeb2_0.class" class="DescartesJS">
+              <param name="nombre" value="amperimetro">
+              <param name="Versión" value="3.875">
+              <param name="Idioma" value="español">
+              <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+              <param name="E_00" value="fijo='si' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no' eje-x='no' eje-y='no'">
+              <param name="C_00" value="tipo='numérico' id='A1' interfaz='botón' región='norte' expresión='(400,10,50,18)' nombre='Actividad' visible='si' tooltip='Observa que el amperímetro va intercalado en el circuito' Explicación='Observa que el amperímetro va intercalado en el circuito' acción='mensaje' parámetro='Observa que por el amperímetro pasa toda la intensidad que viene de la pila -está intercalado en el circuito-.\nDesplaza el cursor rojo del reóstato y observa que a medida que empleas menos resistencia la intensidad aumenta\n¿Para qué valor de la intensidad alcanza la bombilla el máximo brillo? ' pos_mensajes='centro'">
+              <param name="C_01" value="tipo='numérico' id='enc' interfaz='menú' región='interior' expresión='(240,230,150,18)' nombre='Interruptor' visible='no' opciones='Abierto,Cerrado' pos_mensajes='centro'">
+              <param name="C_02" value="tipo='gráfico' id='gr' color='azul' color-int='rojo' expresión='(-3.55,1)'">
+              <param name="C_03" value="tipo='numérico' id='gr.x' región='exterior' valor='-3.55' nombre='gr.x' min='-3.55' max='-3.55' visible='si' pos_mensajes='centro'">
+              <param name="C_04" value="tipo='numérico' id='gr.y' región='exterior' valor='1' nombre='gr.y' min='-0.60' max='1.60' visible='si' pos_mensajes='centro'">
+              <param name="A_00" value="inicio='med.radio=0.75' hacer='med.x1=-4;med.x2=-1;med.y1=-1;med.y2=-1;' id='almed' evaluar='una-sola-vez' algoritmo='si'">
+              <param name="A_01" value="inicio='bom.encendida=0' hacer='bom.ancho=0.1;bom.x1=-1;bom.x2=1;bom.y1=-1;bom.y2=-1' id='albom' evaluar='una-sola-vez' algoritmo='si'">
+              <param name="A_02" value="inicio='pila.ancho=0.5' hacer='pila.x1=-4;pila.x2=3;pila.y1=2;pila.y2=2' id='alpila' evaluar='una-sola-vez' algoritmo='si'">
+              <param name="A_03" value="hacer='reos.x1=-4;reos.x2=-4;reos.y1=2;reos.y2=-1' id='alreos' evaluar='siempre' algoritmo='si'">
+              <param name="A_04" value="inicio='inte.abierto=1' hacer='inte.x1=1;inte.x2=3;inte.y1=-1;inte.y2=-1' id='alinte' evaluar='una-sola-vez' algoritmo='si'">
+              <param name="A_05" value="id='Re' expresión='(gr.y+0.6)*50/2.2'">
+              <param name="A_06" value="id='reos.r' expresión='Re/5'">
+              <param name="A_07" value="id='RR' expresión='12+Re'">
+              <param name="A_08" value="id='I' expresión='(enc=0)?0:12/RR'">
+              <param name="A_09" value="id='vv' expresión='(enc=0)?0:12-Re*I'">
+              <param name="A_10" value="id='med.E' expresión='2*I'">
+              <param name="A_11" value="id='med.v' expresión='I'">
+              <param name="A_12" value="id='bom.encendida' expresión='(enc=0)?0:I'">
+              <param name="A_13" value="id='inte.abierto' expresión='(enc=0)?1:0'">
+              <param name="G_00" value="tipo='macro' expresión='circuitos/medidor' nombre='med'">
+              <param name="G_01" value="tipo='macro' expresión='circuitos/bateria' nombre='pila'">
+              <param name="G_02" value="tipo='macro' expresión='circuitos/bombilla' nombre='bom'">
+              <param name="G_03" value="tipo='macro' expresión='circuitos/interruptor' nombre='inte'">
+              <param name="G_04" value="tipo='segmento' color='negro' expresión='(3,-1)(3,2)'">
+              <param name="G_05" value="tipo='macro' expresión='circuitos/reostato' nombre='reos'">
+              <param name="G_06" value="tipo='texto' color='azul' expresión='[70,240]' texto='Amperímetro'">
+             </ajs>
+            </div></td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <div id="html5div_1492806749"></div> </td> 
+     </tr> 
+     <tr> 
+      <td>
+       <div id="html5div_1878042329"> 
+       </div> 
+       <!-- Licencia de Creative Commons --><p id="html5p_1010124549"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><img alt="Licencia de Creative Commons" src="img/88x31.png" id="html5img_1444702041"></a><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" style=";color:; font-family:Verdana, Arial, Helvetica, sans-serif">licencia de Creative Commons</a></p>
+       <!-- /Licencia de Creative Commons --> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <div id="html5div_1158237477"></div> 
+  </div>  
+  <script type="text/javascript" src="./descartes-min.js"></script>  
+ </body>
+</html>

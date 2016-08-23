@@ -88,7 +88,7 @@ public class InitWorker extends BaseWorker implements Runnable {
                 for (DescartesZipContentProxy zipFile : listaContenidos) {
                     job.getContentsToAnalyze().put(zipFile);
                 }
-                numTotalContenidos = job.getContentsToAnalyze().size();
+                numTotalContenidos = job.getContentsToAnalyze().size() + 1;
             }
 
             log.info("-->> Número Total de Contenidos: " + (numTotalContenidos));

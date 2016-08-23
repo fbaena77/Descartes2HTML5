@@ -18,3 +18,36 @@
 02:34:37  INFO [Thread-1] (AnalyzeWorker.java:60) - -->> Total Analizados: 2
 02:34:37  INFO [Thread-1] (AnalyzeWorker.java:62) - ****ANÁLISIS FINALIZADO****
 02:34:37  INFO [Thread-1] (AnalyzeWorker.java:67) - Contenidos que han provocado errores: 0
+02:53:02  INFO [Thread-1] (AnalyzeWorker.java:40) - ****INICIO DEL ANÁLISIS DE CONTENIDOS****
+02:53:02  INFO [Thread-0] (InitWorker.java:94) - -->> Número Total de Contenidos: 1
+02:53:02  INFO [Thread-1] (AnalyzeWorker.java:98) - >> Analizando Contenido: /home/fede/Emergya/descartes/Descartes2HTML5/src/test/source/Amperimetro-CONTENIDOS.zip
+02:53:02  INFO [Thread-1] (AnalyzeWorker.java:107) - >> Análisis guardado para el contenido: /home/fede/Emergya/descartes/Descartes2HTML5/src/test/source/Amperimetro-CONTENIDOS.zip
+02:53:02  INFO [Thread-1] (AnalyzeWorker.java:98) - >> Analizando Contenido: /home/fede/Emergya/descartes/Descartes2HTML5/src/test/source/Cuadrados_de_numeros_y_alguna_propiedades-CONTENIDOS.zip
+02:53:02  INFO [Thread-1] (AnalyzeWorker.java:107) - >> Análisis guardado para el contenido: /home/fede/Emergya/descartes/Descartes2HTML5/src/test/source/Cuadrados_de_numeros_y_alguna_propiedades-CONTENIDOS.zip
+02:53:02  INFO [Thread-1] (AnalyzeWorker.java:60) - -->> Total Analizados: 2
+02:53:02  INFO [Thread-1] (AnalyzeWorker.java:62) - ****ANÁLISIS FINALIZADO****
+02:53:02  INFO [Thread-1] (AnalyzeWorker.java:67) - Contenidos que han provocado errores: 0
+02:58:21  INFO [Thread-1] (AnalyzeWorker.java:40) - ****INICIO DEL ANÁLISIS DE CONTENIDOS****
+02:58:21  INFO [Thread-0] (InitWorker.java:94) - -->> Número Total de Contenidos: 2
+02:58:22  INFO [Thread-1] (AnalyzeWorker.java:98) - >> Analizando Contenido: /home/fede/Emergya/descartes/Descartes2HTML5/src/test/source/Amperimetro-CONTENIDOS.zip
+02:58:22  INFO [Thread-1] (AnalyzeWorker.java:107) - >> Análisis guardado para el contenido: /home/fede/Emergya/descartes/Descartes2HTML5/src/test/source/Amperimetro-CONTENIDOS.zip
+02:58:22  INFO [Thread-1] (AnalyzeWorker.java:98) - >> Analizando Contenido: /home/fede/Emergya/descartes/Descartes2HTML5/src/test/source/Cuadrados_de_numeros_y_alguna_propiedades-CONTENIDOS.zip
+02:58:22  INFO [Thread-1] (AnalyzeWorker.java:107) - >> Análisis guardado para el contenido: /home/fede/Emergya/descartes/Descartes2HTML5/src/test/source/Cuadrados_de_numeros_y_alguna_propiedades-CONTENIDOS.zip
+02:58:22  INFO [Thread-1] (AnalyzeWorker.java:60) - -->> Total Analizados: 2
+02:58:22  INFO [Thread-1] (AnalyzeWorker.java:62) - ****ANÁLISIS FINALIZADO****
+02:58:22  INFO [Thread-1] (AnalyzeWorker.java:67) - Contenidos que han provocado errores: 0
+02:58:48  INFO [Thread-1] (ConvertWorker.java:37) - ****INICIO DEL PROCESO DE CONVERSIÓN DE CONTENIDOS****
+02:58:48  INFO [Thread-0] (InitWorker.java:94) - -->> Número Total de Contenidos: 2
+02:58:48  INFO [Thread-1] (ConvertWorker.java:112) - >> Convirtiendo Contenido: Amperimetro-CONTENIDOS
+02:58:48  INFO [Thread-1] (ConvertWorker.java:119) - >> Sumario de conversión guardado para el contenido: Amperimetro-CONTENIDOS
+02:58:48  INFO [Thread-1] (ConvertWorker.java:112) - >> Convirtiendo Contenido: Cuadrados_de_numeros_y_alguna_propiedades-CONTENIDOS
+02:58:48  INFO [Thread-1] (ConvertWorker.java:119) - >> Sumario de conversión guardado para el contenido: Cuadrados_de_numeros_y_alguna_propiedades-CONTENIDOS
+02:58:48  INFO [Thread-1] (ConvertWorker.java:69) - -->> Total contenidos convertidos: 2
+02:58:48  INFO [Thread-1] (ConvertWorker.java:72) - ****CONVERSIÓN FINALIZADA****
+02:58:48  INFO [Thread-1] (ConvertWorker.java:75) - Contenidos que han provocado errores: 0
+02:58:48  INFO [Thread-2] (ValidateWorker.java:80) - >> Validando Contenido: Amperimetro-CONTENIDOS
+02:58:48  INFO [Thread-2] (ValidateWorker.java:88) - >> Validación guardada para el contenido: Amperimetro-CONTENIDOS
+02:58:48  INFO [Thread-2] (ValidateWorker.java:80) - >> Validando Contenido: Cuadrados_de_numeros_y_alguna_propiedades-CONTENIDOS
+02:58:48  INFO [Thread-2] (ValidateWorker.java:88) - >> Validación guardada para el contenido: Cuadrados_de_numeros_y_alguna_propiedades-CONTENIDOS
+02:58:48  INFO [Thread-2] (ValidateWorker.java:60) - -->> Total Validados: 2
+02:58:48  INFO [Thread-2] (ValidateWorker.java:62) - ****VALIDACIÓN FINALIZADA****

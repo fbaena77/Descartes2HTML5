@@ -24,10 +24,10 @@ public class AnalyzedContent<T> implements Iterable<T> {
     }
 
     /**
-     * @param contentProxy the contentProxy to set
+     * @param contentProxy2 the contentProxy to set
      */
-    public void setContentProxy(DescartesContentProxy contentProxy) {
-        this.contentProxy = contentProxy;
+    public void setContentProxy(DescartesContentProxy contentProxy2) {
+        this.contentProxy = contentProxy2;
     }
 
     /**

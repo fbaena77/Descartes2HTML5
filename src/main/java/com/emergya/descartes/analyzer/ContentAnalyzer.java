@@ -1,15 +1,12 @@
 package com.emergya.descartes.analyzer;
 
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
-import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -17,11 +14,22 @@ import org.jsoup.nodes.Document;
 import com.emergya.descartes.analyzer.model.AnalyzedContent;
 import com.emergya.descartes.analyzer.model.AnalyzedHTMLFile;
 import com.emergya.descartes.content.DescartesContentProxy;
+import com.emergya.descartes.job.JobConverter;
 import com.emergya.descartes.utils.Constants;
 
 public class ContentAnalyzer {
 
     private static Logger log = Logger.getLogger(ContentAnalyzer.class);
+
+    List<AnalyzedHTMLFile> analyzedListFiles = new ArrayList<>();
+    JobConverter job;
+
+    /**
+     * @param job
+     */
+    public ContentAnalyzer(JobConverter job) {
+        this.job = job;
+    }
 
     /**
      * @param <T>
@@ -30,25 +38,13 @@ public class ContentAnalyzer {
     public <T> AnalyzedContent<T> analyzeContent(
             DescartesContentProxy contentProxy) {
         AnalyzedContent<T> analyzedContent = new AnalyzedContent<T>();
-        analyzedContent.setContentProxy(contentProxy);
-        List<AnalyzedHTMLFile> analyzedListFiles = new ArrayList<>();
-
-        try (Stream<Path> filePathStream = Files.walk(Paths.get(contentProxy
-                .getLocalCopy().getPath()))) {
-            filePathStream
-                    .forEach(filePath -> {
-                        if (Files.isRegularFile(filePath)) {
-                            String ext = FilenameUtils.getExtension(filePath
-                                    .toString());
-                            if (ext.equals(Constants.FILE_HTML)
-                                    || ext.equals(Constants.FILE_HTM)) {
-                                analyzedListFiles.add(analyzeHtml(filePath));
-                            }
-                        }
-                    });
-
+        try {
+            Files.walk(Paths.get(contentProxy.getLocalCopy().getPath()))
+                    .filter(p -> p.toString().endsWith(Constants.FILE_HTML)
+                            || p.toString().endsWith(Constants.FILE_HTM))
+                    .forEach(this::setAnalyzedListFiles);
+            analyzedContent.setContentProxy(contentProxy);
             analyzedContent.setAnalyzedListFiles(analyzedListFiles);
-
         } catch (IOException e) {
             log.error(
                     "Error al obtener el nombre de los ficheros .zip de Descartes en la ruta de origen",
@@ -58,6 +54,10 @@ public class ContentAnalyzer {
         return analyzedContent;
     }
 
+    private void setAnalyzedListFiles(Path path) {
+        analyzedListFiles.add(analyzeHtml(path));
+    }
+
     /**
      * @param file the file
      */
@@ -65,16 +65,16 @@ public class ContentAnalyzer {
         AnalyzedHTMLFile analyzedHTMLFile = new AnalyzedHTMLFile();
         try {
             @SuppressWarnings("unused")
-            Document doc = Jsoup.parse(file.toFile(),
-                    StandardCharsets.UTF_8.displayName());
-
+            Document doc = Jsoup.parse(file.toFile(), job.getJobConfig()
+                    .getValidationCharset());
             analyzedHTMLFile.setPathInContent(file.getFileName().toString());
-            analyzedHTMLFile.setAnalisis(W3CValidator.validateHtml5(file
-                    .toFile()));
+            analyzedHTMLFile.setLocalCopy(file.toFile());
+            analyzedHTMLFile.setAnalisis(W3CValidator.validateHtml5(
+                    file.toFile(), job));
 
         } catch (Exception e) {
             log.error((file != null ? file.getFileName().toString() : "Fichero")
-                    + ": Estructura HTML incorrecta." + e);
+                    + ": estructura HTML incorrecta: " + e);
         }
 
         return analyzedHTMLFile;

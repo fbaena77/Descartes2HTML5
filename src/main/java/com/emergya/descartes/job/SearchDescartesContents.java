@@ -4,12 +4,12 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 import org.apache.log4j.Logger;
 
-import com.emergya.descartes.content.ZipContent;
+import com.emergya.descartes.content.DescartesZipContentProxy;
 
 public class SearchDescartesContents {
 
@@ -18,7 +18,7 @@ public class SearchDescartesContents {
 
     private long numContents;
     private String path;
-    private List<ZipContent> contentList;
+    private List<DescartesZipContentProxy> contentList = new ArrayList<DescartesZipContentProxy>();
 
     public SearchDescartesContents(String path) {
         super();
@@ -26,16 +26,13 @@ public class SearchDescartesContents {
         this.setPath(path);
     }
 
-    public List<ZipContent> getZipContentListNames() {
-        try (Stream<Path> filePathStream = Files.walk(Paths.get(getPath()))) {
-            filePathStream.forEach(filePath -> {
-                if (Files.isRegularFile(filePath)) {
-                    ZipContent zipContent = new ZipContent(getPath());
-                    contentList.add(zipContent);
-                }
-            });
+    public List<DescartesZipContentProxy> getDescartesZipContentProxyListNames() {
+        try {
+            Files.walk(Paths.get(getPath()))
+                    .filter(p -> p.toString().endsWith(".zip"))
+                    .forEach(this::setContentList);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             log.error(
                     "Error al obtener el nombre de los ficheros .zip de Descartes en la ruta de origen",
                     e);
@@ -44,10 +41,16 @@ public class SearchDescartesContents {
         return contentList;
     }
 
+    private void setContentList(Path path) {
+        DescartesZipContentProxy DescartesZipContentProxy = new DescartesZipContentProxy(
+                path);
+        contentList.add(DescartesZipContentProxy);
+    }
+
     private void setNumContents(final String _path) {
         try {
             numContents = Files.find(Paths.get(_path), 1,
-                    (path, attributes) -> !attributes.isDirectory()).count() - 1;
+                    (path, attributes) -> !attributes.isDirectory()).count();
         } catch (IOException e) {
             log.error(
                     "Error al obtener el ńumero de contenidos Descartes en la ruta de origen",

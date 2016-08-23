@@ -34,7 +34,6 @@ public class ValidateWorker extends BaseWorker implements Runnable {
     public void run() {
         try {
             JobConverter currentJob = getJob();
-            log.info("----Inicio de la validación final de contenidos----");
             // Control de existencia de carpeta de trabajo
             File resultPath = new File(currentJob.getJobConfig()
                     .getValidationResultPath());
@@ -53,14 +52,14 @@ public class ValidateWorker extends BaseWorker implements Runnable {
                 DescartesContentProxy contentToValidate = currentJob
                         .getContentsToValidate().take();
 
-                if (contentToValidate != JobConverter.STOP_QUEUE) {
+                if (contentToValidate != JobConverter.STOP_QUEUE_V) {
                     if (contentToValidate != null) {
                         doWork(contentToValidate, currentJob);
                     }
                 } else {
-                    log.info("-->>Total Validados: "
+                    log.info("-->> Total Validados: "
                             + (currentJob.getContentsValidate().size()));
-                    log.info("****Proceso de Validación Finalizado****");
+                    log.info("****VALIDACIÓN FINALIZADA****");
                     currentJob.setValidateQueueReadyFlag(true);
                 }
             }
@@ -75,19 +74,18 @@ public class ValidateWorker extends BaseWorker implements Runnable {
      */
     private void doWork(DescartesContentProxy contentToValidate,
             JobConverter job) {
-
-        ContentAnalyzer contentAnalyzer = new ContentAnalyzer();
+        ContentAnalyzer contentAnalyzer = new ContentAnalyzer(job);
         AnalyzedContent<?> analyzedContent = contentAnalyzer
                 .analyzeContent(contentToValidate);
-        log.info(">>Validando Contenido: " + contentToValidate.getTitle());
-
-        File validatedContentFile = new File(job.getJobConfig()
+        log.info(">> Validando Contenido: " + contentToValidate.getTitle());
+        File validateContentFile = new File(job.getJobConfig()
                 .getValidationResultPath()
                 + File.separator
-                + contentToValidate.getTitle() + "_W3CResult.csv");
-        analyzedContent.setLocalCopy(validatedContentFile);
-        OutputManager.createAnalizedContentCSV(analyzedContent);
-        log.info(">>Validación guardada para el contenido: "
+                + contentToValidate.getTitle());
+        analyzedContent.setLocalCopy(validateContentFile);
+        String workingPath = job.getJobConfig().getConvertedContentPath();
+        OutputManager.createAnalizedContentCSV(analyzedContent, workingPath);
+        log.info(">> Validación guardada para el contenido: "
                 + contentToValidate.getTitle());
 
         // Info estadística

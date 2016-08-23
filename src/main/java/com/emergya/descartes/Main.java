@@ -38,10 +38,9 @@ public class Main {
                         job.getJobConfig().getOriginalContentPath());
 
                 if (checkContents.getNumContents() > 0) {
-                    log.info("---------------------------------INICIO DEL PROCESO DE CONVERSIÓN---------------------------------");
                     initWorkers(job);
                 } else {
-                    log.info("---------------------------------NO SE HAN ENCONTRADO CONTENIDOS DESCARTES EN LA RUTA ESPECIFICADA---------------------------------");
+                    log.info("-----No se han encontrado contenidos Descartes en la ruta especificada en la configuración------");
                 }
             }
         } catch (Exception e) {

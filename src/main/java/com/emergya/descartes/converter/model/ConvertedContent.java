@@ -10,7 +10,7 @@ import com.emergya.descartes.content.DescartesContentType;
 public class ConvertedContent<T> implements Iterable<T> {
 
     private DescartesContentProxy contentProxy;
-    private File localCopy;
+    private File logFile;
     private Double totalSize;
     private DescartesContentType typeContent = DescartesContentType.mef10;
     private List<ConvertedHTMLFile> convertedListFiles;
@@ -77,16 +77,16 @@ public class ConvertedContent<T> implements Iterable<T> {
     }
 
     /**
-     * @return the localCopy
+     * @return the logFile
      */
-    public File getLocalCopy() {
-        return localCopy;
+    public File getLogFile() {
+        return logFile;
     }
 
     /**
-     * @param localCopy the localCopy to set
+     * @param logFile the logFile to set
      */
-    public void setLocalCopy(File localCopy) {
-        this.localCopy = localCopy;
+    public void setLogFile(File logFile) {
+        this.logFile = logFile;
     }
 }

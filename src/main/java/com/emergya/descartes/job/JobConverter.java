@@ -5,7 +5,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 import com.emergya.descartes.content.DescartesContentProxy;
-import com.emergya.descartes.content.ZipContent;
+import com.emergya.descartes.content.DescartesZipContentProxy;
 
 /**
  * 
@@ -25,34 +25,33 @@ public class JobConverter {
     private boolean validateQueueReadyFlag = false;
 
     /* Colas de proceso */
-    private BlockingQueue<DescartesContentProxy> contentsToModel;
-    private BlockingQueue<ZipContent> contentsToAnalyze;
-    private BlockingQueue<DescartesContentProxy> contentsToConvert;
+    private BlockingQueue<DescartesZipContentProxy> contentsToModel;
+    private BlockingQueue<DescartesZipContentProxy> contentsToAnalyze;
+    private BlockingQueue<DescartesZipContentProxy> contentsToConvert;
     private BlockingQueue<DescartesContentProxy> contentsToValidate;
-
+    /**
+     * Poison pill para consumir los threads que usan Blocking Queues con DescartesZipContentProxy
+     */
+    public static final DescartesZipContentProxy STOP_QUEUE = new DescartesZipContentProxy();
     /**
      * Poison pill para consumir los threads que usan Blocking Queues con DescartesContentProxy
      */
-    public static final DescartesContentProxy STOP_QUEUE = new DescartesContentProxy();
-    /**
-     * Poison pill para consumir los threads que usan Blocking Queues con ZipContent
-     */
-    public static final ZipContent STOP_QUEUE_ZIP = new ZipContent("");
+    public static final DescartesContentProxy STOP_QUEUE_V = new DescartesContentProxy();
 
     /* Informacion estadistica */
     /**
      * Contenidos que se han modelado con éxito.
      */
-    private Queue<DescartesContentProxy> contentsModeled;
+    private Queue<DescartesZipContentProxy> contentsModeled;
     /**
      * Contenidos que se han analizado con éxito.
      */
-    private Queue<ZipContent> contentsAnalyzed;
+    private Queue<DescartesZipContentProxy> contentsAnalyzed;
 
     /**
      * Contenidos que se han convertido con éxito.    
      */
-    private Queue<DescartesContentProxy> contentsConverted;
+    private Queue<DescartesZipContentProxy> contentsConverted;
 
     /**
      * Contenidos que se han validado con éxito
@@ -62,17 +61,17 @@ public class JobConverter {
     /**
      * Contenidos que no se han modelado correctamente.
      */
-    private Queue<DescartesContentProxy> contentsModeledError;
+    private Queue<DescartesZipContentProxy> contentsModeledError;
 
     /**
      * Contenidos que no se han analizado correctamente.
      */
-    private Queue<DescartesContentProxy> contentsAnalyzedError;
+    private Queue<DescartesZipContentProxy> contentsAnalyzedError;
 
     /**
      * Contenidos que no se han convertido correctamente.
      */
-    private Queue<DescartesContentProxy> contentsConvertedError;
+    private Queue<DescartesZipContentProxy> contentsConvertedError;
 
     /**
      * Contenidos que no se han validado correctamente.
@@ -86,18 +85,18 @@ public class JobConverter {
 
         this.setJobConfig(config);
 
-        this.setContentsToModel(generateArrayBlockingQueue());
+        this.setContentsToModel(generateArrayBlockingQueueZip());
         this.setContentsToAnalyze(generateArrayBlockingQueueZip());
-        this.setContentsToConvert(generateArrayBlockingQueue());
+        this.setContentsToConvert(generateArrayBlockingQueueZip());
         this.setContentsToValidate(generateArrayBlockingQueue());
 
-        this.setContentsModeled(generateArrayBlockingQueue());
+        this.setContentsModeled(generateArrayBlockingQueueZip());
         this.setContentsAnalyzed(generateArrayBlockingQueueZip());
-        this.setContentsConverted(generateArrayBlockingQueue());
+        this.setContentsConverted(generateArrayBlockingQueueZip());
         this.setContentsValidate(generateArrayBlockingQueue());
-        this.setContentsModeledError(generateArrayBlockingQueue());
-        this.setContentsAnalyzedError(generateArrayBlockingQueue());
-        this.setContentsConvertedError(generateArrayBlockingQueue());
+        this.setContentsModeledError(generateArrayBlockingQueueZip());
+        this.setContentsAnalyzedError(generateArrayBlockingQueueZip());
+        this.setContentsConvertedError(generateArrayBlockingQueueZip());
         this.setContentsValidateError(generateArrayBlockingQueue());
     }
 
@@ -115,13 +114,13 @@ public class JobConverter {
         this.jobConfig = jobConfig;
     }
 
-    private ArrayBlockingQueue<DescartesContentProxy> generateArrayBlockingQueue() {
+    private BlockingQueue<DescartesContentProxy> generateArrayBlockingQueue() {
         return new ArrayBlockingQueue<DescartesContentProxy>(
                 this.jobConfig.getSizeArrayBlockingqueue(), true);
     }
 
-    private ArrayBlockingQueue<ZipContent> generateArrayBlockingQueueZip() {
-        return new ArrayBlockingQueue<ZipContent>(
+    private ArrayBlockingQueue<DescartesZipContentProxy> generateArrayBlockingQueueZip() {
+        return new ArrayBlockingQueue<DescartesZipContentProxy>(
                 this.jobConfig.getSizeArrayBlockingqueue(), true);
     }
 
@@ -171,21 +170,22 @@ public class JobConverter {
     /**
      * @return the contentsToAnalyze
      */
-    public BlockingQueue<ZipContent> getContentsToAnalyze() {
+    public BlockingQueue<DescartesZipContentProxy> getContentsToAnalyze() {
         return contentsToAnalyze;
     }
 
     /**
      * @param contentsToAnalyze the contentsToAnalyze to set
      */
-    public void setContentsToAnalyze(BlockingQueue<ZipContent> contentsToAnalyze) {
+    public void setContentsToAnalyze(
+            BlockingQueue<DescartesZipContentProxy> contentsToAnalyze) {
         this.contentsToAnalyze = contentsToAnalyze;
     }
 
     /**
      * @return the contentsToConvert
      */
-    public BlockingQueue<DescartesContentProxy> getContentsToConvert() {
+    public BlockingQueue<DescartesZipContentProxy> getContentsToConvert() {
         return contentsToConvert;
     }
 
@@ -193,7 +193,7 @@ public class JobConverter {
      * @param contentsToConvert the contentsToConvert to set
      */
     public void setContentsToConvert(
-            BlockingQueue<DescartesContentProxy> contentsToConvert) {
+            BlockingQueue<DescartesZipContentProxy> contentsToConvert) {
         this.contentsToConvert = contentsToConvert;
     }
 
@@ -215,35 +215,37 @@ public class JobConverter {
     /**
      * @return the contentsModeled
      */
-    public Queue<DescartesContentProxy> getContentsModeled() {
+    public Queue<DescartesZipContentProxy> getContentsModeled() {
         return contentsModeled;
     }
 
     /**
      * @param contentsModeled the contentsModeled to set
      */
-    public void setContentsModeled(Queue<DescartesContentProxy> contentsModeled) {
+    public void setContentsModeled(
+            Queue<DescartesZipContentProxy> contentsModeled) {
         this.contentsModeled = contentsModeled;
     }
 
     /**
      * @return the contentsAnalyzed
      */
-    public Queue<ZipContent> getContentsAnalyzed() {
+    public Queue<DescartesZipContentProxy> getContentsAnalyzed() {
         return contentsAnalyzed;
     }
 
     /**
      * @param contentsAnalyzed the contentsAnalyzed to set
      */
-    public void setContentsAnalyzed(Queue<ZipContent> contentsAnalyzed) {
+    public void setContentsAnalyzed(
+            Queue<DescartesZipContentProxy> contentsAnalyzed) {
         this.contentsAnalyzed = contentsAnalyzed;
     }
 
     /**
      * @return the contentsConverted
      */
-    public Queue<DescartesContentProxy> getContentsConverted() {
+    public Queue<DescartesZipContentProxy> getContentsConverted() {
         return contentsConverted;
     }
 
@@ -251,7 +253,7 @@ public class JobConverter {
      * @param contentsConverted the contentsConverted to set
      */
     public void setContentsConverted(
-            Queue<DescartesContentProxy> contentsConverted) {
+            Queue<DescartesZipContentProxy> contentsConverted) {
         this.contentsConverted = contentsConverted;
     }
 
@@ -273,7 +275,7 @@ public class JobConverter {
     /**
      * @return the contentsModeledError
      */
-    public Queue<DescartesContentProxy> getContentsModeledError() {
+    public Queue<DescartesZipContentProxy> getContentsModeledError() {
         return contentsModeledError;
     }
 
@@ -281,14 +283,14 @@ public class JobConverter {
      * @param contentsModeledError the contentsModeledError to set
      */
     public void setContentsModeledError(
-            Queue<DescartesContentProxy> contentsModeledError) {
+            Queue<DescartesZipContentProxy> contentsModeledError) {
         this.contentsModeledError = contentsModeledError;
     }
 
     /**
      * @return the contentsAnalyzedError
      */
-    public Queue<DescartesContentProxy> getContentsAnalyzedError() {
+    public Queue<DescartesZipContentProxy> getContentsAnalyzedError() {
         return contentsAnalyzedError;
     }
 
@@ -296,14 +298,14 @@ public class JobConverter {
      * @param contentsAnalyzedError the contentsAnalyzedError to set
      */
     public void setContentsAnalyzedError(
-            Queue<DescartesContentProxy> contentsAnalyzedError) {
+            Queue<DescartesZipContentProxy> contentsAnalyzedError) {
         this.contentsAnalyzedError = contentsAnalyzedError;
     }
 
     /**
      * @return the contentsConvertedError
      */
-    public Queue<DescartesContentProxy> getContentsConvertedError() {
+    public Queue<DescartesZipContentProxy> getContentsConvertedError() {
         return contentsConvertedError;
     }
 
@@ -311,7 +313,7 @@ public class JobConverter {
      * @param contentsConvertedError the contentsConvertedError to set
      */
     public void setContentsConvertedError(
-            Queue<DescartesContentProxy> contentsConvertedError) {
+            Queue<DescartesZipContentProxy> contentsConvertedError) {
         this.contentsConvertedError = contentsConvertedError;
     }
 
@@ -347,7 +349,7 @@ public class JobConverter {
     /**
      * @return the contentsToModel
      */
-    public BlockingQueue<DescartesContentProxy> getContentsToModel() {
+    public BlockingQueue<DescartesZipContentProxy> getContentsToModel() {
         return contentsToModel;
     }
 
@@ -355,7 +357,7 @@ public class JobConverter {
      * @param contentsToModel the contentsToModel to set
      */
     public void setContentsToModel(
-            BlockingQueue<DescartesContentProxy> contentsToModel) {
+            BlockingQueue<DescartesZipContentProxy> contentsToModel) {
         this.contentsToModel = contentsToModel;
     }
 

@@ -2,6 +2,8 @@ package com.emergya.descartes.analyzer;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -14,6 +16,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import com.emergya.descartes.analyzer.model.W3CResponse;
+import com.emergya.descartes.job.JobConverter;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
@@ -31,13 +34,14 @@ public class W3CValidator {
      * @throws ParserConfigurationException the parser configuration exception
      * @throws IOException Signals that an I/O exception has occurred.
      */
-    public static W3CResponse validateHtml5(File file) throws UnirestException,
-            ParserConfigurationException, IOException {
-        final Document doc = Jsoup.parse(file, "UTF-8");
+    public static List<W3CResponse> validateHtml5(File file, JobConverter job)
+            throws UnirestException, ParserConfigurationException, IOException {
+        final Document doc = Jsoup.parse(file, job.getJobConfig()
+                .getValidationCharset());
         String response = null;
         String source = doc.html();
         HttpResponse<String> uniResponse = Unirest
-                .post("http://validator.w3.org/nu/")
+                .post(job.getJobConfig().getW3CServiceUrl())
                 .header("User-Agent",
                         "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36")
                 .header("Content-Type", "text/html; charset=UTF-8")
@@ -53,8 +57,9 @@ public class W3CValidator {
      * @param response
      * @return W3CResponse
      */
-    private static W3CResponse deserializeResponse(String response, File file) {
-        W3CResponse w3CResponse = new W3CResponse();
+    private static List<W3CResponse> deserializeResponse(String response,
+            File file) {
+        List<W3CResponse> w3CResponseList = new ArrayList<W3CResponse>();
         JSONObject json = null;
         try {
             json = (JSONObject) new JSONParser().parse(response);
@@ -66,6 +71,7 @@ public class W3CValidator {
         if (messages != null) {
             for (int i = 0; i < messages.size(); i++) {
                 JSONObject jsonMessage = (JSONObject) messages.get(i);
+                W3CResponse w3CResponse = new W3CResponse();
                 w3CResponse.setType(jsonMessage.get("type").toString());
                 w3CResponse.setMessage(jsonMessage.get("message").toString());
                 w3CResponse
@@ -83,9 +89,11 @@ public class W3CValidator {
                 w3CResponse
                         .setLastColumn((jsonMessage.get("lastColumn") != null ? jsonMessage
                                 .get("lastColumn") : "").toString());
+
+                w3CResponseList.add(w3CResponse);
             }
         }
 
-        return w3CResponse;
+        return w3CResponseList;
     }
 }

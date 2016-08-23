@@ -74,9 +74,8 @@ public class JobConfiguration {
     /**
      * @return boolean
      */
-    public boolean isToAnalyze() {
-        String toAnalyze = getCommonProperties().get(Constants.MUST_ANALYZE);
-        return Boolean.parseBoolean(toAnalyze);
+    public String isToAnalyzeOrConvert() {
+        return getCommonProperties().get(Constants.GENERAL_ANALYZEORCONVERT);
     }
 
     /**
@@ -86,24 +85,6 @@ public class JobConfiguration {
         String toW3CValidate = getCommonProperties().get(
                 Constants.MUST_VALIDATE);
         return Boolean.parseBoolean(toW3CValidate);
-    }
-
-    /**
-     * @return boolean
-     */
-    public boolean isToConvert2HTML5() {
-        String toConvert2HTML5 = getCommonProperties().get(
-                Constants.MUST_CONVERT);
-        return Boolean.parseBoolean(toConvert2HTML5);
-    }
-
-    /**
-     * @return boolean
-     */
-    public boolean isToCompressConverted() {
-        String toZipConverted = getCommonProperties().get(
-                Constants.COMPRESS_CONVERTED_CONTENT);
-        return Boolean.parseBoolean(toZipConverted);
     }
 
     /**
@@ -149,6 +130,33 @@ public class JobConfiguration {
         String validationResultPath = getCommonProperties().get(
                 Constants.PATH_W3C_VALIDATION);
         return validationResultPath;
+    }
+
+    /**
+     * @return String
+     */
+    public String getW3CServiceUrl() {
+        String w3CServiceUrl = getCommonProperties().get(
+                Constants.W3C_SERVICE_URL);
+        return w3CServiceUrl;
+    }
+
+    /**
+     * @return String
+     */
+    public String getConversionCharset() {
+        String conversionCharset = getCommonProperties().get(
+                Constants.CONVERT_CHARSET);
+        return conversionCharset;
+    }
+
+    /**
+     * @return String
+     */
+    public String getValidationCharset() {
+        String validationCharset = getCommonProperties().get(
+                Constants.VALIDATION_W3C_CHARSET);
+        return validationCharset;
     }
 
     /**

@@ -1,12 +1,13 @@
 package com.emergya.descartes.analyzer.model;
 
 import java.io.File;
+import java.util.List;
 
 public class AnalyzedHTMLFile {
 
     private File localCopy;
     private String pathInContent;
-    private W3CResponse analisis;
+    private List<W3CResponse> analisis;
 
     /**
      * @return the pathInContent
@@ -39,14 +40,14 @@ public class AnalyzedHTMLFile {
     /**
      * @return the analisis
      */
-    public W3CResponse getAnalisis() {
+    public List<W3CResponse> getAnalisis() {
         return analisis;
     }
 
     /**
      * @param analisis the analisis to set
      */
-    public void setAnalisis(W3CResponse analisis) {
+    public void setAnalisis(List<W3CResponse> analisis) {
         this.analisis = analisis;
     }
 }

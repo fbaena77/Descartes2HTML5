@@ -7,11 +7,10 @@ import org.apache.log4j.Logger;
 import com.emergya.descartes.analyzer.ContentAnalyzer;
 import com.emergya.descartes.analyzer.model.AnalyzedContent;
 import com.emergya.descartes.content.DescartesContentProxy;
-import com.emergya.descartes.content.ZipContent;
+import com.emergya.descartes.content.DescartesZipContentProxy;
 import com.emergya.descartes.job.JobConverter;
 import com.emergya.descartes.persistence.FileManager;
 import com.emergya.descartes.persistence.OutputManager;
-import com.emergya.descartes.utils.ZipUtils;
 
 /**
  * 
@@ -38,7 +37,7 @@ public class AnalyzeWorker extends BaseWorker implements Runnable {
     public void run() {
         try {
             JobConverter currentJob = getJob();
-            log.info("----Inicio del análisis de contenidos----");
+            log.info("****INICIO DEL ANÁLISIS DE CONTENIDOS****");
             // Control de existencia de carpeta de trabajo
             File resultPath = new File(currentJob.getJobConfig()
                     .getAnalysisResultPath());
@@ -46,33 +45,21 @@ public class AnalyzeWorker extends BaseWorker implements Runnable {
             if (resultPath.exists()) {
                 FileManager.deleteFilesInFolder(resultPath);
             }
-            resultPath.mkdirs();
 
-            boolean toConvert2HTML5 = currentJob.getJobConfig()
-                    .isToConvert2HTML5();
+            resultPath.mkdirs();
 
             while (!currentJob.isAnalyzeQueueReadyFlag()
                     || !currentJob.getContentsToAnalyze().isEmpty()) {
-                ZipContent contentToProcess = currentJob.getContentsToAnalyze()
-                        .take();
-                if (contentToProcess != JobConverter.STOP_QUEUE_ZIP) {
+                DescartesZipContentProxy contentToProcess = currentJob
+                        .getContentsToAnalyze().take();
+                if (contentToProcess != JobConverter.STOP_QUEUE) {
                     if (contentToProcess != null) {
-                        DescartesContentProxy contentToConvert = new DescartesContentProxy();
-                        contentToConvert = doWork(contentToProcess, currentJob);
-                        if (toConvert2HTML5) {
-                            currentJob.getContentsToConvert().put(
-                                    contentToConvert);
-                        }
+                        doWork(contentToProcess, currentJob);
                     }
                 } else {
-                    if (toConvert2HTML5) {
-                        currentJob.getContentsToConvert().put(
-                                JobConverter.STOP_QUEUE);
-                    }
-
-                    log.info("-->>Total Analizados: "
+                    log.info("-->> Total Analizados: "
                             + (currentJob.getContentsAnalyzed().size()));
-                    log.info("****Proceso de Análisis Finalizado****");
+                    log.info("****ANÁLISIS FINALIZADO****");
                     currentJob.setAnalyzeQueueReadyFlag(true);
                 }
             }
@@ -100,28 +87,27 @@ public class AnalyzeWorker extends BaseWorker implements Runnable {
      * @param zipContent
      * @param job
      */
-    private DescartesContentProxy doWork(ZipContent zipContent, JobConverter job) {
+    private void doWork(DescartesZipContentProxy zipContent, JobConverter job) {
+        File contentFolder = FileManager.extractZipContents(zipContent, job);
         DescartesContentProxy contentProxy = new DescartesContentProxy();
-        File contentFolder = ZipUtils.doZipDecompress(zipContent, job);
         contentProxy.setLocalCopy(contentFolder);
-        contentProxy.setTitle(zipContent.getFileName());
-
-        ContentAnalyzer contentAnalyzer = new ContentAnalyzer();
+        contentProxy.setTitle(zipContent.getTitle());
+        ContentAnalyzer contentAnalyzer = new ContentAnalyzer(job);
         AnalyzedContent<?> analyzedContent = contentAnalyzer
                 .analyzeContent(contentProxy);
-        log.info(">>Analizando Contenido: " + zipContent.getFileName());
+        log.info(">> Analizando Contenido: " + zipContent.getFileName());
 
         File analyzedContentFile = new File(job.getJobConfig()
                 .getAnalysisResultPath()
                 + File.separator
-                + contentProxy.getTitle() + "_W3CResult.csv");
+                + contentProxy.getTitle());
         analyzedContent.setLocalCopy(analyzedContentFile);
-        OutputManager.createAnalizedContentCSV(analyzedContent);
-        log.info(">>Análisis guardado para el contenido: "
+        String workingPath = job.getJobConfig().getWorkingContentPath();
+        OutputManager.createAnalizedContentCSV(analyzedContent, workingPath);
+        log.info(">> Análisis guardado para el contenido: "
                 + zipContent.getFileName());
 
         // Info estadística
         job.getContentsAnalyzed().add(zipContent);
-        return contentProxy;
     }
 }

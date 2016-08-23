@@ -1,12 +1,14 @@
 package com.emergya.descartes.workers;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 
-import com.emergya.descartes.content.ZipContent;
+import com.emergya.descartes.content.DescartesZipContentProxy;
 import com.emergya.descartes.job.JobConverter;
 import com.emergya.descartes.job.SearchDescartesContents;
+import com.emergya.descartes.persistence.FileManager;
 
 /**
  * 
@@ -35,47 +37,70 @@ public class InitWorker extends BaseWorker implements Runnable {
     @Override
     public void run() {
 
-        if (getJob().getJobConfig().isToAnalyze()) {
+        boolean isToConvert = false;
+        if (getJob().getJobConfig().isToAnalyzeOrConvert()
+                .equalsIgnoreCase("analyze")) {
             (new Thread(new AnalyzeWorker(getJob()))).start();
-        }
-
-        if (getJob().getJobConfig().isToConvert2HTML5()) {
+        } else if (getJob().getJobConfig().isToAnalyzeOrConvert()
+                .equalsIgnoreCase("convert")) {
             (new Thread(new ConvertWorker(getJob()))).start();
+            isToConvert = true;
+            if (getJob().getJobConfig().isToW3CValidate()) {
+                (new Thread(new ValidateWorker(getJob()))).start();
+            }
+        } else {
+            log.error("----------La configuración no es válida: el parámetro 'general.analyzeORconvert' sólo acepta los valores 'analyze' o 'convert'-----------");
         }
 
-        if (getJob().getJobConfig().isToAnalyze()) {
-            (new Thread(new ValidateWorker(getJob()))).start();
-        }
-
-        SearchDescartesContents zipFilesNames = new SearchDescartesContents(
+        SearchDescartesContents zipDescartesContents = new SearchDescartesContents(
                 getJob().getJobConfig().getOriginalContentPath());
 
-        doWork(getJob(), zipFilesNames);
+        // Control de existencia de carpeta de trabajo
+        File resultPath = new File(getJob().getJobConfig()
+                .getWorkingContentPath());
 
-        log.info("---------------------------------PROCESO FINALIZADO---------------------------------");
+        if (resultPath.exists()) {
+            FileManager.deleteFilesInFolder(resultPath);
+        }
+
+        resultPath.mkdirs();
+
+        doWork(getJob(), zipDescartesContents, isToConvert);
     }
 
     /**
-     * Método que inicializa la cola de conversión de contenidos
-     * @param execSearch
+     * Método que inicializa la cola de análisis de contenidos
+     * @param ZipFilesNames
      * @param job
      */
-    private void doWork(JobConverter job, SearchDescartesContents ZipFilesNames) {
-        ArrayList<ZipContent> listaContenidos = (ArrayList<ZipContent>) ZipFilesNames
-                .getZipContentListNames();
+    private void doWork(JobConverter job,
+            SearchDescartesContents zipDescartesContents, boolean isToConvert) {
+        ArrayList<DescartesZipContentProxy> listaContenidos = (ArrayList<DescartesZipContentProxy>) zipDescartesContents
+                .getDescartesZipContentProxyListNames();
+        int numTotalContenidos = 0;
         try {
-            for (ZipContent zipFile : listaContenidos) {
-                job.getContentsToAnalyze().put(zipFile);
+            if (isToConvert) {
+                for (DescartesZipContentProxy zipFile : listaContenidos) {
+                    job.getContentsToConvert().put(zipFile);
+                }
+                numTotalContenidos = job.getContentsToConvert().size();
+            } else {
+                for (DescartesZipContentProxy zipFile : listaContenidos) {
+                    job.getContentsToAnalyze().put(zipFile);
+                }
+                numTotalContenidos = job.getContentsToAnalyze().size();
             }
-            log.info("-->>Número Total de Contenidos: "
-                    + (job.getContentsToAnalyze().size() + 1));
+
+            log.info("-->> Número Total de Contenidos: " + (numTotalContenidos));
             // Añadimos a la cola la poison pill para consumir el thread cuando
             // llegue a ella
-            job.getContentsToAnalyze().put(JobConverter.STOP_QUEUE_ZIP);
+            job.getContentsToAnalyze().put(JobConverter.STOP_QUEUE);
+            job.getContentsToConvert().put(JobConverter.STOP_QUEUE);
         } catch (InterruptedException e) {
             log.error("Error de Interrupción. " + e.getMessage(), e);
             try {
-                job.getContentsToAnalyze().put(JobConverter.STOP_QUEUE_ZIP);
+                job.getContentsToAnalyze().put(JobConverter.STOP_QUEUE);
+                job.getContentsToConvert().put(JobConverter.STOP_QUEUE);
             } catch (InterruptedException e1) {
                 log.error("Error de Interrupción. " + e.getMessage(), e);
             }

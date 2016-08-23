@@ -3,7 +3,6 @@ package com.emergya.descartes.converter;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -12,10 +11,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.stream.Stream;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.helper.StringUtil;
@@ -28,12 +25,18 @@ import org.jsoup.select.Elements;
 import com.emergya.descartes.content.DescartesContentProxy;
 import com.emergya.descartes.converter.model.ConvertedContent;
 import com.emergya.descartes.converter.model.ConvertedHTMLFile;
+import com.emergya.descartes.job.JobConverter;
 import com.emergya.descartes.persistence.FileManager;
+import com.emergya.descartes.persistence.OutputManager;
 import com.emergya.descartes.utils.Constants;
 
 public class Html5FileConverter {
 
     private static Logger log = Logger.getLogger(Html5FileConverter.class);
+
+    JobConverter job;
+
+    List<ConvertedHTMLFile> convertedListFiles = new ArrayList<>();
 
     /** The Constant ID_ATTRIBUTE. */
     private final String ID_ATTRIBUTE = "id";
@@ -48,6 +51,13 @@ public class Html5FileConverter {
     private String errorContent;
 
     /**
+     * @param job
+     */
+    public Html5FileConverter(JobConverter job) {
+        this.job = job;
+    }
+
+    /**
      *
      * @param <T>
      * @param file the file
@@ -56,7 +66,6 @@ public class Html5FileConverter {
             final DescartesContentProxy contentToConvert, File targetPath) {
         errorContent = "";
         ConvertedContent<T> convertedContent = new ConvertedContent<T>();
-        List<ConvertedHTMLFile> convertedListFiles = new ArrayList<>();
         try {
             FileUtils
                     .copyDirectory(contentToConvert.getLocalCopy(), targetPath);
@@ -64,67 +73,66 @@ public class Html5FileConverter {
             log.error("Error al crear el contenido "
                     + contentToConvert.getTitle() + " para su conversión");
         }
-        convertedContent.setContentProxy(contentToConvert);
-        convertedContent.setLocalCopy(targetPath);
 
-        try (Stream<Path> filePathStream = Files.walk(Paths
-                .get(convertedContent.getLocalCopy().getPath()))) {
-            filePathStream
-                    .forEach(filePath -> {
-                        if (Files.isRegularFile(filePath)) {
-                            String ext = FilenameUtils.getExtension(filePath
-                                    .toString());
-                            if (ext.equals(Constants.FILE_HTML)
-                                    || ext.equals(Constants.FILE_HTM)) {
-                                try {
-                                    Document doc = Jsoup.parse(filePath
-                                            .toFile(),
-                                            StandardCharsets.ISO_8859_1
-                                                    .displayName());
+        DescartesContentProxy convertedContentProxy = new DescartesContentProxy();
+        convertedContentProxy.setLocalCopy(targetPath);
+        convertedContentProxy.setTitle(contentToConvert.getTitle());
+        convertedContent.setContentProxy(convertedContentProxy);
 
-                                    final Charset charset = Utils
-                                            .getContentCharset(doc);
-                                    if (!charset
-                                            .equals(StandardCharsets.ISO_8859_1)) {
-                                        doc = Jsoup.parse(filePath.toFile(),
-                                                charset.displayName());
-                                    }
-                                    Document _doc = Utils.updateCharset(doc,
-                                            StandardCharsets.UTF_8);
-                                    nodeCss = new HashMap<String, String>();
-                                    analizeDOM(_doc);
-                                    addCssStyleDOM(_doc);
-
-                                    ConvertedHTMLFile convertedHTMLFile = new ConvertedHTMLFile();
-                                    convertedHTMLFile.setLocalCopy(filePath
-                                            .toFile());
-                                    convertedListFiles.add(convertedHTMLFile);
-
-                                } catch (Exception e) {
-                                    errorContent = e.getMessage();
-                                    ConvertedHTMLFile convertedHTMLFile = new ConvertedHTMLFile();
-                                    convertedHTMLFile.setLocalCopy(filePath
-                                            .toFile());
-                                    convertedHTMLFile.setErrors(errorContent);
-                                    convertedListFiles.add(convertedHTMLFile);
-
-                                    log.error((filePath.toFile() != null ? filePath
-                                            .toFile().getAbsolutePath()
-                                            : "Fichero")
-                                            + ": Estructura HTML incorrecta."
-                                            + e);
-                                }
-                            }
-                        }
-                    });
+        try {
+            Files.walk(
+                    Paths.get(convertedContentProxy.getLocalCopy().getPath()))
+                    .filter(p -> p.toString().endsWith(Constants.FILE_HTML)
+                            || p.toString().endsWith(Constants.FILE_HTM))
+                    .forEach(this::setConvertContent);
 
             convertedContent.setConvertedListFiles(convertedListFiles);
+
+            Files.walk(
+                    Paths.get(convertedContentProxy.getLocalCopy().getPath()))
+                    .filter(p -> p.toString().endsWith(Constants.FILE_JS))
+                    .forEach(this::replaceDescartesJS);
 
         } catch (IOException e) {
             log.error("Error al obtener los ficheros del contenido '"
                     + contentToConvert.getTitle() + "' en la ruta de origen", e);
         }
         return convertedContent;
+    }
+
+    private void setConvertContent(Path path) {
+        try {
+            String charsetName = job.getJobConfig().getConversionCharset();
+            Document doc = Jsoup.parse(path.toFile(), charsetName);
+
+            final Charset charset = Utils.getContentCharset(doc);
+            if (!charset.equals(charsetName)) {
+                doc = Jsoup.parse(path.toFile(), charset.displayName());
+            }
+            Document _doc = Utils.updateCharset(doc,
+                    Charset.forName(charsetName));
+            nodeCss = new HashMap<String, String>();
+            analizeDOM(_doc);
+            addCssStyleDOM(_doc);
+
+            File fileConverted = OutputManager.createHtml5File(path.toFile(),
+                    _doc);
+
+            ConvertedHTMLFile convertedHTMLFile = new ConvertedHTMLFile();
+            convertedHTMLFile.setLocalCopy(fileConverted);
+            convertedHTMLFile.setPathInContent(path.toString());
+            convertedListFiles.add(convertedHTMLFile);
+
+        } catch (Exception e) {
+            errorContent = e.getMessage();
+            ConvertedHTMLFile convertedHTMLFile = new ConvertedHTMLFile();
+            convertedHTMLFile.setLocalCopy(path.toFile());
+            convertedHTMLFile.setErrors(errorContent);
+            convertedListFiles.add(convertedHTMLFile);
+
+            log.error((path.toFile() != null ? path.toFile().getAbsolutePath()
+                    : "Fichero") + ": Estructura HTML incorrecta." + e);
+        }
     }
 
     /**
@@ -384,13 +392,14 @@ public class Html5FileConverter {
      *
      * @param file the file
      */
-    private void replaceDescartesJS(File file) {
+    private void replaceDescartesJS(Path path) {
         try {
-            if (file.getName().equals("descartes-min.js")) {
+            if (path.getFileName().equals("descartes-min.js")) {
                 FileManager.copy(
                         this.getClass()
                                 .getResource("/" + Constants.SCRIPT_DESCARTES)
-                                .getPath(), file.getParent(), file.getName());
+                                .getPath(), path.toString(), path.getFileName()
+                                .toString());
             }
         } catch (Exception e) {
             errorContent = e.getMessage();

@@ -5,6 +5,7 @@ import java.io.File;
 import org.apache.log4j.Logger;
 
 import com.emergya.descartes.content.DescartesContentProxy;
+import com.emergya.descartes.content.DescartesZipContentProxy;
 import com.emergya.descartes.converter.Html5FileConverter;
 import com.emergya.descartes.converter.model.ConvertedContent;
 import com.emergya.descartes.job.JobConverter;
@@ -33,7 +34,7 @@ public class ConvertWorker extends BaseWorker implements Runnable {
     public void run() {
         try {
             JobConverter currentJob = getJob();
-            log.info("----Inicio del proceso de conversión de contenidos----");
+            log.info("****INICIO DEL PROCESO DE CONVERSIÓN DE CONTENIDOS****");
             // Control de existencia de carpeta de trabajo
             File resultPath = new File(currentJob.getJobConfig()
                     .getConvertedContentPath());
@@ -46,30 +47,38 @@ public class ConvertWorker extends BaseWorker implements Runnable {
             while (!currentJob.isConvertQueueReadyFlag()
                     || !currentJob.getContentsToConvert().isEmpty()) {
 
-                DescartesContentProxy contentToConvert = currentJob
+                DescartesZipContentProxy contentToConvert = currentJob
                         .getContentsToConvert().take();
+
+                DescartesContentProxy contentConverted = new DescartesContentProxy();
 
                 if (contentToConvert != JobConverter.STOP_QUEUE) {
                     if (contentToConvert != null) {
-                        doWork(contentToConvert, currentJob);
+                        contentConverted = doWork(contentToConvert, currentJob);
                     }
+
+                    if (currentJob.getJobConfig().isToW3CValidate()) {
+                        currentJob.getContentsToValidate()
+                                .put(contentConverted);
+                    }
+
                 } else {
                     currentJob.getContentsToValidate().put(
-                            JobConverter.STOP_QUEUE);
+                            JobConverter.STOP_QUEUE_V);
                     currentJob.setConvertQueueReadyFlag(true);
-                    log.info("-->>Total contenidos convertidos: "
+                    log.info("-->> Total contenidos convertidos: "
                             + (currentJob.getContentsConverted().size()));
+
+                    log.info("****CONVERSIÓN FINALIZADA****");
                 }
             }
-
             log.info("Contenidos que han provocado errores: "
                     + currentJob.getContentsConvertedError().size());
-
         } catch (InterruptedException e) {
             log.error("Interrupción de la cola de transformación. "
                     + e.getMessage());
             try {
-                getJob().getContentsToValidate().put(JobConverter.STOP_QUEUE);
+                getJob().getContentsToValidate().put(JobConverter.STOP_QUEUE_V);
             } catch (InterruptedException e1) {
                 log.error("error", e1);
             }
@@ -84,26 +93,34 @@ public class ConvertWorker extends BaseWorker implements Runnable {
      * @param contentToConvert
      * @param job
      */
-    private void doWork(DescartesContentProxy contentToConvert, JobConverter job)
+    private DescartesContentProxy doWork(
+            DescartesZipContentProxy contentToConvert, JobConverter job)
             throws InterruptedException {
+        File contentFolder = FileManager.extractZipContents(contentToConvert,
+                job);
+        DescartesContentProxy contentProxy = new DescartesContentProxy();
+        contentProxy.setLocalCopy(contentFolder);
+        contentProxy.setTitle(contentToConvert.getTitle());
         File filesConvertedPath = new File(job.getJobConfig()
-                .getConvertedContentPath());
-
-        Html5FileConverter html5FileConverter = new Html5FileConverter();
-        ConvertedContent<?> convertedContent = html5FileConverter
-                .convertContentToHtml5(contentToConvert, filesConvertedPath);
-        log.info(">>Convirtiendo Contenido: " + contentToConvert.getTitle());
-
-        File convertedContentLogFile = new File(job.getJobConfig()
                 .getConvertedContentPath()
                 + File.separator
-                + "descartes2Html5_summary.csv");
+                + contentProxy.getTitle());
 
-        convertedContent.setLocalCopy(convertedContentLogFile);
+        Html5FileConverter html5FileConverter = new Html5FileConverter(job);
+        ConvertedContent<?> convertedContent = html5FileConverter
+                .convertContentToHtml5(contentProxy, filesConvertedPath);
+        log.info(">> Convirtiendo Contenido: " + contentToConvert.getTitle());
+
+        File convertedContentLogFile = new File(filesConvertedPath.toString()
+                + File.separator + "descartes2Html5_summary.csv");
+
+        convertedContent.setLogFile(convertedContentLogFile);
         OutputManager.createLogConvertedContentCSV(convertedContent);
-        log.info(">>Conversión Summary guardado para el contenido: "
+        log.info(">> Sumario de conversión guardado para el contenido: "
                 + contentToConvert.getTitle());
         // Estadistica
         job.getContentsConverted().add(contentToConvert);
+
+        return convertedContent.getContentProxy();
     }
 }

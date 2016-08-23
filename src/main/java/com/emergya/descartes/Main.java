@@ -1,6 +1,5 @@
 package com.emergya.descartes;
 
-import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 import com.emergya.descartes.job.JobConfiguration;
@@ -14,25 +13,16 @@ import com.emergya.descartes.workers.InitWorker;
  */
 public class Main {
     /**
-     * 
-     */
-    private static final Logger log = Logger.getLogger(Main.class);
-
-    /**
     * Inicia la aplicacion Descartes2HTML5
     * @param args 
     */
     public static void main(String[] args) {
 
         try {
-            PropertyConfigurator.configure(args[0]);
             if (args.length != 1) {
-                String errorArgs = "Es obligatorio indicar un fichero de configuración";
-                log.debug(errorArgs);
-                throw new Exception(
-                        "No se han pasado todos los argumentos, debe indicar el nombre de un fichero de configuración");
+                throw new Exception();
             } else {
-
+                PropertyConfigurator.configure(args[0]);
                 JobConverter job = initJob(args[0]);
                 SearchDescartesContents checkContents = new SearchDescartesContents(
                         job.getJobConfig().getOriginalContentPath());
@@ -40,11 +30,15 @@ public class Main {
                 if (checkContents.getNumContents() > 0) {
                     initWorkers(job);
                 } else {
-                    log.info("-----No se han encontrado contenidos Descartes en la ruta especificada en la configuración------");
+                    System.console()
+                            .writer()
+                            .println(
+                                    "-----No se han encontrado contenidos Descartes en la ruta especificada en la configuración------");
                 }
             }
         } catch (Exception e) {
-            log.error(e.getMessage(), e);
+            String errorArgs = "**No se han pasado todos los argumentos, debe indicar el nombre de un fichero de configuración**\n";
+            System.err.print(errorArgs);
         }
     }
 

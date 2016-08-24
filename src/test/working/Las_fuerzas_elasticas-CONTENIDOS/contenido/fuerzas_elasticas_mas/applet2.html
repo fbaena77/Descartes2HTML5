@@ -1,0 +1,332 @@
+<HTML>
+<HEAD>
+<META http-equiv=Content-Type content='text/html; charset=ISO-8859-1'>
+<TITLE>LAS FUERZAS EL�STICAS</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="resoluprocss/newton.css">
+<script type="text/javascript" language="JavaScript" src="resoluprojs/objNavegador.js"></script>
+<script type="text/javascript" language="JavaScript" src="resoluprojs/objLayer.js"></script>
+<script type="text/javascript" language="JavaScript" src="resoluprojs/newton.js"></script>
+<style type="text/css">
+<!--
+.Estilo1 {	font-family: Arial, Helvetica, sans-serif;
+	color: #0000FF;
+}
+-->
+</style>
+<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<script type="text/javascript" src="./descartes-min.js"></script></HEAD>
+<BODY onLoad="posicionaMenu(4)" BGCOLOR="#ffffff">
+<DIV class=clsCurso id="CapaCurso" GBLCOLORON="ECF8F9" GBLCOLOR="78A6DA">Problema. 1� Bachillerato</DIV>
+<DIV id=CapaFondo><IMG height=429 src="images/fondo.jpg" width=770></DIV>
+<DIV id=CapaImg><IMG src="images/muelles.png" name=imgUnidad width="201" height="80" id=imgUnidad></DIV>
+<DIV id="eltoMenuHead"  nombre="eltoMenuHead">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=4 src="images/menu/menu_01.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_02.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_03.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_04.jpg height=29></TD>
+<TD class=clsMenuHead id=tbMenuVTitulo align=middle width=112 bgColor=#f7f7f7 height=29><A href="index.html"><FONT class=clsMenuHead>LAS FUERZAS EL�STICAS</FONT></A></TD>
+<TD width=16 background=images/menu/menu_06.jpg height=29></TD></TR>
+<TR>
+<TD><IMG height=2 src="images/menu/menu_07.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_08.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_09.jpg" width=16></TD></TR>
+<TR>
+<TD><IMG height=2 src="images/menu/menu_10.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_11.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_12.jpg" width=16></TD></TR>
+<TR>
+<TD><IMG height=2 src="images/menu/menu_16.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_17.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_18.jpg" width=16></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenuFoot"  nombre="eltoMenuFoot">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=75 src="images/menu/menu_31.jpg" width=10></TD>
+<TD class=clsPeque id=idTextoPie vAlign=bottom width=112 background=images/menu/menu_32.jpg height=75>M� Josefa Grima y Javier Soriano</TD>
+<TD><IMG height=75 src="images/menu/menu_33.jpg" width=16></TD></TR></TABLE></DIV>
+<DIV id=CapaMenuH>
+<TABLE height=21 cellSpacing=0 cellPadding=0 width=381 background=images/menuH/fondo.jpg border=0>
+
+<TR>
+<TD width=2><IMG height=21 src="images/menuH/separaFondo.jpg" width=2></TD>
+<TD id=idUnidad height=21>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+
+<TR>
+<TD class=clsMenuH id=idUnidadDentro contentEditable=false vAlign=bottom height=21>fuerzas_el�sticas</TD>
+<TD><IMG height=21 src="images/menuH/cajaOn.jpg" width=18></TD>
+<TD><IMG height=21 src="images/menuH/separador.jpg" width=2></TD>
+<TD><IMG height=21 src="images/menuH/cajaOn.jpg" width=18></TD>
+<TD><IMG height=21 src="images/menuH/separador.jpg" width=2></TD>
+<TD><IMG height=21 src="images/menuH/cajaOff.jpg" width=18></TD>
+<TD><IMG height=21 src="images/menuH/separador.jpg" width=2></TD>
+<TD><IMG height=21 src="images/menuH/cajaOff.jpg" width=18></TD>
+<TD><IMG height=21 src="images/spacer.gif" width=10></TD></TR></TABLE></TD>
+
+
+<TD class=clsMenuH width=24 height=21><IMG id=imgImprimir height=21 src="images/menuH/imprimir.jpg" width=24 name=imgImprimir></TD>
+<TD class=clsMenuH vAlign=bottom width=60 height=21><A class=clsMenuH onMouseOver="rollOver('imgImprimir', 'CapaMenuH', 'images/menuH/imprimir_on.jpg')" onMouseOut="rollOver('imgImprimir', 'CapaMenuH', 'images/menuH/imprimir.jpg')" href="javascript:imprimir()">Imprimir</A></TD>
+
+
+<TD width=2><IMG height=21 src="images/menuH/separaFondo.jpg" width=2></TD></TR></TABLE>
+</DIV>
+<DIV class="" id=CapaCont contentEditable=false>
+  <table id=oTblCont0 borderColor=#e5d48c cellSpacing=0 cellPadding=2 width=610 bgColor=#c5b375 border=0>
+    <tr>
+      <td class=clsTexto valign=top><p align=center><font color=#333333>LAS FUERZAS EL&Aacute;STICAS</font></p></td>
+    </tr>
+  </table>
+  <DIV class="" id=CapaCont2 contentEditable=false>
+  <p align="justify"><span class="Estilo1">En las siguientes tres ESCENAS, vamos a considerar todos los casos posibles que plantea el problema.</span></p>
+  <p align="justify" class="Estilo1">En la primera ESCENA (applet) vamos a considerar el muelle comprimido empujando a una masa, que luego se desliza por un plano horizontal con mayor o menor rozamiento. La fuerza resultante que act&uacute;a sobre la masa en cada instante, la representamos en rojo. En la parte de abajo del applet aparece la gr&aacute;fica de esta fuerza F frente a &quot;x&quot;. La escena se titula &quot;muelle_masa_plano&quot;.</p>
+  <p align="justify" class="Estilo1">En la segunda ESCENA (applet) vamos a estudiar el caso de la masa ligada al muelle previamente comprimido y que la dejamos en libertad sobre un plano horizontal sin rozamiento. En ella aparece la fuerza resultante sobre &quot;m&quot; en cada instante de su movimiento y, en la parte de abajo del applet una gr&aacute;fica en la que se representa la posici&oacute;n de &quot;m&quot; frente al tiempo. Adem&aacute;s aparece el dato del periodo del movimiento en cada caso. La escena se titula &quot;muelle_masa_m.a.s&quot;.</p>
+  <p align="justify" class="Estilo1">En la tercera ESCENA (applet) vamos a considerar los aspectos energ&eacute;ticos del anterior movimiento. En la parte superior del applet aparece el movimiento de la masa ligada al muelle y, en la parte inferior, una gr&aacute;fica de la energ&iacute;a potencial frente a la posici&oacute;n &quot;x&quot; de la masa, indicando adem&aacute;s la cantidad de energ&iacute;a cin&eacute;tica de la masa en cada instante. La escena se titula &quot;muelle_masa_energia&quot;.</p>
+  <p align="justify" class="Estilo1">Las variables que podemos introducir en todos los casos son: en la primera escena, la compresi&oacute;n del muelle, la constante el&aacute;stica del mismo, la masa empujada y, el coeficiente de rozamiento del plano horizontal. En las otras dos escenas podremos introducir como variables, la compresi&oacute;n inicial del muelle, la constante el&aacute;stica del mismo, y la masa ligada.</p>
+  <div align="center">
+    <applet name=""muelle-masa-plano"" width=150 height=35
+        code="descinst.Descartes.class"
+        archive="descinst.jar,http://descartes.cnice.mec.es/plugin/descinst.jar"
+        MAYSCRIPT>
+        <param name="nombre" value="muelle_masa_plano">
+        <param name="pop" value="width=465 height=340">
+        <param name="Versi&oacute;n" value="3.875">
+        <param name="Idioma" value="espa&ntilde;ol">
+        <param name="Botones" value="cr&eacute;ditos=no config=si inicio=si limpiar=no">
+        <param name="E_00" value="id='E1' escala='50' O.x='-20' x='x' y='y' despl_imagen='arr-izq' fondo='blanco' red='grisClaro' red10='gris' ejes='gris' texto='rosa'">
+        <param name="E_01" value="id='E2' escala='50' O.x='-70' x='100' y='200' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='gris' texto='rosa' eje-x='x' eje-y='F/N'">
+        <param name="C_00" value="tipo='num&eacute;rico' id='xmax' espacio='E1' valor='1' decimales='1' nombre='xmax' min='0.5' max='2' visible='si' tooltip='compresi&oacute;n inicial del muelle' Explicaci&oacute;n='compresi&oacute;n inicial del muelle' pos_mensajes='centro'">
+        <param name="C_01" value="tipo='num&eacute;rico' id='k' espacio='E1' valor='10' decimales='0' nombre='k' incr='1' min='1' max='20' visible='si' tooltip='constante el&aacute;stica del muelle' Explicaci&oacute;n='constante el&aacute;stica del muelle' pos_mensajes='centro'">
+        <param name="C_02" value="tipo='num&eacute;rico' id='u' espacio='E1' valor='0.2' nombre='u' incr='0.05' min='0' max='1' visible='si' tooltip='coeficiente de rozamiento del suelo' Explicaci&oacute;n='coeficiente de rozamiento del suelo' pos_mensajes='centro'">
+        <param name="C_03" value="tipo='num&eacute;rico' id='m' espacio='E1' valor='1' decimales='1' nombre='m' min='0.1' max='3' visible='si' tooltip='masa del bloque' Explicaci&oacute;n='masa del bloque' pos_mensajes='centro'">
+        <param name="A_00" value="id='a' expresi&oacute;n='u*g'">
+        <param name="A_01" value="id='g' expresi&oacute;n='9.8' evaluar='siempre' constante='si'">
+        <param name="A_02" value="id='vo' expresi&oacute;n='xmax*sqrt(k/m)'">
+        <param name="A_03" value="id='emax' expresi&oacute;n='0.5*(vo/a)*vo'">
+        <param name="G_00" value="espacio='E1' tipo='segmento' dibujar-si='t>0' color='azul' expresi&oacute;n='(-3,0)(-2.75,0.5)'">
+        <param name="G_01" value="espacio='E1' tipo='segmento' dibujar-si='t>0' color='azul' expresi&oacute;n='(-2.75,0.5)(-2.5,0)'">
+        <param name="G_02" value="espacio='E1' tipo='segmento' dibujar-si='t>0' color='azul' expresi&oacute;n='(-2.5,0)(-2.25,0.5)'">
+        <param name="G_03" value="espacio='E1' tipo='segmento' dibujar-si='t>0' color='azul' expresi&oacute;n='(-2.25,0.5)(-2.0,0)'">
+        <param name="G_04" value="espacio='E1' tipo='segmento' dibujar-si='t>0' color='azul' expresi&oacute;n='(-2.0,0)(-1.75,0.5)'">
+        <param name="G_05" value="espacio='E1' tipo='segmento' dibujar-si='t>0' color='azul' expresi&oacute;n='(-1.75,0.5)(-1.5,0)'">
+        <param name="G_06" value="espacio='E1' tipo='segmento' dibujar-si='t>0' color='azul' expresi&oacute;n='(-1.5,0)(-1.25,0.5)'">
+        <param name="G_07" value="espacio='E1' tipo='segmento' dibujar-si='t>0' color='azul' expresi&oacute;n='(-1.25,0.5)(-1.0,0)'">
+        <param name="G_08" value="espacio='E1' tipo='segmento' dibujar-si='t>0' color='azul' expresi&oacute;n='(-1.0,0)(-0.75,0.5)'">
+        <param name="G_09" value="espacio='E1' tipo='segmento' dibujar-si='t>0' color='azul' expresi&oacute;n='(-0.75,0.5)(-0.5,0)'">
+        <param name="G_10" value="espacio='E1' tipo='segmento' dibujar-si='t>0' color='azul' expresi&oacute;n='(-0.5,0)(-0.25,0.5)'">
+        <param name="G_11" value="espacio='E1' tipo='segmento' dibujar-si='t>0' color='azul' expresi&oacute;n='(-0.25,0.5)(0,0)'">
+        <param name="G_12" value="espacio='E1' tipo='segmento' dibujar-si='t>0' color='azul' expresi&oacute;n='(0,0)(0,0.5)'">
+        <param name="G_13" value="espacio='E1' tipo='pol&iacute;gono' dibujar-si='t>0' color='verde' expresi&oacute;n='(0+vo*t-0.5*a*t*t,0)(0+vo*t-0.5*a*t*t,0.5)(0.5+vo*t-0.5*a*t*t,0.5)(0.5+vo*t-0.5*a*t*t,0)(0+vo*t-0.5*a*t*t,0)' relleno='verde'">
+        <param name="G_14" value="espacio='E1' tipo='pol&iacute;gono' color='azul' expresi&oacute;n='(-4.5,0)(5,0)(5,-3)(-4.5,-3)' relleno='grisClaro'">
+        <param name="G_15" value="espacio='E1' tipo='pol&iacute;gono' color='azul' expresi&oacute;n='(-3,0)(-3,4)(-4.5,4)(-4.5,0)' relleno='grisClaro'">
+        <param name="G_16" value="espacio='E1' tipo='flecha' dibujar-si='t>0' color='rojo' expresi&oacute;n='(0.25+vo*t-0.5*a*t*t,0.25)(0.25+vo*t-0.5*a*t*t,-m)' ancho='0.5' ancho='0.5' punta='6' flecha='rojo'">
+        <param name="G_17" value="espacio='E1' tipo='flecha' dibujar-si='t>0' color='rojo' expresi&oacute;n='(0.25+vo*t-0.5*a*t*t,0.25)(0.25+vo*t-0.5*a*t*t,0.5+m)' ancho='2' ancho='2' punta='6' flecha='rojo'">
+        <param name="G_18" value="espacio='E1' tipo='punto' dibujar-si='t>0' color='negro' expresi&oacute;n='(0.25+vo*t-0.5*a*t*t,0.25)' tama&ntilde;o='4'">
+        <param name="G_19" value="espacio='E1' tipo='segmento' color='azul' expresi&oacute;n='(0,0)(5,0)' ancho='3'">
+        <param name="G_20" value="espacio='E1' tipo='flecha' dibujar-si='(t>0)&((vo/a)>t)' color='rojo' expresi&oacute;n='(0.25+vo*t-0.5*a*t*t,0.1)(-3.75*u*m+0.25+vo*t-0.5*a*t*t,0.1)' texto='rozamiento' ancho='2' ancho='2' punta='6' flecha='rojo'">
+        <param name="G_21" value="espacio='E1' tipo='segmento' dibujar-si='t<0' color='azul' expresi&oacute;n='(-3,0)(-2.75+(xmax/12)*(1/2)*t*2,0.5)'">
+        <param name="G_22" value="espacio='E1' tipo='segmento' dibujar-si='t<0' color='azul' expresi&oacute;n='(-2.75+(xmax/12)*(1/2)*t*2,0.5)(-2.5+(xmax/12)*(2/2)*t*2,0)'">
+        <param name="G_23" value="espacio='E1' tipo='segmento' dibujar-si='t<0' color='azul' expresi&oacute;n='(-2.5+(xmax/12)*(2/2)*t*2,0)(-2.25+(xmax/12)*(3/2)*t*2,0.5)'">
+        <param name="G_24" value="espacio='E1' tipo='segmento' dibujar-si='t<0' color='azul' expresi&oacute;n='(-2.25+(xmax/12)*(3/2)*t*2,0.5)(-2.0+(xmax/12)*(4/2)*t*2,0)'">
+        <param name="G_25" value="espacio='E1' tipo='segmento' dibujar-si='t<0' color='azul' expresi&oacute;n='(-2+(xmax/12)*(4/2)*t*2,0)(-1.75+(xmax/12)*(5/2)*t*2,0.5)'">
+        <param name="G_26" value="espacio='E1' tipo='segmento' dibujar-si='t<0' color='azul' expresi&oacute;n='(-1.75+(xmax/12)*(5/2)*t*2,0.5)(-1.5+(xmax/12)*(6/2)*t*2,0)'">
+        <param name="G_27" value="espacio='E1' tipo='segmento' dibujar-si='t<0' color='azul' expresi&oacute;n='(-1.5+(xmax/12)*(6/2)*t*2,0)(-1.25+(xmax/12)*(7/2)*t*2,0.5)'">
+        <param name="G_28" value="espacio='E1' tipo='segmento' dibujar-si='t<0' color='azul' expresi&oacute;n='(-1.25+(xmax/12)*(7/2)*t*2,0.5)(-1.0+(xmax/12)*(8/2)*t*2,0)'">
+        <param name="G_29" value="espacio='E1' tipo='segmento' dibujar-si='t<0' color='azul' expresi&oacute;n='(-1.0+(xmax/12)*(8/2)*t*2,0)(-0.75+(xmax/12)*(9/2)*t*2,0.5)'">
+        <param name="G_30" value="espacio='E1' tipo='segmento' dibujar-si='t<0' color='azul' expresi&oacute;n='(-0.75+(xmax/12)*(9/2)*t*2,0.5)(-0.5+(xmax/12)*(10/2)*t*2,0)'">
+        <param name="G_31" value="espacio='E1' tipo='segmento' dibujar-si='t<0' color='azul' expresi&oacute;n='(-0.5+(xmax/12)*(10/2)*t*2,0)(-0.25+(xmax/12)*(11/2)*t*2,0.5)'">
+        <param name="G_32" value="espacio='E1' tipo='segmento' dibujar-si='t<0' color='azul' expresi&oacute;n='(-0.25+(xmax/12)*(11/2)*t*2,0.5)(0+(xmax/12)*(12/2)*t*2,0)'">
+        <param name="G_33" value="espacio='E1' tipo='segmento' dibujar-si='t<0' color='azul' expresi&oacute;n='(0+(xmax/12)*(12/2)*t*2,0)(0+(xmax/12)*(12/2)*t*2,0.5)'">
+        <param name="G_34" value="espacio='E1' tipo='pol&iacute;gono' dibujar-si='t<0' color='azul' expresi&oacute;n='(0+(xmax/2)*t*2,0)(0+(xmax/2)*t*2,0.5)(0.5+(xmax/2)*t*2,0.5)(0.5+(xmax/2)*t*2,0)(0+(xmax/2)*t*2,0)' relleno='verde'">
+        <param name="G_35" value="espacio='E1' tipo='flecha' dibujar-si='t<0' color='rojo' expresi&oacute;n='((xmax/2)*t*2+0.25,0.25)((xmax/2)*t*2+0.25,-m)' texto='peso' ancho='0.5' ancho='0.5' punta='6' flecha='rojo'">
+        <param name="G_36" value="espacio='E1' tipo='flecha' dibujar-si='t<0' color='rojo' expresi&oacute;n='((xmax/2)*t*2+0.25,0.25)((xmax/2)*t*2+0.25,m+0.50)' texto='normal' ancho='0.5' ancho='0.5' punta='6' flecha='rojo'">
+        <param name="G_37" value="espacio='E1' tipo='flecha' dibujar-si='t<0' color='rojo' expresi&oacute;n='((xmax/2)*t*2+0.25,0.25)(xmax*k*0.1*(t*2/-2)+(xmax/2)*t*2+0.25,0.25)' texto='el&aacute;stica' ancho='0.5' ancho='0.5' punta='6' flecha='rojo'">
+        <param name="G_38" value="espacio='E1' tipo='texto' dibujar-si='t>0' color='azul' expresi&oacute;n='[20,20]' texto='velocidad lanzamiento:[vo]m/s'">
+        <param name="G_39" value="espacio='E1' tipo='texto' dibujar-si='t>vo/a' color='azul' expresi&oacute;n='[20,40]' texto='espacio recorrido:[emax]m'">
+        <param name="G_40" value="espacio='E1' tipo='texto' color='azul' expresi&oacute;n='[95,280]' texto=' m'">
+        <param name="G_41" value="espacio='E1' tipo='texto' color='azul' expresi&oacute;n='[200,280]' texto='N/m'">
+        <param name="G_42" value="espacio='E1' tipo='texto' color='azul' expresi&oacute;n='[380,280]' texto='kg'">
+        <param name="G_43" value="espacio='E2' tipo='ecuaci&oacute;n' dibujar-si='(x>-xmax)&(x<0)' color='rojo' expresi&oacute;n='y=-(k/28)*x' visible='no'">
+        <param name="G_44" value="espacio='E2' tipo='ecuaci&oacute;n' dibujar-si='(x>0)&(x<emax)' color='rojo' expresi&oacute;n='y=-u*m' visible='no'">
+        <param name="Animaci&oacute;n" value="controles='no' auto='no' inicio='t=-1' hacer='t=t+0.025' mientras='t<vo/a'">
+    </applet>
+&nbsp;&nbsp;
+<applet name=""muelle_masa_m.a.s"" width=150 height=35
+        code="descinst.Descartes.class"
+        archive="descinst.jar,http://descartes.cnice.mec.es/plugin/descinst.jar"
+        MAYSCRIPT>
+        <param name="nombre" value="muelle_masa_m.a.s">
+        <param name="pop" value="width=465 height=340">
+        <param name="Versi&oacute;n" value="3.875">
+        <param name="Idioma" value="espa&ntilde;ol">
+        <param name="Botones" value="cr&eacute;ditos=no config=si inicio=si limpiar=si">
+        <param name="E_00" value="fijo='si' O.x='-200' O.y='40' despl_imagen='arr-izq' fondo='rosa' red='no' red10='no' ejes='gris' texto='rosa' eje-x='t' eje-y='X' n&uacute;meros='si'">
+        <param name="E_01" value="id='E2' ancho='500' alto='98' despl_imagen='arr-izq' fondo='blanco' red='grisClaro' red10='gris' ejes='gris' texto='rosa' eje-x='x'">
+        <param name="C_00" value="tipo='num&eacute;rico' id='xmax' espacio='E2' valor='1' decimales='1' nombre='xmax' min='0.5' max='2' visible='si' tooltip='Amplitud' Explicaci&oacute;n='Amplitud' pos_mensajes='centro'">
+        <param name="C_01" value="tipo='num&eacute;rico' id='k' espacio='E2' valor='10' decimales='0' nombre='k' incr='1' min='5' max='50' visible='si' pos_mensajes='centro'">
+        <param name="C_02" value="tipo='num&eacute;rico' id='m' espacio='E2' valor='1' decimales='1' nombre='m' min='0.5' max='5' visible='si' pos_mensajes='centro'">
+        <param name="A_00" value="id='w' expresi&oacute;n='sqrt(k/m)'">
+        <param name="A_01" value="id='pi' expresi&oacute;n='3.1416' evaluar='siempre' constante='si'">
+        <param name="A_02" value="id='a' expresi&oacute;n='xmax*w*w*cos(w*t)'">
+        <param name="A_03" value="id='x' expresi&oacute;n='a/(w*w)'">
+        <param name="G_00" value="espacio='E2' tipo='pol&iacute;gono' color='grisClaro' expresi&oacute;n='(-5,1.2)(-3,1.2)(-3,-1)(-5,-1)(-5,1)' relleno='grisClaro'">
+        <param name="G_01" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-3,0)(-2.75-(xmax/11)*cos(w*t),0.5)'">
+        <param name="G_02" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-2.75-(xmax/11)*cos(w*t),0.5)(-2.5-(xmax/11)*2*cos(w*t),0)'">
+        <param name="G_03" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-2.5-(xmax/11)*2*cos(w*t),0)(-2.25-(xmax/11)*3*cos(w*t),0.5)'">
+        <param name="G_04" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-2.25-(xmax/11)*3*cos(w*t),0.5)(-2.0-(xmax/11)*4*cos(w*t),0)'">
+        <param name="G_05" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-2.0-(xmax/11)*4*cos(w*t),0)(-1.75-(xmax/11)*5*cos(w*t),0.5)'">
+        <param name="G_06" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-1.75-(xmax/11)*5*cos(w*t),0.5)(-1.5-(xmax/11)*6*cos(w*t),0)'">
+        <param name="G_07" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-1.5-(xmax/11)*6*cos(w*t),0)(-1.25-(xmax/11)*7*cos(w*t),0.5)'">
+        <param name="G_08" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-1.25-(xmax/11)*7*cos(w*t),0.5)(-1.0-(xmax/11)*8*cos(w*t),0)'">
+        <param name="G_09" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-1.0-(xmax/11)*8*cos(w*t),0)(-0.75-(xmax/11)*9*cos(w*t),0.5)'">
+        <param name="G_10" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-0.75-(xmax/11)*9*cos(w*t),0.5)(-0.5-(xmax/11)*10*cos(w*t),0)'">
+        <param name="G_11" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-0.5-(xmax/11)*10*cos(w*t),0)(-0.25-(xmax/11)*11*cos(w*t),0.5)'">
+        <param name="G_12" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-0.25-(xmax/11)*11*cos(w*t),0)(-0.25-(xmax/11)*11*cos(w*t),0.5)'">
+        <param name="G_13" value="espacio='E2' tipo='pol&iacute;gono' color='azul' expresi&oacute;n='(-0.25-(xmax/11)*11*cos(w*t),0)(-0.25-(xmax/11)*11*cos(w*t),0.5)(0.25-(xmax/11)*11*cos(w*t),0.5)(0.25-(xmax/11)*11*cos(w*t),0)(-0.25-(xmax/11)*11*cos(w*t),0)' relleno='verde'">
+        <param name="G_14" value="espacio='E2' tipo='flecha' color='rojo' expresi&oacute;n='(0-xmax*cos(w*t),0.25)(k*x*0.1-xmax*cos(w*t),0.25)' ancho='0.5' ancho='0.5' punta='4' flecha='rojo'">
+        <param name="G_15" value="tipo='punto' color='azul' expresi&oacute;n='(t,-xmax*cos(w*t))' rastro='gris'">
+        <param name="G_16" value="tipo='texto' color='azul' expresi&oacute;n='[10,100]' texto='x'">
+        <param name="G_17" value="espacio='E2' tipo='texto' color='gris' expresi&oacute;n='[220,3]' texto='y'">
+        <param name="G_18" value="tipo='texto' color='azul' expresi&oacute;n='[115,280]' texto='(m)'">
+        <param name="G_19" value="tipo='texto' color='azul' expresi&oacute;n='[210,280]' texto='(N/m)'">
+        <param name="G_20" value="tipo='texto' color='azul' expresi&oacute;n='[320,280]' texto='(Kg)'">
+        <param name="G_21" value="espacio='E2' tipo='texto' color='azul' expresi&oacute;n='[5,2]' texto='T=[2*pi*sqrt(m/k)]s'">
+        <param name="Animaci&oacute;n" value="controles='no' auto='no' inicio='t=0' hacer='t=t+0.025' mientras='t<10'">
+    </applet>
+&nbsp;&nbsp;
+<applet name=""muelle_masa_energia"" width=150 height=35
+        code="descinst.Descartes.class"
+        archive="descinst.jar,http://descartes.cnice.mec.es/plugin/descinst.jar"
+        MAYSCRIPT>
+        <param name="nombre" value="muelle_masa_energia">
+        <param name="pop" value="width=465 height=340">
+        <param name="Versi&oacute;n" value="3.875">
+        <param name="Idioma" value="espa&ntilde;ol">
+        <param name="Botones" value="cr&eacute;ditos=no config=si inicio=si limpiar=si">
+        <param name="E_00" value="fijo='si' O.y='110' despl_imagen='arr-izq' fondo='rosa' red='no' red10='no' ejes='gris' texto='rosa' eje-x='x' eje-y='E/J'">
+        <param name="E_01" value="id='E2' ancho='500' alto='98' despl_imagen='arr-izq' fondo='blanco' red='grisClaro' red10='gris' ejes='gris' texto='rosa' eje-x='x'">
+        <param name="C_00" value="tipo='num&eacute;rico' id='xmax' espacio='E2' valor='1' decimales='1' nombre='xmax' min='0.5' max='2' visible='si' tooltip='Amplitud' Explicaci&oacute;n='Amplitud' pos_mensajes='centro'">
+        <param name="C_01" value="tipo='num&eacute;rico' id='k' espacio='E2' valor='10' decimales='0' nombre='k' incr='1' min='5' max='50' visible='si' pos_mensajes='centro'">
+        <param name="C_02" value="tipo='num&eacute;rico' id='m' espacio='E2' valor='1' decimales='1' nombre='m' min='0.5' max='5' visible='si' pos_mensajes='centro'">
+        <param name="C_03" value="tipo='num&eacute;rico' id='parar' interfaz='bot&oacute;n' regi&oacute;n='norte' nombre='parar' visible='si' acci&oacute;n='animar' pos_mensajes='centro'">
+        <param name="A_00" value="id='w' expresi&oacute;n='sqrt(k/m)'">
+        <param name="A_01" value="id='pi' expresi&oacute;n='3.1416' evaluar='siempre' constante='si'">
+        <param name="A_02" value="id='a' expresi&oacute;n='xmax*w*w*cos(w*t)'">
+        <param name="A_03" value="id='x' expresi&oacute;n='xmax*cos(w*t)'">
+        <param name="A_04" value="id='E' expresi&oacute;n='0.5*k*xmax*xmax'">
+        <param name="A_05" value="id='Ep' expresi&oacute;n='0.5*k*x*x'">
+        <param name="A_06" value="id='Ec' expresi&oacute;n='E-Ep'">
+        <param name="G_00" value="espacio='E2' tipo='pol&iacute;gono' color='grisClaro' expresi&oacute;n='(-5,1.2)(-3,1.2)(-3,-1)(-5,-1)(-5,1)' relleno='grisClaro'">
+        <param name="G_01" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-3,0)(-2.75-(xmax/11)*cos(w*t),0.5)'">
+        <param name="G_02" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-2.75-(xmax/11)*cos(w*t),0.5)(-2.5-(xmax/11)*2*cos(w*t),0)'">
+        <param name="G_03" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-2.5-(xmax/11)*2*cos(w*t),0)(-2.25-(xmax/11)*3*cos(w*t),0.5)'">
+        <param name="G_04" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-2.25-(xmax/11)*3*cos(w*t),0.5)(-2.0-(xmax/11)*4*cos(w*t),0)'">
+        <param name="G_05" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-2.0-(xmax/11)*4*cos(w*t),0)(-1.75-(xmax/11)*5*cos(w*t),0.5)'">
+        <param name="G_06" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-1.75-(xmax/11)*5*cos(w*t),0.5)(-1.5-(xmax/11)*6*cos(w*t),0)'">
+        <param name="G_07" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-1.5-(xmax/11)*6*cos(w*t),0)(-1.25-(xmax/11)*7*cos(w*t),0.5)'">
+        <param name="G_08" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-1.25-(xmax/11)*7*cos(w*t),0.5)(-1.0-(xmax/11)*8*cos(w*t),0)'">
+        <param name="G_09" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-1.0-(xmax/11)*8*cos(w*t),0)(-0.75-(xmax/11)*9*cos(w*t),0.5)'">
+        <param name="G_10" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-0.75-(xmax/11)*9*cos(w*t),0.5)(-0.5-(xmax/11)*10*cos(w*t),0)'">
+        <param name="G_11" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-0.5-(xmax/11)*10*cos(w*t),0)(-0.25-(xmax/11)*11*cos(w*t),0.5)'">
+        <param name="G_12" value="espacio='E2' tipo='segmento' color='azul' expresi&oacute;n='(-0.25-(xmax/11)*11*cos(w*t),0)(-0.25-(xmax/11)*11*cos(w*t),0.5)'">
+        <param name="G_13" value="espacio='E2' tipo='pol&iacute;gono' color='azul' expresi&oacute;n='(-0.25-(xmax/11)*11*cos(w*t),0)(-0.25-(xmax/11)*11*cos(w*t),0.5)(0.25-(xmax/11)*11*cos(w*t),0.5)(0.25-(xmax/11)*11*cos(w*t),0)(-0.25-(xmax/11)*11*cos(w*t),0)' relleno='verde'">
+        <param name="G_14" value="espacio='E2' tipo='flecha' color='rojo' expresi&oacute;n='(0-xmax*cos(w*t),0.25)(k*x*0.1-xmax*cos(w*t),0.25)' ancho='0.5' ancho='0.5' punta='4' flecha='rojo'">
+        <param name="G_15" value="tipo='texto' color='azul' expresi&oacute;n='[210,100]' texto='E/J'">
+        <param name="G_16" value="espacio='E2' tipo='texto' color='gris' expresi&oacute;n='[220,3]' texto='y'">
+        <param name="G_17" value="tipo='texto' color='azul' expresi&oacute;n='[115,280]' texto='(m)'">
+        <param name="G_18" value="tipo='texto' color='azul' expresi&oacute;n='[210,280]' texto='(N/m)'">
+        <param name="G_19" value="tipo='texto' color='azul' expresi&oacute;n='[320,280]' texto='(Kg)'">
+        <param name="G_20" value="tipo='punto' color='azul' expresi&oacute;n='(-x,0.1*k*x*x)' rastro='gris'">
+        <param name="G_21" value="tipo='segmento' color='rojo' expresi&oacute;n='(-x,0)(-x,0.1*k*x*x)' tama&ntilde;o='1' ancho='0.5'">
+        <param name="G_22" value="tipo='segmento' color='azul' expresi&oacute;n='(-x,0.1*k*xmax*xmax)(-x,0.1*k*x*x)' tama&ntilde;o='1' ancho='0.5'">
+        <param name="G_23" value="tipo='texto' color='rojo' expresi&oacute;n='[360,200]' texto='Ep el&aacute;stica'">
+        <param name="G_24" value="tipo='texto' color='azul' expresi&oacute;n='[360,220]' texto='Ec de m'">
+        <param name="G_25" value="tipo='texto' color='grisObscuro' expresi&oacute;n='[360,240]' texto='Ec+Epe=cte'">
+        <param name="G_26" value="tipo='texto' color='grisObscuro' expresi&oacute;n='[10,100]' texto='E=[E]J'">
+        <param name="G_27" value="tipo='texto' color='rojo' expresi&oacute;n='[10,120]' texto='Ep=[Ep]J'">
+        <param name="G_28" value="tipo='texto' color='azul' expresi&oacute;n='[10,140]' texto='Ec=[Ec]J'">
+        <param name="Animaci&oacute;n" value="controles='no' auto='no' inicio='t=0' hacer='t=t+0.025' mientras='t<10'">
+    </applet>
+  </div>
+  <TABLE id=oTblSep height=1 cellSpacing=0 cellPadding=0 border=0>
+    <TR height=1>
+      <TD height=1></TD>
+    </TR>
+  </TABLE>
+</DIV>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<TABLE id=oTblSep0 height=1 cellSpacing=0 cellPadding=0 border=0>
+
+<TR height=1>
+<TD height=1></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenu0"  nombre="eltoMenu0">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=2 src="images/menu/menu_19.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_20.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_21.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_22.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD>
+<TD class=clsMenu id=eltoMenuHead0 align=middle width=112 bgColor=#e5d48c height=25><A class=clsMenu href="guia2.html">Gu�a del alumno</A></TD>
+<TD width=16 background=images/menu/menu_24.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD></TR>
+<TR>
+<TD><IMG height=4 src="images/menu/menu_25.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_26.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_27.jpg" width=16></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenu1"  nombre="eltoMenu1">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=2 src="images/menu/menu_19.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_20.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_21.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_22.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD>
+<TD class=clsMenu id=eltoMenuHead1 align=middle width=112 bgColor=#c5b375 height=25><A class=clsMenu href="applet2.html">Applet</A></TD>
+<TD width=16 background=images/menu/menu_24.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD></TR>
+<TR>
+<TD><IMG height=4 src="images/menu/menu_25.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_26.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_27.jpg" width=16></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenu2"  nombre="eltoMenu2">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=2 src="images/menu/menu_19.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_20.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_21.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_22.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD>
+<TD class=clsMenu id=eltoMenuHead2 align=middle width=112 bgColor=#e5d48c height=25><A class=clsMenu href="evaluacion2.html">Evaluaci�n</A></TD>
+<TD width=16 background=images/menu/menu_24.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD></TR>
+<TR>
+<TD><IMG height=4 src="images/menu/menu_25.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_26.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_27.jpg" width=16></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenu3"  nombre="eltoMenu3">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=2 src="images/menu/menu_19.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_20.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_21.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_22.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD>
+<TD class=clsMenu id=eltoMenuHead3 align=middle width=112 bgColor=#e5d48c height=25><A class=clsMenu href="problema2.html">Problema resuelto</A></TD>
+<TD width=16 background=images/menu/menu_24.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD></TR>
+<TR>
+<TD><IMG height=4 src="images/menu/menu_25.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_26.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_27.jpg" width=16></TD></TR></TABLE></DIV>
+</BODY>
+<script type="text/javascript" src="./descartes-min.js"></script>
+
+<script type="text/javascript" src="./descartes-min.js"></script>
+
+</html>

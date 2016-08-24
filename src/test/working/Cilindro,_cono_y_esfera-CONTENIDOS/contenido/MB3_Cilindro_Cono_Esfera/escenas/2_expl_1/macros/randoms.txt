@@ -1,0 +1,15 @@
+tipo_de_macro=R2
+Idioma=espa&ntilde;ol
+id='rangMin' constante='s&iacute;' expresi&oacute;n='2' evaluar='una-sola-vez'
+id='rangMax' constante='s&iacute;' expresi&oacute;n='10' evaluar='una-sola-vez'
+id='V1' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='100'
+id='VecAux' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='100'
+id='VecAleat' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='100'
+id='inV1()' algoritmo='s&iacute;' algoritmo='s&iacute;' inicio='iV1=0' hacer='V1[iV1]=iV1+rangMin;iV1=iV1+1' mientras='iV1&lt;(rangMax-rangMin+1)'
+id='wVecAux(iwVA)' algoritmo='s&iacute;' algoritmo='s&iacute;' inicio='_ii=0' hacer='VecAux[_ii]=(_ii&gt;=iwVA)?V1[_ii+1]:V1[_ii];_ii=_ii+1' mientras='_ii&lt;(rangMax-rangMin)'
+id='copiaVecs()' algoritmo='s&iacute;' algoritmo='s&iacute;' inicio='_icp=0' hacer='V1[_icp]=VecAux[_icp];_icp=_icp+1' mientras='_icp&lt;(rangMax-rangMin+1)'
+id='elige()' algoritmo='s&iacute;' algoritmo='s&iacute;' inicio='_i=0' hacer='_indx=ent(rnd*(rangMax-rangMin-_i+0.999));VecAleat[_i]=V1[_indx];wVecAux(_indx);copiaVecs();_i=_i+1' mientras='_i&lt;(rangMax-rangMin+1)'
+id='INICIO' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='inV1();elige()'
+id='CALCULOS' algoritmo='s&iacute;' evaluar='siempre'
+tipo='texto' expresi&oacute;n='[20,20+15*s]' familia='s' s.intervalo='[0,rangMax-rangMin]' s.pasos='rangMax-rangMin' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Times New Roman;}\f1\fs24 V1[\f2\fs28\i{\*\mjaformula{\expr s\decimals 2\fixed0}}\f1\fs24\i0 ]=\f2\fs28\i{\*\mjaformula{\expr V1[s]\decimals 2\fixed0}}\f1\fs24\i0}' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' 
+tipo='texto' expresi&oacute;n='[100,20+15*s]' familia='s' s.intervalo='[0,rangMax-rangMin]' s.pasos='rangMax-rangMin' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Times New Roman;}\f1\fs24 VecAleat[\f2\fs28\i{\*\mjaformula{\expr s\decimals 2\fixed0}}\f1\fs24\i0 ]=\f2\fs28\i{\*\mjaformula{\expr VecAleat[s]\decimals 2\fixed0}}\f1\fs24\i0}' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' 

@@ -1,0 +1,56 @@
+'Escribe las tres respuestas de cada pregunta y la posición de la respuesta correcta'
+
+'cilindro'
+'hexaedro'
+'cono'
+'esfera'
+'tetraedro'
+1
+0
+1
+1
+0
+
+'cilindro'
+'pirámide'
+'cono'
+'cubo'
+'esfera'
+1
+0
+1
+0
+1
+
+'semiesfera'
+'cono'
+'cilindro'
+'esfera'
+'semicono'
+1
+1
+0
+0
+0
+
+'cono'
+'esfera'
+'Icosaedro'
+'cilindro'
+'pirámide'
+1
+0
+0
+0
+0
+
+'tubos y cucuruchos'
+'cubo de rubik'
+'canicas y balones'
+'pirámide de Keops'
+'cuaderno de escritura'
+1
+0
+1
+0
+0

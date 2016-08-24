@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Para poder subir ficheros al servidor hay que introducir usuario y contraseña autorizado"
+AuthUserFile "c:/AppServ/www/fyq10x10b/claves.txt"
+require valid-user

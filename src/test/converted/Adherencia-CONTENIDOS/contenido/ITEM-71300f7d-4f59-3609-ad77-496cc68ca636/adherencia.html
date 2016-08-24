@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <script type="text/javascript" src="img/homejs/objNavegador.js"></script> 
+  <script type="text/javascript" src="img/homejs/objLayer.js"></script> 
+  <script type="text/javascript">
+<!--
+var capaMuestra = "";
+function mostrarCapa(capa) {
+if (is.ns4) {
+if(document.layers[capaMuestra])document.layers[capaMuestra].visibility = "hide";
+if(document.layers[capaMuestra + "_titulo"])document.layers[capaMuestra + "_titulo"].visibility = "hide";
+if(document.layers[capa])document.layers[capa].visibility = "show";
+if(document.layers[capa + "_titulo"])document.layers[capa + "_titulo"].visibility = "show";
+}
+else if(is.ie4) {
+if(document.all[capaMuestra])document.all[capaMuestra].style.visibility = "hidden";
+if(document.all[capaMuestra + "_titulo"])document.all[capaMuestra + "_titulo"].style.visibility = "hidden";
+if(document.all[capa])document.all[capa].style.visibility = "visible";
+if(document.all[capa + "_titulo"])document.all[capa + "_titulo"].style.visibility = "visible";
+}
+else {
+if(document.getElementById(capaMuestra))document.getElementById(capaMuestra).style.visibility = "hidden";
+if(document.getElementById(capaMuestra + "_titulo"))document.getElementById(capaMuestra + "_titulo").style.visibility = "hidden";
+if(document.getElementById(capa))document.getElementById(capa).style.visibility = "visible";
+if(document.getElementById(capa + "_titulo"))document.getElementById(capa + "_titulo").style.visibility = "visible";
+window.focus();
+}
+capaMuestra = capa;
+}
+//-->
+</script> 
+  <style>
+DIV.capaCurso {
+position:absolute;
+left:276px;
+top:154px;
+width:387px;
+height:227px;
+overflow:auto;
+scrollbar-face-color: #eaeaea;
+scrollbar-shadow-color: #222222;
+scrollbar-highlight-color: #CACACA;
+scrollbar-3dlight-color: #FFFFFF;
+scrollbar-darkshadow-color: #CACACA;
+scrollbar-track-color: #eeeeee;
+scrollbar-arrow-color: #0033CC;
+visibility: hidden;
+}
+DIV.capaCurso_titulo {position:absolute; left:200px; top:115px; width:560px; height:30px; visibility:hidden;
+COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 13px; TEXT-DECORATION: none; font-weight:bold;
+}
+#alumnos_inicio{position:absolute; left:700px; top:420px;}
+#alumnos_fondo{position:absolute; left:8px; top:106px;}
+#alumnos_menu{
+position:absolute;
+left:0px;
+top:165px;
+width: 207px;
+height: 187px;
+}
+#alumnos_mail{position:absolute; left:0px; top:417px;}
+#alumnos_newton{position:absolute; left:195px; top:78px;}
+.Estilo3 {
+color: #6699CC;
+font-weight: bold;
+}
+.Estilo4 {color: #FFCC00}
+.Estilo99 {font-size: 12px}
+ #html5p_1065939242{text-align:right;} #contenidos{position: absolute; left: 1px; top: 68px; width: 770px; height: 375px; z-index: 3;;} #html5table_1734685449{border:0px;width:75%;} #html5table_1734685449 &gt; tr &gt; td{padding:10;} #html5div_1766496258{text-align:center;} #html5img_1986555167{border:0px;} #html5div_1619092437{text-align:center;} #html5table_1668132620{border-color:#708eb2;border:2px;width:48%;} #html5div_1640083529{text-align:center;} #html5body_1916771791{background-color: rgb(255, 255, 255);;margin-left:0px;margin-top:0px;} #html5p_1606755721{text-align:center;} #html5div_1166820809{text-align:justify;} #html5div_1605687619{text-align:center;} #html5img_1039921505{border:0px;width:771px;height:51px;} #html5table_1668132620 &gt; tr &gt; td{padding:0;margin:0;}.table_center{margin: auto;}.noshade{height:2px;border-width:0;color:gray;background-color:gray;}.allowtransparency{background: none transparent !important;}.iframe_scrolling_auto{overflow:auto;}.iframe_scrolling_yes{overflow:scroll;}.iframe_scrolling_no{overflow:hidden;}.div_center{text-align: center;}.span_dl{display: block;margin-top: 1em; margin-bottom: 1em;margin-left: 0;margin-right: 0;}.span_u{text-decoration:underline}.span_em{font-style:italic}.span_tt{font-family:'Lucida Console', monospace}.span_remove{display:none}.span_nobr{white-space:nowrap;}</style> 
+  <script type="text/javascript">
+<!--
+function MM_reloadPage(init) { //reloads the window if Nav4 resized
+if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script> 
+  <script type="text/javascript" src="./descartes-min.js"></script>
+  <title>Fuerzas de adherencia en l�quidos</title>
+ </head> 
+ <body onload=";mostrarCapa('bienvenidos')" id="html5body_1916771791"> 
+  <div id="banner">
+   <a href="" target="_blank"><img src="img/banner_nuevo1.gif" id="html5img_1039921505" alt="img/banner_nuevo1.gif"></a>
+  </div> 
+  <div id="alumnos_newton"> 
+  </div> 
+  <div id="contenidos"> 
+   <table class="table_center" id="html5table_1734685449"> 
+    <tbody> 
+     <tr> 
+      <td> 
+       <div id="html5div_1166820809"> 
+        <p class="Estilo3"> Se denominan <span class="Estilo4">fuerzas de adherencia</span> a las fuerza de atracci�n entre las mol�culas de distintas sustancias. En la siguiente escena podr�s ver simulado un dispositivo para medirlas. </p> 
+       </div> </td> 
+     </tr> 
+     <tr> 
+      <td> 
+       <div id="html5div_1640083529"> 
+        <table class="table_center" id="html5table_1668132620"> 
+         <tbody> 
+          <tr> 
+           <td> 
+            <div id="html5div_1605687619">
+             <ajs width="460" height="3000" code="descinst.DescartesWeb2_0.class" name="descinst.DescartesWeb2_0.class" class="DescartesJS">
+              <param name="Versi�n" value="3.718">
+              <param name="Idioma" value="espa�ol">
+              <param name="Botones" value="cr�ditos=no config=no inicio=si limpiar=no">
+              <param name="E_00" value="fijo='si' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+              <param name="C_00" value="tipo='num�rico' id='masa' valor='0.02' nombre='A�adir pesas de masa (gramos)' incr='0.01' min='0.02' max='0.04' visible='si' acci�n='calcular' pos_mensajes='centro'">
+              <param name="C_01" value="tipo='num�rico' id='n2' interfaz='bot�n' regi�n='norte' nombre='Observa que...' visible='si' acci�n='mensaje' par�metro='como el liquido del recipiente es mercurio, el vidrio se adhiere a �l fuertemente(y el mercurio al vidrio).Las pesas a�adidas miden la adherencia. Cuando se sobrepasan las fuerzas de adherencia, no queda nada de pel�cula l�quida adherida al vidrio (en este caso la cohesi�n es mayor que adherencia y el l�quido cohesionado se separ� totalmente de la placa), la fuerza ejercida por las pesas se emple� en vencer la adherencia. Observa tambi�n la curvatura de la superficie del mercurio.�C�mo se llama esa curvatura?' pos_mensajes='centro'">
+              <param name="C_02" value="tipo='num�rico' id='Actividad' interfaz='bot�n' regi�n='norte' nombre='Actividad' visible='si' tooltip='0.32 N' Explicaci�n='Cuando se separa la placa de vidrio no queda adherida a ella nada de mercurio. Por tanto se rompen las fuerzas de ADHERENCIA.' acci�n='mensaje' par�metro='Calcula la fuerza de adherencia del mercurio con esa superficie de vidrio observando la masa que debes a�adir al platillo.Cierra esta ventana y pasa el cursor sobre el bot�n de la actividad para ver la soluci�n.' pos_mensajes='centro'">
+              <param name="A_00" value="id='h' expresi�n='(masa=0.04)?1:(masa=0.03)*0.15' evaluar='siempre' constante='si'">
+              <param name="G_00" value="tipo='pol�gono' fondo='si' color='ff7500' expresi�n='(-3.4,-1.8)(4.6,-1.8)(4,-2.5)(-4,-2.5)' relleno='ff7500'">
+              <param name="G_01" value="tipo='pol�gono' color='negro' expresi�n='(-2.5,1.3-h)(-2.9,-1-h)(-2.1,-1-h)(-2.5,1.3-h)'">
+              <param name="G_02" value="tipo='segmento' color='negro' expresi�n='(2.5,2.3)(2.5,0.1+h)' tama�o='1'">
+              <param name="G_03" value="tipo='pol�gono' fondo='si' color='8f8faf' expresi�n='(1,0)(1.1,0.1)(3.85,0.1)(4,0)(4,-2)(1,-2)(1,0)' rastro='gris' relleno='8f8faf'">
+              <param name="G_04" value="tipo='arco' color='azul' centro='(-2.3,2.3)' radio='0.2' fin='360'">
+              <param name="G_05" value="tipo='arco' color='azul' centro='(2.3,2.3)' radio='0.2' fin='360'">
+              <param name="G_06" value="tipo='segmento' color='azul' expresi�n='(-2.3,2.3)(-2.3,3)' tama�o='1' ancho='3'">
+              <param name="G_07" value="tipo='segmento' color='azul' expresi�n='(2.3,2.3)(2.3,3)' tama�o='1' ancho='3'">
+              <param name="G_08" value="tipo='segmento' color='negro' expresi�n='(-2.5,1-h)(-2.5,2.3)' tama�o='1'">
+              <param name="G_09" value="tipo='segmento' color='negro' expresi�n='(-2.3,2.5)(2.3,2.5)'">
+              <param name="G_10" value="tipo='segmento' color='azul' expresi�n='(-4,3)(4,3)' tama�o='1' ancho='3'">
+              <param name="G_11" value="tipo='pol�gono' color='azul' expresi�n='(-2.8,-1-h)(-2.7,-1-h)(-2.7,-0.8-h)(-2.8,-0.8-h)(-2.8,-1-h)' relleno='c5c5c7'">
+              <param name="G_12" value="tipo='pol�gono' dibujar-si='masa>0.02' color='azul' expresi�n='(-2.6,-1-h)(-2.5,-1-h)(-2.5,-0.8-h)(-2.6,-0.8-h)(-2.6,-1-h)' relleno='c5c5c7'">
+              <param name="G_13" value="tipo='pol�gono' fondo='si' color='azul' expresi�n='(4,0.6)(4,-1.95)(1,-1.95)(1,0.6)' ancho='4'">
+              <param name="G_14" value="tipo='pol�gono' dibujar-si='masa=0.04' color='azul' expresi�n='(-2.4,-1-h)(-2.3,-1-h)(-2.3,-0.8-h)(-2.4,-0.8-h)(-2.4,-1-h)' relleno='c5c5c7'">
+              <param name="G_15" value="tipo='pol�gono' dibujar-si='masa=0.03' color='8f8faf' expresi�n='(1.5,0.2)(1.5,0.1)(3.5,0.1)(3.5,0.2)' relleno='8f8faf'">
+              <param name="G_16" value="tipo='segmento' color='00007a' expresi�n='(1.5,0.1+h)(3.5,0.1+h)' tama�o='1' ancho='4'">
+             </ajs>
+            </div> </td> 
+          </tr> 
+         </tbody> 
+        </table> 
+       </div> </td> 
+     </tr> 
+     <tr> 
+      <td> 
+       <div id="html5div_1619092437">
+        <strong style=";color:#ffcc00; font-family:"><a href="../presion2/tensupef.htm" target="_blank"> </a></strong> 
+        <p id="html5p_1065939242"></p> 
+       </div> 
+       <!-- Licencia de Creative Commons --> <p id="html5p_1606755721"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><img alt="Licencia de Creative Commons" src="img/88x31.png" id="html5img_1986555167"></a><br> <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" style=";color:; font-family:Verdana, Arial, Helvetica, sans-serif">licencia de Creative Commons</a></p> 
+       <!-- /Licencia de Creative Commons --> </td> 
+     </tr> 
+    </tbody> 
+   </table> 
+   <div id="html5div_1766496258"></div> 
+  </div> 
+  <script type="text/javascript" src="./descartes-min.js"></script>  
+ </body>
+</html>

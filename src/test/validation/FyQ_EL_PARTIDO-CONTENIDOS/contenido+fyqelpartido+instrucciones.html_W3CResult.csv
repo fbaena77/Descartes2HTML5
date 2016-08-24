@@ -1,0 +1,12 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Attribute “gblcoloron” not allowed on element “div” at this point.;;3;24;77;8826"">   <div class=""clsCurso"" id=""CapaCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">    J
+error;Attribute “gblcolor” not allowed on element “div” at this point.;;3;24;77;8826"">   <div class=""clsCurso"" id=""CapaCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">    J
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;33;47;</div>   <div id=""eltoMenuHead"" nombre=""eltoMenuHead"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;64;68;</div>   <div class=""clsCapasMenu"" id=""eltoMenuFoot"" nombre=""eltoMenuFoot"">    <
+error;Attribute “height” not allowed on element “tr” at this point.;107;12;108;45;   <tbody>      <tr height=""26"" id=""html5tr_1064256598"">     
+error;Attribute “height” not allowed on element “tr” at this point.;128;12;129;20;   <tbody>      <tr height=""1"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;135;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu0"" nombre=""eltoMenu0"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;156;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu1"" nombre=""eltoMenu1"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;177;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu2"" nombre=""eltoMenu2"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;198;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu3"" nombre=""eltoMenu3"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;219;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu4"" nombre=""eltoMenu4"">    <

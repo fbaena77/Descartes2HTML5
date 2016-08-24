@@ -1,0 +1,14 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Attribute “gblcolor” not allowed on element “div” at this point.;;3;20;77;9023"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""78A6DA"" gblcoloron=""ECF8F9"">    J
+error;Attribute “gblcoloron” not allowed on element “div” at this point.;;3;20;77;9023"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""78A6DA"" gblcoloron=""ECF8F9"">    J
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;29;47;</div>   <div id=""eltoMenuHead"" nombre=""eltoMenuHead"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;60;68;</div>   <div class=""clsCapasMenu"" id=""eltoMenuFoot"" nombre=""eltoMenuFoot"">    <
+error;Attribute “height” not allowed on element “tr” at this point.;107;12;108;45;   <tbody>      <tr height=""26"" id=""html5tr_1736243736"">     
+error;Attribute “height” not allowed on element “tr” at this point.;132;12;133;20;   <tbody>      <tr height=""1"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;139;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu0"" nombre=""eltoMenu0"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;160;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu1"" nombre=""eltoMenu1"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;181;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu2"" nombre=""eltoMenu2"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;202;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu3"" nombre=""eltoMenu3"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;223;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu4"" nombre=""eltoMenu4"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;244;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu5"" nombre=""eltoMenu5"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;265;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu6"" nombre=""eltoMenu6"">    <

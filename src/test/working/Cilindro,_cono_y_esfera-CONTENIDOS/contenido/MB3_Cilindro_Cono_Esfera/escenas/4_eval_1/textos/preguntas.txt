@@ -1,0 +1,7 @@
+5
+
+'¿Cuáles de estos cuerpos no son poliedros?'
+'¿Cuáles de estos cuerpos poseen una superficie curva?'
+'¿Cuáles de estos cuerpos poseen solo una superficie plana?'
+'Está limitado por una superficie curva y una base circular'
+'Los siguientes son ejemplos de cuerpos redondos:'

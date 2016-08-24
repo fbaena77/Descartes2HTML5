@@ -1,0 +1,23 @@
+60
+'CAT'
+'HORSE'
+'DOG'
+'OWL'
+'SNAKE'
+'PIG'
+'WORM'
+'FISH'
+'EAGLE'
+PISTAS
+'GATO'
+'CABALLO'
+'PERRO'
+'BUHO'
+'SERPIENTE'
+'CERDO'
+'GUSANO'
+'PEZ'
+'AGUILA'
+'AUTOR/A: Jesús M. Muñoz'
+'TEMA: Animales'
+FyQ DE PAR EN PAR

@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>TITULO</title>
+<style>
+		*{
+		border:0;
+		margin:0;
+		padding:0;
+		}
+	</style>
+<script type="text/javascript" src="./descartes-min.js"></script></head>
+<body BGCOLOR="ffffff">
+
+<p align="left">
+<applet width=790 height=500
+        code="descinst.Descartes.class"
+        codebase="./"
+        archive="descinst.jar,http://recursostic.educacion.es/descartes/web/plugin/descinst.jar"
+        MAYSCRIPT>
+   <param name="tama&ntilde;o" value="790x500">
+   <param name="sonido" value="s&iacute;">
+   <param name="&aacute;lgebra" value="s&iacute;">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="s&iacute;">
+   <param name="Versi&oacute;n" value="4.41, 2010-12-16">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=no limpiar=no">
+   <param name="E_00" value="tipo='R2' id='E1' fijo='s&iacute;' escala='25' O.x='-365' despl_imagen='arr-izq' fondo='dc7e00' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_00" value="id='n4' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' nombre='Otro ejercicio' expresi&oacute;n='(560,370,150,30)' fijo='s&iacute;' visible='s&iacute;' color='negro' color-int='negro' negrita='s&iacute;' fuente puntos='20' imagen='./imagenes/btn150.png' acci&oacute;n='calcular' par&aacute;metro='otra=otra+1\nd1=(otra=2)?7:d1\nd1=(otra=3)?5:d1\nd1=(otra=4)?3:d1\nxr=-.5\nyr=4.5\nmuestra=1\nh=xr+L/2\nk=yr+1+L/3\na=-((xr-h)^2)/(yr-k)\nllegada=(ent(15/L))*L\nn3=0\nsi=0\nno=0' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='(otra&lt;4)&amp;(xr&gt;llegada-.5)' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_01" value="id='n5' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' nombre='S&Iacute;' expresi&oacute;n='(430,205,50,50)' fijo='s&iacute;' visible='s&iacute;' negrita='s&iacute;' fuente puntos='22' imagen='./imagenes/btn50.png' acci&oacute;n='calcular' par&aacute;metro='si=1\nno=0' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='no=0' activo-si='si+no=0' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_02" value="id='n6' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' nombre='NO' expresi&oacute;n='(490,205,50,50)' fijo='s&iacute;' visible='s&iacute;' negrita='s&iacute;' fuente puntos='22' imagen='./imagenes/btn50.png' acci&oacute;n='calcular' par&aacute;metro='si=0\nno=1' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='si=0' activo-si='si+no=0' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="A_00" value="id='INICIO' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='xr=-.5;yr=4.5;L=1.5;h=xr+L/2;k=yr+1+L/3;a=-((xr-h)^2)/(yr-k);llegada=(ent(15/L))*L;otra=1;muestra=1;d1=2;'">
+   <param name="A_01" value="id='CALCULOS' algoritmo='s&iacute;' evaluar='siempre' hacer='pp=(pp&lt;7)?pp+2:0;kk=(pp=6)?kk+1:kk;m1=(kk&gt;=d1)?d1:pp;;;' mientras='kk&lt;d1'">
+   <param name="A_02" value="id='e3' evento='s&iacute;' condici&oacute;n='(si=1)|(no=1)' acci&oacute;n='calcular' par&aacute;metro='d1=(otra=1)?2:d1\nd1=(otra=3)?5:d1\nd1=(otra=2)?7:d1\nd1=(otra=3)?5:d1\nd1=(otra=4)?3:d1\nkk=(d1=6)*(ent(rnd*3)+3)+(d1=5)*(ent(rnd*3)+3)\nmuestra=1\nL=d1\nh=xr+L/2\nk=yr+1+L/3\na=-((xr-h)^2)/(yr-k)\nllegada=(ent(15/L))*L' par&aacute;metro.fuente='Monospaced,PLAIN,12' ejecuci&oacute;n='alternar' pos_mensajes='centro'">
+   <param name="A_03" value="id='e4' evento='s&iacute;' condici&oacute;n='(si=1)|(no=1)' acci&oacute;n='animar' par&aacute;metro.fuente='Monospaced,PLAIN,12' ejecuci&oacute;n='alternar' pos_mensajes='centro'">
+   <param name="G_00" value="espacio='E1' tipo='arco' color='640000' centro='(2*s-1,4)' radio='.96' fin='360' familia='s' s.intervalo='[1,15]' s.pasos='14' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;}\f1\fs24}' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' relleno='a86f00' ancho='2'">
+   <param name="G_01" value="espacio='E1' tipo='texto' expresi&oacute;n='[50*s-5,140]' familia='s' s.intervalo='[1,15]' s.pasos='14' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}{\colortbl\red255\green255\blue0;\red0\green0\blue255;}\cf0\f1\fs32\b{\*\mjaformula{\expr s\decimals 0\fixed1}}\cf1\f2\fs28}' fuente='Times New Roman Negrita,BOLD,16' fijo='s&iacute;'">
+   <param name="G_02" value="espacio='E1' tipo='arco' color='640000' dibujar-si='((s/L)=ent(s/L))&amp;(xr&gt;s-.5)' centro='(2*s-1,4)' radio='.96' fin='360' familia='s' s.intervalo='[1,15]' s.pasos='14' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;}\f1\fs24}' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' relleno='rojo' ancho='2'">
+   <param name="G_03" value="espacio='E1' tipo='texto' dibujar-si='((s/L)=ent(s/L))&amp;(xr&gt;s-.5)' expresi&oacute;n='[50*s-5,140]' familia='s' s.intervalo='[1,15]' s.pasos='14' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs36\b{\*\mjaformula{\expr s\decimals 0\fixed1}}\f2\fs28}' fuente='Monospaced,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_04" value="espacio='E1' tipo='imagen' dibujar-si='yr&lt;5.2' expresi&oacute;n='(2*xr,yr,.8,.8)' archivo='./imagenes/r1_suelo.png'">
+   <param name="G_05" value="espacio='E1' tipo='texto' expresi&oacute;n='[21,11]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red0\green0\blue255;}\f1\fs56\b\cf0 EL SALTO DE LA RANA\cf1\f2\fs24\b0}' fuente='Arial Negrita,BOLD,28' fijo='s&iacute;'">
+   <param name="G_06" value="espacio='E1' tipo='texto' expresi&oacute;n='[20,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green255\blue0;\red0\green0\blue255;}\f1\fs56\b\cf0 EL SALTO DE LA RANA\cf1\f2\fs24\b0}' fuente='Arial Negrita,BOLD,28' fijo='s&iacute;'">
+   <param name="G_07" value="espacio='E1' tipo='texto' dibujar-si='(muestra=1)&amp;(d1&gt;1)' expresi&oacute;n='[21,181]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red0\green0\blue255;}\f1\fs56\b\cf0 LA RANA SALTAR\u193  CADA \f2\fs60{\*\mjaformula{\expr d1\decimals 0\fixed1}}\f1\fs56   PIEDRAS\par \u191 LLEGAR\u193  A LA PIEDRA 15?\f3\fs24\b0\par \cf1}' fuente='Arial Bold,BOLD,28' fijo='s&iacute;'">
+   <param name="G_08" value="espacio='E1' tipo='texto' dibujar-si='(muestra=1)&amp;(d1&gt;1)' expresi&oacute;n='[20,180]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}{\colortbl\red0\green255\blue255;\red0\green0\blue255;}\f1\fs56\b\cf0 LA RANA SALTAR\u193  CADA \f2\fs60{\*\mjaformula{\expr d1\decimals 0\fixed1}}\f1\fs56   PIEDRAS\par \u191 LLEGAR\u193  A LA PIEDRA 15?\cf1\f3\fs24\b0\par }' fuente='Arial Bold,BOLD,28' fijo='s&iacute;'">
+   <param name="G_09" value="espacio='E1' tipo='texto' dibujar-si='(xr&gt;llegada-.5)&amp;(((15/d1=ent(15/d1))&amp;(no=1))|((15/d1!=ent(15/d1))&amp;(si=1)))' expresi&oacute;n='[21,261]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red0\green0\blue255;}\f1\fs56\b\cf0\u161 Te has equivocado!\cf1\f2\fs24\b0\par }' fuente='Arial Bold,BOLD,28' fijo='s&iacute;'">
+   <param name="G_10" value="espacio='E1' tipo='texto' dibujar-si='(xr&gt;llegada-.5)&amp;(((15/d1=ent(15/d1))&amp;(no=1))|((15/d1!=ent(15/d1))&amp;(si=1)))' expresi&oacute;n='[20,260]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red255\green0\blue0;\red0\green0\blue255;}\f1\fs56\b\cf0\u161 Te has equivocado!\cf1\f2\fs24\b0\par }' fuente='Arial Bold,BOLD,28' fijo='s&iacute;'">
+   <param name="G_11" value="espacio='E1' tipo='imagen' dibujar-si='(yr&gt;5.2)' expresi&oacute;n='(2*xr,yr,.8,.8)' archivo='./imagenes/r1_aire.png'">
+   <param name="G_12" value="espacio='E1' tipo='texto' dibujar-si='(xr&gt;llegada-.5)&amp;(((15/d1=ent(15/d1))&amp;(si=1))|((15/d1!=ent(15/d1))&amp;(no=1)))' expresi&oacute;n='[21,261]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red0\green0\blue255;}\f1\fs56\b\cf0\u161 Excelente! Tu respuesta es correcta\cf1\f2\fs24\b0\par }' fuente='Arial Bold,BOLD,28' fijo='s&iacute;'">
+   <param name="G_13" value="espacio='E1' tipo='texto' dibujar-si='(xr&gt;llegada-.5)&amp;(((15/d1=ent(15/d1))&amp;(si=1))|((15/d1!=ent(15/d1))&amp;(no=1)))' expresi&oacute;n='[20,260]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green255\blue0;\red0\green0\blue255;}\f1\fs56\b\cf0\u161 Excelente! Tu respuesta es correcta\cf1\f2\fs24\b0\par }' fuente='Arial Bold,BOLD,28' fijo='s&iacute;'">
+   <param name="G_14" value="espacio='E1' tipo='texto' dibujar-si='(otra=4)&amp;(xr&gt;llegada-.5)' expresi&oacute;n='[20,420]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}{\colortbl\red255\green255\blue255;}\f1\fs60\b\cf0\u161 Contin\u250 a con la siguiente actividad!}' fuente='Arial Bold,BOLD,30' fijo='s&iacute;'">
+   <param name="Animaci&oacute;n" value="controles='no' auto='no' inicio='bb=0' hacer='bb=bb+.2;xr=xr+.2;yr=-((xr-h)^2)/a+k;paso1=(bb&gt;L)&amp;(L&gt;2);paso2=(bb&gt;L-.2)&amp;(L=1);paso3=(bb&gt;L-.1)&amp;(L=2);paso=paso1+paso2+paso3;h=(paso=1)?xr+L/2:h;k=(paso=1)?yr+1+L/3:k;a=(paso=1)?-((xr-h)^2)/(yr-k):a;bb=(paso=1)?0:bb;bb=(xr&gt;llegada-.5)?llegada-.5:bb;yr=(xr&gt;llegada-.5)?5.1:yr;' mientras='bb&lt;L+.1'">
+<font face="Arial" size="3">Esta unidad interactiva requiere la m&aacute;quina virtual de Java <a href="http://java.sun.com/javase/downloads/index.jsp" target="_blank">J2RE</a>.</font>
+</applet></p>
+
+</body>
+<script type="text/javascript" src="./descartes-min.js"></script>
+
+</html>

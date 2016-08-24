@@ -32,36 +32,30 @@ public class ConvertWorker extends BaseWorker implements Runnable {
      */
     @Override
     public void run() {
-        try {
-            JobConverter currentJob = getJob();
-            log.info("****INICIO DEL PROCESO DE CONVERSIÓN DE CONTENIDOS****");
-            // Control de existencia de carpeta de trabajo
-            File resultPath = new File(currentJob.getJobConfig()
-                    .getConvertedContentPath());
-
-            if (resultPath.exists()) {
-                FileManager.deleteFilesInFolder(resultPath);
-            }
-            resultPath.mkdirs();
-
-            while (!currentJob.isConvertQueueReadyFlag()
-                    || !currentJob.getContentsToConvert().isEmpty()) {
-
-                DescartesZipContentProxy contentToConvert = currentJob
-                        .getContentsToConvert().take();
-
+        JobConverter currentJob = getJob();
+        log.info("****INICIO DEL PROCESO DE CONVERSIÓN DE CONTENIDOS****");
+        // Control de existencia de carpeta de trabajo
+        File resultPath = new File(currentJob.getJobConfig()
+                .getConvertedContentPath());
+        if (resultPath.exists()) {
+            FileManager.deleteFilesInFolder(resultPath);
+        }
+        resultPath.mkdirs();
+        DescartesZipContentProxy contentToConvert = new DescartesZipContentProxy();
+        while (!currentJob.isConvertQueueReadyFlag()
+                || !currentJob.getContentsToConvert().isEmpty()) {
+            try {
+                contentToConvert = currentJob.getContentsToConvert().take();
                 DescartesContentProxy contentConverted = new DescartesContentProxy();
-
                 if (contentToConvert != JobConverter.STOP_QUEUE) {
                     if (contentToConvert != null) {
                         contentConverted = doWork(contentToConvert, currentJob);
+                        currentJob.getContentsConverted().add(contentToConvert);
                     }
-
                     if (currentJob.getJobConfig().isToW3CValidate()) {
                         currentJob.getContentsToValidate()
                                 .put(contentConverted);
                     }
-
                 } else {
                     currentJob.getContentsToValidate().put(
                             JobConverter.STOP_QUEUE_V);
@@ -71,20 +65,24 @@ public class ConvertWorker extends BaseWorker implements Runnable {
 
                     log.info("****CONVERSIÓN FINALIZADA****");
                 }
+            } catch (InterruptedException e) {
+                log.error("Interrupción de la cola de conversión", e);
+                try {
+                    getJob().getContentsToValidate().put(
+                            JobConverter.STOP_QUEUE_V);
+                } catch (InterruptedException e1) {
+                    log.error("Interrupción de la cola de conversión", e1);
+                }
+            } catch (Exception e) {
+                currentJob.getContentsConvertedError().add(contentToConvert);
+                log.error(
+                        "No se ha podido realizar la conversión del contenido: "
+                                + contentToConvert.getTitle() + ": ", e);
             }
-            log.info("Contenidos que han provocado errores: "
-                    + currentJob.getContentsConvertedError().size());
-        } catch (InterruptedException e) {
-            log.error("Interrupción de la cola de transformación. "
-                    + e.getMessage());
-            try {
-                getJob().getContentsToValidate().put(JobConverter.STOP_QUEUE_V);
-            } catch (InterruptedException e1) {
-                log.error("error", e1);
-            }
-        } catch (Exception e) {
-            log.error("No se ha podido crear la carpeta de conversión de contenidos");
         }
+
+        log.info("Contenidos que han provocado errores en la conversión: "
+                + currentJob.getContentsConvertedError().size());
     }
 
     /**
@@ -118,8 +116,6 @@ public class ConvertWorker extends BaseWorker implements Runnable {
         OutputManager.createLogConvertedContentCSV(convertedContent);
         log.info(">> Sumario de conversión guardado para el contenido: "
                 + contentToConvert.getTitle());
-        // Estadistica
-        job.getContentsConverted().add(contentToConvert);
 
         return convertedContent.getContentProxy();
     }

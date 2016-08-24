@@ -1,0 +1,2 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Table columns in range 2…3 established by element “td” have no cells beginning in them.;194;9;195;21;     <tr>      <td colspan=""3"">     

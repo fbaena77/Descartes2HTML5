@@ -1,0 +1,23 @@
+60
+'Niebla'
+'Campos de Castilla'
+'Arroz y tartana '
+'Porvenir de España '
+'Sonata de estío'
+'Cartas a mujeres'
+'La selva oscura'
+'Don Juan'
+'Hacia otra España'
+PISTAS
+'Unamuno'
+'A. Machado'
+'Blasco Ibáñez'
+'Ángel Ganivet'
+'Valle-Inclán'
+'Benavente'
+'Baroja '
+'Azorín'
+'Maeztu'
+'AUTORA/A: Rebeca de la Cova Ortega'
+'TEMA: Literatura 1'
+FyQ DE PAR EN PAR

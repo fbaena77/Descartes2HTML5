@@ -1,0 +1,150 @@
+BODY {
+	FONT-FAMILY: arial, verdana
+}
+A {
+	FONT-FAMILY: arial, verdana
+}
+B {
+	FONT-FAMILY: arial, verdana
+}
+TD {
+	FONT-FAMILY: arial, verdana
+}
+DIV {
+	FONT-FAMILY: arial, verdana
+}
+SPAN {
+	FONT-FAMILY: arial, verdana
+}
+LI {
+	FONT-FAMILY: arial, verdana
+}
+UL {
+	FONT-FAMILY: arial, verdana
+}
+OL {
+	FONT-FAMILY: arial, verdana
+}
+P {
+	FONT-FAMILY: arial, verdana
+}
+HR {
+	COLOR: #bacee2
+}
+SPAN {
+	WIDTH: 100%
+}
+.clsMenuHead {
+	TEXT-ALIGN: center; COLOR: #444444; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.clsMenu:link {
+	COLOR: #444444; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.clsMenu:active {
+	COLOR: #444444; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.clsMenu:visited {
+	COLOR: #444444; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.clsMenu:hover {
+	TEXT-ALIGN: center; COLOR: #225a92; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+.clsMenu {
+	COLOR: #444444; FONT-SIZE: 13px; TEXT-DECORATION: none
+}
+A.clsSubMenu:link {
+	COLOR: #444444; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+A.clsSubMenu:active {
+	COLOR: #444444; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+A.clsSubMenu:visited {
+	COLOR: #444444; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+A.clsSubMenu:hover {
+	TEXT-ALIGN: center; COLOR: #225a92; FONT-SIZE: 11px; TEXT-DECORATION: underline
+}
+.clsSubMenu {
+	COLOR: #444444; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+A.clsSubMenuRes:active {
+	COLOR: #444444; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+A.clsSubMenuRes:link {
+	COLOR: #444444; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+A.clsSubMenuRes:hover {
+	COLOR: #444444; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+A.clsSubMenuRes:visited {
+	COLOR: #444444; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+.clsMenuH {
+	TEXT-ALIGN: left; COLOR: #444444; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+A.clsMenuH:link {
+	TEXT-ALIGN: left; COLOR: #444444; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+A.clsMenuH:active {
+	TEXT-ALIGN: left; COLOR: #444444; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+A.clsMenuH:visited {
+	TEXT-ALIGN: left; COLOR: #444444; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+A.clsMenuH:hover {
+	TEXT-ALIGN: left; COLOR: #225a92; FONT-SIZE: 11px; TEXT-DECORATION: underline
+}
+:link {
+	COLOR: #225a92; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+:active {
+	COLOR: #225a92; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+:visited {
+	COLOR: #225a92; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+:hover {
+	COLOR: #444444; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+.clsCurso {
+	TEXT-ALIGN: left; COLOR: #6d6d6d; FONT-SIZE: 23px; TEXT-DECORATION: none
+}
+.clsPeque {
+	TEXT-ALIGN: justify; COLOR: #888888; FONT-SIZE: 9px
+}
+.clsTexto {
+	COLOR: #333333; FONT-SIZE: 11px
+}
+.clsCabecera {
+	TEXT-ALIGN: center; COLOR: #333333; FONT-SIZE: 13px
+}
+#CapaFondo {
+	Z-INDEX: 1; POSITION: absolute; WIDTH: 769px; HEIGHT: 429px; TOP: 0px; LEFT: 0px
+}
+#CapaImg {
+	Z-INDEX: 2; POSITION: absolute; TOP: 0px; LEFT: 0px
+}
+#eltoMenuHead {
+	Z-INDEX: 2; POSITION: absolute; WIDTH: 138px; VISIBILITY: hidden; TOP: 88px; LEFT: 0px
+}
+.clsCapasMenu {
+	Z-INDEX: 2; POSITION: absolute; WIDTH: 138px; VISIBILITY: hidden; OVERFLOW: hidden; LEFT: 0px
+}
+#CapaCurso {
+	Z-INDEX: 3; POSITION: absolute; TOP: 20px; CURSOR: hand; LEFT: 227px
+}
+#CapaMenuH {
+	Z-INDEX: 3; POSITION: absolute; TOP: 54px; LEFT: 220px
+}
+#CapaCont {
+	Z-INDEX: 3; POSITION: absolute; WIDTH: 605px; HEIGHT: 330px; OVERFLOW: visible; TOP: 97px; LEFT: 160px
+}
+#CapaAvanzar {
+	Z-INDEX: 3; POSITION: absolute; TEXT-ALIGN: right; WIDTH: 530px; HEIGHT: 9px; VISIBILITY: visible; TOP: 80px; LEFT: 238px
+}
+#CapaRetroceder {
+	Z-INDEX: 3; POSITION: absolute; WIDTH: 70px; HEIGHT: 9px; VISIBILITY: visible; TOP: 80px; LEFT: 222px
+}
+.textMode {
+	FONT-FAMILY: Courier New; FONT-SIZE: 12px
+}

@@ -1,0 +1,7 @@
+5
+
+'Dos lados iguales y un ángulo recto'
+'Tres ángulos agudos distintos'
+'Dos lados iguales y un ángulo obtuso'
+'Tres lados iguales'
+'Un ángulo recto y lados distintos'

@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
+  <script type="text/javascript" src="img/homejs/objNavegador.js"></script> 
+  <script type="text/javascript" src="img/homejs/objLayer.js"></script> 
+  <script type="text/javascript">
+<!--
+
+var capaMuestra = "";
+function mostrarCapa(capa) {
+	if (is.ns4) {
+		if(document.layers[capaMuestra])document.layers[capaMuestra].visibility = "hide";
+		if(document.layers[capaMuestra + "_titulo"])document.layers[capaMuestra + "_titulo"].visibility = "hide";
+		if(document.layers[capa])document.layers[capa].visibility = "show";
+		if(document.layers[capa + "_titulo"])document.layers[capa + "_titulo"].visibility = "show";
+	}
+	else if(is.ie4) {
+		if(document.all[capaMuestra])document.all[capaMuestra].style.visibility = "hidden";
+		if(document.all[capaMuestra + "_titulo"])document.all[capaMuestra + "_titulo"].style.visibility = "hidden";
+		if(document.all[capa])document.all[capa].style.visibility = "visible";
+		if(document.all[capa + "_titulo"])document.all[capa + "_titulo"].style.visibility = "visible";
+	}
+	else {
+		if(document.getElementById(capaMuestra))document.getElementById(capaMuestra).style.visibility = "hidden";
+		if(document.getElementById(capaMuestra + "_titulo"))document.getElementById(capaMuestra + "_titulo").style.visibility = "hidden";
+		if(document.getElementById(capa))document.getElementById(capa).style.visibility = "visible";
+		if(document.getElementById(capa + "_titulo"))document.getElementById(capa + "_titulo").style.visibility = "visible";
+		window.focus();
+	}
+	capaMuestra = capa;
+}
+//-->
+</script> 
+  <style>
+
+
+
+DIV.capaCurso {
+	position:absolute;
+	left:276px;
+	top:154px;
+	width:387px;
+	height:227px;
+	overflow:auto;
+	scrollbar-face-color: #eaeaea;
+	scrollbar-shadow-color: #222222;
+	scrollbar-highlight-color: #CACACA;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #CACACA;
+	scrollbar-track-color: #eeeeee;
+	scrollbar-arrow-color: #0033CC;
+	visibility: hidden;
+}
+DIV.capaCurso_titulo {position:absolute; left:200px; top:115px; width:560px; height:30px; visibility:hidden;
+COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 13px; TEXT-DECORATION: none; font-weight:bold;
+}
+
+#alumnos_inicio{position:absolute; left:700px; top:420px;}
+#alumnos_fondo{position:absolute; left:8px; top:106px;}
+#alumnos_menu{
+	position:absolute;
+	left:0px;
+	top:165px;
+	width: 207px;
+	height: 187px;
+}
+#alumnos_mail{position:absolute; left:0px; top:417px;}
+#alumnos_newton{position:absolute; left:196px; top:78px;}
+.Estilo1 {color: #FFCC00}
+.Estilo99 {font-size: 12px}
+ #html5img_1280382044{border:0px;width:771px;height:51px;} #html5div_1193228854{text-align:justify;} #contenidos{position:absolute; left:1px; top:68px; width:770px; height:375px; z-index:3;} #html5body_1492115769{background-color:#FFFFFF;margin-left:0px;margin-top:0px;} #html5div_1667045757{text-align:center;} #html5img_1337460060{border:0px;} #html5div_1861901603{text-align:center;} #html5table_1265715064 &gt; tr &gt; td{padding:0;margin:0;} #html5div_1299750899{text-align:center;} #html5p_1241840756{text-align:center;} #html5table_1744357003{border:0px;width:75%;} #html5table_1744357003 &gt; tr &gt; td{padding:10;} #html5table_1265715064{border-color:708EB2;border:2px;width:37%;} #html5td_1415066611{vertical-align:top;}.table_center{margin: auto;}.noshade{height:2px;border-width:0;color:gray;background-color:gray;}.allowtransparency{background: none transparent !important;}.iframe_scrolling_auto{overflow:auto;}.iframe_scrolling_yes{overflow:scroll;}.iframe_scrolling_no{overflow:hidden;}.div_center{text-align: center;}.span_dl{display: block;margin-top: 1em; margin-bottom: 1em;margin-left: 0;margin-right: 0;}.span_u{text-decoration:underline}.span_em{font-style:italic}.span_tt{font-family:'Lucida Console', monospace}.span_remove{display:none}.span_nobr{white-space:nowrap;}</style>
+  <script type="text/javascript">
+<!--
+
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script> 
+  <script type="text/javascript" src="./descartes-min.js"></script>
+  <title>Generación de una corriente alterna</title>
+ </head> 
+ <body onload=";mostrarCapa('bienvenidos')" id="html5body_1492115769"> 
+  <div id="banner">
+   <img src="img/banner_nuevo1.gif" id="html5img_1280382044" alt="img/banner_nuevo1.gif">
+  </div> 
+  <div id="alumnos_newton"> 
+  </div> 
+  <div id="contenidos"> 
+   <table class="table_center" id="html5table_1744357003"> 
+    <tbody>
+     <tr> 
+      <td> 
+       <div id="html5div_1193228854"> 
+        <p><strong style=";color:#6699CC; font-family:">Cuando una bobina gira uniformemente en el interior de un campo magnético uniforme se genera una corriente eléctrica, éste es el fundamento del <span class="Estilo1">alternador</span>. </strong></p> 
+       </div></td> 
+     </tr> 
+     <tr> 
+      <td>
+       <div id="html5div_1861901603"> 
+        <table id="html5table_1265715064"> 
+         <tbody>
+          <tr> 
+           <td class="clsTexto" id="html5td_1415066611">
+            <ajs width="465" height="3000" code="descinst.DescartesWeb2_0.class" name="descinst.DescartesWeb2_0.class" class="DescartesJS">
+             <param name="Versión" value="3.718">
+             <param name="Idioma" value="español">
+             <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+             <param name="E_00" value="R3='si' id='E1' fijo='si' despl_imagen='arr-izq' fondo='negro' despliegue='pintor'">
+             <param name="E_01" value="id='E2' fijo='si' x='0' y='0' ancho='500' alto='100' despl_imagen='arr-izq' fondo='negro' red='no' red10='no' ejes='no' texto='rosa'">
+             <param name="C_00" value="tipo='numérico' id='Ayuda' interfaz='botón' región='norte' espacio='E1' nombre='Ayuda' visible='si' tooltip='Ayuda para entender la escena' Explicación='Ayuda para entender la escena' acción='mensaje' parámetro='La escena muestra el gráfico de la corriente inducida que se produce cuando una bobina gira uniformemente en un campo magnético homogéneo.\nPodemos fijar el número de espiras de la bobina y su diámetro, así como el valor del campo magnético B, el ángulo iicial de la bobina y su frecuencia de giro.\nEl botón Girar/Parar pone en marcha la bobina y la detiene si se oprime una segunda vez..\nEl programa nos informa del valor de la fuerza electromotriz inducida en cada momento, su valor máximo y su valor eficaz.\nEl boton Ver/Ocultar nos muestra la dirección de los vectores campo magnético y superficie.\nEl botón Restaurar nos devuelve a la situación inicial.\n' pos_mensajes='centro'">
+             <param name="C_01" value="tipo='numérico' id='A1' interfaz='botón' región='norte' espacio='E1' nombre='A1' visible='si' tooltip='Observación de la corriente alterna' Explicación='Observación de la corriente alterna' acción='mensaje' parámetro='Apretamos el botón de puesta en marcha y observamos que se produce corriente. ¿Cómo es posible si no han cambiado B o S?.\nPara comprenderlo mejor pulsa Ver/Ocultar. ¿Forman los vectores B y S permanentemente el mismo ángulo?\nObserva la gráfica y los valores que se producen a la izquierda.¿Entiendes por qúé se denomina a esta corriente como alterna?\n¿A qué función matemática te recuerda la gráfica que observas?' pos_mensajes='centro'">
+             <param name="C_02" value="tipo='numérico' id='A2' interfaz='botón' región='norte' espacio='E1' nombre='A2' visible='si' tooltip='Variando los parámetros ' Explicación='Variando los parámetros ' acción='mensaje' parámetro='Ve alterando el valor de N y observa como varía la fem máxima. ¿Qué clase de relación hay?\n¿Y si varía el diámetro de las espiras?\n¿Y si varía el campo magnético?\n¿Y si varía la frecuencia?\nObserva que alterar el ángulo inicial no es capaz de alterar el valor máximo de la fem. ¿En qué se nota la variación de este parámetro?\nTeniendo en cuenta la forma de la gráfica y las observaciones que has realizado, trata de deducir una fórmula matemática para calcular la fem.\nJustifícala teóricamente con ayuda de tu libro de texto.' pos_mensajes='centro'">
+             <param name="C_03" value="tipo='numérico' id='A3' interfaz='botón' región='norte' espacio='E1' nombre='A3' visible='si' tooltip='La fuerza electromotriz efucaz' Explicación='La fuerza electromotriz efucaz' acción='mensaje' parámetro='La fuerza electromotriz eficaz determina la fuerza electromotriz de una corriente continua que produjera sobre una resistencia los mismos efectos que la corriente alterna.\nCambiando parámetros observa la relación constante que hay entre la fem efivaz y la fem máxima. Busca en tu libro de texto la justificación teórica de esta relación.\n' pos_mensajes='centro'">
+             <param name="C_04" value="tipo='numérico' id='n' región='interior' espacio='E1' expresión='(5,210,100,18)' valor='4' decimales='0' nombre='N' incr='1' min='1' max='20' visible='si' tooltip='Número de espiras' Explicación='Número de espiras' pos_mensajes='centro'">
+             <param name="C_05" value="tipo='numérico' id='d' región='interior' espacio='E1' expresión='(5,230,100,18)' valor='2.5' decimales='1' nombre='D' min='2' max='3' visible='si' tooltip='Diámetro de cada espira en dm' Explicación='Diámetro de cada espira en dm' pos_mensajes='centro'">
+             <param name="C_06" value="tipo='numérico' id='B' región='interior' espacio='E1' expresión='(5,250,100,18)' valor='1' decimales='1' nombre='B' min='0.1' max='1' visible='si' tooltip='Intensidad de campo en teslas' Explicación='Intensidad de campo en teslas' pos_mensajes='centro'">
+             <param name="C_07" value="tipo='numérico' id='ai' región='interior' espacio='E1' expresión='(5,270,100,18)' decimales='0' nombre='A.in.' incr='10' min='0' max='360' visible='si' tooltip='Ángulo inicial de firo de la bobina respecto a B en º' Explicación='Ángulo inicial de firo de la bobina respecto a B en º' pos_mensajes='centro'">
+             <param name="C_08" value="tipo='numérico' id='f' región='interior' espacio='E1' expresión='(5,290,100,18)' valor='1' decimales='0' nombre='Fr' incr='1' min='1' max='4' visible='si' tooltip='Frecuencia de giro en rev/s' Explicación='Frecuencia de giro en rev/s' pos_mensajes='centro'">
+             <param name="C_09" value="tipo='numérico' id='bot' interfaz='botón' región='interior' espacio='E1' expresión='(350,290,120,18)' nombre='Restaurar' visible='si' tooltip='Vuelve a la situación inicial' Explicación='Vuelve a la situación inicial' acción='inicio' pos_mensajes='centro'">
+             <param name="C_10" value="tipo='numérico' id='verc' interfaz='botón' región='interior' espacio='E1' expresión='(350,270,120,18)' nombre='Ver vect.' visible='si' tooltip='Para ver los vectores campo y superficie' Explicación='Para ver los vectores campo y superficie' acción='calcular' parámetro='ver=(ver=0)?1:0' pos_mensajes='centro'">
+             <param name="C_11" value="tipo='numérico' id='ejec' interfaz='botón' región='interior' espacio='E1' expresión='(350,250,120,18)' nombre='Gira/Para' visible='no' tooltip='Botón de puesta en marcha de la bobina' Explicación='Botón de puesta en marcha de la bobina' acción='animar' pos_mensajes='centro'">
+             <param name="A_00" value="id='pi' expresión='3.141593' evaluar='una-sola-vez' constante='si'">
+             <param name="A_01" value="id='l' expresión='1.5' evaluar='una-sola-vez' constante='si'">
+             <param name="A_02" value="id='r' expresión='d/4' evaluar='siempre' constante='si'">
+             <param name="A_03" value="id='fi' expresión='ai*pi/180' evaluar='siempre' constante='si'">
+             <param name="A_04" value="hacer='vb.rojo=1;vb.verde=0;vb.azul=1;vb.x1=-0.5;vb.y1=0;vb.z1=0;vb.x2=1.2*l;vb.y2=0;vb.z2=0;vb2.rojo=1;vb2.verde=0;vb2.azul=1;vb2.x1=-0.5;vb2.y1=0.5*r;vb2.z1=0;vb2.x2=1.2*l;vb2.y2=0.5*r;vb2.z2=0;vb3.rojo=1;vb3.verde=0;vb3.azul=1;vb3.x1=-0.5;vb3.y1=-0.5*r;vb3.z1=0;vb3.x2=1.2*l;vb3.y2=-0.5*r;vb3.z2=0;s.rojo=1;s.verde=1;s.azul=0;s.x1=0;s.y1=0;s.z1=0;s.x2=d/2;s.y2=0;s.z2=0;;' id='valores' evaluar='siempre' algoritmo='si'">
+             <param name="A_05" value="id='s' expresión='0.01*pi*d^2/4'">
+             <param name="A_06" value="id='e' expresión='n*B*s*2*pi*f*sen(2*pi*f*t+fi)'">
+             <param name="A_07" value="id='alfa' expresión='(t=0)?ai:ai+2*f*t*180'">
+             <param name="G_00" value="espacio='E2' tipo='segmento' dibujar-si='t>0' color='blanco' expresión='(-2,2)(-2,-2)' tamaño='1'">
+             <param name="G_01" value="espacio='E2' tipo='segmento' dibujar-si='t>0' color='blanco' expresión='(-2,0)(5,0)'">
+             <param name="G_02" value="espacio='E2' tipo='segmento' dibujar-si='t>0' color='blanco' expresión='(-2+px1*2,py1)(-2+px2*2,py2)' rastro='blanco' tamaño='1'">
+             <param name="G_03" value="espacio='E2' tipo='texto' dibujar-si='t>0' color='blanco' expresión='[5,10]' texto='t:[t]s'">
+             <param name="G_04" value="espacio='E2' tipo='texto' dibujar-si='t>0' color='blanco' expresión='[5,40]' texto='fem:[e]V'">
+             <param name="G_05" value="espacio='E2' tipo='texto' dibujar-si='t>0' color='blanco' expresión='[5,60]' texto='fem máx.:[n*B*s*2*pi*f]V'">
+             <param name="G_06" value="espacio='E2' tipo='texto' dibujar-si='t>0' color='blanco' expresión='[100,5]' texto='fem'">
+             <param name="G_07" value="espacio='E2' tipo='texto' dibujar-si='t>0' color='blanco' expresión='[420,55]' texto='t'">
+             <param name="G_08" value="espacio='E2' tipo='texto' dibujar-si='t>0' color='blanco' expresión='[5,80]' texto='fem efi.:[(n*B*s*2*pi*f)/2^0.5]'">
+             <param name="S_00" value="espacio='E1' tipo='curva' expresión='x=r*cos(2*pi*n*u+pi*u) y=l*u-l/2 z=r*sen(2*n*pi*u+pi*u)' rotini='(0,0,alfa)' color='ff5726' Nu='1000'">
+             <param name="S_01" value="espacio='E1' tipo='curva' expresión='x=r y=-l/2 z=-10*u' rotini='(0,0,alfa)' color='ff5726'">
+             <param name="S_02" value="espacio='E1' tipo='curva' expresión='x=-r y=l/2 z=-10*u' rotini='(0,0,alfa)' color='ff5726'">
+             <param name="S_03" value="espacio='E1' tipo='macro' dibujar-si='(ver=1)' nombre='vb' expresión='vector' posini='(0,-1,0)'">
+             <param name="S_04" value="espacio='E1' tipo='macro' dibujar-si='(ver=1)' nombre='vb2' expresión='vector' posini='(0,-1,0)'">
+             <param name="S_05" value="espacio='E1' tipo='macro' dibujar-si='(ver=1)' nombre='vb3' expresión='vector' posini='(0,-1,0)'">
+             <param name="S_06" value="espacio='E1' tipo='paralelepípedo' expresión='Paralelepípedo' posini='(0,-4,0)' color_reverso='rosa' modelo='metal' largo='4' alto='1.5'">
+             <param name="S_07" value="espacio='E1' tipo='paralelepípedo' expresión='Paralelepípedo' posini='(0,1.5+1.5*l,0)' color='grisClaro' color_reverso='gris' modelo='metal' largo='4' alto='1.5'">
+             <param name="S_08" value="espacio='E1' tipo='texto' expresión='[5,20]' texto='fem:[e]V' fijo='si' color='blanco'">
+             <param name="S_09" value="espacio='E1' tipo='macro' dibujar-si='ver=1' nombre='s' expresión='vector' rotini='(0,0,alfa)'">
+             <param name="Animación" value="controles='no' auto='no' inicio='t=0' hacer='px1=t;py1=0.5*e^(1/3);t=t+0.05;px2=t;py2=0.5*e^(1/3)' mientras='t<4'">
+            </ajs></td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div></td> 
+     </tr> 
+     <tr> 
+      <td>
+       <div id="html5div_1299750899"> 
+       </div> 
+       <!-- Licencia de Creative Commons --><p id="html5p_1241840756"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><img alt="Licencia de Creative Commons" src="img/88x31.png" id="html5img_1337460060"></a><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" style=";color:; font-family:Verdana, Arial, Helvetica, sans-serif">licencia de Creative Commons</a></p>
+       <!-- /Licencia de Creative Commons --> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <div id="html5div_1667045757"></div> 
+  </div>  
+  <script type="text/javascript" src="./descartes-min.js"></script>  
+ </body>
+</html>

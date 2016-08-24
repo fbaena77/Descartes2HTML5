@@ -1,0 +1,2 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Element “ajs” not allowed as child of element “td” in this context. (Suppressing further errors from this subtree.);;13;109;139;          <ajs width=""465"" height=""3000"" code=""descinst.DescartesWeb2_0.class"" name=""descinst.DescartesWeb2_0.class"" class=""DescartesJS"">     

@@ -1,0 +1,26 @@
+'Escribe las tres respuestas de cada pregunta y la posición de la respuesta correcta'
+
+'segmento circular'
+'corona circular'
+'sector circular'
+2
+
+'segmentos circulares'
+'triángulos'
+'embecaduras'
+3
+
+'sectores circulares'
+'embecaduras'
+'segmentos circulares'
+3
+
+'embecadura'
+'sector circular'
+'segmento circular'
+2
+
+'8'
+'10'
+'12'
+1

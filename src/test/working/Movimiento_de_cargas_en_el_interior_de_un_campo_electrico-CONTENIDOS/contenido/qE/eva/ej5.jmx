@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<hotpot-jmix-file>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <rdf:Description rdf:about="">
+    <dc:creator>UNREGISTERED</dc:creator>
+    <dc:creator>NITROUS</dc:creator>
+    <dc:title>Ejercicio 5</dc:title>
+  </rdf:Description>
+</rdf:RDF><version>6</version>
+
+<data>
+<title>Ejercicio 5</title>
+
+<timer><seconds>60</seconds><include-timer>0</include-timer></timer>
+
+<reading>
+<include-reading>0</include-reading>
+<reading-title></reading-title>
+<reading-text></reading-text>
+
+</reading>
+
+<jumbled-order-exercise><main-order><segment>la energ&amp;#x00ED;a mec&amp;#x00E1;nica</segment>
+<segment>de un electr&amp;#x00F3;n</segment>
+<segment>sometido</segment>
+<segment>exclusivamente</segment>
+<segment>a la fuerza el&amp;#x00E9;ctrica</segment>
+<segment>permanece</segment>
+<segment>constante</segment>
+</main-order><alternate></alternate>
+</jumbled-order-exercise>
+</data>
+
+<hotpot-config-file>
+<jmix>
+<exercise-subtitle>Palabras mezcladas</exercise-subtitle>
+<instructions>Reordene las siguientes palabras para formar la frase correcta. Pulse &quot;Comprobar&quot; cuando crea que la frase es correcta. Tambi&amp;#x00E9;n puede solicitar una pista para encontrar la siguiente palabra correcta.</instructions>
+<guess-correct>Correcto!</guess-correct>
+<guess-incorrect>Lo siento. Int&amp;#x00E9;ntelo de nuevo</guess-incorrect>
+<this-much-correct>Muchas de sus respuestas son correctas</this-much-correct>
+<next-correct-part>La siguiente parte correcta es:</next-correct-part>
+<click-to-add>Click en las palabras para a&amp;#x00F1;adirlas a la frase</click-to-add>
+<also-correct>Estas respuestas tambi&amp;#x00E9;n son correctas</also-correct>
+<include-undo>1</include-undo>
+<include-restart>1</include-restart>
+<include-hint>1</include-hint>
+<next-ex-url>ej6.htm</next-ex-url>
+<send-email>0</send-email>
+<capitalize-first-letter>0</capitalize-first-letter>
+<separate-javascript-file>0</separate-javascript-file>
+</jmix>
+
+<global>
+
+<times-up>Your time is over!</times-up>
+<check-caption>Comprobar</check-caption>
+<ok-caption>OK</ok-caption>
+<undo-caption>Deshacer</undo-caption>
+<hint-caption>Pista</hint-caption>
+<restart-caption>Restablecer</restart-caption>
+<your-score-is>Su puntuaci&amp;#x00F3;n es:</your-score-is>
+<show-also-correct>1</show-also-correct>
+<process-for-rtl>0</process-for-rtl>
+<include-scorm-12>0</include-scorm-12>
+<next-ex-caption>=&amp;#x003E;</next-ex-caption>
+<back-caption>&amp;#x003C;=</back-caption>
+<contents-caption>&amp;#x00CD;ndice de actividades</contents-caption>
+<include-next-ex>1</include-next-ex>
+<include-contents>1</include-contents>
+<include-back>1</include-back>
+<contents-url>index.htm</contents-url>
+<contents-url>index.htm</contents-url>
+<graphic-url></graphic-url>
+<font-face>Geneva,Arial,sans-serif</font-face>
+<font-size>small</font-size>
+<page-bg-color>#FFFFFF</page-bg-color>
+<title-color>#000000</title-color>
+<ex-bg-color>#FFFFFF</ex-bg-color>
+<text-color>#000000</text-color>
+<link-color>#0000FF</link-color>
+<vlink-color>#0000CC</vlink-color>
+<nav-bar-color>#FFACC2</nav-bar-color>
+<formmail-url>http://yourserver.com/cgi-bin/FormMail.pl</formmail-url>
+<email>you@yourserver.com</email>
+<name-please>Please enter your name:</name-please>
+<user-string-1>one</user-string-1>
+<user-string-2>two</user-string-2>
+<user-string-3>three</user-string-3>
+<header-code></header-code>
+</global>
+</hotpot-config-file>
+</hotpot-jmix-file>

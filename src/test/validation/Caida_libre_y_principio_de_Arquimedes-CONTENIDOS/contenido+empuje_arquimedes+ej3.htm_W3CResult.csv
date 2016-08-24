@@ -1,0 +1,5 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+info;Comments seen before doctype. Internet Explorer will go into the quirks mode.;;1;1;26;<!--?xml version=""1.0""?--><!doct
+error;When the attribute “xml:lang” in no namespace is specified, the element must also have the attribute “lang” present with the same value.;1;42;2;20;type html><html xml:lang=""en""> <hea
+error;Bad value “schema.DC” for attribute “rel” on element “link”: The string “schema.dc” is not a registered keyword.;;3;4;64;<head>   <link rel=""schema.DC"" href=""http://purl.org/dc/elements/1.1/"">   <m
+error;Bad value “” for attribute “action” on element “form”: Must be non-empty.;;5;1480;70;iv"">     <form id=""Cloze"" method=""post"" action="""" onsubmit=""return false;"">     

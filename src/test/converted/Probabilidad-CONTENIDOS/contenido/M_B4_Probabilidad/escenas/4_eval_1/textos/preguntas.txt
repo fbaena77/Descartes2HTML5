@@ -1,0 +1,24 @@
+10
+
+'Si se lanza un dado, ¿qué es más probable?'
+''
+'En una bolsa hay 5 bolas negras y 3 bolas blancas'
+'¿Qué probabilidad hay de sacar una blanca?'
+'En un ruleta de 4 colores: amarillo, rojo, verde y naranja.'
+'¿Qué probabilidad hay de que al girar la ruleta salga rojo?'
+'¿Cuál es la probabilidad de que al tirar un dado'
+'al aire se obtenga una puntuación mayor que dos?'
+'La probabilidad de que al tirar 2 monedas al aire'
+'el resultado sea dos caras es:'
+'La probabilidad de que al sacar una carta'
+'de una baraja española se obtenga un As es:'
+'La probabilidad de seleccionar un mes escogido al azar'
+'que comienza con la letra A es:'
+'¿Qué número tiene mayores probabilidades de aparecer'
+'al lanzar dos dados y sumar los puntos?'
+
+'En un salón hay 20 niñas y 12 niños. Si se escoge uno'
+'de ellos al azar, ¿Cual es la probabilidad que sea niño?'
+
+'La probabilidad de sacar al menos un uno' 
+'al tirar dos dados es:'

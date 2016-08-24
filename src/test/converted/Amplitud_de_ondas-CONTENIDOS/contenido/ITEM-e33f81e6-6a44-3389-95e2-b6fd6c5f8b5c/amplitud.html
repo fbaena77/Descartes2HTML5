@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
+  <script type="text/javascript" src="img/homejs/objNavegador.js"></script> 
+  <script type="text/javascript" src="img/homejs/objLayer.js"></script> 
+  <script type="text/javascript">
+<!--
+
+var capaMuestra = "";
+function mostrarCapa(capa) {
+	if (is.ns4) {
+		if(document.layers[capaMuestra])document.layers[capaMuestra].visibility = "hide";
+		if(document.layers[capaMuestra + "_titulo"])document.layers[capaMuestra + "_titulo"].visibility = "hide";
+		if(document.layers[capa])document.layers[capa].visibility = "show";
+		if(document.layers[capa + "_titulo"])document.layers[capa + "_titulo"].visibility = "show";
+	}
+	else if(is.ie4) {
+		if(document.all[capaMuestra])document.all[capaMuestra].style.visibility = "hidden";
+		if(document.all[capaMuestra + "_titulo"])document.all[capaMuestra + "_titulo"].style.visibility = "hidden";
+		if(document.all[capa])document.all[capa].style.visibility = "visible";
+		if(document.all[capa + "_titulo"])document.all[capa + "_titulo"].style.visibility = "visible";
+	}
+	else {
+		if(document.getElementById(capaMuestra))document.getElementById(capaMuestra).style.visibility = "hidden";
+		if(document.getElementById(capaMuestra + "_titulo"))document.getElementById(capaMuestra + "_titulo").style.visibility = "hidden";
+		if(document.getElementById(capa))document.getElementById(capa).style.visibility = "visible";
+		if(document.getElementById(capa + "_titulo"))document.getElementById(capa + "_titulo").style.visibility = "visible";
+		window.focus();
+	}
+	capaMuestra = capa;
+}
+//-->
+</script> 
+  <style>
+
+
+DIV.capaCurso {
+	position:absolute;
+	left:276px;
+	top:154px;
+	width:387px;
+	height:227px;
+	overflow:auto;
+	scrollbar-face-color: #eaeaea;
+	scrollbar-shadow-color: #222222;
+	scrollbar-highlight-color: #CACACA;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #CACACA;
+	scrollbar-track-color: #eeeeee;
+	scrollbar-arrow-color: #0033CC;
+	visibility: hidden;
+}
+DIV.capaCurso_titulo {position:absolute; left:200px; top:115px; width:560px; height:30px; visibility:hidden;
+COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 13px; TEXT-DECORATION: none; font-weight:bold;
+}
+
+#alumnos_inicio{position:absolute; left:700px; top:420px;}
+#alumnos_fondo{position:absolute; left:8px; top:106px;}
+#alumnos_menu{
+	position:absolute;
+	left:0px;
+	top:165px;
+	width: 207px;
+	height: 187px;
+}
+#alumnos_mail{position:absolute; left:0px; top:417px;}
+#alumnos_newton{position:absolute; left:196px; top:78px;}
+.Estilo99 {font-size: 12px}
+ #html5table_1469548033{border-color:708EB2;border:2px;width:85%;} #html5img_1343027234{border:0px;} #contenidos{position:absolute; left:1px; top:68px; width:770px; height:375px; z-index:3;} #html5table_1071061782 &gt; tr &gt; td{padding:10;} #html5span_1219486850{color:#FFCC00; font-family:;} #html5div_1204805427{text-align:justify;} #html5p_1355871115{text-align:right;} #html5p_1033013171{text-align:center;} #html5span_1525138361{color:#FFCC00; font-family:;} #html5div_1666758027{text-align:center;} #html5table_1469548033 &gt; tr &gt; td{padding:0;margin:0;} #html5span_1451915439{color:#6699CC; font-family:;} #html5body_1431276337{background-color:#FFFFFF;margin-left:0px;margin-top:0px;} #html5img_1269184933{border:0px;width:771px;height:51px;} #html5div_1206855398{text-align:center;} #html5table_1071061782{border:0px;width:75%;} #html5div_1898383369{text-align:center;}.table_center{margin: auto;}.noshade{height:2px;border-width:0;color:gray;background-color:gray;}.allowtransparency{background: none transparent !important;}.iframe_scrolling_auto{overflow:auto;}.iframe_scrolling_yes{overflow:scroll;}.iframe_scrolling_no{overflow:hidden;}.div_center{text-align: center;}.span_dl{display: block;margin-top: 1em; margin-bottom: 1em;margin-left: 0;margin-right: 0;}.span_u{text-decoration:underline}.span_em{font-style:italic}.span_tt{font-family:'Lucida Console', monospace}.span_remove{display:none}.span_nobr{white-space:nowrap;}</style>
+  <script type="text/javascript">
+<!--
+
+
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script> 
+  <script type="text/javascript" src="./descartes-min.js"></script>
+  <title>Amplitud de una vibración</title>
+ </head> 
+ <body onload=";mostrarCapa('bienvenidos')" id="html5body_1431276337"> 
+  <div id="banner">
+   <a href="" target="_blank"><img src="img/banner_nuevo1.gif" id="html5img_1269184933" alt="img/banner_nuevo1.gif"></a>
+  </div> 
+  <div id="alumnos_newton"> 
+  </div> 
+  <div id="contenidos"> 
+   <table class="table_center" id="html5table_1071061782"> 
+    <tbody>
+     <tr> 
+      <td>
+       <div id="html5div_1204805427"> 
+        <p><strong style=";color:#6699CC; font-family:">Una onda es la propagación de una vibración. En esta escena puedes ver qué es <span id="html5span_1525138361">la</span> <span id="html5span_1451915439">. Basta con que </span><strong style=";color:#6699CC; font-family:">pinches y arrastres el punto rojo. Además podrás cambiar <span id="html5span_1219486850">el periodo</span> de la vibración.</strong></strong></p> 
+       </div></td> 
+     </tr> 
+     <tr> 
+      <td>
+       <div id="html5div_1898383369"> 
+        <table id="html5table_1469548033"> 
+         <tbody>
+          <tr> 
+           <td> <p>
+             <ajs width="465" height="3000" code="descinst.DescartesWeb2_0.class" name="descinst.DescartesWeb2_0.class" class="DescartesJS">
+              <param name="c_03" value="tipo='numï¿½rico' id='g.y' interfaz='pulsador' regiï¿½n='exterior' nombre='g.y' visible='no'">
+              <param name="c_02" value="tipo='numï¿½rico' id='g.x' interfaz='pulsador' regiï¿½n='exterior' nombre='g.x' visible='no'">
+              <param name="c_01" value="tipo='grï¿½fico' id='g' color='rojo' color-int='rojo' expresiï¿½n='(0,1)' dibujar-si='t=0' tooltip='Para variar la amplitud' Explicaciï¿½n='Arrastra este punto para variar la amplitud'">
+              <param name="c_00" value="tipo='numï¿½rico' id='T' interfaz='pulsador' regiï¿½n='sur' valor='1' nombre='Periodo (s)' min='0.1' max='2' visible='si' tooltip='Periodo de la oscilaciï¿½n' Explicaciï¿½n='Periodo de la oscilaciï¿½n' acciï¿½n=' '">
+              <param name="idioma" value="espaï¿½ol">
+              <param name="g_06" value="tipo='texto' dibujar-si='t>T' color='azul' expresiï¿½n='[200,40]' texto='Velocidad mï¿½xima: [A*2*pi/T] m/s '">
+              <param name="g_05" value="tipo='texto' color='azul' expresiï¿½n='[20,40]' texto='Velocidad: [v] m/s '">
+              <param name="g_04" value="tipo='flecha' color='azul' expresiï¿½n='(0,0)(x,y)' ancho='5' flecha='rojo'">
+              <param name="g_03" value="tipo='texto' color='azul' expresiï¿½n='[150,20]' texto='Frecuencia: [1/T] hz  Amplitud: [A] m '">
+              <param name="g_02" value="tipo='texto' color='azul' expresiï¿½n='[20,20]' texto='Tiempo: [t] s'">
+              <param name="g_01" value="tipo='polï¿½gono' color='blanco' expresiï¿½n='(-4.75,1.75)(-4.75,2.75)(4.75,2.75)(4.75,1.75)' relleno='blanco'">
+              <param name="g_00" value="tipo='punto' color='rojo' expresiï¿½n='(x,y)' tamaï¿½o='4'">
+              <param name="a_06" value="id='v' expresiï¿½n='abs(A*2*pi/T*sen(2*pi*t/T))'">
+              <param name="a_05" value="id='y' expresiï¿½n='A*c1*cos(2*pi*t/T)'">
+              <param name="botones" value="crï¿½ditos=si config=si inicio=si limpiar=no">
+              <param name="a_04" value="id='x' expresiï¿½n='A*s1*cos(2*pi*t/T)'">
+              <param name="a_03" value="id='c1' expresiï¿½n='g.y/A'">
+              <param name="a_02" value="id='s1' expresiï¿½n='g.x/A'">
+              <param name="a_01" value="id='A' expresiï¿½n='(g.x*g.x+g.y*g.y)^0.5'">
+              <param name="a_00" value="id='pi' expresiï¿½n='3.1416' evaluar='una-sola-vez' constante='si'">
+              <param name="e_00" value="fijo='si' despl_imagen='arr-izq' fondo='d4d4d7' red='grisClaro' red10='no' ejes='no' texto='no' eje-x='no' eje-y='no'">
+              <param name="animaciï¿½n" value="controles='no' auto='no' inicio='t=0; x=g.x; y=g.y' hacer='t=t+0.01;;' mientras='t<1000*T'">
+              <param name="nombre" value="onda">
+              <param name="versiï¿½n" value="3.101">
+              <param name="c_06" value="tipo='numï¿½rico' id='A3' interfaz='botï¿½n' regiï¿½n='norte' nombre='A3' visible='si' tooltip='Deduciendo el valor de la velocidad mï¿½xima' Explicaciï¿½n='Periodo y velocidad ' opciones='Investigando la relaciï¿½n entre periodo y velocidad mï¿½xima' acciï¿½n='mensaje' parï¿½metro='Varï¿½a ahora el periodo sin alterar la amplitud. ï¿½Cï¿½mo varï¿½a la velocidad mï¿½ximaï¿½ ï¿½Ves alguna relaciï¿½n entre frecuencia y velocidad mï¿½xima? Intenta deducir una expresiï¿½n matemï¿½tica que relacione la velocidad mï¿½xima con la amplitud y la frecuencia.'">
+              <param name="c_05" value="tipo='numï¿½rico' id='A2' interfaz='botï¿½n' regiï¿½n='norte' nombre='A2' visible='si' tooltip='Velocidad y amplitud' Explicaciï¿½n='Investigamos cï¿½mo la velocidad mï¿½mima del movimiento se relaciona con la amplitud' acciï¿½n='mensaje' parï¿½metro='Tambiï¿½n puedes cambiar la amplitud y direcciï¿½n del movimiento. Te basta pinchar con el ratï¿½n en el extremo de la flecha y arrastrar este punto a cualquier lugar de la escena. ï¿½Cï¿½mo se alteran el periodo y la frecuencia al cambiar la amplitud y la direcciï¿½n?. ï¿½Quï¿½ magnitud varï¿½a claramente con la amplitud? ï¿½En quï¿½ punto de la oscilaciï¿½n se alcanza la velocidad mï¿½xima?'">
+              <param name="c_04" value="tipo='numï¿½rico' id='A1' interfaz='botï¿½n' regiï¿½n='norte' nombre='A1' visible='si' tooltip='Periodo y frecuencia' Explicaciï¿½n='Investigamos la relaciï¿½n entre el periodo y la frecuencia de una vibraciï¿½n' acciï¿½n='mensaje' parï¿½metro='La escena te permite cambiar el periodo, el tiempo que se tarda en dar una oscilaciï¿½n completa. La frecuencia es el nï¿½mero de oscilaciones completas que se dan en un segundo y su unidad se denomina herzio (hz). Despuï¿½s de probar con varios valores para el periodo, trata de contestar a la siguiente pregunta: ï¿½Quï¿½ relaciï¿½n ves entre la frecuencia y el periodo?'">
+             </ajs></p></td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div></td> 
+     </tr> 
+     <tr> 
+      <td>
+       <div id="html5div_1206855398">
+        <strong style=";color:#FFCC00; font-family:"> </strong> 
+        <p id="html5p_1355871115"></p> 
+       </div> 
+       <!-- Licencia de Creative Commons --><p id="html5p_1033013171"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><img alt="Licencia de Creative Commons" src="img/88x31.png" id="html5img_1343027234"></a><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" style=";color:; font-family:Verdana, Arial, Helvetica, sans-serif">licencia de Creative Commons</a></p>
+       <!-- /Licencia de Creative Commons --> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <div id="html5div_1666758027"></div> 
+  </div> 
+  <div id="inicio_alumnos">  
+   <script type="text/javascript" src="./descartes-min.js"></script>  
+  </div>
+ </body>
+</html>

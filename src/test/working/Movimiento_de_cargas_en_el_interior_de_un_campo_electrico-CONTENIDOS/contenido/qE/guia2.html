@@ -1,0 +1,615 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="es">
+<head>
+
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+
+
+
+  <title>Cargas y campo el&eacute;ctrico</title>
+  <link rel="stylesheet" type="text/css" href="resoluprocss/newton.css">
+
+
+
+  <script type="text/javascript" language="JavaScript" src="resoluprojs/objNavegador.js"></script>
+
+  <script type="text/javascript" language="JavaScript" src="resoluprojs/objLayer.js"></script>
+
+  <script type="text/javascript" language="JavaScript" src="resoluprojs/newton.js"></script>
+  <style type="text/css">
+<!--
+.Estilo1 {
+	font-size: 17px;
+	color: #0000FF;
+}
+.Estilo2 {font-size: 16px}
+.Estilo3 {font-size: 16px; color: #0000FF; }
+.Estilo4 {font-size: 11px}
+-->
+  </style>
+<script type="text/javascript" src="./descartes-min.js"></script></head>
+
+
+<body onload="posicionaMenu(4)" bgcolor="#ffffff">
+
+
+<div class="clsCurso" id="CapaCurso" gblcoloron="FFACC2" gblcolor="E48CA2">Problema. 2�  Bachillerato</div>
+
+
+<div id="CapaFondo"><img src="images/fondo.jpg" height="429" width="770"></div>
+
+
+<div id="CapaImg"><img src="images/cargas_campo_electrico.png" name="imgUnidad" width="201" height="80" id="imgUnidad"></div>
+
+
+<div id="eltoMenuHead" nombre="eltoMenuHead">
+<table border="0" cellpadding="0" cellspacing="0" width="138">
+
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_01.jpg" height="4" width="10"></td>
+
+
+      <td><img src="images/menu/menu_02.jpg" height="4" width="112"></td>
+
+
+      <td><img src="images/menu/menu_03.jpg" height="4" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td background="images/menu/menu_04.jpg" height="29" width="10"></td>
+
+
+      <td class="clsMenuHead" id="tbMenuVTitulo" align="center" bgcolor="#f7f7f7" height="29" width="112"><a href="index.html"><font class="clsMenuHead">Cargas y campo el&eacute;ctrico</font></a></td>
+
+
+      <td background="images/menu/menu_06.jpg" height="29" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_07.jpg" height="2" width="10"></td>
+
+
+      <td><img src="images/menu/menu_08.jpg" height="2" width="112"></td>
+
+
+      <td><img src="images/menu/menu_09.jpg" height="2" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_10.jpg" height="2" width="10"></td>
+
+
+      <td><img src="images/menu/menu_11.jpg" height="2" width="112"></td>
+
+
+      <td><img src="images/menu/menu_12.jpg" height="2" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_16.jpg" height="2" width="10"></td>
+
+
+      <td><img src="images/menu/menu_17.jpg" height="2" width="112"></td>
+
+
+      <td><img src="images/menu/menu_18.jpg" height="2" width="16"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+<div class="clsCapasMenu" id="eltoMenuFoot" nombre="eltoMenuFoot">
+<table border="0" cellpadding="0" cellspacing="0" width="138">
+
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_31.jpg" height="75" width="10"></td>
+
+
+      <td class="clsPeque" id="idTextoPie" background="images/menu/menu_32.jpg" height="75" valign="bottom" width="112">Juan Carlos Collantes</td>
+
+
+      <td><img src="images/menu/menu_33.jpg" height="75" width="16"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+<div id="CapaMenuH">
+<table background="images/menuH/fondo.jpg" border="0" cellpadding="0" cellspacing="0" height="21" width="519">
+
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td width="2"><img src="images/menuH/separaFondo.jpg" height="21" width="2"></td>
+
+
+      <td id="idUnidad" height="21">
+
+      <table border="0" cellpadding="0" cellspacing="0">
+
+
+
+        <tbody>
+
+          <tr>
+
+
+            <td class="clsMenuH" id="idUnidadDentro" contenteditable="false" height="21" valign="bottom">Cargas y campo el&eacute;ctrico&nbsp;</td>
+
+
+            <td><img src="images/menuH/cajaOn.jpg" height="21" width="18"></td>
+
+
+            <td><img src="images/menuH/separador.jpg" height="21" width="2"></td>
+
+
+            <td><img src="images/menuH/cajaOff.jpg" height="21" width="18"></td>
+
+
+            <td><img src="images/menuH/separador.jpg" height="21" width="2"></td>
+
+
+            <td><img src="images/menuH/cajaOff.jpg" height="21" width="18"></td>
+
+
+            <td><img src="images/menuH/separador.jpg" height="21" width="2"></td>
+
+
+            <td><img src="images/menuH/cajaOff.jpg" height="21" width="18"></td>
+
+
+            <td><img src="images/spacer.gif" height="21" width="10"></td>
+
+          </tr>
+
+
+        </tbody>
+
+      </table>
+
+      </td>
+
+
+
+
+
+      
+
+
+      <td class="clsMenuH" height="21" width="24"><img id="imgImprimir" src="images/menuH/imprimir.jpg" name="imgImprimir" height="21" width="24"></td>
+
+
+      <td class="clsMenuH" height="21" valign="bottom" width="60"><a class="clsMenuH" onmouseover="rollOver('imgImprimir', 'CapaMenuH', 'images/menuH/imprimir_on.jpg')" onmouseout="rollOver('imgImprimir', 'CapaMenuH', 'images/menuH/imprimir.jpg')" href="javascript:imprimir()">Imprimir</a></td>
+
+
+
+
+
+
+
+
+      <td width="2"><img src="images/menuH/separaFondo.jpg" height="21" width="2"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+<div id="CapaCont">
+<table width="610" border="0" cellpadding="2" cellspacing="0" bordercolor="#e5d48c" bgcolor="#ffffff" id="oTblCont0">
+
+
+
+  <tbody>
+
+    <tr height="26">
+
+
+      <td bgcolor="#c5b375" class="clsTexto"><div align="center">AN&Aacute;LISIS CUALITATIVO</div></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td class="clsTexto" valign="top">
+
+      <div>
+
+
+
+
+      <div class="Estilo1" style="text-align: justify;">
+        <p class="Estilo2">&iquest;Por qu&eacute; tuercen
+  su trayectoria las part&iacute;culas cargadas?. Como es habitual en los
+  problemas de f&iacute;sica, la soluci&oacute;n la encontramos haciendo
+  uso de leyes y definiciones. En nuestro caso<br>
+  
+      <br>
+        1) Definici&oacute;n de campo el&eacute;ctrico.<br>
+  
+2) Leyes de Newton</p>
+      </div>
+
+
+
+      <div class="Estilo3" style="text-align: justify;">
+Primero queremos saber qu&eacute; fuerzas act&uacute;an sobre una carga
+cuando est&aacute; en el interior de un campo el&eacute;ctrico. Para
+conseguirlo hacemos uso de la idea de intensidad de campo
+el&eacute;ctrico E, definida en un punto del espacio como la fuerza que
+actuar&iacute;a sobre la unidad de carga positiva situada en ese punto,
+es decir:
+      </div>
+
+      </div>
+
+
+
+      <p class="Estilo3" style="text-align: center;"><img alt="" src="images/ec0.gif" border="0"></p>
+
+
+
+      <p class="Estilo3" style="text-align: justify;">En segundo lugar queremos conocer
+qu&eacute; efecto produce esta fuerza sobre la carga en
+cuesti&oacute;n. Habr&aacute; que tener en cuenta la 2&ordf; ley de
+Newton (F=m.a) y, por tanto:</p>
+
+
+
+      <p class="Estilo3" style="text-align: center;"><img alt="" src="images/ec12.gif" border="0"></p>
+
+
+
+      <p class="Estilo3" style="text-align: justify;">Esta expresi&oacute;n nos da una
+pista sobre cu&aacute;l ser&aacute; el comportamiento de una carga q
+cuando se sit&uacute;a en el interior de una campo el&eacute;ctrico
+E.&nbsp; Si sobre una part&iacute;cula act&uacute;a s&oacute;lo la
+fuerza el&eacute;ctrica, pueden ocurrir dos casos:</p>
+
+
+      <p class="Estilo3" style="text-align: justify;">1. Que la carga sea positiva. Entonces esta acelera en la direcci&oacute;n y sentido del campo E, y<br>
+
+2. Que sea negativa. Entonces la aceleraci&oacute;n se produce en sentido contrario al sentido del campo. </p>
+
+
+      <p class="Estilo3" style="text-align: justify;">El applet siguiente nos muestra el comportamiento de una carga q en el interior de un campo el&eacute;ctrico E.</p>
+
+
+      <p style="text-align: center;"><applet name=""Applet"" width="100" height="25"
+        code="descinst.Descartes.class"
+        archive="descinst.jar,http://descartes.cnice.mec.es/plugin/descinst.jar"
+        MAYSCRIPT>
+   <param name="nombre" value="Applet">
+   <param name="pop" value="width=480 height=360">
+   <param name="Versi&oacute;n" value="3.875">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=si config=si inicio=si limpiar=si filas_norte=2">
+   <param name="E_00" value="despl_imagen='arr-izq' fondo='blanco' red='grisClaro' red10='gris' ejes='grisObscuro' texto='no'">
+   <param name="C_00" value="tipo='num&eacute;rico' id='A1' interfaz='bot&oacute;n' regi&oacute;n='norte' nombre='A1' visible='si' acci&oacute;n='mensaje' par&aacute;metro='Intenta predecir la trayectoria de una carga negativa que se mueve a 10 m/s en un campo dirigido en el sentido positivo del eje X' pos_mensajes='centro'">
+   <param name="C_01" value="tipo='num&eacute;rico' id='A2' interfaz='bot&oacute;n' regi&oacute;n='norte' nombre='A2' visible='si' acci&oacute;n='mensaje' par&aacute;metro='Intenta predecir la trayectoria de una carga negativa que se mueve a 10 m/s en un campo dirigido en el sentido positivo del eje Y' pos_mensajes='centro'">
+   <param name="C_02" value="tipo='num&eacute;rico' id='A3' interfaz='bot&oacute;n' regi&oacute;n='norte' nombre='A3' visible='si' acci&oacute;n='mensaje' par&aacute;metro='Intenta predecir la trayectoria de una carga positiva que se mueve a 10 m/s en un campo dirigido en el sentido negativo del eje Y. &iquest;Qu&eacute; similitudes observas con el tiro horizontal en el campo gravitatorio terrestre?' pos_mensajes='centro'">
+   <param name="C_03" value="tipo='num&eacute;rico' id='q' regi&oacute;n='norte' nombre='carga (mC)' min='-1' max='1' visible='si' pos_mensajes='centro'">
+   <param name="C_04" value="tipo='num&eacute;rico' id='v0x' regi&oacute;n='norte' decimales='0' nombre='v0x' incr='5' min='0' max='20' visible='si' pos_mensajes='centro'">
+   <param name="C_05" value="tipo='num&eacute;rico' id='Ex' decimales='0' nombre='Ex' incr='10' min='-100' max='100' visible='si' pos_mensajes='centro'">
+   <param name="C_06" value="tipo='num&eacute;rico' id='Ey' decimales='0' nombre='Ey' incr='10' min='-100' max='100' visible='si' pos_mensajes='centro'">
+   <param name="A_00" value="id='ey' expresi&oacute;n='0.003*q*Ey*t*t'">
+   <param name="A_01" value="id='ex' expresi&oacute;n='0.1*v0x*t+0.003*q*Ex*t*t'">
+   <param name="G_00" value="tipo='punto' color='azul' expresi&oacute;n='(-4+ex,ey)' rastro='gris'">
+   <param name="G_01" value="tipo='flecha' color='verde' expresi&oacute;n='(-3,1)(-3+Ex/50,1+Ey/50)' ancho='1' punta='3' flecha='negro'">
+   <param name="G_02" value="tipo='texto' color='azul' expresi&oacute;n='[20,20]' texto='E=[Ex]i+[Ey]j'">
+   <param name="Animaci&oacute;n" value="auto='no' inicio='t=0;dt=0.1' hacer='t=t+dt' mientras='ey&lt;=3.5'">
+      </applet>
+
+      </p>
+
+      </td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+
+<table id="oTblSep0" border="0" cellpadding="0" cellspacing="0" height="1">
+
+
+
+  <tbody>
+
+    <tr height="1">
+
+
+      <td height="1"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+<div class="clsCapasMenu" id="eltoMenu0" nombre="eltoMenu0">
+<table border="0" cellpadding="0" cellspacing="0" width="138">
+
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_19.jpg" height="2" width="10"></td>
+
+
+      <td><img src="images/menu/menu_20.jpg" height="2" width="112"></td>
+
+
+      <td><img src="images/menu/menu_21.jpg" height="2" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td background="images/menu/menu_22.jpg" height="25" width="10"><img src="images/spacer.gif" height="1" width="1"></td>
+
+
+      <td class="clsMenu" id="eltoMenuHead0" align="center" bgcolor="#c5b375" height="25" width="112"><a class="clsMenu" href="guia1.html">Gu&iacute;a del alumno</a></td>
+
+
+      <td background="images/menu/menu_24.jpg" height="25" width="16"><img src="images/spacer.gif" height="1" width="1"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_25.jpg" height="4" width="10"></td>
+
+
+      <td><img src="images/menu/menu_26.jpg" height="4" width="112"></td>
+
+
+      <td><img src="images/menu/menu_27.jpg" height="4" width="16"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+<div class="clsCapasMenu" id="eltoMenu1" nombre="eltoMenu1">
+<table border="0" cellpadding="0" cellspacing="0" width="138">
+
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_19.jpg" height="2" width="10"></td>
+
+
+      <td><img src="images/menu/menu_20.jpg" height="2" width="112"></td>
+
+
+      <td><img src="images/menu/menu_21.jpg" height="2" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td background="images/menu/menu_22.jpg" height="25" width="10"><img src="images/spacer.gif" height="1" width="1"></td>
+
+
+      <td class="clsMenu" id="eltoMenuHead1" align="center" bgcolor="#e5d48c" height="25" width="112"><a class="clsMenu" href="applet.html">Applet</a></td>
+
+
+      <td background="images/menu/menu_24.jpg" height="25" width="16"><img src="images/spacer.gif" height="1" width="1"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_25.jpg" height="4" width="10"></td>
+
+
+      <td><img src="images/menu/menu_26.jpg" height="4" width="112"></td>
+
+
+      <td><img src="images/menu/menu_27.jpg" height="4" width="16"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+<div class="clsCapasMenu" id="eltoMenu2" nombre="eltoMenu2">
+<table border="0" cellpadding="0" cellspacing="0" width="138">
+
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_19.jpg" height="2" width="10"></td>
+
+
+      <td><img src="images/menu/menu_20.jpg" height="2" width="112"></td>
+
+
+      <td><img src="images/menu/menu_21.jpg" height="2" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td background="images/menu/menu_22.jpg" height="25" width="10"><img src="images/spacer.gif" height="1" width="1"></td>
+
+
+      <td class="clsMenu" id="eltoMenuHead2" align="center" bgcolor="#e5d48c" height="25" width="112"><a href="eva.html" target="_self" class="clsMenu">Evaluaci&oacute;n</a></td>
+
+
+      <td background="images/menu/menu_24.jpg" height="25" width="16"><img src="images/spacer.gif" height="1" width="1"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_25.jpg" height="4" width="10"></td>
+
+
+      <td><img src="images/menu/menu_26.jpg" height="4" width="112"></td>
+
+
+      <td><img src="images/menu/menu_27.jpg" height="4" width="16"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+<div class="clsCapasMenu" id="eltoMenu3" nombre="eltoMenu3">
+<table border="0" cellpadding="0" cellspacing="0" width="138">
+
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_19.jpg" height="2" width="10"></td>
+
+
+      <td><img src="images/menu/menu_20.jpg" height="2" width="112"></td>
+
+
+      <td><img src="images/menu/menu_21.jpg" height="2" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td background="images/menu/menu_22.jpg" height="25" width="10"><img src="images/spacer.gif" height="1" width="1"></td>
+
+
+      <td class="clsMenu" id="eltoMenuHead3" align="center" bgcolor="#e5d48c" height="25" width="112"><a href="problema.html" target="_self" class="clsMenu">Problema resuelto</a></td>
+
+
+      <td background="images/menu/menu_24.jpg" height="25" width="16"><img src="images/spacer.gif" height="1" width="1"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_25.jpg" height="4" width="10"></td>
+
+
+      <td><img src="images/menu/menu_26.jpg" height="4" width="112"></td>
+
+
+      <td><img src="images/menu/menu_27.jpg" height="4" width="16"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+<div id="CapaAvanzar"><a id="aAvanzar" href="sol1.html"><img onmouseover="this.src='images/avanzar_on.jpg'" onmouseout="this.src='images/avanzar.jpg'" src="images/avanzar.jpg" border="0" height="15" width="70"></a></div>
+
+
+<div id="CapaRetroceder"><a id="aRetroceder" href="guia1.html"><img onmouseover="this.src='images/retroceder_on.jpg'" onmouseout="this.src='images/retroceder.jpg'" src="images/retroceder.jpg" border="0" height="15" width="80"></a></div>
+
+
+</body>
+<script type="text/javascript" src="./descartes-min.js"></script>
+
+</html>

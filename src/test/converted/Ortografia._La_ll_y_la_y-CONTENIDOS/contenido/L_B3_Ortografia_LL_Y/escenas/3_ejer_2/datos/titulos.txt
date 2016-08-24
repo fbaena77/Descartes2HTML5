@@ -1,0 +1,5 @@
+2
+'Se escriben con y'
+'No se escriben con y'
+'Se escriben con ll'
+'No se escriben con ll'

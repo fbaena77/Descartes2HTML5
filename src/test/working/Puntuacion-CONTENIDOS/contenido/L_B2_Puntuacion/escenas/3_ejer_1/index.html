@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Las desventuras del Capit&aacute;n Bravura sin normas ortogr&aacute;ficas.</title>
+	<style>
+		*{
+		border:0;
+		margin:0;
+		padding:0;
+		}
+	</style>
+<script type="text/javascript" src="./descartes-min.js"></script></head>
+<body >
+
+<p align="left">
+<applet width=790 height=500
+        code="descinst.Descartes.class"
+        codebase="./"
+        archive="descinst.jar,http://recursostic.educacion.es/descartes/web/plugin/descinst.jar"
+        MAYSCRIPT>
+   <param name="tama&ntilde;o" value="790x500">
+   <param name="pleca" value="title='' subtitle='Escribe las frases colocando las comas en el lugar indicado, para que los enunciados  tengan sentido. Tienes dos intentos en cada pregunta. ' subtitlines='2' bgcolor='d0f0ff' fgcolor='ffffff' align='center' titleimage='images/instrucciones.jpg' titlefont='SansSerif,BOLD,18' subtitlefont='SansSerif,PLAIN,22' ">
+   <param name="sonido" value="s&iacute;">
+   <param name="&aacute;lgebra" value="s&iacute;">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="s&iacute;">
+   <param name="Versi&oacute;n" value="4.41, 2010-12-16">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=no limpiar=no alto=30">
+   <param name="E_00" value="tipo='R2' fijo='s&iacute;' escala='60' O.y='30' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_00" value="id='Verificar' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' nombre='Verificar' expresi&oacute;n='(685,200,101,31)' fijo='s&iacute;' visible='s&iacute;' color='negro' negrita='s&iacute;' fuente puntos='20' imagen='./images/btn100.png' acci&oacute;n='calcular' par&aacute;metro='ver=1\nintento=(intento=2)?0:intento+1\n\n' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='(kk!=1)&amp;(intento!=2)&amp;(kk!=3)' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_01" value="id='n4' tipo='num&eacute;rico' interfaz='campo de texto' solo_texto='s&iacute;' regi&oacute;n='interior' expresi&oacute;n='(120,90,560,25)' valor='&squot;&squot;' fijo='s&iacute;' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='inicia=1' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_02" value="id='n1' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' nombre='Otra frase' expresi&oacute;n='(10,350,141,31)' fijo='s&iacute;' visible='s&iacute;' color='negro' negrita='s&iacute;' fuente puntos='20' imagen='./images/btn140.png' acci&oacute;n='calcular' par&aacute;metro='intento=0\notra=otra+1\nver=0\nmuestra=0\nerror3=0\nn4=&squot;&squot;\nkk=0' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='(kk=1)|(kk=3)' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="A_00" value="id='Incio_macro' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='SOM1.transp=0.8;SOM1.rojo=0.2;SOM1.verde=0.8;SOM1.azul=0.99;SOM1.Top=200;SOM1.Left=100;SOM2.transp=0.8;SOM2.rojo=0.2;SOM2.verde=0.8;SOM2.azul=0.99;SOM2.Top=50;SOM2.Left=50'">
+   <param name="A_01" value="id='INICIO' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='intento=0;inicia=1;dd=1;fallos=0;aciertos=0'">
+   <param name="A_02" value="id='otra' constante='s&iacute;' expresi&oacute;n='1' evaluar='una-sola-vez'">
+   <param name="A_03" value="id='F2' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='6' archivo='./datos/frases.txt'">
+   <param name="A_04" value="id='F' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='6' archivo='./datos/frases2.txt'">
+   <param name="A_05" value="id='R' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='6'">
+   <param name="A_06" value="id='suma' constante='s&iacute;' expresi&oacute;n='0' evaluar='una-sola-vez'">
+   <param name="A_07" value="id='a18' algoritmo='s&iacute;' evaluar='siempre' hacer='R[1]=(otra=1)&amp;(kk=1)?1:0;R[2]=(otra=2)&amp;(kk=1)?1:0;R[3]=(otra=3)&amp;(kk=1)?1:0;R[4]=(otra=4)&amp;(kk=1)?1:0;R[5]=(otra=5)&amp;(kk=1)?1:0;total=R[1]+R[2]+R[3]+R[4]+R[5];;'">
+   <param name="A_08" value="id='e3' evento='s&iacute;' condici&oacute;n='(n4=F[otra])&amp;(ver=1)' acci&oacute;n='calcular' par&aacute;metro='kk=1' par&aacute;metro.fuente='Monospaced,PLAIN,12' ejecuci&oacute;n='alternar' pos_mensajes='centro'">
+   <param name="A_09" value="id='e9' evento='s&iacute;' condici&oacute;n='(n4!=F[otra])&amp;(n4!=&squot;&squot;)&amp;(intento=1)' acci&oacute;n='calcular' par&aacute;metro='kk=2' par&aacute;metro.fuente='Monospaced,PLAIN,12' ejecuci&oacute;n='alternar' pos_mensajes='centro'">
+   <param name="A_10" value="id='e9' evento='s&iacute;' condici&oacute;n='(n4!=F[otra])&amp;(n4!=&squot;&squot;)&amp;(intento=2)' acci&oacute;n='calcular' par&aacute;metro='kk=3' par&aacute;metro.fuente='Monospaced,PLAIN,12' ejecuci&oacute;n='alternar' pos_mensajes='centro'">
+   <param name="A_11" value="id='e12' evento='s&iacute;' condici&oacute;n='kk=1' acci&oacute;n='calcular' par&aacute;metro='suma=suma+1' par&aacute;metro.fuente='Monospaced,PLAIN,12' ejecuci&oacute;n='alternar' pos_mensajes='centro'">
+   <param name="G_00" value="tipo='macro' fondo='s&iacute;' expresi&oacute;n='macros/sombras.txt' nombre='SOM1'">
+   <param name="G_01" value="espacio='E1' tipo='macro' fondo='s&iacute;' expresi&oacute;n='macros/sombras_inv.txt' nombre='SOM2'">
+   <param name="G_02" value="tipo='texto' dibujar-si='inicia' expresi&oacute;n='[20,90]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs40\b Frase {\*\mjaformula{\expr [otra]\decimals 0\fixed1}}\f2\fs24\b0}' fuente='Arial Bold,BOLD,20' fijo='s&iacute;'">
+   <param name="G_03" value="tipo='texto' expresi&oacute;n='[115,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs32\b{\*\mjaformula{\expr F2[otra]}}\f2\fs24\b0}' fuente='Arial Bold,BOLD,16' fijo='s&iacute;'">
+   <param name="G_04" value="tipo='texto' dibujar-si='(ver=1)&amp;(kk=3)' expresi&oacute;n='[115,130]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red255\green0\blue0;\red0\green0\blue255;}\f1\fs32\b\cf0{\*\mjaformula{\expr F[otra]}}\cf1\f2\fs24\b0}' fuente='Arial Bold,BOLD,16' fijo='s&iacute;'">
+   <param name="G_05" value="tipo='imagen' dibujar-si='kk=3' expresi&oacute;n='(5,2.7)' familia='s' s.intervalo='[1,otra]' s.pasos='otra-1' archivo='./images/mal.png'">
+   <param name="G_06" value="tipo='imagen' dibujar-si='kk=1' expresi&oacute;n='(5,2.7)' archivo='./images/bien.png'">
+   <param name="G_07" value="tipo='texto' dibujar-si='(otra=5)&amp;((intento=2)|(kk=1))' expresi&oacute;n='[21,401]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red0\green0\blue255;}\f1\fs42\b\cf0 Terminaste el ejercicio con {\*\mjaformula{\expr 5-suma\decimals 0\fixed1}} fallos y {\*\mjaformula{\expr suma\decimals 0\fixed1}} aciertos\cf1\fs40\b0}' fuente='Arial Bold,BOLD,21' fijo='s&iacute;'">
+   <param name="G_08" value="tipo='texto' dibujar-si='(otra=5)&amp;(intento=2)' expresi&oacute;n='[20,400]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red0\green171\blue255;\red0\green0\blue255;}\f1\fs42\b\cf0 Terminaste el ejercicio con {\*\mjaformula{\expr 5-suma\decimals 0\fixed1}} fallos y {\*\mjaformula{\expr suma\decimals 0\fixed1}} aciertos\cf1\fs40\b0}' fuente='Arial Bold,BOLD,21' fijo='s&iacute;'">
+   <param name="G_09" value="tipo='texto' dibujar-si='kk=2' expresi&oacute;n='[20,200]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs38 Int\u233 ntalo de nuevo\f2\fs24}' fuente='Arial,PLAIN,19' fijo='s&iacute;'">
+<font face="Arial" size="3">Esta unidad interactiva requiere la m&aacute;quina virtual de Java <a href="http://java.sun.com/javase/downloads/index.jsp" target="_blank">J2RE</a>.</font>
+</applet>
+<script type="text/javascript" src="./descartes-min.js"></script>

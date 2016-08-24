@@ -1,0 +1,12 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Attribute “xmlns:m” not allowed here.;1;16;2;65;type html><html xmlns:m=""http://schemas.microsoft.com/office/2004/12/omml""> <hea
+info;Attribute with the local name “xmlns:m” is not serializable as XML 1.0.;1;16;2;65;type html><html xmlns:m=""http://schemas.microsoft.com/office/2004/12/omml""> <hea
+error;Attribute “gblcoloron” not allowed on element “div” at this point.;;4;30;78;le1"">    <div id=""CapaCurso"" class=""clsCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">     
+error;Attribute “gblcolor” not allowed on element “div” at this point.;;4;30;78;le1"">    <div id=""CapaCurso"" class=""clsCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;4;39;48;/div>    <div id=""eltoMenuHead"" nombre=""eltoMenuHead"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;4;70;69;/div>    <div id=""eltoMenuFoot"" class=""clsCapasMenu"" nombre=""eltoMenuFoot"">     
+error;Attribute “height” not allowed on element “tr” at this point.;118;13;119;21;   <tbody>       <tr height=""1"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;4;139;63;/div>    <div id=""eltoMenu0"" class=""clsCapasMenu"" nombre=""eltoMenu0"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;4;160;63;/div>    <div id=""eltoMenu1"" class=""clsCapasMenu"" nombre=""eltoMenu1"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;4;181;63;/div>    <div id=""eltoMenu2"" class=""clsCapasMenu"" nombre=""eltoMenu2"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;4;202;63;/div>    <div id=""eltoMenu3"" class=""clsCapasMenu"" nombre=""eltoMenu3"">     

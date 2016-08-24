@@ -1,0 +1,13 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Attribute “gblcoloron” not allowed on element “div” at this point.;;3;14;77;2100"">   <div class=""clsCurso"" id=""CapaCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">    J
+error;Attribute “gblcolor” not allowed on element “div” at this point.;;3;14;77;2100"">   <div class=""clsCurso"" id=""CapaCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">    J
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;23;47;</div>   <div id=""eltoMenuHead"" nombre=""eltoMenuHead"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;54;68;</div>   <div class=""clsCapasMenu"" id=""eltoMenuFoot"" nombre=""eltoMenuFoot"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;95;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu0"" nombre=""eltoMenu0"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;116;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu1"" nombre=""eltoMenu1"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;137;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu2"" nombre=""eltoMenu2"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;158;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu3"" nombre=""eltoMenu3"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;179;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu4"" nombre=""eltoMenu4"">    <
+error;Attribute “height” not allowed on element “tr” at this point.;202;12;203;45;   <tbody>      <tr height=""26"" id=""html5tr_1489145827"">     
+error;Element “ajs” not allowed as child of element “div” in this context. (Suppressing further errors from this subtree.);;15;224;141;          <ajs width=""250"" height=""3000"" code=""descinst.DescartesWeb2_0.class"" name=""descinst.DescartesWeb2_0.class"" class=""DescartesJS"">     
+error;Attribute “height” not allowed on element “tr” at this point.;585;12;586;20;   <tbody>      <tr height=""1"">     

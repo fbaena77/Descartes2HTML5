@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
+  <script type="text/javascript">
+<!--
+
+var capaMuestra = "";
+function mostrarCapa(capa) {
+	if (is.ns4) {
+		if(document.layers[capaMuestra])document.layers[capaMuestra].visibility = "hide";
+		if(document.layers[capaMuestra + "_titulo"])document.layers[capaMuestra + "_titulo"].visibility = "hide";
+		if(document.layers[capa])document.layers[capa].visibility = "show";
+		if(document.layers[capa + "_titulo"])document.layers[capa + "_titulo"].visibility = "show";
+	}
+	else if(is.ie4) {
+		if(document.all[capaMuestra])document.all[capaMuestra].style.visibility = "hidden";
+		if(document.all[capaMuestra + "_titulo"])document.all[capaMuestra + "_titulo"].style.visibility = "hidden";
+		if(document.all[capa])document.all[capa].style.visibility = "visible";
+		if(document.all[capa + "_titulo"])document.all[capa + "_titulo"].style.visibility = "visible";
+	}
+	else {
+		if(document.getElementById(capaMuestra))document.getElementById(capaMuestra).style.visibility = "hidden";
+		if(document.getElementById(capaMuestra + "_titulo"))document.getElementById(capaMuestra + "_titulo").style.visibility = "hidden";
+		if(document.getElementById(capa))document.getElementById(capa).style.visibility = "visible";
+		if(document.getElementById(capa + "_titulo"))document.getElementById(capa + "_titulo").style.visibility = "visible";
+		window.focus();
+	}
+	capaMuestra = capa;
+}
+//-->
+</script> 
+  <style>
+
+
+
+DIV.capaCurso {
+	position:absolute;
+	left:276px;
+	top:154px;
+	width:387px;
+	height:227px;
+	overflow:auto;
+	scrollbar-face-color: #eaeaea;
+	scrollbar-shadow-color: #222222;
+	scrollbar-highlight-color: #CACACA;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #CACACA;
+	scrollbar-track-color: #eeeeee;
+	scrollbar-arrow-color: #0033CC;
+	visibility: hidden;
+}
+DIV.capaCurso_titulo {position:absolute; left:200px; top:115px; width:560px; height:30px; visibility:hidden;
+COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 13px; TEXT-DECORATION: none; font-weight:bold;
+}
+
+#alumnos_inicio{position:absolute; left:700px; top:420px;}
+#alumnos_fondo{position:absolute; left:8px; top:106px;}
+#alumnos_menu{
+	position:absolute;
+	left:0px;
+	top:165px;
+	width: 207px;
+	height: 187px;
+}
+#alumnos_mail{position:absolute; left:0px; top:417px;}
+#alumnos_newton{position:absolute; left:196px; top:78px;}
+.Estilo2 {
+	color: #6699CC;
+	font-weight: bold;
+}
+.Estilo4 {color: #FFCC00; font-weight: bold; }
+.Estilo5 {font-family: Symbol}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+.Estilo99 {font-size: 12px}
+ #html5img_1599426668{text-align:absmiddle;width:159px;height:45px;} #contenidos{position:absolute; left:1px; top:55px; width:600px; height:582px; z-index:3;} #html5div_1581830616{text-align:center;} #html5td_1180449513{width:377px;} #html5div_1791177671{text-align:justify;} #html5p_1676816993{text-align:center;} #html5p_1908189928{text-align:justify;} #html5p_1163977217{text-align:justify;} #html5img_1342051297{width:170px;height:33px;} #html5body_1632482729{background-color:#FFFFFF;margin-left:0px;margin-top:0px;} #html5table_1089758221{height:419px;width:708px;} #html5td_1541241119{height:321px;vertical-align:top;} #html5table_1269226117{border-color:708EB2;border:2px;width:40%;} #html5img_1848812360{border:0px;} #html5table_1269928200{border:0px;} #html5div_1130743251{text-align:center;} #html5p_1719471755{text-align:right;} #html5table_1089758221 &gt; tr &gt; td{padding:5;} #html5img_1203191157{border:0px;width:771px;height:51px;} #html5table_1269928200 &gt; tr &gt; td{padding:10;} #html5table_1269226117 &gt; tr &gt; td{padding:15;margin:0;} #html5td_1533079247{width:286px;}.table_center{margin: auto;}.noshade{height:2px;border-width:0;color:gray;background-color:gray;}.allowtransparency{background: none transparent !important;}.iframe_scrolling_auto{overflow:auto;}.iframe_scrolling_yes{overflow:scroll;}.iframe_scrolling_no{overflow:hidden;}.div_center{text-align: center;}.span_dl{display: block;margin-top: 1em; margin-bottom: 1em;margin-left: 0;margin-right: 0;}.span_u{text-decoration:underline}.span_em{font-style:italic}.span_tt{font-family:'Lucida Console', monospace}.span_remove{display:none}.span_nobr{white-space:nowrap;}</style>
+  <script type="text/javascript">
+<!--
+
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script> 
+  <script type="text/javascript" src="./descartes-min.js"></script>
+  <title>Actividad</title>
+ </head> 
+ <body onload=";mostrarCapa('bienvenidos')" id="html5body_1632482729"> 
+  <div id="banner">
+   <img src="img/banner_nuevo1.gif" id="html5img_1203191157" alt="img/banner_nuevo1.gif">
+  </div> 
+  <div id="contenidos"> 
+   <table class="table_center" id="html5table_1269928200"> 
+    <tbody>
+     <tr> 
+      <td> 
+       <div id="html5div_1791177671"> 
+        <p> <span class="Estilo2"> </span><span class="Estilo2">La <span class="Estilo4">actividad</span> de una muestra de sustancia radiactiva es el número de núcleos que desaparecen por unidad de tiempo y representa la velocidad de desintegración.<span class="clsTexto"><img src="images/ps9.gif" id="html5img_1599426668" alt="images/ps9.gif"></span> </span></p> 
+        <table id="html5table_1089758221"> 
+         <tbody>
+          <tr> 
+           <td id="html5td_1533079247"> 
+            <table id="html5table_1269226117"> 
+             <tbody>
+              <tr> 
+               <td class="clsTexto" id="html5td_1541241119">
+                <ajs width="250" height="3000" code="descinst.DescartesWeb2_0.class" name="descinst.DescartesWeb2_0.class" class="DescartesJS">
+                 <param name="nombre" value="puntos">
+                 <param name="Versión" value="3.861">
+                 <param name="Idioma" value="español">
+                 <param name="Botones" value="créditos=no config=no inicio=si limpiar=no">
+                 <param name="E_00" value="fijo='si' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+                 <param name="C_00" value="tipo='numérico' id='n1' interfaz='botón' región='norte' nombre='Ejercicio' visible='si' tooltip='Pulsa el botón -play- para iniciar la escena.' Explicación='La actividad de una muestra radiactiva disminuye exponencialmente con el tiempo.' acción='mensaje' parámetro='Lanza la animación y observa cómo la actividad, manifestada por los impactos de las partículas en la pantalla de sulfuro de cinc, disminuye exponencialmente con el tiempo.\nAl principio el número de impactos por segundo es muy grande y poco a poco son menos frecuentes.\nEsto sucede así con los núcleos radiactivos que no originen isótopos radiactivos al desintegrarse (sólo átomos estables) y es debido a que quedan cada vez quedan menos átomos iniciales (que son los que emiten radiación). ' pos_mensajes='centro'">
+                 <param name="A_00" value="id='x' tamaño='30' evaluar='una-sola-vez' vector='si'">
+                 <param name="A_01" value="id='y' tamaño='30' evaluar='una-sola-vez' vector='si'">
+                 <param name="A_02" value="inicio='i=0' hacer='sgn=(rnd>0.5)?1:-1;sgn1=(rnd<0.5)?1:-1;x[i]=1*rnd*sgn;y[i]=1*rnd*sgn1;i=i+1;q=q+0.005;q=(entero(i/5)=0)?(q+ 0.001):q' mientras='i<=8' id='a3' evaluar='siempre' algoritmo='si'">
+                 <param name="G_00" value="tipo='punto' dibujar-si='q<0.1' color='blanco' expresión='(x[1],y[1])'">
+                 <param name="G_01" value="tipo='punto' dibujar-si='q<0.25' color='blanco' expresión='(x[2],y[2])'">
+                 <param name="G_02" value="tipo='punto' dibujar-si='q<1' color='blanco' expresión='(x[4],y[4])'">
+                 <param name="G_03" value="tipo='polígono' fondo='si' color='negro' expresión='(-1.1,1.1)(-1.1,-1.1)(1.1,-1.1)(1.1,1.1)(-1.1,1.1)' relleno='bfbfbf'">
+                 <param name="G_04" value="tipo='punto' dibujar-si='q<2' color='blanco' expresión='(x[5],y[5])'">
+                 <param name="G_05" value="tipo='punto' dibujar-si='q<4' color='blanco' expresión='(x[0],y[0])'">
+                 <param name="G_06" value="tipo='punto' dibujar-si='q<8' color='blanco' expresión='(x[6],y[6])'">
+                 <param name="G_07" value="tipo='punto' dibujar-si='q<16' color='blanco' expresión='(x[7],y[7])'">
+                 <param name="G_08" value="tipo='texto' dibujar-si='q>16' color='azul' expresión='[10,5]' texto='El decaimiento de la actividad'">
+                 <param name="G_09" value="tipo='texto' dibujar-si='q>16' color='azul' expresión='[10,20]' texto='     es exponencial'">
+                 <param name="G_10" value="tipo='texto' dibujar-si='q>16' color='azul' expresión='[10,160]' texto=' Tarda mucho en desaparecer' fijo='no'">
+                 <param name="G_11" value="tipo='texto' dibujar-si='q>16' color='azul' expresión='[10,180]' texto='    totalmente' fijo='no'">
+                 <param name="Animación" value="pausa='50+t' controles='no' auto='no' repetir='si' inicio='t=1' hacer='t=t+1;t=(t<29)?1:t;' mientras='t<=30'">
+                </ajs></td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+           <td class="clsTexto" id="html5td_1180449513"> <p id="html5p_1163977217"><span class="Estilo2">La <span class="Estilo4">actividad</span> es tanto mayor cuanto mayor sea la constante radiactiva (<span class="Estilo5"> l </span>) y el número de núcleos presentes. <br> La <span class="Estilo4">actividad</span> inicial de un isótopo es mayor inicialmente, siempre que el isótopo que se forme no sea también radiactivo, en cuyo caso tenemos una <a href="seriesradiactnaturales.html">serie radiactiva. </a></span></p> <p id="html5p_1908189928"><img src="images/ps10.gif" id="html5img_1342051297" alt="images/ps10.gif"><span class="Estilo2"><br> En esta escena puedes ver de manera cualitativa cómo va disminuyendo la <span class="Estilo4">actividad</span> de una muestra radiactiva según va transcurriendo el tiempo.<br> <br> La <span class="Estilo4">actividad</span> de una sustancia depende de la cantidad de muestra y sus unidades son: el Curie y el Rutherford: <br> </span><span class="Estilo2"> 1 Curie es la actividad que corresponde a 1 gramo de radio y produce 3,7.10<sup>10</sup> desintegraciones / segundo. <br> 1 Rutherford corresponde a 10 <sup>6 </sup> desintegraciones / segundo. <strong style=";color:#6699CC; font-family:"></strong></span></p> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> </td> 
+     </tr> 
+     <tr> 
+      <td>
+       <div id="html5div_1130743251">
+        <strong style=";color:#FFCC00; font-family:"><a href="../radiactividad/equilibrio.htm" target="_blank"> </a></strong> 
+        <p id="html5p_1719471755"> </p> 
+       </div> 
+       <!-- Licencia de Creative Commons --><p id="html5p_1676816993"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><img alt="Licencia de Creative Commons" src="img/88x31.png" id="html5img_1848812360"></a><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" style=";color:; font-family:Verdana, Arial, Helvetica, sans-serif">licencia de Creative Commons</a></p>
+       <!-- /Licencia de Creative Commons --> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <div id="html5div_1581830616"></div> 
+  </div>  
+  <script type="text/javascript" src="./descartes-min.js"></script>  
+ </body>
+</html>

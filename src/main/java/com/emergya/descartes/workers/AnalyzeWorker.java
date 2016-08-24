@@ -35,23 +35,20 @@ public class AnalyzeWorker extends BaseWorker implements Runnable {
      */
     @Override
     public void run() {
-        try {
-            JobConverter currentJob = getJob();
-            log.info("****INICIO DEL ANÁLISIS DE CONTENIDOS****");
-            // Control de existencia de carpeta de trabajo
-            File resultPath = new File(currentJob.getJobConfig()
-                    .getAnalysisResultPath());
-
-            if (resultPath.exists()) {
-                FileManager.deleteFilesInFolder(resultPath);
-            }
-
-            resultPath.mkdirs();
-
-            while (!currentJob.isAnalyzeQueueReadyFlag()
-                    || !currentJob.getContentsToAnalyze().isEmpty()) {
-                DescartesZipContentProxy contentToProcess = currentJob
-                        .getContentsToAnalyze().take();
+        JobConverter currentJob = getJob();
+        log.info("****INICIO DEL ANÁLISIS DE CONTENIDOS****");
+        // Control de existencia de carpeta de trabajo
+        File resultPath = new File(currentJob.getJobConfig()
+                .getAnalysisResultPath());
+        if (resultPath.exists()) {
+            FileManager.deleteFilesInFolder(resultPath);
+        }
+        resultPath.mkdirs();
+        DescartesZipContentProxy contentToProcess = new DescartesZipContentProxy();
+        while (!currentJob.isAnalyzeQueueReadyFlag()
+                || !currentJob.getContentsToAnalyze().isEmpty()) {
+            try {
+                contentToProcess = currentJob.getContentsToAnalyze().take();
                 if (contentToProcess != JobConverter.STOP_QUEUE) {
                     if (contentToProcess != null) {
                         doWork(contentToProcess, currentJob);
@@ -62,23 +59,18 @@ public class AnalyzeWorker extends BaseWorker implements Runnable {
                     log.info("****ANÁLISIS FINALIZADO****");
                     currentJob.setAnalyzeQueueReadyFlag(true);
                 }
+            } catch (InterruptedException e1) {
+                log.error("Interrupción de la cola de análisis", e1);
+            } catch (Exception e) {
+                currentJob.getContentsAnalyzedError().add(contentToProcess);
+                log.error(
+                        "No se ha podido realizar el análisis del contenido: "
+                                + contentToProcess.getTitle() + ": ", e);
             }
-
-            log.info("Contenidos que han provocado errores: "
-                    + currentJob.getContentsAnalyzedError().size());
-
-        } catch (InterruptedException e1) {
-            log.error("Interrupción de la cola de exportación. "
-                    + e1.getMessage());
-            try {
-                getJob().getContentsToConvert().put(JobConverter.STOP_QUEUE);
-            } catch (InterruptedException e) {
-                log.error("Interrupción de la cola de análisis. "
-                        + e1.getMessage());
-            }
-        } catch (Exception e) {
-            log.error("No se ha podido crear la carpeta temporal de análisis de contenidos");
         }
+
+        log.info("Contenidos que han provocado errores en el análisis: "
+                + currentJob.getContentsAnalyzedError().size());
     }
 
     /**
@@ -95,8 +87,6 @@ public class AnalyzeWorker extends BaseWorker implements Runnable {
         ContentAnalyzer contentAnalyzer = new ContentAnalyzer(job);
         AnalyzedContent<?> analyzedContent = contentAnalyzer
                 .analyzeContent(contentProxy);
-        log.info(">> Analizando Contenido: " + zipContent.getFileName());
-
         File analyzedContentFile = new File(job.getJobConfig()
                 .getAnalysisResultPath()
                 + File.separator
@@ -104,9 +94,8 @@ public class AnalyzeWorker extends BaseWorker implements Runnable {
         analyzedContent.setLocalCopy(analyzedContentFile);
         String workingPath = job.getJobConfig().getWorkingContentPath();
         OutputManager.createAnalizedContentCSV(analyzedContent, workingPath);
-        log.info(">> Análisis guardado para el contenido: "
+        log.info(">> Análisis realizado para el contenido: "
                 + zipContent.getFileName());
-
         // Info estadística
         job.getContentsAnalyzed().add(zipContent);
     }

@@ -1,0 +1,18 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Attribute “gblcoloron” not allowed on element “div” at this point.;;3;18;77;9572"">   <div class=""clsCurso"" id=""CapaCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">    J
+error;Attribute “gblcolor” not allowed on element “div” at this point.;;3;18;77;9572"">   <div class=""clsCurso"" id=""CapaCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">    J
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;27;47;</div>   <div id=""eltoMenuHead"" nombre=""eltoMenuHead"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;58;68;</div>   <div class=""clsCapasMenu"" id=""eltoMenuFoot"" nombre=""eltoMenuFoot"">    <
+error;Attribute “height” not allowed on element “tr” at this point.;105;12;106;45;   <tbody>      <tr height=""26"" id=""html5tr_1178994131"">     
+error;Element “ajs” not allowed as child of element “div” in this context. (Suppressing further errors from this subtree.);;14;124;140;          <ajs width=""225"" height=""3000"" code=""descinst.DescartesWeb2_0.class"" name=""descinst.DescartesWeb2_0.class"" class=""DescartesJS"">     
+error;Element “ajs” not allowed as child of element “div” in this context. (Suppressing further errors from this subtree.);;14;323;140;          <ajs width=""225"" height=""3000"" code=""descinst.DescartesWeb2_0.class"" name=""descinst.DescartesWeb2_0.class"" class=""DescartesJS"">     
+error;Element “ajs” not allowed as child of element “div” in this context. (Suppressing further errors from this subtree.);;14;527;140;          <ajs width=""225"" height=""3000"" code=""descinst.DescartesWeb2_0.class"" name=""descinst.DescartesWeb2_0.class"" class=""DescartesJS"">     
+error;Element “ajs” not allowed as child of element “div” in this context. (Suppressing further errors from this subtree.);;14;726;140;          <ajs width=""225"" height=""3000"" code=""descinst.DescartesWeb2_0.class"" name=""descinst.DescartesWeb2_0.class"" class=""DescartesJS"">     
+error;Attribute “height” not allowed on element “tr” at this point.;931;12;932;20;   <tbody>      <tr height=""1"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;938;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu0"" nombre=""eltoMenu0"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;959;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu1"" nombre=""eltoMenu1"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;980;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu2"" nombre=""eltoMenu2"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;1001;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu3"" nombre=""eltoMenu3"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;1022;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu4"" nombre=""eltoMenu4"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;1043;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu5"" nombre=""eltoMenu5"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;1064;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu6"" nombre=""eltoMenu6"">    <

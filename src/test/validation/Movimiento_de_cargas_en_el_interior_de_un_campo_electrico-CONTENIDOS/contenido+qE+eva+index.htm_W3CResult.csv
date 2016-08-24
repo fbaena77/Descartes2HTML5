@@ -1,0 +1,2 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;When the attribute “xml:lang” in no namespace is specified, the element must also have the attribute “lang” present with the same value.;1;16;2;30;type html><html xml:lang=""en"" lang=""es""> <hea

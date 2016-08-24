@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>&Aacute;rea de figuras planas &nbsp;-&nbsp; Exploraci&oacute;n.</title>
+	<style>
+		*{
+		border:0;
+		margin:0;
+		padding:0;
+		}
+		body{
+			background-color:#7db9f2;
+		}
+	</style>
+<script type="text/javascript" src="./descartes-min.js"></script></head>
+<body >
+
+<p align="center">
+<applet width=790 height=520
+        code="descinst.Descartes.class"
+        codebase="./"
+        archive="descinst.jar,http://recursostic.educacion.es/descartes/web/plugin/descinst.jar"
+        MAYSCRIPT>
+   <param name="tama&ntilde;o" value="790x520">
+   <param name="pleca" value="title='Pasa el rat&oacute;n sobre cada figura para que conozcas c&oacute;mo se calcula su &aacute;rea.' subtitle='Pon atenci&oacute;n al &aacute;rea del c&iacute;rculo.' subtitlines='2' bgcolor='268bea' fgcolor='ffffff' align='center' titleimage='images/instrucciones.jpg' titlefont='SansSerif,BOLD,22' subtitlefont='SansSerif,BOLD,22' ">
+   <param name="sonido" value="s&iacute;">
+   <param name="&aacute;lgebra" value="s&iacute;">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="s&iacute;">
+   <param name="deshacer" value="no">
+   <param name="Versi&oacute;n" value="4.41, 2010-12-16">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=no limpiar=no">
+   <param name="E_00" value="tipo='R2' id='E1' fijo='s&iacute;' escala='15' O.x='-30%' O.y='45%' imagen='images/fondo.png' despl_imagen='expand.' fondo='69b2dc' red='no' red10='no' ejes='no' texto='no' sensible_a_los_movimientos_del_rat&oacute;n='s&iacute;'">
+   <param name="C_00" value="id='n10' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' nombre='Dibujar' expresi&oacute;n='(20,410,120,30)' fijo='s&iacute;' visible='s&iacute;' negrita='s&iacute;' fuente puntos='18' imagen='./images/btn120.png' acci&oacute;n='calcular' par&aacute;metro='anima=0\ndibuja=1' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='(clic&gt;1)&amp;(dibuja=0)' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_01" value="id='n11' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' nombre='Tangente' expresi&oacute;n='(20,70,121,30)' fijo='s&iacute;' visible='s&iacute;' negrita='s&iacute;' fuente puntos='18' imagen='./images/btn120.png' acci&oacute;n='calcular' par&aacute;metro='t=1\na=0\nc=0\ndia=0\nrd=0\ns=0' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='dibuja' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="A_00" value="id='INICIO_MACROS' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='RA.transp=0.0;RA.rojo=1.0;RA.verde=0.93;RA.azul=0.32;RA.w=360;RA.h=240;RA.x=(E1._w-RA.w)/2;RA.y=((E1._h-50)-RA.h)/2;SOM1.transp=0.8;SOM1.rojo=0.2;SOM1.verde=0.8;SOM1.azul=0.99;SOM1.Top=1540;SOM1.Left=2400;SOM2.transp=0.8;SOM2.rojo=0.2;SOM2.verde=0.8;SOM2.azul=0.99;SOM2.Top=180;SOM2.Left=100'">
+   <param name="A_01" value="id='INICIO1' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='cx=0;r=2.8;otro=0;t=0;a=0;c=0;dia=0;rd=0;s=0;;;'">
+   <param name="A_02" value="id='INICIO' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='lados=6;ang=pi*(180/lados)/180;apo=4*cos(ang);xj=15+apo*cos(pi/lados);yj=15+apo*sen(pi/lados);'">
+   <param name="A_03" value="id='a5' algoritmo='s&iacute;' evaluar='siempre' hacer='tri=(E1.mouse_x&gt;0)&amp;(E1.mouse_x&lt;10)&amp;(E1.mouse_y&gt;0)&amp;(E1.mouse_y&lt;10);cir=(E1.mouse_x&gt;10)&amp;(E1.mouse_x&lt;20)&amp;(E1.mouse_y&gt;0)&amp;(E1.mouse_y&lt;10);cua=(E1.mouse_x&gt;20)&amp;(E1.mouse_x&lt;30)&amp;(E1.mouse_y&gt;0)&amp;(E1.mouse_y&lt;10);rom=(E1.mouse_x&gt;0)&amp;(E1.mouse_x&lt;10)&amp;(E1.mouse_y&gt;10)&amp;(E1.mouse_y&lt;20);pol=(E1.mouse_x&gt;10)&amp;(E1.mouse_x&lt;20)&amp;(E1.mouse_y&gt;10)&amp;(E1.mouse_y&lt;20);rec=(E1.mouse_x&gt;20)&amp;(E1.mouse_x&lt;30)&amp;(E1.mouse_y&gt;10)&amp;(E1.mouse_y&lt;20);;;'">
+   <param name="A_04" value="id='e5' evento='s&iacute;' condici&oacute;n='cir' acci&oacute;n='animar' par&aacute;metro.fuente='Monospaced,PLAIN,12' ejecuci&oacute;n='alternar' pos_mensajes='centro'">
+   <param name="G_00" value="espacio='E1' tipo='macro' expresi&oacute;n='/macros/sombras.txt' nombre='SOM1'">
+   <param name="G_01" value="espacio='E1' tipo='arco' color='009d00' centro='(15,5)' radio='3' fin='360' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' relleno='009d00'">
+   <param name="G_02" value="espacio='E1' tipo='pol&iacute;gono' expresi&oacute;n='(2,2)(2,8)(8,2)(2,2)' relleno='azul'">
+   <param name="G_03" value="espacio='E1' tipo='pol&iacute;gono' color='rojo' expresi&oacute;n='(22,2)(22,8)(28,8)(28,2)(22,2)' relleno='rojo'">
+   <param name="G_04" value="espacio='E1' tipo='pol&iacute;gono' color='amarillo' expresi&oacute;n='(5+4*cos(2*s*pi/4),15+4*sen(2*pi*s/4))(5+4*cos(2*(s+1)*pi/4),15+4*sen(2*pi*(s+1)/4))(5,15)' familia='s' s.intervalo='[1,4]' s.pasos='3' relleno='amarillo'">
+   <param name="G_05" value="espacio='E1' tipo='pol&iacute;gono' color='magenta' expresi&oacute;n='(15+4*cos(2*s*pi/6),15+4*sen(2*pi*s/6))(15+4*cos(2*(s+1)*pi/6),15+4*sen(2*pi*(s+1)/6))(15,15)' familia='s' s.intervalo='[1,6]' s.pasos='5' relleno='magenta'">
+   <param name="G_06" value="espacio='E1' tipo='pol&iacute;gono' color='ff9d00' expresi&oacute;n='(22,13)(22,17)(28,17)(28,13)(22,13)' relleno='ff9d00'">
+   <param name="G_07" value="espacio='E1' tipo='pol&iacute;gono' expresi&oacute;n='(s,0)(s,10)(s+10,10)(s+10,0)(s,0)' familia='s' s.intervalo='[0,20]' s.pasos='2' ancho='2'">
+   <param name="G_08" value="espacio='E1' tipo='pol&iacute;gono' expresi&oacute;n='(s,10)(s,20)(s+10,20)(s+10,10)(s,10)' familia='s' s.intervalo='[0,20]' s.pasos='2' ancho='2'">
+   <param name="G_09" value="espacio='E1' tipo='texto' dibujar-si='tri' expresi&oacute;n='[21,21]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red0\green178\blue255;}\f1\fs44\b\cf0 TRI\u193 NGULO\b0\par El \u225 rea de un tri\u225 ngulo es igual al semiproducto de\par la base por la altura: A = \fs48{\*\mjaformula{\fraction{\num b\u183 h}{\den 2}}}\cf1\fs44}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_10" value="espacio='E1' tipo='texto' dibujar-si='tri' expresi&oacute;n='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}{\colortbl\red0\green129\blue255;\red0\green178\blue255;}\f1\fs44\b\cf0 TRI\u193 NGULO\b0\par El \u225 rea de un tri\u225 ngulo es igual al semiproducto de\par la base por la altura: A = \fs48{\*\mjaformula{\fraction{\num b\f2\fs44\u183 h}{\den 2}}}\cf1\fs44}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_11" value="espacio='E1' tipo='texto' dibujar-si='tri' expresi&oacute;n='[210,400]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs36\b b\f2\fs24\b0}' fuente='Arial Bold,BOLD,18' fijo='s&iacute;'">
+   <param name="G_12" value="espacio='E1' tipo='texto' dibujar-si='tri' expresi&oacute;n='[170,350]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs36\b h\f2\fs24\b0}' fuente='Arial Bold,BOLD,18' fijo='s&iacute;'">
+   <param name="G_13" value="espacio='E1' tipo='segmento' dibujar-si='cir' expresi&oacute;n='(15,5)(15+3*cos(a),5+3*sen(a))' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs32\b r\f2\fs24\b0}' fuente='Arial Bold,BOLD,16' fijo='s&iacute;' tama&ntilde;o='.2' ancho='2'">
+   <param name="G_14" value="espacio='E1' tipo='texto' dibujar-si='cir' expresi&oacute;n='[21,21]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red0\green178\blue255;}\f1\fs44\b\cf0 C\u205 RCULO\b0\par El \u225 rea de un c\u237 rculo es igual al producto del\par cuadrado del radio por pi: A = \u960 \u183 r\b{\*\mjaformula{\supix 2}}\cf1\b0}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_15" value="espacio='E1' tipo='texto' dibujar-si='cir' expresi&oacute;n='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red255\green126\blue0;\red0\green178\blue255;}\f1\fs44\b\cf0 C\u205 RCULO\b0\par El \u225 rea de un c\u237 rculo es igual al producto del\par cuadrado del radio por pi: A = \u960 \u183 r\b{\*\mjaformula{\supix 2}}\cf1\b0}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_16" value="espacio='E1' tipo='texto' dibujar-si='cua' expresi&oacute;n='[470,350]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs36\b l\f2\fs24\b0}' fuente='Arial Bold,BOLD,18' fijo='s&iacute;'">
+   <param name="G_17" value="espacio='E1' tipo='texto' dibujar-si='cua' expresi&oacute;n='[530,400]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs36\b l\f2\fs24\b0}' fuente='Arial Bold,BOLD,18' fijo='s&iacute;'">
+   <param name="G_18" value="espacio='E1' tipo='texto' dibujar-si='cua' expresi&oacute;n='[21,21]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red0\green178\blue255;}\f1\fs44\b\cf0 CUADRADO\b0\par El \u225 rea de un cuadrado es igual al \par cuadrado de su lado: A = l\b{\*\mjaformula{\supix 2}}\cf1\b0}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_19" value="espacio='E1' tipo='texto' dibujar-si='cua' expresi&oacute;n='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red0\green185\blue0;\red0\green178\blue255;}\f1\fs44\b\cf0 CUADRADO\b0\par El \u225 rea de un cuadrado es igual al \par cuadrado de su lado: A = l\b{\*\mjaformula{\supix 2}}\cf1\b0}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_20" value="espacio='E1' tipo='segmento' dibujar-si='rom' expresi&oacute;n='(5+4*cos(pi),15+4*sen(pi))(5+4*cos(0),15+4*sen(0))' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Arial;}\f1\fs24\par \f2\fs32\b D\f1\fs24\b0}' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='2'">
+   <param name="G_21" value="espacio='E1' tipo='segmento' dibujar-si='rom' expresi&oacute;n='(5+4*cos(pi/2),15+4*sen(pi/2))(5+4*cos(3*pi/2),15+4*sen(3*pi/2))' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs36  d\fs44}' fuente='Arial,PLAIN,18' fijo='s&iacute;' tama&ntilde;o='.2' ancho='2'">
+   <param name="G_22" value="espacio='E1' tipo='texto' dibujar-si='rom' expresi&oacute;n='[21,21]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red0\green178\blue255;}\f1\fs44\b\cf0 ROMBO\b0\par El \u225 rea de un rombo es igual al semiproducto de\par de sus diagonales: A = \fs48{\*\mjaformula{\fraction{\num D\u183 d}{\den 2}}}\cf1\fs44}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_23" value="espacio='E1' tipo='texto' dibujar-si='rom' expresi&oacute;n='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}{\colortbl\red189\green0\blue255;\red0\green178\blue255;}\f1\fs44\b\cf0 ROMBO\b0\par El \u225 rea de un rombo es igual al semiproducto de\par de sus diagonales: A = \fs48{\*\mjaformula{\fraction{\num D\u183 d}{\den 2}}}\cf1\fs44}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_24" value="espacio='E1' tipo='segmento' color='rojo' dibujar-si='pol' expresi&oacute;n='(15,15)(xj,yj)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red255\green0\blue0;}\cf0\f1\fs24\b apotema\f2\fs24\b0\cf1}' fuente='Arial Bold,BOLD,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='2'">
+   <param name="G_25" value="espacio='E1' tipo='texto' dibujar-si='pol' expresi&oacute;n='[320,170]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs32\b l}' fuente='Arial Bold,BOLD,16' fijo='s&iacute;'">
+   <param name="G_26" value="espacio='E1' tipo='texto' dibujar-si='pol' expresi&oacute;n='[21,21]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red0\green178\blue255;}\f1\fs44\b\cf0 POL\u205 GONO REGULAR\b0\par El \u225 rea de un pol\u237 gono regular es igual al semiproducto \par del per\u237 metro por la apotema: A = \fs48{\*\mjaformula{\fraction{\num p\u183 a}{\den 2}}}\cf1\fs44}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_27" value="espacio='E1' tipo='texto' dibujar-si='pol' expresi&oacute;n='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}{\colortbl\red192\green192\blue192;\red0\green178\blue255;}\f1\fs44\b\cf0 POL\u205 GONO REGULAR\b0\par El \u225 rea de un pol\u237 gono regular es igual al semiproducto \par del per\u237 metro por la apotema: A = \fs48{\*\mjaformula{\fraction{\num p\u183 a}{\den 2}}}\cf1\fs44}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_28" value="espacio='E1' tipo='texto' dibujar-si='rec' expresi&oacute;n='[21,21]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red0\green178\blue255;}\f1\fs44\b\cf0 RECT\u193 NGULO\b0\par El \u225 rea de un rect\u225 ngulo es igual al producto \par de la base por la altura: A = b\u183 h\cf1}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_29" value="espacio='E1' tipo='texto' dibujar-si='rec' expresi&oacute;n='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red0\green178\blue255;}\f1\fs44\b RECT\u193 NGULO\b0\par El \u225 rea de un rect\u225 ngulo es igual al producto \par de la base por la altura: A = b\u183 h\cf0}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_30" value="espacio='E1' tipo='texto' dibujar-si='rec' expresi&oacute;n='[520,240]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs36\b b}' fuente='Arial Bold,BOLD,18' fijo='s&iacute;'">
+   <param name="G_31" value="espacio='E1' tipo='texto' dibujar-si='rec' expresi&oacute;n='[460,200]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs36\b h}' fuente='Arial Bold,BOLD,18' fijo='s&iacute;'">
+   <param name="G_32" value="espacio='E1' tipo='imagen' expresi&oacute;n='(-5.5,15,.6,.6)' archivo='./images/piensa.png'">
+   <param name="Animaci&oacute;n" value="controles='no' auto='no' inicio='a=0' hacer='a=a+.1' mientras='a&lt;2*pi'">
+<font face="Arial" size="3">Esta unidad interactiva requiere la m&aacute;quina virtual de Java <a href="http://java.sun.com/javase/downloads/index.jsp" target="_blank">J2RE</a>.</font>
+</applet></p>
+
+</body>
+<script type="text/javascript" src="./descartes-min.js"></script>
+
+</html>

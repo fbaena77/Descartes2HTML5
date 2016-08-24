@@ -1,0 +1,176 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Generaci&oacute;n de una corriente alterna</title>
+
+<script type="text/javascript" language="JavaScript" src="img/homejs/objNavegador.js"></script>
+<script type="text/javascript" language="JavaScript" src="img/homejs/objLayer.js"></script>
+<script language="JavaScript">
+<!--
+
+var capaMuestra = "";
+function mostrarCapa(capa) {
+	if (is.ns4) {
+		if(document.layers[capaMuestra])document.layers[capaMuestra].visibility = "hide";
+		if(document.layers[capaMuestra + "_titulo"])document.layers[capaMuestra + "_titulo"].visibility = "hide";
+		if(document.layers[capa])document.layers[capa].visibility = "show";
+		if(document.layers[capa + "_titulo"])document.layers[capa + "_titulo"].visibility = "show";
+	}
+	else if(is.ie4) {
+		if(document.all[capaMuestra])document.all[capaMuestra].style.visibility = "hidden";
+		if(document.all[capaMuestra + "_titulo"])document.all[capaMuestra + "_titulo"].style.visibility = "hidden";
+		if(document.all[capa])document.all[capa].style.visibility = "visible";
+		if(document.all[capa + "_titulo"])document.all[capa + "_titulo"].style.visibility = "visible";
+	}
+	else {
+		if(document.getElementById(capaMuestra))document.getElementById(capaMuestra).style.visibility = "hidden";
+		if(document.getElementById(capaMuestra + "_titulo"))document.getElementById(capaMuestra + "_titulo").style.visibility = "hidden";
+		if(document.getElementById(capa))document.getElementById(capa).style.visibility = "visible";
+		if(document.getElementById(capa + "_titulo"))document.getElementById(capa + "_titulo").style.visibility = "visible";
+		window.focus();
+	}
+	capaMuestra = capa;
+}
+//-->
+</script>
+<style>
+
+
+
+DIV.capaCurso {
+	position:absolute;
+	left:276px;
+	top:154px;
+	width:387px;
+	height:227px;
+	overflow:auto;
+	scrollbar-face-color: #eaeaea;
+	scrollbar-shadow-color: #222222;
+	scrollbar-highlight-color: #CACACA;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #CACACA;
+	scrollbar-track-color: #eeeeee;
+	scrollbar-arrow-color: #0033CC;
+	visibility: hidden;
+}
+DIV.capaCurso_titulo {position:absolute; left:200px; top:115px; width:560px; height:30px; visibility:hidden;
+COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 13px; TEXT-DECORATION: none; font-weight:bold;
+}
+
+#alumnos_inicio{position:absolute; left:700px; top:420px;}
+#alumnos_fondo{position:absolute; left:8px; top:106px;}
+#alumnos_menu{
+	position:absolute;
+	left:0px;
+	top:165px;
+	width: 207px;
+	height: 187px;
+}
+#alumnos_mail{position:absolute; left:0px; top:417px;}
+#alumnos_newton{position:absolute; left:196px; top:78px;}
+.Estilo1 {color: #FFCC00}
+.Estilo99 {font-size: 12px}
+</style><script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<script type="text/javascript" src="./descartes-min.js"></script></head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" onLoad=";mostrarCapa('bienvenidos')">
+<div id=banner><img src="img/banner_nuevo1.gif" border=0 width=771 height=51></div>
+
+<div id=alumnos_newton> </div>
+
+<div id="contenidos" style="position:absolute; left:1px; top:68px; width:770px; height:375px; z-index:3">
+  <table width="75%" border="0" align="center" cellpadding="10">
+    <tr>
+      <td>
+<div align="justify">
+  <p><font color="#6699CC"><strong>Cuando una bobina
+gira uniformemente en el interior de un campo magn&eacute;tico uniforme se genera una corriente el&eacute;ctrica, &eacute;ste es el fundamento del <span class="Estilo1">alternador</span>. </strong></font></p>
+  </div></td>
+    </tr>
+    <tr>
+      <td><div align="center">
+        <table width="37%" border="2" cellpadding="0" cellspacing="0" bordercolor="708EB2">
+            <tr>
+              <TD class=clsTexto vAlign=top><applet
+        code="descinst.Descartes.class"
+         name="alternador" width="465" height="340"
+        MAYSCRIPT
+        archive="descinst.jar,http://recursostic.educacion.es/newton/plugin/descinst.jar"
+        value="width=465 height=340">
+   <param name="Versi&oacute;n" value="3.718">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=no limpiar=no">
+   <param name="E_00" value="R3='si' id='E1' fijo='si' despl_imagen='arr-izq' fondo='negro' despliegue='pintor'">
+   <param name="E_01" value="id='E2' fijo='si' x='0' y='0' ancho='500' alto='100' despl_imagen='arr-izq' fondo='negro' red='no' red10='no' ejes='no' texto='rosa'">
+   <param name="C_00" value="tipo='num&eacute;rico' id='Ayuda' interfaz='bot&oacute;n' regi&oacute;n='norte' espacio='E1' nombre='Ayuda' visible='si' tooltip='Ayuda para entender la escena' Explicaci&oacute;n='Ayuda para entender la escena' acci&oacute;n='mensaje' par&aacute;metro='La escena muestra el gr&aacute;fico de la corriente inducida que se produce cuando una bobina gira uniformemente en un campo magn&eacute;tico homog&eacute;neo.\nPodemos fijar el n&uacute;mero de espiras de la bobina y su di&aacute;metro, as&iacute; como el valor del campo magn&eacute;tico B, el &aacute;ngulo iicial de la bobina y su frecuencia de giro.\nEl bot&oacute;n Girar/Parar pone en marcha la bobina y la detiene si se oprime una segunda vez..\nEl programa nos informa del valor de la fuerza electromotriz inducida en cada momento, su valor m&aacute;ximo y su valor eficaz.\nEl boton Ver/Ocultar nos muestra la direcci&oacute;n de los vectores campo magn&eacute;tico y superficie.\nEl bot&oacute;n Restaurar nos devuelve a la situaci&oacute;n inicial.\n' pos_mensajes='centro'">
+   <param name="C_01" value="tipo='num&eacute;rico' id='A1' interfaz='bot&oacute;n' regi&oacute;n='norte' espacio='E1' nombre='A1' visible='si' tooltip='Observaci&oacute;n de la corriente alterna' Explicaci&oacute;n='Observaci&oacute;n de la corriente alterna' acci&oacute;n='mensaje' par&aacute;metro='Apretamos el bot&oacute;n de puesta en marcha y observamos que se produce corriente. &iquest;C&oacute;mo es posible si no han cambiado B o S?.\nPara comprenderlo mejor pulsa Ver/Ocultar. &iquest;Forman los vectores B y S permanentemente el mismo &aacute;ngulo?\nObserva la gr&aacute;fica y los valores que se producen a la izquierda.&iquest;Entiendes por q&uacute;&eacute; se denomina a esta corriente como alterna?\n&iquest;A qu&eacute; funci&oacute;n matem&aacute;tica te recuerda la gr&aacute;fica que observas?' pos_mensajes='centro'">
+   <param name="C_02" value="tipo='num&eacute;rico' id='A2' interfaz='bot&oacute;n' regi&oacute;n='norte' espacio='E1' nombre='A2' visible='si' tooltip='Variando los par&aacute;metros ' Explicaci&oacute;n='Variando los par&aacute;metros ' acci&oacute;n='mensaje' par&aacute;metro='Ve alterando el valor de N y observa como var&iacute;a la fem m&aacute;xima. &iquest;Qu&eacute; clase de relaci&oacute;n hay?\n&iquest;Y si var&iacute;a el di&aacute;metro de las espiras?\n&iquest;Y si var&iacute;a el campo magn&eacute;tico?\n&iquest;Y si var&iacute;a la frecuencia?\nObserva que alterar el &aacute;ngulo inicial no es capaz de alterar el valor m&aacute;ximo de la fem. &iquest;En qu&eacute; se nota la variaci&oacute;n de este par&aacute;metro?\nTeniendo en cuenta la forma de la gr&aacute;fica y las observaciones que has realizado, trata de deducir una f&oacute;rmula matem&aacute;tica para calcular la fem.\nJustif&iacute;cala te&oacute;ricamente con ayuda de tu libro de texto.' pos_mensajes='centro'">
+   <param name="C_03" value="tipo='num&eacute;rico' id='A3' interfaz='bot&oacute;n' regi&oacute;n='norte' espacio='E1' nombre='A3' visible='si' tooltip='La fuerza electromotriz efucaz' Explicaci&oacute;n='La fuerza electromotriz efucaz' acci&oacute;n='mensaje' par&aacute;metro='La fuerza electromotriz eficaz determina la fuerza electromotriz de una corriente continua que produjera sobre una resistencia los mismos efectos que la corriente alterna.\nCambiando par&aacute;metros observa la relaci&oacute;n constante que hay entre la fem efivaz y la fem m&aacute;xima. Busca en tu libro de texto la justificaci&oacute;n te&oacute;rica de esta relaci&oacute;n.\n' pos_mensajes='centro'">
+   <param name="C_04" value="tipo='num&eacute;rico' id='n' regi&oacute;n='interior' espacio='E1' expresi&oacute;n='(5,210,100,18)' valor='4' decimales='0' nombre='N' incr='1' min='1' max='20' visible='si' tooltip='N&uacute;mero de espiras' Explicaci&oacute;n='N&uacute;mero de espiras' pos_mensajes='centro'">
+   <param name="C_05" value="tipo='num&eacute;rico' id='d' regi&oacute;n='interior' espacio='E1' expresi&oacute;n='(5,230,100,18)' valor='2.5' decimales='1' nombre='D' min='2' max='3' visible='si' tooltip='Di&aacute;metro de cada espira en dm' Explicaci&oacute;n='Di&aacute;metro de cada espira en dm' pos_mensajes='centro'">
+   <param name="C_06" value="tipo='num&eacute;rico' id='B' regi&oacute;n='interior' espacio='E1' expresi&oacute;n='(5,250,100,18)' valor='1' decimales='1' nombre='B' min='0.1' max='1' visible='si' tooltip='Intensidad de campo en teslas' Explicaci&oacute;n='Intensidad de campo en teslas' pos_mensajes='centro'">
+   <param name="C_07" value="tipo='num&eacute;rico' id='ai' regi&oacute;n='interior' espacio='E1' expresi&oacute;n='(5,270,100,18)' decimales='0' nombre='A.in.' incr='10' min='0' max='360' visible='si' tooltip='&Aacute;ngulo inicial de firo de la bobina respecto a B en &ordm;' Explicaci&oacute;n='&Aacute;ngulo inicial de firo de la bobina respecto a B en &ordm;' pos_mensajes='centro'">
+   <param name="C_08" value="tipo='num&eacute;rico' id='f' regi&oacute;n='interior' espacio='E1' expresi&oacute;n='(5,290,100,18)' valor='1' decimales='0' nombre='Fr' incr='1' min='1' max='4' visible='si' tooltip='Frecuencia de giro en rev/s' Explicaci&oacute;n='Frecuencia de giro en rev/s' pos_mensajes='centro'">
+   <param name="C_09" value="tipo='num&eacute;rico' id='bot' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' expresi&oacute;n='(350,290,120,18)' nombre='Restaurar' visible='si' tooltip='Vuelve a la situaci&oacute;n inicial' Explicaci&oacute;n='Vuelve a la situaci&oacute;n inicial' acci&oacute;n='inicio' pos_mensajes='centro'">
+   <param name="C_10" value="tipo='num&eacute;rico' id='verc' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' expresi&oacute;n='(350,270,120,18)' nombre='Ver vect.' visible='si' tooltip='Para ver los vectores campo y superficie' Explicaci&oacute;n='Para ver los vectores campo y superficie' acci&oacute;n='calcular' par&aacute;metro='ver=(ver=0)?1:0' pos_mensajes='centro'">
+   <param name="C_11" value="tipo='num&eacute;rico' id='ejec' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' expresi&oacute;n='(350,250,120,18)' nombre='Gira/Para' visible='no' tooltip='Bot&oacute;n de puesta en marcha de la bobina' Explicaci&oacute;n='Bot&oacute;n de puesta en marcha de la bobina' acci&oacute;n='animar' pos_mensajes='centro'">
+   <param name="A_00" value="id='pi' expresi&oacute;n='3.141593' evaluar='una-sola-vez' constante='si'">
+   <param name="A_01" value="id='l' expresi&oacute;n='1.5' evaluar='una-sola-vez' constante='si'">
+   <param name="A_02" value="id='r' expresi&oacute;n='d/4' evaluar='siempre' constante='si'">
+   <param name="A_03" value="id='fi' expresi&oacute;n='ai*pi/180' evaluar='siempre' constante='si'">
+   <param name="A_04" value="hacer='vb.rojo=1;vb.verde=0;vb.azul=1;vb.x1=-0.5;vb.y1=0;vb.z1=0;vb.x2=1.2*l;vb.y2=0;vb.z2=0;vb2.rojo=1;vb2.verde=0;vb2.azul=1;vb2.x1=-0.5;vb2.y1=0.5*r;vb2.z1=0;vb2.x2=1.2*l;vb2.y2=0.5*r;vb2.z2=0;vb3.rojo=1;vb3.verde=0;vb3.azul=1;vb3.x1=-0.5;vb3.y1=-0.5*r;vb3.z1=0;vb3.x2=1.2*l;vb3.y2=-0.5*r;vb3.z2=0;s.rojo=1;s.verde=1;s.azul=0;s.x1=0;s.y1=0;s.z1=0;s.x2=d/2;s.y2=0;s.z2=0;;' id='valores' evaluar='siempre' algoritmo='si'">
+   <param name="A_05" value="id='s' expresi&oacute;n='0.01*pi*d^2/4'">
+   <param name="A_06" value="id='e' expresi&oacute;n='n*B*s*2*pi*f*sen(2*pi*f*t+fi)'">
+   <param name="A_07" value="id='alfa' expresi&oacute;n='(t=0)?ai:ai+2*f*t*180'">
+   <param name="G_00" value="espacio='E2' tipo='segmento' dibujar-si='t>0' color='blanco' expresi&oacute;n='(-2,2)(-2,-2)' tama&ntilde;o='1'">
+   <param name="G_01" value="espacio='E2' tipo='segmento' dibujar-si='t>0' color='blanco' expresi&oacute;n='(-2,0)(5,0)'">
+   <param name="G_02" value="espacio='E2' tipo='segmento' dibujar-si='t>0' color='blanco' expresi&oacute;n='(-2+px1*2,py1)(-2+px2*2,py2)' rastro='blanco' tama&ntilde;o='1'">
+   <param name="G_03" value="espacio='E2' tipo='texto' dibujar-si='t>0' color='blanco' expresi&oacute;n='[5,10]' texto='t:[t]s'">
+   <param name="G_04" value="espacio='E2' tipo='texto' dibujar-si='t>0' color='blanco' expresi&oacute;n='[5,40]' texto='fem:[e]V'">
+   <param name="G_05" value="espacio='E2' tipo='texto' dibujar-si='t>0' color='blanco' expresi&oacute;n='[5,60]' texto='fem m&aacute;x.:[n*B*s*2*pi*f]V'">
+   <param name="G_06" value="espacio='E2' tipo='texto' dibujar-si='t>0' color='blanco' expresi&oacute;n='[100,5]' texto='fem'">
+   <param name="G_07" value="espacio='E2' tipo='texto' dibujar-si='t>0' color='blanco' expresi&oacute;n='[420,55]' texto='t'">
+   <param name="G_08" value="espacio='E2' tipo='texto' dibujar-si='t>0' color='blanco' expresi&oacute;n='[5,80]' texto='fem efi.:[(n*B*s*2*pi*f)/2^0.5]'">
+   <param name="S_00" value="espacio='E1' tipo='curva' expresi&oacute;n='x=r*cos(2*pi*n*u+pi*u) y=l*u-l/2 z=r*sen(2*n*pi*u+pi*u)' rotini='(0,0,alfa)' color='ff5726' Nu='1000'">
+   <param name="S_01" value="espacio='E1' tipo='curva' expresi&oacute;n='x=r y=-l/2 z=-10*u' rotini='(0,0,alfa)' color='ff5726'">
+   <param name="S_02" value="espacio='E1' tipo='curva' expresi&oacute;n='x=-r y=l/2 z=-10*u' rotini='(0,0,alfa)' color='ff5726'">
+   <param name="S_03" value="espacio='E1' tipo='macro' dibujar-si='(ver=1)' nombre='vb' expresi&oacute;n='vector' posini='(0,-1,0)'">
+   <param name="S_04" value="espacio='E1' tipo='macro' dibujar-si='(ver=1)' nombre='vb2' expresi&oacute;n='vector' posini='(0,-1,0)'">
+   <param name="S_05" value="espacio='E1' tipo='macro' dibujar-si='(ver=1)' nombre='vb3' expresi&oacute;n='vector' posini='(0,-1,0)'">
+   <param name="S_06" value="espacio='E1' tipo='paralelep&iacute;pedo' expresi&oacute;n='Paralelep&iacute;pedo' posini='(0,-4,0)' color_reverso='rosa' modelo='metal' largo='4' alto='1.5'">
+   <param name="S_07" value="espacio='E1' tipo='paralelep&iacute;pedo' expresi&oacute;n='Paralelep&iacute;pedo' posini='(0,1.5+1.5*l,0)' color='grisClaro' color_reverso='gris' modelo='metal' largo='4' alto='1.5'">
+   <param name="S_08" value="espacio='E1' tipo='texto' expresi&oacute;n='[5,20]' texto='fem:[e]V' fijo='si' color='blanco'">
+   <param name="S_09" value="espacio='E1' tipo='macro' dibujar-si='ver=1' nombre='s' expresi&oacute;n='vector' rotini='(0,0,alfa)'">
+   <param name="Animaci&oacute;n" value="controles='no' auto='no' inicio='t=0' hacer='px1=t;py1=0.5*e^(1/3);t=t+0.05;px2=t;py2=0.5*e^(1/3)' mientras='t<4'">
+</applet>
+</td>
+            </tr>
+          </table>
+
+        </div></td>
+    </tr>
+    <tr>
+      <td><div align="center">
+        
+
+				</div>
+        <!-- Licencia de Creative Commons --><p align="center"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><img alt="Licencia de Creative Commons" src="img/88x31.png"  border="0"></a><br><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Los contenidos de esta unidad did&aacute;ctica est&aacute;n bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">licencia de Creative Commons</a> si no se indica lo contrario. </font></p><!-- /Licencia de Creative Commons -->
+          </td>
+    </tr>
+  </table>
+  <div align="center"></div>
+</div>
+</body>
+<script type="text/javascript" src="./descartes-min.js"></script>
+
+</html>

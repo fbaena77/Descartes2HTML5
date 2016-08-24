@@ -1,0 +1,106 @@
+<html>
+<head>
+	<title>&Aacute;rea de figuras planas &nbsp;-&nbsp; Exploraci&oacute;n.</title>
+	<style>
+		*{
+		border:0;
+		margin:0;
+		padding:0;
+		}
+		body{
+			background-color:#7db9f2;
+		}
+	</style>
+<script type="text/javascript" src="./descartes-min.js"></script></head>
+<body >
+
+<p align="center">
+<applet width=790 height=520
+        code="descinst.Descartes.class"
+        codebase="./"
+        archive="descinst.jar,http://recursostic.educacion.es/descartes/web/plugin/descinst.jar"
+        MAYSCRIPT>
+   <param name="tama&ntilde;o" value="790x520">
+   <param name="pleca" value="title='Las figuras mostradas en la escena, se han formado con figuras circulares.' subtitle='Halla el &aacute;rea de cada figura y arrastra el valor al cuadrante correspondiente.' subtitlines='2' bgcolor='268bea' fgcolor='ffffff' align='center' titleimage='images/instrucciones.jpg' titlefont='SansSerif,BOLD,22' subtitlefont='SansSerif,BOLD,22' ">
+   <param name="sonido" value="s&iacute;">
+   <param name="&aacute;lgebra" value="s&iacute;">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="s&iacute;">
+   <param name="deshacer" value="no">
+   <param name="Versi&oacute;n" value="4.41, 2010-12-16">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=no limpiar=no">
+   <param name="E_00" value="tipo='R2' id='E3' fijo='s&iacute;' escala='25' O.y='-70' imagen='/imagenes/fondo.png' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_01" value="tipo='R2' id='E1' x='10' y='10' ancho='70%' fijo='s&iacute;' escala='25' O.y='-70' despl_imagen='arr-izq' fondo='blanco' red='verde' red10='no' ejes='negro' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2' x='553' ancho='30%' fijo='s&iacute;' despl_imagen='arr-izq' fondo='ffb0ffff' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_00" value="id='g1' tipo='gr&aacute;fico' espacio='E1' color='azul' color-int='ffffff00' tama&ntilde;o='20' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' activo-si='verifica=0' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12'">
+   <param name="C_01" value="id='g1.x' tipo='num&eacute;rico' regi&oacute;n='exterior' espacio='E1' nombre='g1.x' valor='-4' fijo='s&iacute;' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_02" value="id='g1.y' tipo='num&eacute;rico' regi&oacute;n='exterior' espacio='E1' nombre='g1.y' valor='-8' fijo='s&iacute;' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_03" value="id='g2' tipo='gr&aacute;fico' espacio='E1' color='azul' color-int='ffffff00' tama&ntilde;o='20' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' activo-si='verifica=0' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12'">
+   <param name="C_04" value="id='g2.x' tipo='num&eacute;rico' regi&oacute;n='exterior' espacio='E1' nombre='g2.x' valor='-1' fijo='s&iacute;' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_05" value="id='g2.y' tipo='num&eacute;rico' regi&oacute;n='exterior' espacio='E1' nombre='g2.y' valor='-8' fijo='s&iacute;' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_06" value="id='g3' tipo='gr&aacute;fico' espacio='E1' color='azul' color-int='ffffff00' tama&ntilde;o='20' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' activo-si='verifica=0' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12'">
+   <param name="C_07" value="id='g3.x' tipo='num&eacute;rico' regi&oacute;n='exterior' espacio='E1' nombre='g3.x' valor='2' fijo='s&iacute;' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_08" value="id='g3.y' tipo='num&eacute;rico' regi&oacute;n='exterior' espacio='E1' nombre='g3.y' valor='-8' fijo='s&iacute;' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_09" value="id='g4' tipo='gr&aacute;fico' espacio='E1' color='azul' color-int='ffffff00' tama&ntilde;o='20' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' activo-si='verifica=0' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12'">
+   <param name="C_10" value="id='g4.x' tipo='num&eacute;rico' regi&oacute;n='exterior' espacio='E1' nombre='g4.x' valor='5' fijo='s&iacute;' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_11" value="id='g4.y' tipo='num&eacute;rico' regi&oacute;n='exterior' espacio='E1' nombre='g4.y' valor='-8' fijo='s&iacute;' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_12" value="id='n13' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' nombre='Verificar' expresi&oacute;n='(340,400,120,25)' fijo='s&iacute;' visible='s&iacute;' negrita='s&iacute;' fuente puntos='18' acci&oacute;n='calcular' par&aacute;metro='verifica=1' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="A_00" value="id='INICIO_MACROS' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='RA.transp=0.0;RA.rojo=1.0;RA.verde=0.93;RA.azul=0.32;RA.w=360;RA.h=240;RA.x=(E1._w-RA.w)/2;RA.y=((E1._h-50)-RA.h)/2;SOM1.transp=0.8;SOM1.rojo=0.2;SOM1.verde=0.8;SOM1.azul=0.99;SOM1.Top=1540;SOM1.Left=2400;SOM2.transp=0.8;SOM2.rojo=0.2;SOM2.verde=0.8;SOM2.azul=0.99;SOM2.Top=180;SOM2.Left=100'">
+   <param name="A_01" value="id='INICIO' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer=';'">
+   <param name="A_02" value="id='CALCULOS' algoritmo='s&iacute;' evaluar='siempre' hacer=';'">
+   <param name="A_03" value="id='aciertos' constante='s&iacute;' expresi&oacute;n='0' evaluar='una-sola-vez'">
+   <param name="A_04" value="id='a2' algoritmo='s&iacute;' evaluar='siempre' inicio='n=0' hacer='n=n+1;aciertos1=(g1.x&gt;0)&amp;(g1.y&lt;0)&amp;(g1.y&gt;-6)?1:0;aciertos2=(g2.x&gt;0)&amp;(g2.y&gt;0)?1:0;aciertos3=(g3.x&lt;0)&amp;(g3.y&gt;0)?1:0;aciertos4=(g4.x&lt;0)&amp;(g4.y&lt;0)&amp;(g4.y&gt;-6)?1:0;aciertos=aciertos1+aciertos2+aciertos3+aciertos4' mientras='n&lt;1'">
+   <param name="G_00" value="espacio='E3' tipo='macro' fondo='s&iacute;' expresi&oacute;n='macros/sombras.txt' nombre='SOM1'">
+   <param name="G_01" value="espacio='E3' tipo='macro' fondo='s&iacute;' dibujar-si='pp' expresi&oacute;n='macros/sombras_inv.txt' nombre='SOM2'">
+   <param name="G_02" value="espacio='E1' tipo='arco' centro='(-4,2)' inicio='270' fin='360' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_03" value="espacio='E1' tipo='segmento' expresi&oacute;n='(-6,2)(-6,3)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='1.5'">
+   <param name="G_04" value="espacio='E1' tipo='segmento' expresi&oacute;n='(-4,5)(-2,5)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='1.5'">
+   <param name="G_05" value="espacio='E1' tipo='segmento' expresi&oacute;n='(-2,5)(-2,2)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='1.5'">
+   <param name="G_06" value="espacio='E1' tipo='segmento' expresi&oacute;n='(-6,2)(-5,2)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='1.5'">
+   <param name="G_07" value="espacio='E1' tipo='arco' centro='(-6,4)' inicio='270' fin='360' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_08" value="espacio='E1' tipo='arco' centro='(-4,4)' inicio='90' fin='180' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_09" value="espacio='E1' tipo='arco' centro='(-5,1)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_10" value="espacio='E1' tipo='segmento' expresi&oacute;n='(-3,2)(-2,2)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='1.5'">
+   <param name="G_11" value="espacio='E1' tipo='relleno' color='b00000ff' expresi&oacute;n='(-4,3)'">
+   <param name="G_12" value="espacio='E1' tipo='segmento' color='rojo' expresi&oacute;n='(2,5)(6,5)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='1.5'">
+   <param name="G_13" value="espacio='E1' tipo='segmento' color='rojo' expresi&oacute;n='(2,2)(2,3)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='1.5'">
+   <param name="G_14" value="espacio='E1' tipo='segmento' color='rojo' expresi&oacute;n='(6,4)(6,5)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='1.5'">
+   <param name="G_15" value="espacio='E1' tipo='arco' color='rojo' centro='(2,4)' inicio='-90' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_16" value="espacio='E1' tipo='arco' color='rojo' centro='(3,2)' inicio='180' fin='360' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_17" value="espacio='E1' tipo='arco' color='rojo' centro='(5,2)' inicio='90' fin='180' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_18" value="espacio='E1' tipo='arco' color='rojo' centro='(5,4)' inicio='270' fin='360' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_19" value="espacio='E1' tipo='relleno' color='bbff0000' expresi&oacute;n='(3,2)'">
+   <param name="G_20" value="espacio='E1' tipo='segmento' color='negro' expresi&oacute;n='(-6,-1)(-6,-3)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='1.5'">
+   <param name="G_21" value="espacio='E1' tipo='segmento' color='negro' expresi&oacute;n='(-2,-1)(-2,-3)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='1.5'">
+   <param name="G_22" value="espacio='E1' tipo='arco' color='negro' centro='(-6,-4)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_23" value="espacio='E1' tipo='arco' color='negro' centro='(-6,-2)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_24" value="espacio='E1' tipo='arco' color='negro' centro='(-2,-2)' inicio='90' fin='180' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_25" value="espacio='E1' tipo='arco' color='negro' centro='(-2,-4)' inicio='90' fin='180' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_26" value="espacio='E1' tipo='arco' color='negro' centro='(-4,-2)' inicio='180' fin='360' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_27" value="espacio='E1' tipo='arco' color='negro' centro='(-4,-4)' inicio='180' fin='360' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_28" value="espacio='E1' tipo='relleno' color='bb000000' expresi&oacute;n='(-4,-4)'">
+   <param name="G_29" value="espacio='E1' tipo='segmento' color='magenta' expresi&oacute;n='(3,-1)(5,-1)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='1.5'">
+   <param name="G_30" value="espacio='E1' tipo='segmento' color='magenta' expresi&oacute;n='(3,-5)(5,-5)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='1.5'">
+   <param name="G_31" value="espacio='E1' tipo='segmento' color='magenta' expresi&oacute;n='(2,-2)(2,-4)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='1.5'">
+   <param name="G_32" value="espacio='E1' tipo='ecuaci&oacute;n' color='magenta' expresi&oacute;n='(x-4)^2+(y+3)^2=1' visible='no'">
+   <param name="G_33" value="espacio='E1' tipo='segmento' color='magenta' expresi&oacute;n='(6,-2)(6,-4)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='.2' ancho='1.5'">
+   <param name="G_34" value="espacio='E1' tipo='arco' color='magenta' centro='(3,-2)' inicio='90' fin='180' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_35" value="espacio='E1' tipo='arco' color='magenta' centro='(3,-4)' inicio='180' fin='270' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_36" value="espacio='E1' tipo='arco' color='magenta' centro='(5,-2)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_37" value="espacio='E1' tipo='arco' color='magenta' centro='(5,-4)' inicio='270' fin='360' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='1.5'">
+   <param name="G_38" value="espacio='E1' tipo='relleno' color='bbff00ff' expresi&oacute;n='(4,-1.5)'">
+   <param name="G_39" value="espacio='E1' tipo='pol&iacute;gono' expresi&oacute;n='(-9,-6)(-9,-11)(9,-11)(9,-6)(-9-6)' relleno='amarillo'">
+   <param name="G_40" value="espacio='E1' tipo='punto' expresi&oacute;n='(g1.x-.6,g1.y-.2)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs48\b 12\f2\fs24\b0\par }' fuente='Arial Bold,BOLD,24' fijo='s&iacute;' tama&ntilde;o='.2'">
+   <param name="G_41" value="espacio='E1' tipo='punto' expresi&oacute;n='(g2.x-.6,g2.y-.2)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs48\b 10\f2\fs24\b0\par }' fuente='Arial Bold,BOLD,24' fijo='s&iacute;' tama&ntilde;o='.2'">
+   <param name="G_42" value="espacio='E1' tipo='punto' expresi&oacute;n='(g3.x-.6,g3.y-.2)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs48\b 11\f2\fs24\b0\par }' fuente='Arial Bold,BOLD,24' fijo='s&iacute;' tama&ntilde;o='.2'">
+   <param name="G_43" value="espacio='E1' tipo='punto' expresi&oacute;n='(g4.x-.4,g4.y-.2)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs48\b 8\f2\fs24\b0\par }' fuente='Arial Bold,BOLD,24' fijo='s&iacute;' tama&ntilde;o='.2'">
+   <param name="G_44" value="espacio='E2' tipo='texto' expresi&oacute;n='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red0\green0\blue255;}\f1\fs40\b Ejericicio 4\par \par \cf0 Las l\u237 neas verdes que\par forman la cuadr\u237 cula\par est\u225 n separadas por\par una unidad; es decir,\par cada cuadrito tiene\par un \u225 rea de 1.\par \par Debes calcular el \u225 rea\par de cada figura. Luego\par debes arrastrar los\par valores que est\u225 n en\par la ventana de color\par amarillo al cuadrante\par correspondiente.\cf1\par \par \par \f2\fs24\b0}' fuente='Arial Bold,BOLD,20' fijo='s&iacute;'">
+   <param name="G_45" value="espacio='E2' tipo='texto' dibujar-si='verifica' expresi&oacute;n='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red0\green0\blue255;}\f1\fs40\b Ejericicio 4\par \par \cf0 Las l\u237 neas verdes que\par forman la cuadr\u237 cula\par est\u225 n separadas por\par una unidad; es decir,\par cada cuadrito tiene\par un \u225 rea de 1.\par \par Debes calcular el \u225 rea\par de cada figura. Luego\par debes arrastrar los\par valores que est\u225 n en\par la ventana de color\par amarillo al cuadrante\par correspondiente.\cf1\par \par ACIERTOS: {\*\mjaformula{\expr aciertos\decimals 0\fixed1}}\par \f2\fs24\b0}' fuente='Arial Bold,BOLD,20' fijo='s&iacute;'">
+<font face="Arial" size="3">Esta unidad interactiva requiere la m&aacute;quina virtual de Java <a href="http://java.sun.com/javase/downloads/index.jsp" target="_blank">J2RE</a>.</font>
+</applet></p>
+
+</body>
+<script type="text/javascript" src="./descartes-min.js"></script>
+
+</html>

@@ -1,0 +1,231 @@
+<HTML>
+<HEAD>
+<META http-equiv=Content-Type content='text/html; charset=ISO-8859-1'>
+<TITLE>Empuje</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="css/newton.css">
+<script type="text/javascript" language="JavaScript" src="js/objNavegador.js"></script>
+<script type="text/javascript" language="JavaScript" src="js/objLayer.js"></script>
+<script type="text/javascript" language="JavaScript" src="js/newton.js"></script>
+<style type="text/css">
+<!--
+.Estilo1 {font-size: 14px}
+-->
+</style>
+<script type="text/javascript" src="./descartes-min.js"></script></HEAD>
+<BODY onLoad="posicionaMenu(4)" BGCOLOR="#ffffff">
+<DIV class=clsCurso id="CapaCurso" GBLCOLOR="E5D48C" GBLCOLORON="C5B375">Problema. 4� ESO - Bachillerato </DIV>
+<DIV id=CapaFondo><IMG height=429 src="images/fondo.jpg" width=770></DIV>
+<DIV id=CapaImg><IMG id=imgUnidad src="images/empuje_de_arquimedes.png" width="201" height="80" name=imgUnidad></DIV>
+<DIV id="eltoMenuHead"  nombre="eltoMenuHead">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=4 src="images/menu/menu_01.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_02.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_03.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_04.jpg height=29></TD>
+<TD class=clsMenuHead id=tbMenuVTitulo align=middle width=112 bgColor=#f7f7f7 height=29><A href="index.html"><FONT class=clsMenuHead>Ca�da libre y empuje de Arqu�medes</FONT></A></TD>
+<TD width=16 background=images/menu/menu_06.jpg height=29></TD></TR>
+<TR>
+<TD><IMG height=2 src="images/menu/menu_07.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_08.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_09.jpg" width=16></TD></TR>
+<TR>
+<TD><IMG height=2 src="images/menu/menu_10.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_11.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_12.jpg" width=16></TD></TR>
+<TR>
+<TD><IMG height=2 src="images/menu/menu_16.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_17.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_18.jpg" width=16></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenuFoot"  nombre="eltoMenuFoot">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=75 src="images/menu/menu_31.jpg" width=10></TD>
+<TD class=clsPeque id=idTextoPie vAlign=bottom width=112 background=images/menu/menu_32.jpg height=75>Juan Carlos Collantes</TD>
+<TD><IMG height=75 src="images/menu/menu_33.jpg" width=16></TD></TR></TABLE></DIV>
+<DIV id=CapaMenuH>
+<TABLE height=21 cellSpacing=0 cellPadding=0 width=441 background=images/menuH/fondo.jpg border=0>
+
+<TR>
+<TD width=2><IMG height=21 src="images/menuH/separaFondo.jpg" width=2></TD>
+<TD id=idUnidad height=21>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+
+<TR>
+<TD class=clsMenuH id=idUnidadDentro contentEditable=false vAlign=bottom height=21>&nbsp;Empuje&nbsp;</TD>
+<TD><IMG height=21 src="images/menuH/cajaOn.jpg" width=18></TD>
+<TD><IMG height=21 src="images/menuH/separador.jpg" width=2></TD>
+<TD><IMG height=21 src="images/menuH/cajaOn.jpg" width=18></TD>
+<TD><IMG height=21 src="images/menuH/separador.jpg" width=2></TD>
+<TD><IMG height=21 src="images/menuH/cajaOff.jpg" width=18></TD>
+<TD><IMG height=21 src="images/menuH/separador.jpg" width=2></TD>
+<TD><IMG height=21 src="images/menuH/cajaOff.jpg" width=18></TD>
+<TD><IMG height=21 src="images/spacer.gif" width=10></TD></TR></TABLE></TD>
+<TD class=clsMenuH width=24 height=21><IMG id=imgImprimir height=21 src="images/menuH/imprimir.jpg" width=24 name=imgImprimir></TD>
+<TD class=clsMenuH vAlign=bottom width=60 height=21><A class=clsMenuH onMouseOver="rollOver('imgImprimir', 'CapaMenuH', 'images/menuH/imprimir_on.jpg')" onMouseOut="rollOver('imgImprimir', 'CapaMenuH', 'images/menuH/imprimir.jpg')" href="javascript:imprimir()">Imprimir</A></TD>
+<TD width=2><IMG height=21 src="images/menuH/separaFondo.jpg" width=2></TD></TR></TABLE>
+</DIV>
+<DIV id=CapaCont>
+<TABLE id=oTblCont0 borderColor=#e5d48c cellSpacing=0 cellPadding=2 width=606 bgColor=#ffffff border=0>
+
+<TR height=26>
+<TD class=clsCabecera bgColor=#c5b375>APPLET</TD>
+</TR>
+<TR>
+<TD class=clsTexto vAlign=top><p align="justify" class="Estilo1"><br>El applet que se presenta aqu&iacute; reproduce el movimiento
+  de un objeto que cae desde cierta altura hasta sumergirse en un
+  l&iacute;quido. La escena permite elegir&nbsp;las
+  caracter&iacute;sticas del cuerpo que cae (densidad, dimensiones) y
+  el&nbsp;l&iacute;quido en el que lo hace (mar, agua, aceite..).
+  Tambi&eacute;n&nbsp;es modificable la altura desde la que cae.</p>
+  <p align="justify" class="Estilo1">El applet est&aacute; dividido en tres partes: en la primera
+    se reproduce el movimiento, en la segunda podemos observar la
+    fracci&oacute;n de volumen que emerge cuando est&aacute; flotando y en
+    la tercera se dibuja la gr&aacute;fica velocidad tiempo correpondiente
+    al movimiento que se estudia.</p>
+  <p align="center">
+    <applet name="Escena" width=100 height=25 align="center"
+        code="descinst.Descartes.class"
+        archive="descinst.jar,http://descartes.cnice.mec.es/plugin/descinst.jar"
+        MAYSCRIPT>
+   <param name="separate_jvm" value="true">
+   <param name="nombre" value="Escena">
+   <param name="emergente" value="width=580 height=570">
+   <param name="Versi&oacute;n" value="4.05, 2009-05-13">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=s&iacute; config=s&iacute; inicio=s&iacute; limpiar=s&iacute;">
+   <param name="E_00" value="tipo='R2' id='E1' ancho='50%' alto='100%' despl_imagen='arr-izq' fondo='blanco' red='grisClaro' red10='gris' ejes='gris' texto='no'">
+   <param name="E_01" value="tipo='R2' id='E2' x='50%' y='0' ancho='50%' alto='50%' despl_imagen='arr-izq' fondo='f7fce1' red='no' red10='no' ejes='no' texto='rosa'">
+   <param name="E_02" value="tipo='R2' id='E3' x='50%' y='50%' ancho='50%' alto='50%' despl_imagen='arr-izq' fondo='fffad2' red='grisClaro' red10='gris' ejes='gris' texto='rosa'">
+   <param name="C_00" value="id='Ins' espacio='E1' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='norte' fijo='s&iacute;' nombre='Instrucciones' visible='s&iacute;' acci&oacute;n='mensaje' par&aacute;metro='En esta escena puedes modificar el cuerpo que se deja caer y el l&iacute;quido en el que lo hace, las dimensiones del cuerpo y la altura desde la que cae.\nPuedes practicar con ella pulsando los botones A1, A2 y A3 y realizando las actividdades que se proponen.' par&aacute;metro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12'">
+   <param name="C_01" value="id='h0' espacio='E1' tipo='num&eacute;rico' valor='10' decimales='0' fijo='s&iacute;' nombre='Altura inicial' incr='5' min='5' max='20' visible='s&iacute;' activo-si='t&lt;.1' par&aacute;metro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12'">
+   <param name="C_02" value="id='dc' espacio='E1' tipo='num&eacute;rico' interfaz='men&uacute;' regi&oacute;n='norte' fijo='s&iacute;' nombre='cuerpo' visible='no' activo-si='t&lt;.1' opciones='hielo[918],madera[600],corcho[180]' par&aacute;metro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12'">
+   <param name="C_03" value="id='df' espacio='E1' tipo='num&eacute;rico' interfaz='men&uacute;' regi&oacute;n='norte' valor='1000' fijo='s&iacute;' nombre='fluido' visible='no' activo-si='t&lt;.1' opciones='agua[1000],mar[1027],alcohol[785]' par&aacute;metro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12'">
+   <param name="C_04" value="id='l' espacio='E1' tipo='num&eacute;rico' valor='3' decimales='1' fijo='s&iacute;' nombre='arista' incr='0.5' min='2' max='5' visible='s&iacute;' activo-si='t&lt;.1' par&aacute;metro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12'">
+   <param name="C_05" value="id='A1' espacio='E1' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' fijo='s&iacute;' nombre='A1' visible='s&iacute;' acci&oacute;n='mensaje' par&aacute;metro='Calcula la velocidad alcanzada por un bloque de madera cuando se deja caer desde una altura de 15 m a una piscina llena de agua.\nUna vez realizado el ejercicio, fija los valores en la escena y comprueba el resultado obtenido. ' par&aacute;metro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12'">
+   <param name="C_06" value="id='A2' espacio='E1' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' expresi&oacute;n='(100,0)' fijo='s&iacute;' nombre='A2' visible='s&iacute;' acci&oacute;n='mensaje' par&aacute;metro='Comprueba que la profundidad alcanzada por el cuerpo que cae es independiente de sus dimensiones.\nPara ello puedes modificar los valores de la arista manteniendo la altura invariable. \nAnota los valores de arista que utilizas y los valores de profundidad que obtienes.' par&aacute;metro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12'">
+   <param name="C_07" value="id='A3' espacio='E1' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' expresi&oacute;n='(200,0)' fijo='s&iacute;' nombre='A3' visible='s&iacute;' acci&oacute;n='mensaje' par&aacute;metro='A partir de los datos de la densidad del hielo (918 kg/m3) y del agua de mar (1027 kg/m3), calcula el porcentaje de volumen sumergido de un iceberg.\nAnota el valor obtenido y comprueba el resultado utilizando los valores adecuados en la escena.' par&aacute;metro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12'">
+   <param name="A_00" value="id='g' constante='s&iacute;' expresi&oacute;n='-9.81' evaluar='una-sola-vez'">
+   <param name="A_01" value="id='c' expresi&oacute;n='(dc=918)?0.03:0.1'">
+   <param name="A_02" value="id='i' expresi&oacute;n='(dc=918)?0.3:0.18'">
+   <param name="A_03" value="id='V' expresi&oacute;n='l^3'">
+   <param name="A_04" value="id='m' expresi&oacute;n='dc*l^3'">
+   <param name="A_05" value="id='P' expresi&oacute;n='m*g'">
+   <param name="A_06" value="id='E1' expresi&oacute;n='-df*V*g'">
+   <param name="A_07" value="id='a' expresi&oacute;n='(P+E1)/m'">
+   <param name="A_08" value="id='y1' expresi&oacute;n='h0+(g*t^2)/2'">
+   <param name="A_09" value="id='ts1' expresi&oacute;n='sqrt(h0*2/(-g))'">
+   <param name="A_10" value="id='vs1' expresi&oacute;n='g*ts1'">
+   <param name="A_11" value="id='t2' expresi&oacute;n='t-ts1'">
+   <param name="A_12" value="id='y2' expresi&oacute;n='vs1*t2+(a*t2^2)/2'">
+   <param name="A_13" value="id='y' expresi&oacute;n='(t&lt;=ts1)?0.1*y1+2:(c*y2+2)'">
+   <param name="A_14" value="id='tfondo' expresi&oacute;n='(h0=10)?11.5:11'">
+   <param name="A_15" value="id='ts2' expresi&oacute;n='(a&gt;0)?(ts1-vs1*2/a):tfondo'">
+   <param name="A_16" value="id='e' expresi&oacute;n='(a&gt;=0)?1.5:0.6'">
+   <param name="A_17" value="id='le' expresi&oacute;n='(t&gt;=ts2)?1:e'">
+   <param name="A_18" value="id='vsum' expresi&oacute;n='(a&lt;0)?1:(dc/df)'">
+   <param name="A_19" value="id='tmin' expresi&oacute;n='-vs1/a'">
+   <param name="A_20" value="id='ymin' expresi&oacute;n='vs1*tmin+0.5*a*(tmin)^2'">
+   <param name="A_21" value="id='v' expresi&oacute;n='(t&lt;=ts1)?(g*t):(vs1+a*(t-ts1))'">
+   <param name="G_00" value="espacio='E1' tipo='pol&iacute;gono' color='grisObscuro' expresi&oacute;n='(-3,0)(-3,-5.5)(3,-5.5)(3,0)' relleno='8caaffff' ancho='0'">
+   <param name="G_01" value="espacio='E1' tipo='ecuaci&oacute;n' color='aebdff' dibujar-si='abs(x)&lt;=3' expresi&oacute;n='y=2+0.1*sen(x-2*t)' relleno+='8caaffff' visible='no'">
+   <param name="G_02" value="espacio='E1' tipo='flecha' color='rojo' expresi&oacute;n='(0,y)(0,y-1)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='2' ancho='2' punta='4' flecha='negro'">
+   <param name="G_03" value="espacio='E1' tipo='flecha' color='verde' dibujar-si='t&gt;ts1' expresi&oacute;n='(0,y)(0,y+le)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='2' ancho='2' punta='4' flecha='negro'">
+   <param name="G_04" value="espacio='E1' tipo='pol&iacute;gono' color='a80000ff' dibujar-si='dc=918' expresi&oacute;n='(-0.15*l,y-0.15*l)(-0.15*l,y+0.15*l)(0.15*l,y+0.15*l)(0.15*l,y-0.15*l)(-0.15*l,y-0.15*l)' relleno='a80000ff' ancho='0'">
+   <param name="G_05" value="espacio='E1' tipo='pol&iacute;gono' color='a8ffc351' dibujar-si='dc=180' expresi&oacute;n='(-0.15*l,y-0.15*l)(-0.15*l,y+0.15*l)(0.15*l,y+0.15*l)(0.15*l,y-0.15*l)(-0.15*l,y-0.15*l)' relleno='66ffc351' ancho='0'">
+   <param name="G_06" value="espacio='E1' tipo='pol&iacute;gono' color='a884480a' dibujar-si='dc=600' expresi&oacute;n='(-0.15*l,y-0.15*l)(-0.15*l,y+0.15*l)(0.15*l,y+0.15*l)(0.15*l,y-0.15*l)(-0.15*l,y-0.15*l)' relleno='6684480a' ancho='0'">
+   <param name="G_07" value="espacio='E3' tipo='flecha' expresi&oacute;n='(-2.5,-2)(-2.5,2)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='2' ancho='2' flecha='negro'">
+   <param name="G_08" value="espacio='E3' tipo='flecha' expresi&oacute;n='(-2.7,0)(2.5,0)' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' ancho='2' ancho='2' flecha='negro'">
+   <param name="G_09" value="espacio='E2' tipo='pol&iacute;gono' color='ff0000ff' expresi&oacute;n='(-3,0)(3,0)(3,-3)(-3,-3)(-3,0)' relleno='8caaffff'">
+   <param name="G_10" value="espacio='E2' tipo='pol&iacute;gono' color='a80000ff' dibujar-si='t&gt;=ts2' expresi&oacute;n='(-1,-vsum*2)(-1,(1-vsum)*2)(1,(1-vsum)*2)(1,-vsum*2)(-1,-vsum*2)' relleno='gris' ancho='0'">
+   <param name="G_11" value="espacio='E2' tipo='texto' expresi&oacute;n='[40,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;}\f1\fs24 VOLUMEN SUMERGIDO CUANDO EL\par CUERPO ALCANZA EL EQUILIBRIO\par}' fuente='Monospaced,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_12" value="espacio='E3' tipo='texto' expresi&oacute;n='[70,20]' texto='GR&Aacute;FICA VELOCIDAD-TIEMPO' fuente='Monospaced,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_13" value="espacio='E2' tipo='texto' color='a30200' dibujar-si='t&gt;=ts2' expresi&oacute;n='[90,230]' texto='Vsum=[vsum*V]m3' fuente='Monospaced,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_14" value="espacio='E2' tipo='texto' color='a30200' dibujar-si='t&gt;=ts2' expresi&oacute;n='[50,245]' texto='[vsum*100]% del volumen total' fuente='Monospaced,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_15" value="espacio='E2' tipo='ecuaci&oacute;n' color='8caaffff' dibujar-si='abs(x)&lt;=3' expresi&oacute;n='y=0.1*+sen(x-2*t)' relleno+='8caaffff' visible='no'">
+   <param name="G_16" value="espacio='E1' tipo='pol&iacute;gono' dibujar-si='a&lt;=0' expresi&oacute;n='(-3,-5.5)(-3,-5)(3,-5)(3,-5.5)' relleno='grisObscuro'">
+   <param name="G_17" value="espacio='E1' tipo='texto' dibujar-si='v&gt;0' expresi&oacute;n='[20,480]' texto='Profundidad: y=[ymin] m' fuente='Monospaced,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_18" value="espacio='E1' tipo='texto' dibujar-si='t&gt;=ts1' expresi&oacute;n='[20,400]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;}\f1\fs24 Tiempo en alcanzar la superficie:\par ts1={\*\mjaformula{\expr ts1}} s\par}' fuente='Monospaced,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_19" value="espacio='E3' tipo='texto' dibujar-si='t&gt;=ts1' expresi&oacute;n='[30,220]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;}\f1\fs24 Velocidad al llegar a la superficie:\par vs1={\*\mjaformula{\expr vs1}}m/s\par}' fuente='Monospaced,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_20" value="espacio='E1' tipo='texto' dibujar-si='t&gt;ts1' expresi&oacute;n='[20,440]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;}\f1\fs24 Aceleraci\u243 n en el interior del l\u237 quido:\par a={\*\mjaformula{\expr a}} m/s2\par}' fijo='s&iacute;'">
+   <param name="G_21" value="espacio='E3' tipo='punto' color='magenta' dibujar-si='dc=180' expresi&oacute;n='(t-2.5,0.06*v)' rastro='magenta' fuente='Monospaced,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_22" value="espacio='E3' tipo='punto' color='magenta' dibujar-si='dc=600' expresi&oacute;n='(0.4*t-2.5,0.1*v)' rastro='magenta' fuente='Monospaced,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_23" value="espacio='E3' tipo='punto' color='magenta' dibujar-si='dc=918' expresi&oacute;n='(0.12*t-2.5,0.1*v)' rastro='magenta' fuente='Monospaced,PLAIN,12' fijo='s&iacute;'">
+   <param name="Animaci&oacute;n" value="controles='s&iacute;' auto='no' inicio='t=0' hacer='t=t+i' mientras='t&lt;ts2'">
+<font face="Arial" size="3">Esta unidad interactiva requiere la m&aacute;quina virtual de Java <a href="http://java.sun.com/javase/downloads/index.jsp" target="_blank">J2RE</a>.</font>
+</applet>
+  </p></TD>
+</TR></TABLE>
+<TABLE id=oTblSep0 height=1 cellSpacing=0 cellPadding=0 border=0>
+
+<TR height=1>
+<TD height=1></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenu0"  nombre="eltoMenu0">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=2 src="images/menu/menu_19.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_20.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_21.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_22.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD>
+<TD class=clsMenu id=eltoMenuHead0 align=middle width=112 bgColor=#e5d48c height=25><A class=clsMenu href="guia1.html">Gu�a del alumno</A></TD>
+<TD width=16 background=images/menu/menu_24.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD></TR>
+<TR>
+<TD><IMG height=4 src="images/menu/menu_25.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_26.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_27.jpg" width=16></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenu1"  nombre="eltoMenu1">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=2 src="images/menu/menu_19.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_20.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_21.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_22.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD>
+<TD class=clsMenu id=eltoMenuHead1 align=middle width=112 bgColor=#c5b375 height=25><A class=clsMenu href="applet.html">Applet</A></TD>
+<TD width=16 background=images/menu/menu_24.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD></TR>
+<TR>
+<TD><IMG height=4 src="images/menu/menu_25.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_26.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_27.jpg" width=16></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenu2"  nombre="eltoMenu2">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=2 src="images/menu/menu_19.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_20.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_21.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_22.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD>
+<TD class=clsMenu id=eltoMenuHead2 align=middle width=112 bgColor=#e5d48c height=25><A class=clsMenu href="eva.html">Evaluaci�n</A></TD>
+<TD width=16 background=images/menu/menu_24.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD></TR>
+<TR>
+<TD><IMG height=4 src="images/menu/menu_25.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_26.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_27.jpg" width=16></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenu3"  nombre="eltoMenu3">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=2 src="images/menu/menu_19.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_20.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_21.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_22.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD>
+<TD class=clsMenu id=eltoMenuHead3 align=middle width=112 bgColor=#e5d48c height=25><A href="resuelto.pdf" target="_blank" class=clsMenu>Problema resuelto</A></TD>
+<TD width=16 background=images/menu/menu_24.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD></TR>
+<TR>
+<TD><IMG height=4 src="images/menu/menu_25.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_26.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_27.jpg" width=16></TD></TR></TABLE></DIV>
+</BODY>
+<script type="text/javascript" src="./descartes-min.js"></script>
+
+<script type="text/javascript" src="./descartes-min.js"></script>
+
+</html>

@@ -1,0 +1,6 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Attribute “xmlns:w” not allowed here.;1;16;2;54;type html><html xmlns:w=""urn:schemas-microsoft-com:office:word""> <hea
+info;Attribute with the local name “xmlns:w” is not serializable as XML 1.0.;1;16;2;54;type html><html xmlns:w=""urn:schemas-microsoft-com:office:word""> <hea
+error;Bad value “File-List” for attribute “rel” on element “link”: The string “file-list” is not a registered keyword.;;3;5;61;tf-8"">   <link rel=""File-List"" href=""./m.a.s_archivos/filelist.xml"">   <l
+error;Bad value “Edit-Time-Data” for attribute “rel” on element “link”: The string “edit-time-data” is not a registered keyword.;;3;6;66;.xml"">   <link rel=""Edit-Time-Data"" href=""./m.a.s_archivos/editdata.mso"">   <l
+error;Bad value “OLE-Object-Data” for attribute “rel” on element “link”: The string “ole-object-data” is not a registered keyword.;;3;7;66;.mso"">   <link rel=""OLE-Object-Data"" href=""./m.a.s_archivos/oledata.mso"">   <!

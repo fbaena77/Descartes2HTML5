@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>Indicar el femenino de nombres de personas y animales.</title>
+	<style>
+		*{
+		border:0;
+		margin:0;
+		padding:0;
+		}
+	</style>
+<script type="text/javascript" src="./descartes-min.js"></script></head>
+<body >
+
+<p align="left">
+<applet width=790 height=520
+        code="descinst.Descartes.class"
+        codebase="./"
+        archive="descinst.jar,http://recursostic.educacion.es/descartes/web/plugin/descinst.jar"
+        MAYSCRIPT>
+   <param name="tama&ntilde;o" value="790x520">
+   <param name="pleca" value="title='' subtitle='En esta escena se introduce un m&eacute;todo para determinar la probabilidad de un suceso simple. Arrastra y analiza el resultado con la flecha azul.' subtitlines='2' bgcolor='d0f0ff' fgcolor='ffffff' align='center' titleimage='imagenes/instrucciones.jpg' titlefont='SansSerif,BOLD,18' subtitlefont='SansSerif,PLAIN,22' ">
+   <param name="sonido" value="s&iacute;">
+   <param name="&aacute;lgebra" value="s&iacute;">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="s&iacute;">
+   <param name="deshacer" value="no">
+   <param name="Versi&oacute;n" value="4.41, 2010-12-16">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=no limpiar=no">
+   <param name="E_00" value="tipo='R2' id='E1' fijo='s&iacute;' O.x='-30' O.y='-130' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_00" value="id='n1' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' nombre='Otro' expresi&oacute;n='(30,400,100,30)' fijo='s&iacute;' visible='s&iacute;' negrita='s&iacute;' fuente puntos='18' imagen='./imagenes/btn100.png' acci&oacute;n='calcular' par&aacute;metro='gg=datos()\ng1.x=-6.81\nsaber=saber+1\n' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_01" value="id='n22' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' nombre='&iexcl;Saber M&aacute;s!' expresi&oacute;n='(620,20,150,30)' fijo='s&iacute;' visible='s&iacute;' fuente puntos='18' imagen='./imagenes/btn150.png' acci&oacute;n='calcular' par&aacute;metro='bt1=0\nbt2=1\nsaber=0' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='saber&gt;1' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_02" value="id='g1' tipo='gr&aacute;fico' espacio='E1' color='azul' color-int='rojo' tama&ntilde;o='40' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' dibujar-si='tt' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12'">
+   <param name="C_03" value="id='g1.x' tipo='num&eacute;rico' regi&oacute;n='exterior' espacio='E1' nombre='g11.x' valor='-7.48' min='-6.81' max='-0.58' fijo='s&iacute;' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_04" value="id='g1.y' tipo='num&eacute;rico' regi&oacute;n='exterior' espacio='E1' nombre='g11.y' valor='-3.77' min='-3.77' max='-3.77' fijo='s&iacute;' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_05" value="id='g12.x' tipo='num&eacute;rico' regi&oacute;n='exterior' espacio='E1' nombre='g12.x' valor='3.2' min='0' max='3.2' fijo='s&iacute;' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_06" value="id='n22' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' nombre='Volver' expresi&oacute;n='(640,400,100,30)' fijo='s&iacute;' visible='s&iacute;' fuente puntos='18' imagen='./imagenes/btn100.png' acci&oacute;n='calcular' par&aacute;metro='bt1=1\nbt2=0\nsaber=0\n' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='bt2=1' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="A_00" value="id='INICIO' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='SOM.Top=200;SOM.Left=200;SOM.transp=0.80;SOM.rojo=0.28;SOM.verde=0.60;SOM.azul=0.93;;bt1=1;bt2=0;otro=1;saber=0;z1=1;z2=1;z3=1;z4=1;z5=1;z6=1;z7=1;z8=1;z9=1;z10=1;'">
+   <param name="A_01" value="id='elegido' constante='s&iacute;' expresi&oacute;n='ent(rnd*4)+1' evaluar='una-sola-vez'">
+   <param name="A_02" value="id='ccolor' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='5' expresi&oacute;n='ccolor[0]=&squot;&squot;;ccolor[1]=&squot;amarillo&squot;;ccolor[2]=&squot;azul&squot;;ccolor[3]=&squot;rojo&squot;;ccolor[4]=&squot;verde&squot;'">
+   <param name="A_03" value="id='muestra' constante='s&iacute;' expresi&oacute;n='0' evaluar='una-sola-vez'">
+   <param name="A_04" value="id='e8' evento='s&iacute;' condici&oacute;n='animar=1' acci&oacute;n='animar' par&aacute;metro.fuente='Monospaced,PLAIN,12' ejecuci&oacute;n='alternar' pos_mensajes='centro'">
+   <param name="A_05" value="id='n' constante='s&iacute;' expresi&oacute;n='0' evaluar='una-sola-vez'">
+   <param name="A_06" value="id='c4' constante='s&iacute;' expresi&oacute;n='ent(rnd*5000)+1000' evaluar='una-sola-vez'">
+   <param name="A_07" value="id='muestra' constante='s&iacute;' expresi&oacute;n='1' evaluar='una-sola-vez'">
+   <param name="A_08" value="id='datos()' algoritmo='s&iacute;' algoritmo='s&iacute;' hacer='h1=ent(rnd*360)+1;h2=ent(rnd*360)+1;h3=ent(rnd*360)+1;h4=ent(rnd*360)+1;h5=ent(rnd*360)+1;h6=ent(rnd*360)+1;h7=ent(rnd*360)+1;h8=ent(rnd*360)+1;;z1=ent(rnd*1+.5);z2=ent(rnd*1+.5);z3=ent(rnd*1+.5);z4=ent(rnd*1+.5);z5=ent(rnd*1+.5);z6=ent(rnd*1+.5);z7=ent(rnd*1+.5);z8=ent(rnd*1+.5);;;elegido=ent(rnd*4)+1'">
+   <param name="A_09" value="id='a7' algoritmo='s&iacute;' evaluar='siempre' hacer='r1=(z1=1)?1:0;r2=(z2=1)?1:0;r3=(z3=1)?1:0;r4=(z4=1)?1:0;r5=(z5=1)?1:0;r6=(z6=1)?1:0;r7=(z7=1)?1:0;r8=(z8=1)?1:0;sr=r1+r2+r3+r4+r5+r6+r7+r8+4;;c13=r1+r5+1;c11=r2+r6+1;c14=r3+r7+1;c12=r4+r8+1;;exito=(elegido=1)?c11:exito;exito=(elegido=2)?c12:exito;exito=(elegido=3)?c13:exito;exito=(elegido=4)?c14:exito;;'">
+   <param name="G_00" value="espacio='E1' tipo='macro' expresi&oacute;n='macros/sombras.txt' nombre='SOM'">
+   <param name="G_01" value="espacio='E1' tipo='imagen' dibujar-si='muestra=1' expresi&oacute;n='(-.1,.5)' archivo='imagenes/pecera.png' rotini='kk'">
+   <param name="G_02" value="espacio='E1' tipo='imagen' dibujar-si='z1=1' expresi&oacute;n='(1,-2)' archivo='imagenes/1.png' rotini='h1'">
+   <param name="G_03" value="espacio='E1' tipo='imagen' dibujar-si='z2=1' expresi&oacute;n='(2,0)' archivo='imagenes/2.png' rotini='h2'">
+   <param name="G_04" value="espacio='E1' tipo='imagen' dibujar-si='z3=1' expresi&oacute;n='(4.7,0.12)' archivo='imagenes/3.png' rotini='h3'">
+   <param name="G_05" value="espacio='E1' tipo='imagen' dibujar-si='z4=1' expresi&oacute;n='(6,0.12)' archivo='imagenes/4.png' rotini='h4'">
+   <param name="G_06" value="espacio='E1' tipo='imagen' dibujar-si='z5=1' expresi&oacute;n='(3,-1)' archivo='imagenes/5.png' rotini='h5'">
+   <param name="G_07" value="espacio='E1' tipo='imagen' dibujar-si='z6=1' expresi&oacute;n='(6,-2.5)' archivo='imagenes/6.png' rotini='h6'">
+   <param name="G_08" value="espacio='E1' tipo='imagen' dibujar-si='z7=1' expresi&oacute;n='(4,-3)' archivo='imagenes/7.png' rotini='h7'">
+   <param name="G_09" value="espacio='E1' tipo='imagen' dibujar-si='z8=1' expresi&oacute;n='(3,-5)' archivo='imagenes/8.png' rotini='h8'">
+   <param name="G_10" value="espacio='E1' tipo='imagen' expresi&oacute;n='(1,-4)' archivo='imagenes/9.png' rotini='h9'">
+   <param name="G_11" value="espacio='E1' tipo='imagen' expresi&oacute;n='(3,-4)' archivo='imagenes/10.png' rotini='h10'">
+   <param name="G_12" value="espacio='E1' tipo='imagen' expresi&oacute;n='(5,-5)' archivo='imagenes/11.png' rotini='h10'">
+   <param name="G_13" value="espacio='E1' tipo='imagen' expresi&oacute;n='(6.5,-4)' archivo='imagenes/12.png' rotini='h10'">
+   <param name="G_14" value="espacio='E1' tipo='imagen' dibujar-si='muestra=1' expresi&oacute;n='(-.1,.5)' archivo='imagenes/pecera2.png' rotini='kk'">
+   <param name="G_15" value="espacio='E1' tipo='texto' dibujar-si='bt1=1' expresi&oacute;n='[30,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red0\green0\blue255;}\f1\fs44\cf0 Mar\u237 a va a sacar sin mirar\par un pez de la pecera,\par \u191 Cu\u225 l es la probabilidad \par que salga uno de color {\*\mjaformula{\expr [ccolor[elegido]]\decimals 0\fixed1}}?\cf1\f2\fs24}' fuente='Arial,PLAIN,22' fijo='s&iacute;'">
+   <param name="G_16" value="espacio='E1' tipo='imagen' dibujar-si='bt1=1' expresi&oacute;n='(g1.x-6.8,g1.y+1.2)' archivo='imagenes/rectangulo.png'">
+   <param name="G_17" value="espacio='E1' tipo='punto' dibujar-si='bt1=1' expresi&oacute;n='(g1.x-6,g1.y+.5)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red255\green255\blue255;\red0\green0\blue255;}\cf0\f1\fs48\b Probabilidad={\*\mjaformula{\fraction{\num{\expr [exito]\decimals 0\fixed1}}{\den{\expr [sr]\decimals 0\fixed1}}}}\cf1\fs40\b0}' fuente='Arial Bold,BOLD,24' fijo='s&iacute;' tama&ntilde;o='0'">
+   <param name="G_18" value="espacio='E1' tipo='texto' dibujar-si='(exito&gt;1) &amp; (bt2=1)' expresi&oacute;n='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;\f4\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red255\green0\blue0;\red0\green0\blue255;}\f1\fs42\cf0 La probabilidad de que sea {\*\mjaformula{\expr [ccolor[elegido]]\decimals 0\fixed1}} es de\par {\*\mjaformula{\expr [exito]\decimals 0\fixed1}} posibilidades de acierto entre {\*\mjaformula{\expr [sr]\decimals 0\fixed1}} posibles.\par \par La probabilidad se expresa as\u237 :\par {\*\mjaformula{\fraction{\num{\expr [exito]\decimals 0\fixed1}}{\den{\expr [sr]\decimals 0\fixed1}}}} \u8594 {\*\mjaformula{\expr [exito]\decimals 0\fixed1}} entre {\*\mjaformula{\expr [sr]\decimals 0\fixed1}}\par \par \cf1 La probabilidad de que ocurrra un \par caso en un fen\u243 meno aleatorio, \par es igual al cociente de los casos \par favorables entre los casos posibles.\par \cf0\par Probabilidad ={\*\mjaformula{\fraction{\num\f2\fs38 Casos favorables}{\den\f2\fs38 Casos posibles}}}\fs44\par \cf2\f4\fs24}' fuente='Arial,PLAIN,21' fijo='s&iacute;'">
+   <param name="G_19" value="espacio='E1' tipo='texto' dibujar-si='(exito=1) &amp; (bt2=1)' expresi&oacute;n='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red255\green0\blue0;\red0\green0\blue255;}\f1\fs42\cf0 La probabilidad de que sea {\*\mjaformula{\expr [ccolor[elegido]]\decimals 0\fixed1}} es de\par {\*\mjaformula{\expr [exito]\decimals 0\fixed1}} posibilidad de acierto entre {\*\mjaformula{\expr [sr]\decimals 0\fixed1}} posibles.\par \par La probabilidad se expresa as\u237 :\par {\*\mjaformula{\fraction{\num{\expr [exito]\decimals 0\fixed1}}{\den{\expr [sr]\decimals 0\fixed1}}}} \u8594 {\*\mjaformula{\expr [exito]\decimals 0\fixed1}} entre {\*\mjaformula{\expr [sr]\decimals 0\fixed1}}\par \par \cf1 La probabilidad de que ocurrra un \par suceso en un fen\u243 meno aleatorio, \par es igual al cociente de los sucesos \par favorables entre los sucesos posibles.\par \cf0\par Probabilidad ={\*\mjaformula{\fraction{\num Sucesos favorables}{\den Sucesos posibles}}}\fs44\par \cf2\f3\fs24}' fuente='Arial,PLAIN,21' fijo='s&iacute;'">
+   <param name="Animaci&oacute;n" value="controles='no' auto='no'">
+<font face="Arial" size="3">Esta unidad interactiva requiere la m&aacute;quina virtual de Java <a href="http://java.sun.com/javase/downloads/index.jsp" target="_blank">J2RE</a>.</font>
+</applet></p>
+
+</body>
+<script type="text/javascript" src="./descartes-min.js"></script>
+
+</html>

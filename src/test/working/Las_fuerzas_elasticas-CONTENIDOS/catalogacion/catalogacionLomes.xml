@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lomes:lom xmlns:lomes="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lomCustom.xsd" xsi:type="lomes:lom">
+	<lomes:general >
+                	<lomes:identifier >
+                    	<lomes:catalog >Plataforma Agrega</lomes:catalog>
+
+                    	<lomes:entry >ODE-fefcdd1f-3063-3885-9ed2-022a9333055b</lomes:entry>
+
+                </lomes:identifier>
+
+                	<lomes:identifier >
+                    	<lomes:catalog >meducacion_agrega</lomes:catalog>
+
+                    	<lomes:entry >101_20100506_000_0000_0861</lomes:entry>
+
+                </lomes:identifier>
+
+                	<lomes:identifier >
+                    	<lomes:catalog >Catálogo unificado mec-red.es-ccaa de identificación de ODE</lomes:catalog>
+
+                    	<lomes:entry >es_2010051212_9172957</lomes:entry>
+
+                </lomes:identifier>
+
+                	<lomes:title >
+                    	<lomes:string  language="es">Las fuerzas elásticas</lomes:string>
+
+                </lomes:title>
+
+                	<lomes:language >es</lomes:language>
+
+                	<lomes:description >
+                    	<lomes:string  language="es">Estudio de las leyes del campo elástico y ley de Hooke a través de problemas educativos interactivos.</lomes:string>
+
+                </lomes:description>
+
+                	<lomes:keyword >
+                    	<lomes:string  language="es">fuerza</lomes:string>
+
+                    	<lomes:string  language="es">hooke</lomes:string>
+
+                    	<lomes:string  language="es">resolución</lomes:string>
+
+                    	<lomes:string  language="es">Newton</lomes:string>
+
+                    	<lomes:string  language="es">elasticidad</lomes:string>
+
+                    	<lomes:string  language="es">constante de elasticidad</lomes:string>
+
+                    	<lomes:string  language="es">dinamómetro</lomes:string>
+
+                </lomes:keyword>
+
+                	<lomes:coverage >
+                    	<lomes:string  language="es">universal</lomes:string>
+
+                </lomes:coverage>
+
+                	<lomes:structure >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >atomic</lomes:value>
+
+                </lomes:structure>
+
+                	<lomes:aggregationLevel >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >2</lomes:value>
+
+                </lomes:aggregationLevel>
+
+            </lomes:general>
+	<lomes:lifeCycle >
+                	<lomes:version >
+                    	<lomes:string  language="es">v1.0</lomes:string>
+
+                </lomes:version>
+
+                	<lomes:status >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >final</lomes:value>
+
+                </lomes:status>
+
+                	<lomes:contribute >
+                    	<lomes:role >
+                        	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                        	<lomes:value >publisher</lomes:value>
+
+                    </lomes:role>
+
+                    	<lomes:entity >BEGIN:VCARD VERSION:3.0 FN: acabezudo2 EMAIL;TYPE=INTERNET:  ORG: Plataforma Agrega</lomes:entity>
+
+                    	<lomes:date >
+                        	<lomes:dateTime >2010-05-12T17:29:59.03Z</lomes:dateTime>
+
+                        	<lomes:description >
+                            	<lomes:string >Fecha de publicación en Agrega</lomes:string>
+
+                        </lomes:description>
+
+                    </lomes:date>
+
+                </lomes:contribute>
+
+                	<lomes:contribute >
+                    	<lomes:role >
+                        	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                        	<lomes:value >author</lomes:value>
+
+                    </lomes:role>
+
+                    	<lomes:entity >BEGIN:VCARD VERSION:3.0 FN:María Josefa Grima Rojas EMAIL;TYPE=INTERNET:administrador.agrega@ite.educacion.es ORG:Ministerio de Educación - Instituto de Tecnologías Educativas (ITE) END:VCARD</lomes:entity>
+
+                    	<lomes:entity >BEGIN:VCARD VERSION:3.0 FN:Javier Soriano Falcó EMAIL;TYPE=INTERNET:administrador.agrega@ite.educacion.es ORG:Ministerio de Educación - Instituto de Tecnologías Educativas (ITE) END:VCARD</lomes:entity>
+
+                    	<lomes:date >
+                        	<lomes:dateTime >2009-07-05</lomes:dateTime>
+
+                        	<lomes:description >
+                            	<lomes:string  language="es">Fecha de publicación en la Web de Proyecto Newton http://recursostic.educacion.es/newton/web/</lomes:string>
+
+                        </lomes:description>
+
+                    </lomes:date>
+
+                </lomes:contribute>
+
+                	<lomes:contribute >
+                    	<lomes:role >
+                        	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                        	<lomes:value >publisher</lomes:value>
+
+                    </lomes:role>
+
+                    	<lomes:entity >BEGIN:VCARD VERSION:3.0 FN:Instituto de Tecnologías Educativas (ITE) EMAIL;TYPE=INTERNET:administrador.agrega@ite.educacion.es ORG:Ministerio de Educación END:VCARD</lomes:entity>
+
+                    	<lomes:date >
+                        	<lomes:dateTime >2010-05-12</lomes:dateTime>
+
+                        	<lomes:description >
+                            	<lomes:string  language="es">Fecha de publicación en Agrega</lomes:string>
+
+                        </lomes:description>
+
+                    </lomes:date>
+
+                </lomes:contribute>
+
+                	<lomes:contribute >
+                    	<lomes:role >
+                        	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                        	<lomes:value >editor</lomes:value>
+
+                    </lomes:role>
+
+                    	<lomes:entity >BEGIN:VCARD VERSION:3.0 FN:Instituto de Tecnologías Educativas (ITE) EMAIL;TYPE=INTERNET:administrador.agrega@ite.educacion.es ORG:Ministerio de Educación END:VCARD</lomes:entity>
+
+                    	<lomes:date >
+                        	<lomes:dateTime >2010-05-05</lomes:dateTime>
+
+                        	<lomes:description >
+                            	<lomes:string  language="es">Fecha de creación del ODE/Objeto Digital Educativo</lomes:string>
+
+                        </lomes:description>
+
+                    </lomes:date>
+
+                </lomes:contribute>
+
+                	<lomes:contribute >
+                    	<lomes:role >
+                        	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                        	<lomes:value >technical validator</lomes:value>
+
+                    </lomes:role>
+
+                    	<lomes:entity >BEGIN:VCARD VERSION:3.0 FN:Jesús Manuel Muñoz Calle EMAIL;TYPE=INTERNET:administrador.agrega@ite.educacion.es ORG:Ministerio de Educación - Instituto de Tecnologías Educativas (ITE) END:VCARD</lomes:entity>
+
+                    	<lomes:date >
+                        	<lomes:dateTime >2010-05-06</lomes:dateTime>
+
+                        	<lomes:description >
+                            	<lomes:string  language="es">Fecha de revisión del ODE/Recurso Educativo</lomes:string>
+
+                        </lomes:description>
+
+                    </lomes:date>
+
+                </lomes:contribute>
+
+            </lomes:lifeCycle>
+	<lomes:metaMetadata >
+                	<lomes:identifier >
+                    	<lomes:catalog >Plataforma Agrega</lomes:catalog>
+
+                    	<lomes:entry >ODE-fefcdd1f-3063-3885-9ed2-022a9333055b-meta</lomes:entry>
+
+                </lomes:identifier>
+
+                	<lomes:identifier >
+                    	<lomes:catalog >meducacion_agrega</lomes:catalog>
+
+                    	<lomes:entry >101_20100506_000_0000_0861-meta</lomes:entry>
+
+                </lomes:identifier>
+
+                	<lomes:contribute >
+                    	<lomes:role >
+                        	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                        	<lomes:value >creator</lomes:value>
+
+                    </lomes:role>
+
+                    	<lomes:entity >BEGIN:VCARD VERSION:3.0 FN:Jesús Manuel Muñoz Calle EMAIL;TYPE=INTERNET:administrador.agrega@ite.educacion.es ORG:Ministerio de Educación - Instituto de Tecnologías Educativas (ITE) END:VCARD</lomes:entity>
+
+                    	<lomes:date >
+                        	<lomes:dateTime >2010-05-06</lomes:dateTime>
+
+                        	<lomes:description >
+                            	<lomes:string  language="es">Fecha de creación de los metadatos</lomes:string>
+
+                        </lomes:description>
+
+                    </lomes:date>
+
+                </lomes:contribute>
+
+                	<lomes:contribute >
+                    	<lomes:role >
+                        	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                        	<lomes:value >validator</lomes:value>
+
+                    </lomes:role>
+
+                    	<lomes:entity >BEGIN:VCARD VERSION:3.0 FN:Ángel Cabezudo Bueno EMAIL;TYPE=INTERNET:administrador.agrega@ite.educacion.es ORG:Ministerio de Educación - Instituto de Tecnologías Educativas (ITE) END:VCARD</lomes:entity>
+
+                    	<lomes:date >
+                        	<lomes:dateTime >2010-05-12</lomes:dateTime>
+
+                        	<lomes:description >
+                            	<lomes:string  language="es">Fecha de validación de los metadatos</lomes:string>
+
+                        </lomes:description>
+
+                    </lomes:date>
+
+                </lomes:contribute>
+
+                	<lomes:metadataSchema >LOM-ESv1.0</lomes:metadataSchema>
+
+                	<lomes:language >es</lomes:language>
+
+            </lomes:metaMetadata>
+	<lomes:technical >
+                	<lomes:format >application/x-java-class</lomes:format>
+
+                	<lomes:format >image/gif</lomes:format>
+
+                	<lomes:format >image/jpeg</lomes:format>
+
+                	<lomes:format >application/pdf</lomes:format>
+
+                	<lomes:format >text/html</lomes:format>
+
+                	<lomes:location >http://agrega.educacion.es/ODE/es/es_2010051212_9172957</lomes:location>
+
+                	<lomes:requirement >
+                    	<lomes:orComposite >
+                        	<lomes:type >
+                            	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                            	<lomes:value >browser</lomes:value>
+
+                        </lomes:type>
+
+                        	<lomes:name >
+                            	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                            	<lomes:value >any</lomes:value>
+
+                        </lomes:name>
+
+                    </lomes:orComposite>
+
+                    	<lomes:orComposite >
+                        	<lomes:type >
+                            	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                            	<lomes:value >operating system</lomes:value>
+
+                        </lomes:type>
+
+                        	<lomes:name >
+                            	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                            	<lomes:value >multi-os</lomes:value>
+
+                        </lomes:name>
+
+                    </lomes:orComposite>
+
+                </lomes:requirement>
+
+                	<lomes:installationRemarks >
+                    	<lomes:string  language="es">No se requiere instalación</lomes:string>
+
+                </lomes:installationRemarks>
+
+                	<lomes:otherPlatformRequirements >
+                    	<lomes:string  language="es">Instalar y activar en local el intérprete de Java y el Plugin del applet Descartes</lomes:string>
+
+                </lomes:otherPlatformRequirements>
+
+            </lomes:technical>
+	<lomes:educational >
+                	<lomes:interactivityType >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >mixed</lomes:value>
+
+                </lomes:interactivityType>
+
+                	<lomes:learningResourceType >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >open problem</lomes:value>
+
+                </lomes:learningResourceType>
+
+                	<lomes:interactivityLevel >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >high</lomes:value>
+
+                </lomes:interactivityLevel>
+
+                	<lomes:semanticDensity >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >medium</lomes:value>
+
+                </lomes:semanticDensity>
+
+                	<lomes:intendedEndUserRole >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >learner</lomes:value>
+
+                </lomes:intendedEndUserRole>
+
+                	<lomes:intendedEndUserRole >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >teacher</lomes:value>
+
+                </lomes:intendedEndUserRole>
+
+                	<lomes:context >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >classroom</lomes:value>
+
+                </lomes:context>
+
+                	<lomes:context >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >distance</lomes:value>
+
+                </lomes:context>
+
+                	<lomes:context >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >home</lomes:value>
+
+                </lomes:context>
+
+                	<lomes:typicalAgeRange >
+                    	<lomes:string  language="es">15 años en adelante</lomes:string>
+
+                </lomes:typicalAgeRange>
+
+                	<lomes:difficulty >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >medium</lomes:value>
+
+                </lomes:difficulty>
+
+                	<lomes:typicalLearningTime >
+                    	<lomes:duration >PT1H</lomes:duration>
+
+                    	<lomes:description >
+                        	<lomes:string  language="es">Tiempo aproximado</lomes:string>
+
+                    </lomes:description>
+
+                </lomes:typicalLearningTime>
+
+                	<lomes:description >
+                    	<lomes:string  language="es">METODOLOGÍA: Aprendizaje a través de la resolución de problemas interactivos.</lomes:string>
+
+                    	<lomes:string  language="es">CONOCIMIENTO PREVIO: Conocimientos matemáticos a nivel de 4ºESO. Conocimientos de Física a nivel de 4ºESO.</lomes:string>
+
+                    	<lomes:string  language="es">OBJETIVOS DIDÁCTICOS: Resolver problemas sobre campo elástico y fuerzas elásticas. Comprender la dinámica de este tipo de fuerzas.</lomes:string>
+
+                </lomes:description>
+
+                	<lomes:language >es</lomes:language>
+
+                	<lomes:cognitiveProcess >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >analyse</lomes:value>
+
+                </lomes:cognitiveProcess>
+
+                	<lomes:cognitiveProcess >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >prove</lomes:value>
+
+                </lomes:cognitiveProcess>
+
+                	<lomes:cognitiveProcess >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >value</lomes:value>
+
+                </lomes:cognitiveProcess>
+
+                	<lomes:cognitiveProcess >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >solve</lomes:value>
+
+                </lomes:cognitiveProcess>
+
+                	<lomes:cognitiveProcess >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >plan</lomes:value>
+
+                </lomes:cognitiveProcess>
+
+            </lomes:educational>
+	<lomes:rights >
+                	<lomes:cost >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >no</lomes:value>
+
+                </lomes:cost>
+
+                	<lomes:copyrightAndOtherRestrictions >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >creative commons: attribution - non commercial - share alike</lomes:value>
+
+                </lomes:copyrightAndOtherRestrictions>
+
+                	<lomes:description >
+                    	<lomes:string  language="es">La utilización de estos contenidos es universal, gratuita y abierta, siempre y cuando se trate de un uso educativo no comercial. Las acciones, productos y utilidades derivadas de su utilización no podrán, en consecuencia, generar ningún tipo de lucro. Asimismo, es obligada la referencia de la fuente.</lomes:string>
+
+                </lomes:description>
+
+                	<lomes:access >
+                    	<lomes:accessType >
+                        	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                        	<lomes:value >universal</lomes:value>
+
+                    </lomes:accessType>
+
+                    	<lomes:description >
+                        	<lomes:string >es_cnice_20080623,es_{nodo}_20080923,es_clm_20091103121523455,es_murcia_20080422121523455,es_valencia_20081215,es_contenidos_20080623,es_canarias_20090114,es_aragon_20080930,es_larioja_20081107,es_cantabria_20081215,es_extremadura_20090126,es_navarra_20090202,es_castillayleon_20080422121523455,es_andalucia_20090324</lomes:string>
+
+                    </lomes:description>
+
+                </lomes:access>
+
+            </lomes:rights>
+	<lomes:classification >
+                	<lomes:purpose >
+                    	<lomes:source >LOM-ESv1.0</lomes:source>
+
+                    	<lomes:value >discipline</lomes:value>
+
+                </lomes:purpose>
+
+                	<lomes:taxonPath >
+                    	<lomes:source >
+                        	<lomes:string  language="es">Árbol curricular LOE 2006</lomes:string>
+
+                    </lomes:source>
+
+                    	<lomes:taxon >
+                        	<lomes:id >4</lomes:id>
+
+                        	<lomes:entry >
+                            	<lomes:string  language="es">Bachillerato</lomes:string>
+
+                        </lomes:entry>
+
+                    </lomes:taxon>
+
+                    	<lomes:taxon >
+                        	<lomes:id >4.2</lomes:id>
+
+                        	<lomes:entry >
+                            	<lomes:string  language="es">Materias de Modalidad</lomes:string>
+
+                        </lomes:entry>
+
+                    </lomes:taxon>
+
+                    	<lomes:taxon >
+                        	<lomes:id >4.2.23</lomes:id>
+
+                        	<lomes:entry >
+                            	<lomes:string  language="es">Física y Química</lomes:string>
+
+                        </lomes:entry>
+
+                    </lomes:taxon>
+
+                </lomes:taxonPath>
+
+                	<lomes:description >
+                    	<lomes:string  language="es">Resolución de problema. 1º Curso.</lomes:string>
+
+                </lomes:description>
+
+            </lomes:classification>
+</lomes:lom>
+

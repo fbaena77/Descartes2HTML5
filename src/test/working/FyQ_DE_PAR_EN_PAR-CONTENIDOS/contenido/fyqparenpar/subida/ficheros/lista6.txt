@@ -1,0 +1,24 @@
+60
+|GATO|
+|PERRO|
+|PÁJARO|
+|CERDO|
+|CABALLO|
+|RANA|
+|LEÓN|
+|BURRO|
+|PATO|
+OPCIONES
+|MIAU|
+|GUAU|
+|PIO|
+|OING|
+|HIIIII|
+|CROA|
+|GRRRRRR|
+|IIIAA-IIIAA|
+|CUA-CUA|
+'AUTOR/A: Jesús M. Muñoz'
+'TEMA: Onomatomeyas'
+FyQ DE PAR EN PAR
+

@@ -1,0 +1,12 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Attribute “gblcolor” not allowed on element “div” at this point.;;3;22;77;2261"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""E48CA2"" gblcoloron=""FFACC2"">    
+error;Attribute “gblcoloron” not allowed on element “div” at this point.;;3;22;77;2261"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""E48CA2"" gblcoloron=""FFACC2"">    
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;31;47;</div>   <div id=""eltoMenuHead"" nombre=""eltoMenuHead"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;62;68;</div>   <div class=""clsCapasMenu"" id=""eltoMenuFoot"" nombre=""eltoMenuFoot"">    <
+error;Attribute “height” not allowed on element “tr” at this point.;103;12;104;21;   <tbody>      <tr height=""26"">     
+error;Element “ajs” not allowed as child of element “div” in this context. (Suppressing further errors from this subtree.);;9;113;135;         <ajs width=""100"" height=""3000"" code=""descinst.DescartesWeb2_0.class"" name=""descinst.DescartesWeb2_0.class"" class=""DescartesJS"">     
+error;Attribute “height” not allowed on element “tr” at this point.;160;12;161;20;   <tbody>      <tr height=""1"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;167;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu0"" nombre=""eltoMenu0"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;188;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu1"" nombre=""eltoMenu1"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;209;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu2"" nombre=""eltoMenu2"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;230;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu3"" nombre=""eltoMenu3"">    <

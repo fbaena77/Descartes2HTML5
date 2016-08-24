@@ -1,0 +1,23 @@
+60
+'ERBIO'
+'GADOLINIO'
+'YTERBIO'
+'ITRIO'
+'DYSPROSIO'
+'FERMIO'
+'FRANCIO'
+'GALIO'
+'RUBIDIO'
+PISTAS
+'Er'
+'Gd'
+'Yb'
+'Y'
+'Dy'
+'Fm'
+'Fr'
+'Ga'
+'Rb'
+'AUTOR/A: Jesús M. Muñoz'
+'TEMA: Elementos 2'
+FyQ DE PAR EN PAR

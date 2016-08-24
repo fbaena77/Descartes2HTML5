@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>Indicar el femenino de nombres de personas y animales.</title>
+	<style>
+		*{
+		border:0;
+		margin:0;
+		padding:0;
+		}
+	</style>
+<script type="text/javascript" src="./descartes-min.js"></script></head>
+<body >
+
+<p align="left">
+<applet width=790 height=520
+        code="descinst.Descartes.class"
+        codebase="./"
+        archive="descinst.jar,http://recursostic.educacion.es/descartes/web/plugin/descinst.jar"
+        MAYSCRIPT>
+   <param name="tama&ntilde;o" value="790x520">
+   <param name="pleca" value="title='Encuentra el valor del &aacute;ngulo A.' subtitle='Recuerda que la suma de los &aacute;ngulos interiores de un tri&aacute;ngulo es 180 grados.' subtitlines='2' bgcolor='268bea' fgcolor='ffffff' align='center' titleimage='images/instrucciones.jpg' titlefont='SansSerif,PLAIN,22' subtitlefont='SansSerif,PLAIN,22' ">
+   <param name="sonido" value="s&iacute;">
+   <param name="&aacute;lgebra" value="s&iacute;">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="s&iacute;">
+   <param name="deshacer" value="no">
+   <param name="Versi&oacute;n" value="4.41, 2010-12-16">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=no limpiar=no">
+   <param name="E_00" value="tipo='R2' id='E1' fijo='s&iacute;' escala='45' O.x='-20%' O.y='40%' imagen='./imagenes/fondo.png' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_00" value="id='n1' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' nombre='Otro ejercicio' expresi&oacute;n='(520,310,150,30)' fijo='s&iacute;' visible='s&iacute;' negrita='s&iacute;' fuente puntos='18' imagen='./imagenes/btn150.png' acci&oacute;n='calcular' par&aacute;metro='A=ent(rnd*100)+20\nA=(A=90)?A+1:A\nB=ent(rnd*30)+20\nC=180-A-B\nC=(C&gt;90)&amp;(C&lt;95)?90:C\nC=(C&lt;90)&amp;(C&gt;85)?90:C\nC=(otro/5)=ent(otro/5)?90:C\nA=(C=90)?180-C-B:A\nb=a*sen(B*pi/180)/sen(A*pi/180)\nc=a*sen(C*pi/180)/sen(A*pi/180)\npx1=b*cos(C*pi/180)\npy1=b*sen(C*pi/180)\notro=otro+1\nintento=0\nn2=&squot;&squot;' par&aacute;metro.fuente='Monospaced,PLAIN,12' dibujar-si='(n2=ent(A))|(intento=2)' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_01" value="id='n2' tipo='num&eacute;rico' interfaz='campo de texto' regi&oacute;n='interior' espacio='E1' expresi&oacute;n='(360,20,40,25)' valor='&squot;&squot;' decimales='0' fijo='s&iacute;' visible='s&iacute;' acci&oacute;n='calcular' par&aacute;metro='intento=intento+1' par&aacute;metro.fuente='Monospaced,PLAIN,12' activo-si='intento&lt;2' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="A_00" value="id='INICIO' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='SOM.Top=200;SOM.Left=200;SOM.transp=0.80;SOM.rojo=0.28;SOM.verde=0.60;SOM.azul=0.93;otro=1;evalua=0;;'">
+   <param name="A_01" value="id='TRIANGULOS' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='A=ent(rnd*100)+20;A=(A=90)?A+1:A;B=ent(rnd*30)+20;C=180-A-B;C=(C&gt;90)&amp;(C&lt;95)?90:C;C=(C&lt;90)&amp;(C&gt;85)?90:C;A=(C=90)?180-C-B:A;a=5;b=a*sen(B*pi/180)/sen(A*pi/180);c=a*sen(C*pi/180)/sen(A*pi/180);px1=b*cos(C*pi/180);py1=b*sen(C*pi/180)'">
+   <param name="A_02" value="id='CLASIFICA' algoritmo='s&iacute;' evaluar='siempre' hacer='recta=(C=90);acuta=(A&lt;90)&amp;(B&lt;90)&amp;(C&lt;90);obtusa=(A&gt;90)|(B&gt;90)|(C&gt;90);;'">
+   <param name="A_03" value="id='COMPARA' algoritmo='s&iacute;' evaluar='siempre'">
+   <param name="A_04" value="id='e5' evento='s&iacute;' condici&oacute;n='intento=1' acci&oacute;n='calcular' par&aacute;metro='rta=n2\nn2=&squot;&squot;' par&aacute;metro.fuente='Monospaced,PLAIN,12' ejecuci&oacute;n='alternar' pos_mensajes='centro'">
+   <param name="G_00" value="espacio='E1' tipo='macro' expresi&oacute;n='macros/sombras.txt' nombre='SOM'">
+   <param name="G_01" value="espacio='E1' tipo='pol&iacute;gono' color='negro' dibujar-si='evalua=0' expresi&oacute;n='(0,0)(a,0)(px1,py1)(0,0)' relleno='(.99*obtusa+.99*recta,.99*acuta+.99*recta,0,00)' ancho='2'">
+   <param name="G_02" value="espacio='E1' tipo='arco' dibujar-si='(recta=0)&amp;(evalua=0)' radio='.5' fin='C' fuente='Arial Negrita,BOLD,18' fijo='s&iacute;' relleno='36c0c0c0' ancho='.1'">
+   <param name="G_03" value="espacio='E1' tipo='arco' dibujar-si='evalua=0' centro='(a,0)' radio='.5' inicio='180-B' fin='180' fuente='Arial Negrita,BOLD,18' fijo='s&iacute;' relleno='36c0c0c0' ancho='.1'">
+   <param name="G_04" value="espacio='E1' tipo='arco' dibujar-si='evalua=0' centro='(px1,py1)' radio='.5' inicio='180+C' fin='360-B' fuente='Arial Negrita,BOLD,18' fijo='s&iacute;' relleno='36c0c0c0' ancho='.1'">
+   <param name="G_05" value="espacio='E1' tipo='texto' dibujar-si='evalua=0' expresi&oacute;n='[185,385]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;}\f1\fs36\b  {\*\mjaformula\cf0{\expr C\decimals 0\fixed1}}\f2\fs40{\*\mjaformula{\supix\cf0 0}}\f3\fs24\b0}' fuente='Arial Negrita,BOLD,18' fijo='s&iacute;'">
+   <param name="G_06" value="espacio='E1' tipo='texto' dibujar-si='evalua=0' expresi&oacute;n='[450,385]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;}\f1\fs36\b  {\*\mjaformula\cf0{\expr B\decimals 0\fixed1}}\f2\fs40{\*\mjaformula{\supix\cf0 0}}\f3\fs24\b0}' fuente='Arial Negrita,BOLD,18' fijo='s&iacute;'">
+   <param name="G_07" value="espacio='E1' tipo='texto' dibujar-si='evalua=0' expresi&oacute;n='[220+px1*45,385-45*py1]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;}\f1\fs36\b  {\*\mjaformula\cf0 A}\f2\fs24\b0}' fuente='Arial Negrita,BOLD,18' fijo='s&iacute;'">
+   <param name="G_08" value="espacio='E1' tipo='pol&iacute;gono' color='negro' dibujar-si='recta&amp;(evalua=0)' expresi&oacute;n='(0,0)(.5,0)(.5,.5)(0,.5)(0,0)' relleno='azul' ancho='2'">
+   <param name="G_09" value="espacio='E1' tipo='texto' expresi&oacute;n='[120,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red0\green0\blue255;}\cf0\f1\fs40\b El valor del \u225 ngulo A es:\cf1\b0}' fuente='Arial Negrita,BOLD,20' fijo='s&iacute;'">
+   <param name="G_10" value="espacio='E1' tipo='texto' expresi&oacute;n='[121,21]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red255\green90\blue0;\red0\green0\blue255;}\f1\fs40\b\cf0 El valor del \u225 ngulo A es:\b0\cf1}' fuente='Arial Negrita,BOLD,20' fijo='s&iacute;'">
+   <param name="G_11" value="espacio='E1' tipo='texto' dibujar-si='A=ent(n2)' expresi&oacute;n='[500,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}{\colortbl\red0\green0\blue0;}\f1\fs44\b\cf0\u161 EXCELENTE!}' fuente='Arial Negrita,BOLD,22' fijo='s&iacute;'">
+   <param name="G_12" value="espacio='E1' tipo='texto' dibujar-si='A=ent(n2)' expresi&oacute;n='[501,21]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}{\colortbl\red0\green255\blue0;\red0\green0\blue0;}\f1\fs44\b\cf0\u161 EXCELENTE!\cf1\par \par \par \par \par \par \par \par \par Haz clic para otro ejercicio.}' fuente='Arial Negrita,BOLD,22' fijo='s&iacute;'">
+   <param name="G_13" value="espacio='E1' tipo='texto' dibujar-si='(A!=ent(n2))&amp;(intento=1)' expresi&oacute;n='[441,21]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Times New Roman;}{\colortbl\red192\green192\blue192;\red0\green0\blue0;}\f1\fs44\b\cf0\u191 \f2\fs48\b0{\*\mjaformula{\expr rta\decimals 0\fixed1}}\f1\fs44\b ?\par \par VEAMOS:\par \par La suma debe ser 180; es decir,\par \f3\fs48{\*\mjaformula{\expr B\decimals 0\fixed1}}\f1\fs44  + \f3\fs48{\*\mjaformula{\expr C\decimals 0\fixed1}}\f1\fs44  + A = 180\par \par Despeja A, e ingresa el valor\par correcto.\cf1}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_14" value="espacio='E1' tipo='texto' dibujar-si='(A!=ent(n2))&amp;(intento=1)' expresi&oacute;n='[440,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Times New Roman;}{\colortbl\red255\green0\blue0;\red0\green0\blue255;\red0\green0\blue0;}\f1\fs44\b\cf0\u191 \f2\fs48\b0{\*\mjaformula{\expr rta\decimals 0\fixed1}}\f1\fs44\b ?\cf1\par \par VEAMOS:\par \par La suma debe ser 180; es decir,\par \f3\fs48{\*\mjaformula{\expr B\decimals 0\fixed1}}\f1\fs44  + \f3\fs48{\*\mjaformula{\expr C\decimals 0\fixed1}}\f1\fs44  + A = 180\par \par Despeja A, e ingresa el valor\par correcto.\cf2}' fuente='Arial Bold,BOLD,22' fijo='s&iacute;'">
+   <param name="G_15" value="espacio='E1' tipo='texto' dibujar-si='(A!=ent(n2))&amp;(intento=2)' expresi&oacute;n='[441,21]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red192\green192\blue192;\red0\green0\blue0;}\f1\fs44\b\cf0\u161 NO ES CORRECTO!\par \par La suma debe ser 180; es decir,\par \f2\fs48{\*\mjaformula{\expr B\decimals 0\fixed1}}\f1\fs44  + \f2\fs48{\*\mjaformula{\expr C\decimals 0\fixed1}}\f1\fs44  + A = 180\par \par Despejando A obtenemos:\par A = 180 - {\*\mjaformula{\expr B\decimals 0\fixed1}} - {\*\mjaformula{\expr C\decimals 0\fixed1}}\par Entonces, A = {\*\mjaformula{\expr A\decimals 0\fixed1}} \cf1}' fuente='Arial Negrita,BOLD,22' fijo='s&iacute;'">
+   <param name="G_16" value="espacio='E1' tipo='texto' dibujar-si='(A!=ent(n2))&amp;(intento=2)' expresi&oacute;n='[440,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red0\green102\blue0;\red0\green0\blue0;}\f1\fs44\b\cf0\u161 NO ES CORRECTO!\par \par La suma debe ser 180; es decir,\par \f2\fs48{\*\mjaformula{\expr B\decimals 0\fixed1}}\f1\fs44  + \f2\fs48{\*\mjaformula{\expr C\decimals 0\fixed1}}\f1\fs44  + A = 180\par \par Despejando A obtenemos:\par A = 180 - {\*\mjaformula{\expr B\decimals 0\fixed1}} - {\*\mjaformula{\expr C\decimals 0\fixed1}}\par Entonces, A = {\*\mjaformula{\expr A\decimals 0\fixed1}} \cf1\par \par Haz clic, para otro ejercicio.\par }' fuente='Arial Negrita,BOLD,22' fijo='s&iacute;'">
+<font face="Arial" size="3">Esta unidad interactiva requiere la m&aacute;quina virtual de Java <a href="http://java.sun.com/javase/downloads/index.jsp" target="_blank">J2RE</a>.</font>
+</applet></p>
+
+</body>
+<script type="text/javascript" src="./descartes-min.js"></script>
+
+</html>

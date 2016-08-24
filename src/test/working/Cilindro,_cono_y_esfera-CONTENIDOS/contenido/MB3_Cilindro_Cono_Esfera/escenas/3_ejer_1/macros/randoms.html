@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>TITULO</title>
+<script type="text/javascript" src="./descartes-min.js"></script></head>
+<body BGCOLOR="ffffff">
+
+<p align="left">
+<applet name="macroedit" width=790 height=565
+        code="descinst.Descartes.class"
+        codebase="./"
+        archive="descinst.jar,http://recursostic.educacion.es/descartes/web/plugin/descinst.jar"
+        MAYSCRIPT>
+   <param name="tama&ntilde;o" value="790x565">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="s&iacute;">
+   <param name="nombre" value="macroedit">
+   <param name="Versi&oacute;n" value="4.106, 2010-08-12">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=s&iacute; config=s&iacute; inicio=s&iacute; limpiar=s&iacute;">
+   <param name="E_00" value="tipo='R2' id='E1' despl_imagen='arr-izq' fondo='blanco' red='grisClaro' red10='gris' ejes='grisObscuro' texto='no'">
+   <param name="A_00" value="id='rangMin' constante='s&iacute;' expresi&oacute;n='2' evaluar='una-sola-vez'">
+   <param name="A_01" value="id='rangMax' constante='s&iacute;' expresi&oacute;n='10' evaluar='una-sola-vez'">
+   <param name="A_02" value="id='V1' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='rangMax-rangMin+1'">
+   <param name="A_03" value="id='VecAux' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='rangMax-rangMin+1'">
+   <param name="A_04" value="id='VecAleat' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='rangMax-rangMin+1'">
+   <param name="A_05" value="id='inV1()' algoritmo='s&iacute;' algoritmo='s&iacute;' inicio='iV1=0' hacer='V1[iV1]=iV1+rangMin;iV1=iV1+1' mientras='iV1&lt;(rangMax-rangMin+1)'">
+   <param name="A_06" value="id='wVecAux(iwVA)' algoritmo='s&iacute;' algoritmo='s&iacute;' inicio='_ii=0' hacer='VecAux[_ii]=(_ii&gt;=iwVA)?V1[_ii+1]:V1[_ii];_ii=_ii+1' mientras='_ii&lt;(rangMax-rangMin)'">
+   <param name="A_07" value="id='copiaVecs()' algoritmo='s&iacute;' algoritmo='s&iacute;' inicio='_icp=0' hacer='V1[_icp]=VecAux[_icp];_icp=_icp+1' mientras='_icp&lt;(rangMax-rangMin+1)'">
+   <param name="A_08" value="id='elige()' algoritmo='s&iacute;' algoritmo='s&iacute;' inicio='_i=0' hacer='_indx=ent(rnd*(rangMax-rangMin-_i+0.999));VecAleat[_i]=V1[_indx];wVecAux(_indx);copiaVecs();_i=_i+1' mientras='_i&lt;(rangMax-rangMin+1)'">
+   <param name="A_09" value="id='INICIO' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='inV1();elige()'">
+   <param name="A_10" value="id='CALCULOS' algoritmo='s&iacute;' evaluar='siempre'">
+   <param name="G_00" value="espacio='E1' tipo='texto' expresi&oacute;n='[20,20+15*s]' familia='s' s.intervalo='[0,rangMax-rangMin]' s.pasos='rangMax-rangMin' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Times New Roman;}\f1\fs24 V1[\f2\fs28\i{\*\mjaformula{\expr s\decimals 2\fixed0}}\f1\fs24\i0 ]=\f2\fs28\i{\*\mjaformula{\expr V1[s]\decimals 2\fixed0}}\f1\fs24\i0}' fuente='Monospaced,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_01" value="espacio='E1' tipo='texto' expresi&oacute;n='[100,20+15*s]' familia='s' s.intervalo='[0,rangMax-rangMin]' s.pasos='rangMax-rangMin' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Times New Roman;}\f1\fs24 VecAleat[\f2\fs28\i{\*\mjaformula{\expr s\decimals 2\fixed0}}\f1\fs24\i0 ]=\f2\fs28\i{\*\mjaformula{\expr VecAleat[s]\decimals 2\fixed0}}\f1\fs24\i0}' fuente='Monospaced,PLAIN,12' fijo='s&iacute;'">
+<font face="Arial" size="3">Esta unidad interactiva requiere la m&aacute;quina virtual de Java <a href="http://java.sun.com/javase/downloads/index.jsp" target="_blank">J2RE</a>.</font>
+</applet><applet name="macrotst" width=790 height=565
+        code="descinst.Descartes.class"
+        codebase="./"
+        archive="descinst.jar,http://recursostic.educacion.es/descartes/web/plugin/descinst.jar"
+        MAYSCRIPT>
+   <param name="tama&ntilde;o" value="790x565">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="s&iacute;">
+   <param name="nombre" value="macrotst">
+   <param name="Versi&oacute;n" value="4.106, 2010-08-12">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=s&iacute; config=s&iacute; inicio=s&iacute; limpiar=s&iacute;">
+   <param name="E_00" value="tipo='R2' id='E1' despl_imagen='arr-izq' fondo='blanco' red='grisClaro' red10='gris' ejes='grisObscuro' texto='no'">
+   <param name="C_00" value="id='myRnd.rangMin' tipo='num&eacute;rico' regi&oacute;n='exterior' espacio='E1' nombre='myRnd.rangMin' incr='1' min='0' max='myRnd.rangMax' decimales='0' fijo='no' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_01" value="id='myRnd.rangMax' tipo='num&eacute;rico' regi&oacute;n='exterior' espacio='E1' nombre='myRnd.rangMax' valor='mn+10' incr='1' min='myRnd.rangMin+1' decimales='0' fijo='no' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_02" value="id='nNums' tipo='num&eacute;rico' regi&oacute;n='exterior' espacio='E1' nombre='nNums' valor='myRnd.rangMax-myRnd.rangMin+1' incr='1' min='1' max='myRnd.rangMax-myRnd.rangMin+1' decimales='0' fijo='no' visible='s&iacute;' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_03" value="id='genera' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='exterior' espacio='E1' nombre='Genera' fijo='s&iacute;' visible='s&iacute;' acci&oacute;n='calcular' par&aacute;metro='myRnd.inV1()\nmyRnd.elige()' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="A_00" value="id='INICIO' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='myRnd.inV1();myRnd.elige()'">
+   <param name="A_01" value="id='CALCULOS' algoritmo='s&iacute;' evaluar='siempre'">
+   <param name="G_00" value="espacio='E1' tipo='macro' dibujar-si='0' expresi&oacute;n='randoms.txt' nombre='myRnd'">
+   <param name="G_01" value="espacio='E1' tipo='texto' expresi&oacute;n='[300,20+15*s]' familia='s' s.intervalo='[0,nNums-1]' s.pasos='nNums-1' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs28\i{\*\mjaformula{\expr myRnd.VecAleat[s]\decimals 2\fixed0}}\f2\fs24\i0}' fuente='Monospaced,PLAIN,12' fijo='s&iacute;'">
+<font face="Arial" size="3">Esta unidad interactiva requiere la m&aacute;quina virtual de Java <a href="http://java.sun.com/javase/downloads/index.jsp" target="_blank">J2RE</a>.</font>
+</applet></p>
+
+</body>
+<script type="text/javascript" src="./descartes-min.js"></script>
+
+</html>

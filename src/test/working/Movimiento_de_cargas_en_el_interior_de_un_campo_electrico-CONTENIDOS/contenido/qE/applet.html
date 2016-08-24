@@ -1,0 +1,592 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="es">
+<head>
+
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+
+
+
+  <title>Cargas y campo el&eacute;ctrico</title>
+  <link rel="stylesheet" type="text/css" href="resoluprocss/newton.css">
+
+
+
+  <script type="text/javascript" language="JavaScript" src="resoluprojs/objNavegador.js"></script>
+
+  <script type="text/javascript" language="JavaScript" src="resoluprojs/objLayer.js"></script>
+
+  <script type="text/javascript" language="JavaScript" src="resoluprojs/newton.js"></script>
+  <style type="text/css">
+<!--
+.Estilo1 {
+	color: #0000FF;
+	font-size: 16px;
+}
+.Estilo2 {font-size: 11px}
+-->
+  </style>
+<script type="text/javascript" src="./descartes-min.js"></script></head>
+
+
+<body onload="posicionaMenu(4)" bgcolor="#ffffff">
+
+
+<div class="clsCurso" id="CapaCurso" gblcolor="E48CA2" gblcoloron="FFACC2">Problema. 2�  Bachillerato</div>
+
+
+<div id="CapaFondo"><img src="images/fondo.jpg" height="429" width="770"></div>
+
+
+<div id="CapaImg"><img src="images/cargas_campo_electrico.png" name="imgUnidad" width="201" height="80" id="imgUnidad"></div>
+
+
+<div id="eltoMenuHead" nombre="eltoMenuHead">
+<table border="0" cellpadding="0" cellspacing="0" width="138">
+
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_01.jpg" height="4" width="10"></td>
+
+
+      <td><img src="images/menu/menu_02.jpg" height="4" width="112"></td>
+
+
+      <td><img src="images/menu/menu_03.jpg" height="4" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td background="images/menu/menu_04.jpg" height="29" width="10"></td>
+
+
+      <td class="clsMenuHead" id="tbMenuVTitulo" align="center" bgcolor="#f7f7f7" height="29" width="112"><a href="index.html"><font class="clsMenuHead">Cargas y campo el&eacute;ctrico</font></a></td>
+
+
+      <td background="images/menu/menu_06.jpg" height="29" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_07.jpg" height="2" width="10"></td>
+
+
+      <td><img src="images/menu/menu_08.jpg" height="2" width="112"></td>
+
+
+      <td><img src="images/menu/menu_09.jpg" height="2" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_10.jpg" height="2" width="10"></td>
+
+
+      <td><img src="images/menu/menu_11.jpg" height="2" width="112"></td>
+
+
+      <td><img src="images/menu/menu_12.jpg" height="2" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_16.jpg" height="2" width="10"></td>
+
+
+      <td><img src="images/menu/menu_17.jpg" height="2" width="112"></td>
+
+
+      <td><img src="images/menu/menu_18.jpg" height="2" width="16"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+<div class="clsCapasMenu" id="eltoMenuFoot" nombre="eltoMenuFoot">
+<table border="0" cellpadding="0" cellspacing="0" width="138">
+
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_31.jpg" height="75" width="10"></td>
+
+
+      <td class="clsPeque" id="idTextoPie" background="images/menu/menu_32.jpg" height="75" valign="bottom" width="112">Juan Carlos Collantes</td>
+
+
+      <td><img src="images/menu/menu_33.jpg" height="75" width="16"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+<div id="CapaMenuH">
+<table background="images/menuH/fondo.jpg" border="0" cellpadding="0" cellspacing="0" height="21" width="519">
+
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td width="2"><img src="images/menuH/separaFondo.jpg" height="21" width="2"></td>
+
+
+      <td id="idUnidad" height="21">
+
+      <table border="0" cellpadding="0" cellspacing="0">
+
+
+
+        <tbody>
+
+          <tr>
+
+
+            <td class="clsMenuH" id="idUnidadDentro" contenteditable="false" height="21" valign="bottom">Cargas y campo el&eacute;ctrico&nbsp;</td>
+
+
+            <td><img src="images/menuH/cajaOn.jpg" height="21" width="18"></td>
+
+
+            <td><img src="images/menuH/separador.jpg" height="21" width="2"></td>
+
+
+            <td><img src="images/menuH/cajaOn.jpg" height="21" width="18"></td>
+
+
+            <td><img src="images/menuH/separador.jpg" height="21" width="2"></td>
+
+
+            <td><img src="images/menuH/cajaOff.jpg" height="21" width="18"></td>
+
+
+            <td><img src="images/menuH/separador.jpg" height="21" width="2"></td>
+
+
+            <td><img src="images/menuH/cajaOff.jpg" height="21" width="18"></td>
+
+
+            <td><img src="images/spacer.gif" height="21" width="10"></td>
+
+          </tr>
+
+
+        </tbody>
+
+      </table>
+
+      </td>
+
+
+
+
+
+      
+
+
+      <td class="clsMenuH" height="21" width="24"><img id="imgImprimir" src="images/menuH/imprimir.jpg" name="imgImprimir" height="21" width="24"></td>
+
+
+      <td class="clsMenuH" height="21" valign="bottom" width="60"><a class="clsMenuH" onmouseover="rollOver('imgImprimir', 'CapaMenuH', 'images/menuH/imprimir_on.jpg')" onmouseout="rollOver('imgImprimir', 'CapaMenuH', 'images/menuH/imprimir.jpg')" href="javascript:imprimir()">Imprimir</a></td>
+
+
+
+
+
+
+
+
+      <td width="2"><img src="images/menuH/separaFondo.jpg" height="21" width="2"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+<div id="CapaCont">
+<table id="oTblCont0" bgcolor="#ffffff" border="0" bordercolor="#e5d48c" cellpadding="2" cellspacing="0" width="610">
+
+
+
+  <tbody>
+
+    <tr height="26">
+
+
+      <td height="18" bgcolor="#c5b375" class="clsSubMenu"><div align="center" class="clsTexto">APPLET</div></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td class="clsTexto" valign="top">
+
+
+
+      <p class="Estilo1" style="text-align: justify;">La escena que se observa en esta
+p&aacute;gina representa, de forma esquematizada, la trayectoria de una
+carga (Q) que inicialmente es acelerada por una diferencia de potencial
+que podemos regular (V0). Una vez acelerada se dirige a una zona entre
+placas en la que existe un campo el&eacute;ctrico vertical que
+tambi&eacute;n es regulable mediante la ddp entre placas (V(placas)) o
+a trav&eacute;s de la distancia d entre las mismas. A la salida de las
+placas se dirige hacia una pantalla que se encuentra a una distancia
+fija igual a 12 cm de la salida de las placas. En la escena podemos
+decidir tambi&eacute;n, por medio de&nbsp;los&nbsp;controles
+num&eacute;ricos Q y M, la part&iacute;cula lanzada. Unos valor, por
+ejemplo, Q=3 y M=2&nbsp;significa una part&iacute;cula
+con&nbsp;carga&nbsp; 3 veces la del prot&oacute;n y masa el doble, los
+valores negativos de Q significan multiplos de la carga y masa del
+electr&oacute;n. Al fijar la carga, masa y V0 el applet nos
+indicar&aacute; la velocidad de salida del ca&ntilde;&oacute;n. Al
+impactar con la pantalla podemos comprobar la velocidad de impacto y el
+desplazamiento vertical sufrido por la part&iacute;cula</p>
+
+      <div align="center"><br>
+
+        <applet name=""Movimiento"" width=100 height=25
+        code="descinst.Descartes.class"
+        archive="descinst.jar,http://descartes.cnice.mec.es/plugin/descinst.jar"
+        MAYSCRIPT>
+       <param name="nombre" value="Escena">
+       <param name="pop" value="width=600 height=480">
+       <param name="Versi&oacute;n" value="3.875">
+       <param name="Idioma" value="espa&ntilde;ol">
+       <param name="Botones" value="cr&eacute;ditos=no config=no inicio=si limpiar=si">
+       <param name="E_00" value="R3='si' id='Principal' escala='32' despl_imagen='arr-izq' fondo='ffffd2' despliegue='pintor'">
+       <param name="C_00" value="tipo='num&eacute;rico' id='d' espacio='Principal' valor='6' decimales='1' nombre='Distancia' min='4' max='8' visible='si' tooltip='Distancia entre las placas en cm.' Explicaci&oacute;n='Distancia entre las placas en cm.' par&aacute;metro='Distancia entre las placas en cm.' pos_mensajes='centro'">
+       <param name="C_01" value="tipo='num&eacute;rico' id='M' regi&oacute;n='interior' espacio='Principal' expresi&oacute;n='(90,0)' decimales='0' nombre='M' incr='1' min='1' max='5' visible='si' pos_mensajes='centro'">
+       <param name="C_02" value="tipo='num&eacute;rico' id='V' espacio='Principal' decimales='0' nombre='V (placas)' incr='10' min='-250' max='250' visible='si' tooltip='Diferencia de potencial entre las placas en voltios' Explicaci&oacute;n='Diferencia de potencial entre las placas en voltios' par&aacute;metro='Diferencia de potencial entre las placas en voltios' pos_mensajes='centro'">
+       <param name="C_03" value="tipo='num&eacute;rico' id='Q' regi&oacute;n='interior' espacio='Principal' decimales='0' nombre='Q' incr='1' min='-5' max='5' visible='si' tooltip='Carga que se mueve en m&uacute;ltiplos de la carga absoluta del electr&oacute;n' Explicaci&oacute;n='Carga que se mueve en m&uacute;ltiplos de la carga absoluta del electr&oacute;n' par&aacute;metro='Carga que se mueve en m&uacute;ltiplos de la carga absoluta del electr&oacute;n' pos_mensajes='centro'">
+       <param name="C_04" value="tipo='num&eacute;rico' id='A1' interfaz='bot&oacute;n' regi&oacute;n='norte' espacio='Principal' nombre='A1' visible='si' tooltip='Movimiento de un electr&oacute;n' Explicaci&oacute;n='Movimiento de un electr&oacute;n' acci&oacute;n='mensaje' par&aacute;metro='Calcula la velocidad de salida de un electr&oacute;n y un prot&oacute;n cuando se somete a una ddp V0=1100 v. Modifica Vo en la escena y comprueba tus c&aacute;lculos' pos_mensajes='centro'">
+       <param name="C_05" value="tipo='num&eacute;rico' id='A2' interfaz='bot&oacute;n' regi&oacute;n='norte' espacio='Principal' nombre='A2' visible='si' tooltip='Movimiento de un prot&oacute;n' Explicaci&oacute;n='Movimiento de un prot&oacute;n' acci&oacute;n='mensaje' par&aacute;metro='Lanza una part&iacute;cula alfa (Q=2, M~4)acelerada con una ddp V0=2000 v, predice su trayectoria si aplicamos una V(placas)=-120 V y calcula la desviaci&oacute;n vertical del impacto en la pantalla (Otras variables: d=4 cm)' pos_mensajes='centro'">
+       <param name="C_06" value="tipo='num&eacute;rico' id='A3' interfaz='bot&oacute;n' regi&oacute;n='norte' espacio='Principal' nombre='A3' visible='si' tooltip='Ejercicio de c&aacute;lculo' Explicaci&oacute;n='Ejercicio de c&aacute;lculo' acci&oacute;n='mensaje' par&aacute;metro='Con los datos V(placas)=240 V ; V0=1500 V y d=4 cm, predice la trayectoria de un electr&oacute;n y calcula la desviaci&oacute;n vertical de un electr&oacute;n en la pantalla' pos_mensajes='centro'">
+       <param name="C_07" value="tipo='num&eacute;rico' id='V0' espacio='Principal' decimales='0' nombre='V0' incr='100' min='1000' max='6000' visible='si' pos_mensajes='centro'">
+       <param name="A_00" value="id='v0' expresi&oacute;n='sqrt(abs(2*Q*V0/M))'">
+       <param name="A_01" value="id='E' expresi&oacute;n='-V/d*100'">
+       <param name="A_02" value="id='a' expresi&oacute;n='(Q>=0)?E*9.58*(10^7):E*1.76*(10^11)'">
+       <param name="A_03" value="id='q' expresi&oacute;n='0.00001*Q'">
+       <param name="A_04" value="id='r' expresi&oacute;n='(Q<0)?0.08*M:0.1*M'">
+       <param name="A_05" value="id='v0e' expresi&oacute;n='592999.4*sqrt(abs(Q)*V0/M)'">
+       <param name="A_06" value="id='v0p' expresi&oacute;n='13842.6*sqrt(abs(Q)*V0/M)'">
+       <param name="A_07" value="id='yp' expresi&oacute;n='(Q<0)?((0.0008*a)/v0e^2):(0.0008*a)/v0p^2'">
+       <param name="A_08" value="id='yf' expresi&oacute;n='(Q<0)?-(yp+a*0.0048/v0e^2):(yp+a*0.0048/v0p^2)'">
+       <param name="A_09" value="id='vy' expresi&oacute;n='(Q<0)?a*0.04/v0e:a*0.04/v0p'">
+       <param name="A_10" value="id='vx' expresi&oacute;n='(Q<0)?v0e:v0p'">
+       <param name="S_00" value="espacio='Principal' tipo='paralelep&iacute;pedo' expresi&oacute;n='Paralelep&iacute;pedo' posini='(0,0,-d/2)' color='grisClaro' color_reverso='gris' modelo='metal' ancho='7' largo='7' alto='0.2'">
+       <param name="S_01" value="espacio='Principal' tipo='paralelep&iacute;pedo' expresi&oacute;n='Paralelep&iacute;pedo' posini='(0,0,d/2)' color='grisClaro' color_reverso='gris' modelo='metal' ancho='6' largo='6' alto='0.2'">
+       <param name="S_02" value="espacio='Principal' tipo='esfera' dibujar-si='e<7.8' expresi&oacute;n='Esfera' posini='(rx,ry-9,rz)' color='ff4500' color_reverso='rosa' modelo='metal' ancho='r'">
+       <param name="S_03" value="espacio='Principal' tipo='texto' dibujar-si='V>0' expresi&oacute;n='[180,80*7/d]' texto='+' fuente='SantSerif,BOLD,18' fijo='si' color='gris'">
+       <param name="S_04" value="espacio='Principal' tipo='texto' dibujar-si='V>0' expresi&oacute;n='[180,300+100*d/8]' texto='-' fuente='SantSerif,BOLD,22' fijo='si' color='gris'">
+       <param name="S_05" value="espacio='Principal' tipo='paralelep&iacute;pedo' expresi&oacute;n='Paralelep&iacute;pedo' posini='(0,8,0)' color='77fc23' color_reverso='rosa' modelo='luz' ancho='12' largo='0.1' alto='10'">
+       <param name="S_06" value="espacio='Principal' tipo='cilindro' expresi&oacute;n='Cilindro' rotini='(90,0,0)' posini='(0,-8.4,0)' color_reverso='rosa' modelo='metal' ancho='0.6' largo='0.6' alto='1.2'">
+       <param name="S_07" value="espacio='Principal' tipo='texto' dibujar-si='V<0' expresi&oacute;n='[180,80*7/d]' texto='-' fuente='SantSerif,BOLD,18' fijo='si' color='gris'">
+       <param name="S_08" value="espacio='Principal' tipo='texto' dibujar-si='V<0' expresi&oacute;n='[180,300+100*d/8]' texto='+' fuente='SantSerif,BOLD,22' fijo='si' color='gris'">
+       <param name="S_09" value="espacio='Principal' tipo='polireg' dibujar-si='e>7.8' expresi&oacute;n='Polireg' rotini='(0,90,90)' posini='(rx,ry-9,rz)' color='amarillo' color_reverso='amarillo' modelo='luz' ancho='0.7' largo='0.7'">
+       <param name="S_10" value="espacio='Principal' tipo='texto' dibujar-si='Q>0' expresi&oacute;n='[10,380]' texto='Velocidad inicial=[v0p] m/s' fijo='si'">
+       <param name="S_11" value="espacio='Principal' tipo='texto' dibujar-si='Q<0' expresi&oacute;n='[10,380]' texto='Velocidad inicial=[v0e] m/s' fijo='si'">
+       <param name="S_12" value="espacio='Principal' tipo='texto' dibujar-si='e>7' expresi&oacute;n='[10,400]' texto='Desplazamiento vertical=[yf] m' decimales='6' fijo='si'">
+       <param name="S_13" value="espacio='Principal' tipo='texto' dibujar-si='e>7' expresi&oacute;n='[10,420]' texto='Velocidad final=[vx]i+[vy]j m/s' fijo='si'">
+       <param name="Animaci&oacute;n" value="controles='no' auto='no' inicio='t=0 && t1=0' hacer='t=t+0.3;ry=0.015*v0*t;e=-9+ry;t1=((e>-d/2)&&(e<d/2))?t1:0;t2=(e>d/2)?t2:0;t3=((e>-d/2)&&(e<d/2))?t1:t3;t1=t1+0.3;t2=t2+0.3;rz=(e<-d/2)?0:(((e>-d/2)&&(e<d/2))?(0.5*q*E*t1^2)/M:((0.5*q*E*t3^2)/M+q*E*t3*t2/M));' mientras='e<=7.8'">
+          </applet>
+
+
+
+    </div>
+      <p style="text-align: justify;"></p>
+
+      </td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+
+<table id="oTblSep0" border="0" cellpadding="0" cellspacing="0" height="1">
+
+
+
+  <tbody>
+
+    <tr height="1">
+
+
+      <td height="1"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+<div class="clsCapasMenu" id="eltoMenu0" nombre="eltoMenu0">
+<table border="0" cellpadding="0" cellspacing="0" width="138">
+
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_19.jpg" height="2" width="10"></td>
+
+
+      <td><img src="images/menu/menu_20.jpg" height="2" width="112"></td>
+
+
+      <td><img src="images/menu/menu_21.jpg" height="2" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td background="images/menu/menu_22.jpg" height="25" width="10"><img src="images/spacer.gif" height="1" width="1"></td>
+
+
+      <td class="clsMenu" id="eltoMenuHead0" align="center" bgcolor="#e5d48c" height="25" width="112"><a class="clsMenu" href="guia1.html">Gu&iacute;a del alumno</a></td>
+
+
+      <td background="images/menu/menu_24.jpg" height="25" width="16"><img src="images/spacer.gif" height="1" width="1"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_25.jpg" height="4" width="10"></td>
+
+
+      <td><img src="images/menu/menu_26.jpg" height="4" width="112"></td>
+
+
+      <td><img src="images/menu/menu_27.jpg" height="4" width="16"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+<div class="clsCapasMenu" id="eltoMenu1" nombre="eltoMenu1">
+<table border="0" cellpadding="0" cellspacing="0" width="138">
+
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_19.jpg" height="2" width="10"></td>
+
+
+      <td><img src="images/menu/menu_20.jpg" height="2" width="112"></td>
+
+
+      <td><img src="images/menu/menu_21.jpg" height="2" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td background="images/menu/menu_22.jpg" height="25" width="10"><img src="images/spacer.gif" height="1" width="1"></td>
+
+
+      <td class="clsMenu" id="eltoMenuHead1" align="center" bgcolor="#c5b375" height="25" width="112"><a class="clsMenu" href="applet.html">Applet</a></td>
+
+
+      <td background="images/menu/menu_24.jpg" height="25" width="16"><img src="images/spacer.gif" height="1" width="1"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_25.jpg" height="4" width="10"></td>
+
+
+      <td><img src="images/menu/menu_26.jpg" height="4" width="112"></td>
+
+
+      <td><img src="images/menu/menu_27.jpg" height="4" width="16"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+<div class="clsCapasMenu" id="eltoMenu2" nombre="eltoMenu2">
+<table border="0" cellpadding="0" cellspacing="0" width="138">
+
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_19.jpg" height="2" width="10"></td>
+
+
+      <td><img src="images/menu/menu_20.jpg" height="2" width="112"></td>
+
+
+      <td><img src="images/menu/menu_21.jpg" height="2" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td background="images/menu/menu_22.jpg" height="25" width="10"><img src="images/spacer.gif" height="1" width="1"></td>
+
+
+      <td class="clsMenu" id="eltoMenuHead2" align="center" bgcolor="#e5d48c" height="25" width="112"><a class="clsMenu" href="eva.html" target="_self">Evaluaci&oacute;n</a></td>
+
+
+      <td background="images/menu/menu_24.jpg" height="25" width="16"><img src="images/spacer.gif" height="1" width="1"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_25.jpg" height="4" width="10"></td>
+
+
+      <td><img src="images/menu/menu_26.jpg" height="4" width="112"></td>
+
+
+      <td><img src="images/menu/menu_27.jpg" height="4" width="16"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+<div class="clsCapasMenu" id="eltoMenu3" nombre="eltoMenu3">
+<table border="0" cellpadding="0" cellspacing="0" width="138">
+
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_19.jpg" height="2" width="10"></td>
+
+
+      <td><img src="images/menu/menu_20.jpg" height="2" width="112"></td>
+
+
+      <td><img src="images/menu/menu_21.jpg" height="2" width="16"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td background="images/menu/menu_22.jpg" height="25" width="10"><img src="images/spacer.gif" height="1" width="1"></td>
+
+
+      <td class="clsMenu" id="eltoMenuHead3" align="center" bgcolor="#e5d48c" height="25" width="112"><a class="clsMenu" href="problema.html" target="_self">Problema resuelto</a></td>
+
+
+      <td background="images/menu/menu_24.jpg" height="25" width="16"><img src="images/spacer.gif" height="1" width="1"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><img src="images/menu/menu_25.jpg" height="4" width="10"></td>
+
+
+      <td><img src="images/menu/menu_26.jpg" height="4" width="112"></td>
+
+
+      <td><img src="images/menu/menu_27.jpg" height="4" width="16"></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+
+
+</body>
+<script type="text/javascript" src="./descartes-min.js"></script>
+
+</html>

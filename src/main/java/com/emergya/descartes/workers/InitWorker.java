@@ -49,7 +49,7 @@ public class InitWorker extends BaseWorker implements Runnable {
                 (new Thread(new ValidateWorker(getJob()))).start();
             }
         } else {
-            log.error("----------La configuración no es válida: el parámetro 'general.analyzeORconvert' sólo acepta los valores 'analyze' o 'convert'-----------");
+            log.error("*La configuración no es válida: el parámetro 'general.analyzeORconvert' sólo acepta los valores 'analyze' o 'convert'*");
         }
 
         SearchDescartesContents zipDescartesContents = new SearchDescartesContents(
@@ -77,21 +77,18 @@ public class InitWorker extends BaseWorker implements Runnable {
             SearchDescartesContents zipDescartesContents, boolean isToConvert) {
         ArrayList<DescartesZipContentProxy> listaContenidos = (ArrayList<DescartesZipContentProxy>) zipDescartesContents
                 .getDescartesZipContentProxyListNames();
-        int numTotalContenidos = 0;
         try {
             if (isToConvert) {
                 for (DescartesZipContentProxy zipFile : listaContenidos) {
                     job.getContentsToConvert().put(zipFile);
                 }
-                numTotalContenidos = job.getContentsToConvert().size();
             } else {
                 for (DescartesZipContentProxy zipFile : listaContenidos) {
                     job.getContentsToAnalyze().put(zipFile);
                 }
-                numTotalContenidos = job.getContentsToAnalyze().size() + 1;
             }
-
-            log.info("-->> Número Total de Contenidos: " + (numTotalContenidos));
+            log.info("-->> Número Total de Contenidos: "
+                    + (listaContenidos.size()));
             // Añadimos a la cola la poison pill para consumir el thread cuando
             // llegue a ella
             job.getContentsToAnalyze().put(JobConverter.STOP_QUEUE);

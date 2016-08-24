@@ -1,0 +1,29 @@
+'AUTOR/A: Jesús M. Muñoz'
+'TEMA: Física y Química 1'
+
+'PREGUNTA 1'
+'¿Cúantos protones tiene el elemento pultonio?'
+''
+''
+93
+'PREGUNTA 2'
+'¿Qué carga tiene el ion carburo?'
+''
+''
+-4
+'PREGUNTA 3'
+'Sin decimales, ¿cuál es la temperatura más baja que se puede obtener'
+'en la escala centígrada?'
+''
+-273
+'PREGUNTA 4'
+'¿En que año nació Isaac Newton?'
+''
+''
+1643
+'PREGUNTA 5'
+'¿En que año murió Abert Einstein?'
+''
+''
+1955
+'FyQ DIANA'

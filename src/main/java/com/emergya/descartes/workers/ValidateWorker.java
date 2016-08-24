@@ -32,29 +32,25 @@ public class ValidateWorker extends BaseWorker implements Runnable {
     */
     @Override
     public void run() {
-        try {
-            JobConverter currentJob = getJob();
-            // Control de existencia de carpeta de trabajo
-            File resultPath = new File(currentJob.getJobConfig()
-                    .getValidationResultPath());
+        JobConverter currentJob = getJob();
+        // Control de existencia de carpeta de trabajo
+        File resultPath = new File(currentJob.getJobConfig()
+                .getValidationResultPath());
+        if (resultPath.exists()) {
+            FileManager.deleteFilesInFolder(resultPath);
+        }
+        resultPath.mkdirs();
+        DescartesContentProxy contentToValidate = new DescartesContentProxy();
+        while (!currentJob.isValidateQueueReadyFlag()
+                || !currentJob.getContentsToValidate().isEmpty()) {
             try {
-                if (resultPath.exists()) {
-                    FileManager.deleteFilesInFolder(resultPath);
-                }
-                resultPath.mkdirs();
-            } catch (Exception e) {
-                log.error("No se ha podido crear la carpeta temporal de validación de contenidos");
-            }
-
-            while (!currentJob.isValidateQueueReadyFlag()
-                    || !currentJob.getContentsToValidate().isEmpty()) {
-
-                DescartesContentProxy contentToValidate = currentJob
-                        .getContentsToValidate().take();
+                contentToValidate = currentJob.getContentsToValidate().take();
 
                 if (contentToValidate != JobConverter.STOP_QUEUE_V) {
                     if (contentToValidate != null) {
                         doWork(contentToValidate, currentJob);
+                        // Info estadística
+                        currentJob.getContentsValidate().add(contentToValidate);
                     }
                 } else {
                     log.info("-->> Total Validados: "
@@ -62,11 +58,18 @@ public class ValidateWorker extends BaseWorker implements Runnable {
                     log.info("****VALIDACIÓN FINALIZADA****");
                     currentJob.setValidateQueueReadyFlag(true);
                 }
+            } catch (InterruptedException e1) {
+                log.error("Interrupción de la cola de validación", e1);
+            } catch (Exception e) {
+                currentJob.getContentsValidateError().add(contentToValidate);
+                log.error(
+                        "No se ha podido realizar la validación del contenido: "
+                                + contentToValidate.getTitle() + ": ", e);
             }
-
-        } catch (InterruptedException e) {
-            log.error("Problema de Interrupción. " + e.getMessage(), e);
         }
+
+        log.info("Contenidos que han provocado errores en la validación: "
+                + currentJob.getContentsValidateError().size());
     }
 
     /**
@@ -77,7 +80,6 @@ public class ValidateWorker extends BaseWorker implements Runnable {
         ContentAnalyzer contentAnalyzer = new ContentAnalyzer(job);
         AnalyzedContent<?> analyzedContent = contentAnalyzer
                 .analyzeContent(contentToValidate);
-        log.info(">> Validando Contenido: " + contentToValidate.getTitle());
         File validateContentFile = new File(job.getJobConfig()
                 .getValidationResultPath()
                 + File.separator
@@ -85,10 +87,7 @@ public class ValidateWorker extends BaseWorker implements Runnable {
         analyzedContent.setLocalCopy(validateContentFile);
         String workingPath = job.getJobConfig().getConvertedContentPath();
         OutputManager.createAnalizedContentCSV(analyzedContent, workingPath);
-        log.info(">> Validación guardada para el contenido: "
+        log.info(">> Validación realizada para el contenido: "
                 + contentToValidate.getTitle());
-
-        // Info estadística
-        job.getContentsValidate().add(contentToValidate);
     }
 }

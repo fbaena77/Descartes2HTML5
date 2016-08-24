@@ -1,0 +1,14 @@
+0
+'./imagenes/dos11.png'
+'./imagenes/dos12.png'
+'./imagenes/tres11.png'
+'./imagenes/tres12.png'
+'./imagenes/dos21.png'
+'./imagenes/dos22.png'
+'./imagenes/tres21.png'
+'./imagenes/tres22.png'
+'./imagenes/dos31.png'
+'./imagenes/dos32.png'
+'./imagenes/tres31.png'
+'./imagenes/tres32.png'
+

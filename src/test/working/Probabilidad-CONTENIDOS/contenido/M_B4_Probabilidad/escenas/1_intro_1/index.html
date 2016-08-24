@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>Indicar el femenino de nombres de personas y animales.</title>
+	<style>
+		*{
+		border:0;
+		margin:0;
+		padding:0;
+		}
+	</style>
+<script type="text/javascript" src="./descartes-min.js"></script></head>
+<body >
+
+<p align="left">
+<applet width=790 height=520
+        code="descinst.Descartes.class"
+        codebase="./"
+        archive="descinst.jar,http://recursostic.educacion.es/descartes/web/plugin/descinst.jar"
+        MAYSCRIPT>
+   <param name="tama&ntilde;o" value="790x520">
+   <param name="pleca" value="title='Analiza en el siguiente fen&oacute;meno aleatorio la relaci&oacute;n entre probabilidad,' subtitle='casos favorables y el n&uacute;mero de casos posibles' subtitlines='2' bgcolor='268bea' fgcolor='ffffff' align='center' titleimage='images/instrucciones.jpg' titlefont='SansSerif,PLAIN,22' subtitlefont='SansSerif,PLAIN,22' ">
+   <param name="sonido" value="s&iacute;">
+   <param name="&aacute;lgebra" value="s&iacute;">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="s&iacute;">
+   <param name="deshacer" value="no">
+   <param name="Versi&oacute;n" value="4.41, 2010-12-16">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=no limpiar=no">
+   <param name="E_00" value="tipo='R2' id='E1' fijo='s&iacute;' escala='100' O.x='-180' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_00" value="id='n1' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='interior' espacio='E1' nombre='Girar' expresi&oacute;n='(620,400,150,30)' fijo='s&iacute;' visible='s&iacute;' fuente puntos='18' imagen='./imagenes/btn100.png' acci&oacute;n='calcular' par&aacute;metro='otro=ent(rnd*8)+1\nanimar=1' par&aacute;metro.fuente='Monospaced,PLAIN,12' tooltip.fuente='Monospaced,PLAIN,12' Explicaci&oacute;n.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="A_00" value="id='INICIO' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='SOM.Top=200;SOM.Left=200;SOM.transp=0.80;SOM.rojo=0.28;SOM.verde=0.60;SOM.azul=0.93;otro=1;z1=1;z2=2;z3=3;z4=4;z5=5;z6=6;z7=7;z8=8;;;;'">
+   <param name="A_01" value="id='V' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='10' expresi&oacute;n='V[0]=0;V[1]=0;V[2]=0'">
+   <param name="A_02" value="id='R' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='10' expresi&oacute;n=';R[1]=0;R[2]=99;R[3]=0;R[4]=0;R[5]=99;R[6]=99;R[7]=69;R[8]=0'">
+   <param name="A_03" value="id='G' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='10' expresi&oacute;n=';G[1]=80;G[2]=0;G[3]=99;G[4]=0;G[5]=0;G[6]=99;G[7]=69;G[8]=0'">
+   <param name="A_04" value="id='B' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='10' expresi&oacute;n=';B[1]=80;B[2]=0;B[3]=0;B[4]=99;B[5]=99;B[6]=0;B[7]=69;B[8]=0'">
+   <param name="A_05" value="id='V6' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='10' expresi&oacute;n='V6[0]=0;V6[1]=&squot;turquesa&squot;;V6[2]=&squot;rojo&squot;;V6[3]=&squot;verde&squot;;V6[4]=&squot;azul&squot;;V6[5]=&squot;magenta&squot;;V6[6]=&squot;amarillo&squot;;V6[7]=&squot;blanco&squot;;V6[8]=&squot;negro&squot;'">
+   <param name="A_06" value="id='a8' algoritmo='s&iacute;' evaluar='siempre' hacer='elegido=(otro=1)?z1:elegido;elegido=(otro=2)?z2:elegido;elegido=(otro=3)?z3:elegido;elegido=(otro=4)?z4:elegido;elegido=(otro=5)?z5:elegido;elegido=(otro=6)?z6:elegido;elegido=(otro=7)?z7:elegido;elegido=(otro=8)?z8:elegido'">
+   <param name="A_07" value="id='a7' algoritmo='s&iacute;' evaluar='siempre' hacer='a1=(z1=elegido)?1:0;a2=(z2=elegido)?1:0;a3=(z3=elegido)?1:0;a4=(z4=elegido)?1:0;a5=(z5=elegido)?1:0;a6=(z6=elegido)?1:0;a7=(z7=elegido)?1:0;a8=(z8=elegido)?1:0;s=a1+a2+a3+a4+a5+a6+a7+a8'">
+   <param name="A_08" value="id='e9' evento='s&iacute;' condici&oacute;n='animar=1' acci&oacute;n='animar' par&aacute;metro.fuente='Monospaced,PLAIN,12' ejecuci&oacute;n='alternar' pos_mensajes='centro'">
+   <param name="A_09" value="id='a10' algoritmo='s&iacute;' evaluar='siempre' hacer='animar=(kk=99)?0:animar'">
+   <param name="G_00" value="espacio='E1' tipo='macro' expresi&oacute;n='macros/sombras.txt' nombre='SOM'">
+   <param name="G_01" value="espacio='E1' tipo='arco' color='0090ff' fin='45' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' relleno='([R[z1]],[G[z1]],[B[z1]],00)'">
+   <param name="G_02" value="espacio='E1' tipo='arco' color='0090ff' inicio='45' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' relleno='([R[z2]],[G[z2]],[B[z2]],00)'">
+   <param name="G_03" value="espacio='E1' tipo='arco' color='0090ff' inicio='90' fin='135' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' relleno='([R[z3]],[G[z3]],[B[z3]],00)'">
+   <param name="G_04" value="espacio='E1' tipo='arco' color='0090ff' inicio='135' fin='180' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' relleno='([R[z4]],[G[z4]],[B[z4]],00)'">
+   <param name="G_05" value="espacio='E1' tipo='arco' color='0090ff' inicio='180' fin='225' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' relleno='([R[z5]],[G[z5]],[B[z5]],00)'">
+   <param name="G_06" value="espacio='E1' tipo='arco' color='0090ff' inicio='225' fin='270' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' relleno='([R[z6]],[G[z6]],[B[z6]],00)'">
+   <param name="G_07" value="espacio='E1' tipo='arco' color='0090ff' inicio='270' fin='315' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' relleno='([R[z7]],[G[z7]],[B[z7]],00)'">
+   <param name="G_08" value="espacio='E1' tipo='arco' color='0090ff' inicio='315' fin='360' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' relleno='([R[z8]],[G[z8]],[B[z8]],00)'">
+   <param name="G_09" value="espacio='E1' tipo='segmento' color='0090ff' expresi&oacute;n='(0,0)(cos(2*s*pi/8),sen(2*s*pi/8))' familia='s' s.intervalo='[0,8]' s.pasos='8' fuente='Monospaced,PLAIN,12' fijo='s&iacute;' tama&ntilde;o='0'">
+   <param name="G_10" value="espacio='E1' tipo='texto' expresi&oacute;n='[200,50]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red0\green0\blue255;}\cf0\f1\fs48 Al girar la ruleta, \u191 cu\u225 l es la probabilidad \par       que se pare en el color {\*\mjaformula{\expr [V6[elegido]]\decimals 0\fixed1}}?\fs52\par \cf1\fs40}' fuente='Arial,PLAIN,24' fijo='s&iacute;'">
+   <param name="G_11" value="espacio='E1' tipo='texto' expresi&oacute;n='[370,180]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red0\green0\blue255;}\f1\fs48\i\cf0\par {\*\mjaformula{\fraction{\num\f2\fs44\i Casos favorables}{\den\f2\fs44\i Casos posibles}}} = {\*\mjaformula{\fraction{\num{\expr [s]\decimals 0\fixed1}}{\den 8}}}\cf1\f3\fs24\i0}' fuente='Times New Roman Italic,ITALIC,24' fijo='s&iacute;'">
+   <param name="Animaci&oacute;n" value="controles='no' auto='s&iacute;' inicio='i=0;kk=0' hacer='i=i+0.5;z1=ent(rnd*8)+1;z2=ent(rnd*8)+1;z3=ent(rnd*8)+1;z4=ent(rnd*8)+1;z5=ent(rnd*8)+1;z6=ent(rnd*8)+1;z7=ent(rnd*8)+1;z8=ent(rnd*8)+1;;animar=0;' mientras='i&lt;8'">
+<font face="Arial" size="3">Esta unidad interactiva requiere la m&aacute;quina virtual de Java <a href="http://java.sun.com/javase/downloads/index.jsp" target="_blank">J2RE</a>.</font>
+</applet></p>
+
+</body>
+<script type="text/javascript" src="./descartes-min.js"></script>
+
+</html>

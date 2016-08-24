@@ -1,0 +1,29 @@
+'AUTOR/A: Jesús M. Muñoz'
+'TEMA: Física y Química general 2'
+
+'PREGUNTA 1'
+'¿Cuál es la masa atómica el nitrógeno?'
+''
+''
+14.007
+'PREGUNTA 2'
+'¿Cuántos Julios hay en un kilovatio-hora?'
+''
+''
+3600000
+'PREGUNTA 3'
+'¿Cuántos segundos hay en una semana?'
+''
+''
+604800
+'PREGUNTA 4'
+'¿Cuánto gramos hay en una tonelada?'
+''
+''
+1000000
+'PREGUNTA 5'
+'¿Cuántos elementos pertenecen a las denominadas tierras raras?'
+''
+''
+28
+'FyQ DIANA'

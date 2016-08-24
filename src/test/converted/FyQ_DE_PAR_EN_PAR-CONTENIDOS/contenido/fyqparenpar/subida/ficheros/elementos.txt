@@ -1,0 +1,23 @@
+60
+'Na'
+'Mg'
+'I'
+'B'
+'Rn'
+'He'
+'C'
+'Ga'
+'K'
+PISTAS
+'Sodio'
+'Magnesio'
+'Yodo'
+'Boro'
+'Radón'
+'Helio'
+'Carbono'
+'Galio'
+'Potasio'
+'AUTOR/A: Joaquín Recio'
+'TEMA: Elementos 1'
+FyQ DE PAR EN PAR

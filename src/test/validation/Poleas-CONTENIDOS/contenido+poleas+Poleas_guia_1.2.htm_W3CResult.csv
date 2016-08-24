@@ -1,0 +1,13 @@
+TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Attribute “gblcoloron” not allowed on element “div” at this point.;;4;31;78;le1"">    <div id=""CapaCurso"" class=""clsCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">     
+error;Attribute “gblcolor” not allowed on element “div” at this point.;;4;31;78;le1"">    <div id=""CapaCurso"" class=""clsCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;4;40;48;/div>    <div id=""eltoMenuHead"" nombre=""eltoMenuHead"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;4;71;69;/div>    <div id=""eltoMenuFoot"" class=""clsCapasMenu"" nombre=""eltoMenuFoot"">     
+error;Attribute “height” not allowed on element “tr” at this point.;119;13;120;21;   <tbody>       <tr height=""1"">     
+error;Element “ajs” not allowed as child of element “td” in this context. (Suppressing further errors from this subtree.);;13;133;139;          <ajs width=""140"" height=""3000"" code=""descinst.DescartesWeb2_0.class"" name=""descinst.DescartesWeb2_0.class"" class=""DescartesJS"">     
+error;Element “ajs” not allowed as child of element “td” in this context. (Suppressing further errors from this subtree.);;13;150;139;          <ajs width=""150"" height=""3000"" code=""descinst.DescartesWeb2_0.class"" name=""descinst.DescartesWeb2_0.class"" class=""DescartesJS"">     
+error;Attribute “height” not allowed on element “tr” at this point.;194;13;195;21;   <tbody>       <tr height=""1"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;4;207;63;/div>    <div id=""eltoMenu0"" class=""clsCapasMenu"" nombre=""eltoMenu0"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;4;228;63;/div>    <div id=""eltoMenu1"" class=""clsCapasMenu"" nombre=""eltoMenu1"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;4;249;63;/div>    <div id=""eltoMenu2"" class=""clsCapasMenu"" nombre=""eltoMenu2"">     
+error;Attribute “nombre” not allowed on element “div” at this point.;;4;270;63;/div>    <div id=""eltoMenu3"" class=""clsCapasMenu"" nombre=""eltoMenu3"">     

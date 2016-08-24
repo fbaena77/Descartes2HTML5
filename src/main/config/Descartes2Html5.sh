@@ -1,2 +1,3 @@
-sudo java -cp vnu.jar nu.validator.servlet.Main 8888
-sudo java -jar Descartes2HTML5-1.0.0.jar ../src/main/config/html5converter.properties
+java -cp vnu.jar nu.validator.servlet.Main 8888 &
+sleep 10;
+java -jar target/Descartes2HTML5-1.0.0.jar src/main/config/html5converter.properties &

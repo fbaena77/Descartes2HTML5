@@ -1,11 +1,13 @@
 TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
-error;Attribute “gblcolor” not allowed on element “div” at this point.;;3;20;77;0324"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""78A6DA"" gblcoloron=""ECF8F9"">    J
-error;Attribute “gblcoloron” not allowed on element “div” at this point.;;3;20;77;0324"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""78A6DA"" gblcoloron=""ECF8F9"">    J
+error;Internal encoding declaration “iso-8859-1” disagrees with the actual encoding of the document (“utf-8”).;;3;4;74;<head>   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <l
+error;Bad value “text/html; charset=iso-8859-1” for attribute “content” on element “meta”: “iso-8859-1” is not a preferred encoding name. The preferred label for this encoding is “windows-1252”.;;3;4;74;<head>   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <l
+error;Attribute “gblcolor” not allowed on element “div” at this point.;;3;20;77;4585"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""78A6DA"" gblcoloron=""ECF8F9"">    J
+error;Attribute “gblcoloron” not allowed on element “div” at this point.;;3;20;77;4585"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""78A6DA"" gblcoloron=""ECF8F9"">    J
 error;Attribute “nombre” not allowed on element “div” at this point.;;3;29;47;</div>   <div id=""eltoMenuHead"" nombre=""eltoMenuHead"">    <
 error;Attribute “nombre” not allowed on element “div” at this point.;;3;60;68;</div>   <div class=""clsCapasMenu"" id=""eltoMenuFoot"" nombre=""eltoMenuFoot"">    <
-error;Attribute “height” not allowed on element “tr” at this point.;107;12;108;45;   <tbody>      <tr height=""26"" id=""html5tr_1097478652"">     
-error;Attribute “width” not allowed on element “input” at this point.;;36;116;199;9872079""> <input id=""boton1"" onclick=""MM_openBrWindow('presentacion.swf','','width=800,height=700')"" type=""button"" value=""PRESENTACI�N"" name=""boton1"" width=""500"" height=""25""> </p> 
-error;Attribute “height” not allowed on element “input” at this point.;;36;116;199;9872079""> <input id=""boton1"" onclick=""MM_openBrWindow('presentacion.swf','','width=800,height=700')"" type=""button"" value=""PRESENTACI�N"" name=""boton1"" width=""500"" height=""25""> </p> 
+error;Attribute “height” not allowed on element “tr” at this point.;107;12;108;45;   <tbody>      <tr height=""26"" id=""html5tr_1460330690"">     
+error;Attribute “width” not allowed on element “input” at this point.;;36;116;199;7948838""> <input id=""boton1"" onclick=""MM_openBrWindow('presentacion.swf','','width=800,height=700')"" type=""button"" value=""PRESENTACIÓN"" name=""boton1"" width=""500"" height=""25""> </p> 
+error;Attribute “height” not allowed on element “input” at this point.;;36;116;199;7948838""> <input id=""boton1"" onclick=""MM_openBrWindow('presentacion.swf','','width=800,height=700')"" type=""button"" value=""PRESENTACIÓN"" name=""boton1"" width=""500"" height=""25""> </p> 
 error;Attribute “height” not allowed on element “tr” at this point.;127;12;128;20;   <tbody>      <tr height=""1"">     
 error;Attribute “nombre” not allowed on element “div” at this point.;;3;134;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu0"" nombre=""eltoMenu0"">    <
 error;Attribute “nombre” not allowed on element “div” at this point.;;3;155;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu1"" nombre=""eltoMenu1"">    <

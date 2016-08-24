@@ -1,1 +1,3 @@
 TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
+error;Internal encoding declaration “iso-8859-1” disagrees with the actual encoding of the document (“utf-8”).;;3;5;74;/css"">   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <t
+error;Bad value “text/html; charset=iso-8859-1” for attribute “content” on element “meta”: “iso-8859-1” is not a preferred encoding name. The preferred label for this encoding is “windows-1252”.;;3;5;74;/css"">   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <t

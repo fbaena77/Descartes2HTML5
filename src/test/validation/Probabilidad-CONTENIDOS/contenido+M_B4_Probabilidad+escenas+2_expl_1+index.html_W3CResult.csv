@@ -1,2 +1,4 @@
 TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
-error;Element “ajs” not allowed as child of element “p” in this context. (Suppressing further errors from this subtree.);;4;17;130;711"">    <ajs width=""790"" height=""3000"" code=""descinst.DescartesWeb2_0.class"" name=""descinst.DescartesWeb2_0.class"" class=""DescartesJS"">     
+error;Internal encoding declaration “iso-8859-1” disagrees with the actual encoding of the document (“utf-8”).;;3;12;74;cript>   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <t
+error;Bad value “text/html; charset=iso-8859-1” for attribute “content” on element “meta”: “iso-8859-1” is not a preferred encoding name. The preferred label for this encoding is “windows-1252”.;;3;12;74;cript>   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <t
+error;Element “ajs” not allowed as child of element “p” in this context. (Suppressing further errors from this subtree.);;4;17;130;542"">    <ajs width=""790"" height=""3000"" code=""descinst.DescartesWeb2_0.class"" name=""descinst.DescartesWeb2_0.class"" class=""DescartesJS"">     

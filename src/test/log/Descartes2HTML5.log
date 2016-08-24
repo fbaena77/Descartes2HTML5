@@ -2748,3 +2748,217 @@ java.lang.IllegalArgumentException: MALFORMED
 02:04:50  INFO [Thread-2] (ValidateWorker.java:56) - -->> Total Validados: 29
 02:04:50  INFO [Thread-2] (ValidateWorker.java:58) - ****VALIDACIÓN FINALIZADA****
 02:04:50  INFO [Thread-2] (ValidateWorker.java:71) - Contenidos que han provocado errores en la validación: 0
+02:20:12  INFO [Thread-1] (ConvertWorker.java:36) - ****INICIO DEL PROCESO DE CONVERSIÓN DE CONTENIDOS****
+02:20:12  INFO [Thread-0] (InitWorker.java:90) - -->> Número Total de Contenidos: 30
+02:20:12  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Clasificacion_de_triangulos-CONTENIDOS
+02:20:12  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Clasificacion_de_triangulos-CONTENIDOS
+02:20:12 ERROR [Thread-1] (ConvertWorker.java:78) - No se ha podido realizar la conversión del contenido: FyQ_EL_DUELO-CONTENIDOS: 
+java.lang.IllegalArgumentException: MALFORMED
+	at java.util.zip.ZipCoder.toString(ZipCoder.java:58)
+	at java.util.zip.ZipFile.getZipEntry(ZipFile.java:566)
+	at java.util.zip.ZipFile.access$900(ZipFile.java:60)
+	at java.util.zip.ZipFile$ZipEntryIterator.next(ZipFile.java:524)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(ZipFile.java:499)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(ZipFile.java:480)
+	at com.emergya.descartes.persistence.FileManager.extractZipContents(FileManager.java:47)
+	at com.emergya.descartes.workers.ConvertWorker.doWork(ConvertWorker.java:97)
+	at com.emergya.descartes.workers.ConvertWorker.run(ConvertWorker.java:52)
+	at java.lang.Thread.run(Thread.java:745)
+02:20:12  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Las_fuerzas_elasticas-CONTENIDOS
+02:20:12  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Las_fuerzas_elasticas-CONTENIDOS
+02:20:12  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Amplitud_de_ondas-CONTENIDOS
+02:20:12  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Amplitud_de_ondas-CONTENIDOS
+02:20:12  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Puntuacion-CONTENIDOS
+02:20:12  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Puntuacion-CONTENIDOS
+02:20:12  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: FyQ_DIANA-CONTENIDOS
+02:20:12  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: FyQ_DIANA-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Preposiciones_y_conjunciones-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Preposiciones_y_conjunciones-CONTENIDOS
+02:20:13  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Clasificacion_de_triangulos-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: FyQ_DEL_TIRON-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: FyQ_DEL_TIRON-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Series-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Series-CONTENIDOS
+02:20:13  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Las_fuerzas_elasticas-CONTENIDOS
+02:20:13  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Amplitud_de_ondas-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Movimiento_de_cargas_en_el_interior_de_un_campo_electrico-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Movimiento_de_cargas_en_el_interior_de_un_campo_electrico-CONTENIDOS
+02:20:13  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Puntuacion-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Cilindro,_cono_y_esfera-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Cilindro,_cono_y_esfera-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Domino_de_areas-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Domino_de_areas-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Alternador-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Alternador-CONTENIDOS
+02:20:13  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: FyQ_DIANA-CONTENIDOS
+02:20:13  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Preposiciones_y_conjunciones-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Poleas-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Poleas-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Palabras_primitivas_y_derivadas-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Palabras_primitivas_y_derivadas-CONTENIDOS
+02:20:13  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: FyQ_DEL_TIRON-CONTENIDOS
+02:20:13  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Series-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: El_circulo-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: El_circulo-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Patrones_numericos._La_rana_saltadora-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Patrones_numericos._La_rana_saltadora-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Adherencia-CONTENIDOS
+02:20:13  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Adherencia-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: FyQ_EL_PARTIDO-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: FyQ_EL_PARTIDO-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Puzle_de_dos_piezas-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Puzle_de_dos_piezas-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Amperimetro-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Amperimetro-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Juegos_de_logica_con_cantidades-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Juegos_de_logica_con_cantidades-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Suma_de_fracciones-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Suma_de_fracciones-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Probabilidad-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Probabilidad-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Sujeto_y_predicado-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Sujeto_y_predicado-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Caida_libre_y_principio_de_Arquimedes-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Caida_libre_y_principio_de_Arquimedes-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: El_pendulo_conico-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: El_pendulo_conico-CONTENIDOS
+02:20:14  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Movimiento_de_cargas_en_el_interior_de_un_campo_electrico-CONTENIDOS
+02:20:14  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Cilindro,_cono_y_esfera-CONTENIDOS
+02:20:14  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Domino_de_areas-CONTENIDOS
+02:20:14  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Alternador-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: FyQ_DE_PAR_EN_PAR-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: FyQ_DE_PAR_EN_PAR-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Ortografia._La_ll_y_la_y-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Ortografia._La_ll_y_la_y-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Actividad_radiactiva-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Actividad_radiactiva-CONTENIDOS
+02:20:14  INFO [Thread-1] (ConvertWorker.java:63) - -->> Total contenidos convertidos: 29
+02:20:14  INFO [Thread-1] (ConvertWorker.java:66) - ****CONVERSIÓN FINALIZADA****
+02:20:14  INFO [Thread-1] (ConvertWorker.java:84) - Contenidos que han provocado errores en la conversión: 1
+02:20:15  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Poleas-CONTENIDOS
+02:20:15  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Palabras_primitivas_y_derivadas-CONTENIDOS
+02:20:15  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: El_circulo-CONTENIDOS
+02:20:15  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Patrones_numericos._La_rana_saltadora-CONTENIDOS
+02:20:15  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Adherencia-CONTENIDOS
+02:20:15  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: FyQ_EL_PARTIDO-CONTENIDOS
+02:20:15  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Puzle_de_dos_piezas-CONTENIDOS
+02:20:15  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Amperimetro-CONTENIDOS
+02:20:15  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Juegos_de_logica_con_cantidades-CONTENIDOS
+02:20:15  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Suma_de_fracciones-CONTENIDOS
+02:20:15  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Probabilidad-CONTENIDOS
+02:20:15  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Sujeto_y_predicado-CONTENIDOS
+02:20:15  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Caida_libre_y_principio_de_Arquimedes-CONTENIDOS
+02:20:16  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: El_pendulo_conico-CONTENIDOS
+02:20:16  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: FyQ_DE_PAR_EN_PAR-CONTENIDOS
+02:20:16  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Ortografia._La_ll_y_la_y-CONTENIDOS
+02:20:16  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Actividad_radiactiva-CONTENIDOS
+02:20:16  INFO [Thread-2] (ValidateWorker.java:56) - -->> Total Validados: 29
+02:20:16  INFO [Thread-2] (ValidateWorker.java:58) - ****VALIDACIÓN FINALIZADA****
+02:20:16  INFO [Thread-2] (ValidateWorker.java:71) - Contenidos que han provocado errores en la validación: 0
+02:27:34  INFO [Thread-1] (ConvertWorker.java:36) - ****INICIO DEL PROCESO DE CONVERSIÓN DE CONTENIDOS****
+02:27:34  INFO [Thread-0] (InitWorker.java:90) - -->> Número Total de Contenidos: 30
+02:27:35  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Clasificacion_de_triangulos-CONTENIDOS
+02:27:35  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Clasificacion_de_triangulos-CONTENIDOS
+02:27:35 ERROR [Thread-1] (ConvertWorker.java:78) - No se ha podido realizar la conversión del contenido: FyQ_EL_DUELO-CONTENIDOS: 
+java.lang.IllegalArgumentException: MALFORMED
+	at java.util.zip.ZipCoder.toString(ZipCoder.java:58)
+	at java.util.zip.ZipFile.getZipEntry(ZipFile.java:566)
+	at java.util.zip.ZipFile.access$900(ZipFile.java:60)
+	at java.util.zip.ZipFile$ZipEntryIterator.next(ZipFile.java:524)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(ZipFile.java:499)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(ZipFile.java:480)
+	at com.emergya.descartes.persistence.FileManager.extractZipContents(FileManager.java:47)
+	at com.emergya.descartes.workers.ConvertWorker.doWork(ConvertWorker.java:97)
+	at com.emergya.descartes.workers.ConvertWorker.run(ConvertWorker.java:52)
+	at java.lang.Thread.run(Thread.java:745)
+02:27:35  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Las_fuerzas_elasticas-CONTENIDOS
+02:27:35  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Las_fuerzas_elasticas-CONTENIDOS
+02:27:35  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Amplitud_de_ondas-CONTENIDOS
+02:27:35  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Amplitud_de_ondas-CONTENIDOS
+02:27:35  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Puntuacion-CONTENIDOS
+02:27:35  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Puntuacion-CONTENIDOS
+02:27:35  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: FyQ_DIANA-CONTENIDOS
+02:27:35  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: FyQ_DIANA-CONTENIDOS
+02:27:35  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Clasificacion_de_triangulos-CONTENIDOS
+02:27:35  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Preposiciones_y_conjunciones-CONTENIDOS
+02:27:35  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Preposiciones_y_conjunciones-CONTENIDOS
+02:27:35  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: FyQ_DEL_TIRON-CONTENIDOS
+02:27:35  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: FyQ_DEL_TIRON-CONTENIDOS
+02:27:35  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Las_fuerzas_elasticas-CONTENIDOS
+02:27:35  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Amplitud_de_ondas-CONTENIDOS
+02:27:35  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Series-CONTENIDOS
+02:27:35  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Series-CONTENIDOS
+02:27:35  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Puntuacion-CONTENIDOS
+02:27:36  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: FyQ_DIANA-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Movimiento_de_cargas_en_el_interior_de_un_campo_electrico-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Movimiento_de_cargas_en_el_interior_de_un_campo_electrico-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Cilindro,_cono_y_esfera-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Cilindro,_cono_y_esfera-CONTENIDOS
+02:27:36  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Preposiciones_y_conjunciones-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Domino_de_areas-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Domino_de_areas-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Alternador-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Alternador-CONTENIDOS
+02:27:36  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: FyQ_DEL_TIRON-CONTENIDOS
+02:27:36  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Series-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Poleas-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Poleas-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Palabras_primitivas_y_derivadas-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Palabras_primitivas_y_derivadas-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: El_circulo-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: El_circulo-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Patrones_numericos._La_rana_saltadora-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Patrones_numericos._La_rana_saltadora-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Adherencia-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Adherencia-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: FyQ_EL_PARTIDO-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: FyQ_EL_PARTIDO-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Puzle_de_dos_piezas-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Puzle_de_dos_piezas-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Amperimetro-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Amperimetro-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Juegos_de_logica_con_cantidades-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Juegos_de_logica_con_cantidades-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Suma_de_fracciones-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Suma_de_fracciones-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Probabilidad-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Probabilidad-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Sujeto_y_predicado-CONTENIDOS
+02:27:36  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Sujeto_y_predicado-CONTENIDOS
+02:27:36  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Movimiento_de_cargas_en_el_interior_de_un_campo_electrico-CONTENIDOS
+02:27:37  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Caida_libre_y_principio_de_Arquimedes-CONTENIDOS
+02:27:37  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Caida_libre_y_principio_de_Arquimedes-CONTENIDOS
+02:27:37  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Cilindro,_cono_y_esfera-CONTENIDOS
+02:27:37  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Domino_de_areas-CONTENIDOS
+02:27:37  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Alternador-CONTENIDOS
+02:27:37  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: El_pendulo_conico-CONTENIDOS
+02:27:37  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: El_pendulo_conico-CONTENIDOS
+02:27:37  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: FyQ_DE_PAR_EN_PAR-CONTENIDOS
+02:27:37  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: FyQ_DE_PAR_EN_PAR-CONTENIDOS
+02:27:37  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Poleas-CONTENIDOS
+02:27:37  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Ortografia._La_ll_y_la_y-CONTENIDOS
+02:27:37  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Ortografia._La_ll_y_la_y-CONTENIDOS
+02:27:37  INFO [Thread-1] (ConvertWorker.java:110) - >> Convirtiendo Contenido: Actividad_radiactiva-CONTENIDOS
+02:27:37  INFO [Thread-1] (ConvertWorker.java:117) - >> Sumario de conversión guardado para el contenido: Actividad_radiactiva-CONTENIDOS
+02:27:37  INFO [Thread-1] (ConvertWorker.java:63) - -->> Total contenidos convertidos: 29
+02:27:37  INFO [Thread-1] (ConvertWorker.java:66) - ****CONVERSIÓN FINALIZADA****
+02:27:37  INFO [Thread-1] (ConvertWorker.java:84) - Contenidos que han provocado errores en la conversión: 1
+02:27:37  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Palabras_primitivas_y_derivadas-CONTENIDOS
+02:27:37  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: El_circulo-CONTENIDOS
+02:27:37  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Patrones_numericos._La_rana_saltadora-CONTENIDOS
+02:27:37  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Adherencia-CONTENIDOS
+02:27:37  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: FyQ_EL_PARTIDO-CONTENIDOS
+02:27:37  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Puzle_de_dos_piezas-CONTENIDOS
+02:27:37  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Amperimetro-CONTENIDOS
+02:27:37  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Juegos_de_logica_con_cantidades-CONTENIDOS
+02:27:37  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Suma_de_fracciones-CONTENIDOS
+02:27:38  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Probabilidad-CONTENIDOS
+02:27:38  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Sujeto_y_predicado-CONTENIDOS
+02:27:38  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Caida_libre_y_principio_de_Arquimedes-CONTENIDOS
+02:27:38  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: El_pendulo_conico-CONTENIDOS
+02:27:38  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: FyQ_DE_PAR_EN_PAR-CONTENIDOS
+02:27:38  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Ortografia._La_ll_y_la_y-CONTENIDOS
+02:27:38  INFO [Thread-2] (ValidateWorker.java:90) - >> Validación realizada para el contenido: Actividad_radiactiva-CONTENIDOS
+02:27:38  INFO [Thread-2] (ValidateWorker.java:56) - -->> Total Validados: 29
+02:27:38  INFO [Thread-2] (ValidateWorker.java:58) - ****VALIDACIÓN FINALIZADA****
+02:27:38  INFO [Thread-2] (ValidateWorker.java:71) - Contenidos que han provocado errores en la validación: 0

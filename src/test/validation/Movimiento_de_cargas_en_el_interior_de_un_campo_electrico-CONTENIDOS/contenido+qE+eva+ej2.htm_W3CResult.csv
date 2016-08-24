@@ -1,3 +1,5 @@
 TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
 error;When the attribute “xml:lang” in no namespace is specified, the element must also have the attribute “lang” present with the same value.;1;16;2;20;type html><html xml:lang=""en""> <hea
 error;Bad value “schema.DC” for attribute “rel” on element “link”: The string “schema.dc” is not a registered keyword.;;3;4;64;<head>   <link rel=""schema.DC"" href=""http://purl.org/dc/elements/1.1/"">   <m
+error;Internal encoding declaration “iso-8859-1” disagrees with the actual encoding of the document (“utf-8”).;;3;5;74;1.1/"">   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <!
+error;Bad value “text/html; charset=iso-8859-1” for attribute “content” on element “meta”: “iso-8859-1” is not a preferred encoding name. The preferred label for this encoding is “windows-1252”.;;3;5;74;1.1/"">   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <!

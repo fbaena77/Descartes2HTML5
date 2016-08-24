@@ -1,6 +1,8 @@
 TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
 error;Attribute “xmlns:m” not allowed here.;1;16;2;65;type html><html xmlns:m=""http://schemas.microsoft.com/office/2004/12/omml""> <hea
 info;Attribute with the local name “xmlns:m” is not serializable as XML 1.0.;1;16;2;65;type html><html xmlns:m=""http://schemas.microsoft.com/office/2004/12/omml""> <hea
+error;Internal encoding declaration “iso-8859-1” disagrees with the actual encoding of the document (“utf-8”).;;3;4;74;<head>   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <l
+error;Bad value “text/html; charset=iso-8859-1” for attribute “content” on element “meta”: “iso-8859-1” is not a preferred encoding name. The preferred label for this encoding is “windows-1252”.;;3;4;74;<head>   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <l
 error;Attribute “gblcoloron” not allowed on element “div” at this point.;;4;30;78;le1"">    <div id=""CapaCurso"" class=""clsCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">     
 error;Attribute “gblcolor” not allowed on element “div” at this point.;;4;30;78;le1"">    <div id=""CapaCurso"" class=""clsCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">     
 error;Attribute “nombre” not allowed on element “div” at this point.;;4;39;48;/div>    <div id=""eltoMenuHead"" nombre=""eltoMenuHead"">     

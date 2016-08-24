@@ -1,12 +1,14 @@
 TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
 error;Attribute “xmlns:m” not allowed here.;1;16;2;65;type html><html xmlns:m=""http://schemas.microsoft.com/office/2004/12/omml""> <hea
 info;Attribute with the local name “xmlns:m” is not serializable as XML 1.0.;1;16;2;65;type html><html xmlns:m=""http://schemas.microsoft.com/office/2004/12/omml""> <hea
-error;Attribute “gblcoloron” not allowed on element “div” at this point.;;3;21;77;4168"">   <div id=""CapaCurso"" class=""clsCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">    P
-error;Attribute “gblcolor” not allowed on element “div” at this point.;;3;21;77;4168"">   <div id=""CapaCurso"" class=""clsCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">    P
+error;Internal encoding declaration “iso-8859-1” disagrees with the actual encoding of the document (“utf-8”).;;3;4;74;<head>   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <l
+error;Bad value “text/html; charset=iso-8859-1” for attribute “content” on element “meta”: “iso-8859-1” is not a preferred encoding name. The preferred label for this encoding is “windows-1252”.;;3;4;74;<head>   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <l
+error;Attribute “gblcoloron” not allowed on element “div” at this point.;;3;21;77;5722"">   <div id=""CapaCurso"" class=""clsCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">    P
+error;Attribute “gblcolor” not allowed on element “div” at this point.;;3;21;77;5722"">   <div id=""CapaCurso"" class=""clsCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">    P
 error;Attribute “nombre” not allowed on element “div” at this point.;;3;30;47;</div>   <div id=""eltoMenuHead"" nombre=""eltoMenuHead"">    <
 error;Row 2 of a row group established by a “tbody” element has no cells beginning on it.;38;;39;10;     <tr>      </tr>     
 info;A table row was 0 columns wide, which is less than the column count established by the first row (3).;38;;39;10;     <tr>      </tr>     
-error;Attribute “nombre” not allowed on element “div” at this point.;;3;63;68;</div>   <div id=""eltoMenuFoot"" class=""clsCapasMenu"" nombre=""eltoMenuFoot"">   
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;63;68;</div>   <div id=""eltoMenuFoot"" class=""clsCapasMenu"" nombre=""eltoMenuFoot"">    <
 error;Attribute “height” not allowed on element “tr” at this point.;111;12;112;20;   <tbody>      <tr height=""1"">     
 error;Element “ajs” not allowed as child of element “p” in this context. (Suppressing further errors from this subtree.);;9;121;135;         <ajs width=""150"" height=""3000"" code=""descinst.DescartesWeb2_0.class"" name=""descinst.DescartesWeb2_0.class"" class=""DescartesJS"">     
 error;Attribute “height” not allowed on element “tr” at this point.;198;12;199;20;   <tbody>      <tr height=""1"">     

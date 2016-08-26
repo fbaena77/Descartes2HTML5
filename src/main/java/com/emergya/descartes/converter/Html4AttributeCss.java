@@ -114,10 +114,10 @@ public enum Html4AttributeCss {
     TYPE("type", null, "list-style-type", null, null),
 
     /** The cellpadding. */
-    CELLPADDING("cellpadding", "> tr > td", "padding", null, null),
+    CELLPADDING("cellpadding", "tr td", "padding", null, null),
 
     /** The cellspacing. */
-    CELLSPACING("cellspacing", "> tr > td", "margin", null, null),
+    CELLSPACING("cellspacing", "", "border-spacing", null, null),
 
     /** The rules. */
     RULES("rules", null, null, null, null),

@@ -88,7 +88,7 @@ public class Html4CustomDeprecated {
     /** The Constant AJS_HEIGHT. */
     private static final String AJS_HEIGHT = "height";
 
-    /** Valor por defecto de altura para los discursos	*/
+    /** Valor por defecto de altura para los discursos      */
     // TODO valor por defecto para la altura del contenedor de los
     // discursos
     private static final String AJS_HEIGHT_VALUE = "3000";
@@ -129,7 +129,7 @@ public class Html4CustomDeprecated {
             }
 
             if (docType == null) {
-                docType = new DocumentType("html", "", "", "");
+                docType = new DocumentType("html", "", "system", "");
                 final Element html = doc.getElementsByTag("html").get(0);
                 html.before(docType);
                 corregido = true;
@@ -359,9 +359,11 @@ public class Html4CustomDeprecated {
 
         ajsNode.attr(AJS_WIDTH, node.attr(AJS_WIDTH));
         // TODO Se establece una altura por defecto para los discursos
-        ajsNode.attr(AJS_HEIGHT, AJS_HEIGHT_VALUE/* node.attr(AJS_HEIGHT) */);
+        // ajsNode.attr(AJS_HEIGHT, AJS_HEIGHT_VALUE/*node.attr(AJS_HEIGHT)*/);
         // TODO el valor del Code de la etiqueta AJS se cambia.
-        ajsNode.attr(AJS_CODE, AJS_NAME_VALUE);
+        // ajsNode.attr(AJS_CODE, AJS_NAME_VALUE);
+        ajsNode.attr(AJS_HEIGHT, node.attr(AJS_HEIGHT));
+        ajsNode.attr(AJS_CODE, node.attr(AJS_CODE));
         ajsNode.attr(AJS_NAME, AJS_NAME_VALUE);
         ajsNode.addClass(AJS_CLASS);
 

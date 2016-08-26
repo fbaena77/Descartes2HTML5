@@ -1,13 +1,13 @@
 TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
 error;Internal encoding declaration “iso-8859-1” disagrees with the actual encoding of the document (“utf-8”).;;3;4;74;<head>   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <l
 error;Bad value “text/html; charset=iso-8859-1” for attribute “content” on element “meta”: “iso-8859-1” is not a preferred encoding name. The preferred label for this encoding is “windows-1252”.;;3;4;74;<head>   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <l
-error;Attribute “gblcolor” not allowed on element “div” at this point.;;3;17;77;3696"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""E5D48C"" gblcoloron=""C5B375"">    P
-error;Attribute “gblcoloron” not allowed on element “div” at this point.;;3;17;77;3696"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""E5D48C"" gblcoloron=""C5B375"">    P
+error;Attribute “gblcolor” not allowed on element “div” at this point.;;3;17;77;8087"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""E5D48C"" gblcoloron=""C5B375"">    P
+error;Attribute “gblcoloron” not allowed on element “div” at this point.;;3;17;77;8087"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""E5D48C"" gblcoloron=""C5B375"">    P
 error;Attribute “nombre” not allowed on element “div” at this point.;;3;26;47;</div>   <div id=""eltoMenuHead"" nombre=""eltoMenuHead"">    <
 error;Attribute “nombre” not allowed on element “div” at this point.;;3;57;68;</div>   <div class=""clsCapasMenu"" id=""eltoMenuFoot"" nombre=""eltoMenuFoot"">    <
 error;Attribute “height” not allowed on element “tr” at this point.;98;12;99;21;   <tbody>      <tr height=""26"">     
 error;Attribute “height” not allowed on element “tr” at this point.;108;12;109;20;   <tbody>      <tr height=""1"">     
 error;Attribute “nombre” not allowed on element “div” at this point.;;3;115;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu0"" nombre=""eltoMenu0"">    <
-error;Attribute “nombre” not allowed on element “div” at this point.;;3;136;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu1"" nombre=""eltoMenu1"">    <
+error;Attribute “nombre” not allowed on element “div” at this point.;;3;136;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu1"" nombre=""eltoMenu1""> 
 error;Attribute “nombre” not allowed on element “div” at this point.;;3;157;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu2"" nombre=""eltoMenu2"">    <
 error;Attribute “nombre” not allowed on element “div” at this point.;;3;178;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu3"" nombre=""eltoMenu3"">    <

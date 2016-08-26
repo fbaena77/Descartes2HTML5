@@ -1,11 +1,11 @@
 TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
 error;Internal encoding declaration “iso-8859-1” disagrees with the actual encoding of the document (“utf-8”).;;3;4;74;<head>   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <l
 error;Bad value “text/html; charset=iso-8859-1” for attribute “content” on element “meta”: “iso-8859-1” is not a preferred encoding name. The preferred label for this encoding is “windows-1252”.;;3;4;74;<head>   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <l
-error;Attribute “gblcoloron” not allowed on element “div” at this point.;;3;21;77;8724"">   <div class=""clsCurso"" id=""CapaCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">    P
-error;Attribute “gblcolor” not allowed on element “div” at this point.;;3;21;77;8724"">   <div class=""clsCurso"" id=""CapaCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">    P
+error;Attribute “gblcoloron” not allowed on element “div” at this point.;;3;21;77;4626"">   <div class=""clsCurso"" id=""CapaCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">    P
+error;Attribute “gblcolor” not allowed on element “div” at this point.;;3;21;77;4626"">   <div class=""clsCurso"" id=""CapaCurso"" gblcoloron=""ECF8F9"" gblcolor=""78A6DA"">    P
 error;Attribute “nombre” not allowed on element “div” at this point.;;3;30;47;</div>   <div id=""eltoMenuHead"" nombre=""eltoMenuHead"">    <
 error;Attribute “nombre” not allowed on element “div” at this point.;;3;61;68;</div>   <div class=""clsCapasMenu"" id=""eltoMenuFoot"" nombre=""eltoMenuFoot"">    <
-error;Element “ajs” not allowed as child of element “div” in this context. (Suppressing further errors from this subtree.);;6;115;132;8"">      <ajs width=""150"" height=""3000"" code=""descinst.DescartesWeb2_0.class"" name=""descinst.DescartesWeb2_0.class"" class=""DescartesJS"">     
+error;Element “ajs” not allowed as child of element “div” in this context. (Suppressing further errors from this subtree.);;6;115;124;1"">      <ajs width=""150"" height=""35"" code=""descinst.Descartes.class"" name=""descinst.DescartesWeb2_0.class"" class=""DescartesJS"">     
 error;Attribute “height” not allowed on element “tr” at this point.;167;13;168;21;   <tbody>       <tr height=""1"">     
 error;Attribute “height” not allowed on element “tr” at this point.;177;12;178;20;   <tbody>      <tr height=""1"">     
 error;Attribute “nombre” not allowed on element “div” at this point.;;3;184;62;</div>   <div class=""clsCapasMenu"" id=""eltoMenu0"" nombre=""eltoMenu0"">    <

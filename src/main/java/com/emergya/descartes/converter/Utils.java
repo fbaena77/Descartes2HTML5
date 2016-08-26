@@ -94,10 +94,9 @@ public class Utils {
      * @param doc the doc
      * @param charset the charset
      */
-    public static Document updateCharset(Document doc, Charset charset) {
+    public static void updateCharset(Document doc, Charset charset) {
         boolean exist = false;
         Elements metas = doc.getElementsByTag("meta");
-        Document _doc = doc;
         for (Element meta : metas) {
             if ("Content-Type".equalsIgnoreCase(meta.attr("http-equiv"))) {
                 final String contentValue = meta.attr("content");
@@ -125,10 +124,8 @@ public class Utils {
             meta.attr("http-equiv", "Content-Type");
             meta.attr("content", "text/html; charset="
                     + charset.displayName().toLowerCase());
-            _doc.head().appendChild(meta);
+            doc.head().appendChild(meta);
         }
-
-        return _doc;
     }
 
     /**

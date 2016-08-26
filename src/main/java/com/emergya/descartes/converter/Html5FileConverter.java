@@ -3,6 +3,7 @@ package com.emergya.descartes.converter;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -102,22 +103,19 @@ public class Html5FileConverter {
 
     private void setConvertContent(Path path) {
         try {
-            String charsetName = job.getJobConfig().getConversionCharset();
-            Document doc = Jsoup.parse(path.toFile(), charsetName);
-
+            Document doc = Jsoup.parse(path.toFile(),
+                    StandardCharsets.ISO_8859_1.displayName());
             final Charset charset = Utils.getContentCharset(doc);
-            if (!charset.equals(charsetName)) {
-                doc = Jsoup.parse(path.toFile(), charset.displayName());
+            doc = Jsoup.parse(path.toFile(), charset.displayName());
+            String charsetName = job.getJobConfig().getConversionCharset();
+            if (!charsetName.equals("")) {
+                Utils.updateCharset(doc, Charset.forName(charsetName));
             }
-            Document _doc = Utils.updateCharset(doc,
-                    Charset.forName(charsetName));
             nodeCss = new HashMap<String, String>();
-            analizeDOM(_doc);
-            addCssStyleDOM(_doc);
-
+            analizeDOM(doc);
+            addCssStyleDOM(doc);
             File fileConverted = OutputManager.createHtml5File(path.toFile(),
-                    _doc);
-
+                    doc);
             ConvertedHTMLFile convertedHTMLFile = new ConvertedHTMLFile();
             convertedHTMLFile.setLocalCopy(fileConverted);
             convertedHTMLFile.setPathInContent(path.toString());

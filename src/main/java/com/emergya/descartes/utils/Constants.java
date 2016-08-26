@@ -14,7 +14,7 @@ public class Constants {
     // Conversión
     public static final String PATH_CONVERTED_CONTENT = "convert.path.content";
     public static final String PATH_LOG_SUMMARY = "convert.path.log.summary";
-    public static final String CONVERT_CHARSET = "convert.charset";
+    public static final String CONVERT_CHARSET = "convert.update.charset";
     // W3C Validación
     public static final String PATH_W3C_VALIDATION = "valid.path.w3cValidation";
     public static final String MUST_VALIDATE = "valid.doValidate";

@@ -1,8 +1,8 @@
 TYPE;MESSAGE;FIRSTLINE;FIRTCOLUMN;LASTLINE;LASTCOLUMN;EXTRACT
 error;Internal encoding declaration “iso-8859-1” disagrees with the actual encoding of the document (“utf-8”).;;3;4;74;<head>   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <l
 error;Bad value “text/html; charset=iso-8859-1” for attribute “content” on element “meta”: “iso-8859-1” is not a preferred encoding name. The preferred label for this encoding is “windows-1252”.;;3;4;74;<head>   <meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">   <l
-error;Attribute “gblcolor” not allowed on element “div” at this point.;;3;21;77;6047"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""E48CA2"" gblcoloron=""FFACC2"">    P
-error;Attribute “gblcoloron” not allowed on element “div” at this point.;;3;21;77;6047"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""E48CA2"" gblcoloron=""FFACC2"">    P
+error;Attribute “gblcolor” not allowed on element “div” at this point.;;3;21;77;0794"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""E48CA2"" gblcoloron=""FFACC2"">    P
+error;Attribute “gblcoloron” not allowed on element “div” at this point.;;3;21;77;0794"">   <div class=""clsCurso"" id=""CapaCurso"" gblcolor=""E48CA2"" gblcoloron=""FFACC2"">    P
 error;Attribute “nombre” not allowed on element “div” at this point.;;3;30;47;</div>   <div id=""eltoMenuHead"" nombre=""eltoMenuHead"">    <
 error;Attribute “nombre” not allowed on element “div” at this point.;;3;61;68;</div>   <div class=""clsCapasMenu"" id=""eltoMenuFoot"" nombre=""eltoMenuFoot"">    <
 error;Attribute “height” not allowed on element “tr” at this point.;102;12;103;21;   <tbody>      <tr height=""26"">     
